@@ -1,0 +1,2184 @@
+# Introduction
+
+Ce document regroupe l’analyse des standards identifiés comme
+potentiellement adaptés pour la mise en œuvre, d’un point de vue
+« générique » de la gestion des traces « Étude métier – Gestion de
+traces » \[1\] :
+
+- Le standard HL7 FHIR R4 (*Fast Healthcare Interoperability
+  Resources*). Pour le besoin d’interopérabilité « Gestion des traces »,
+  les ressources FHIR suivantes sont notamment analysées :
+
+  - AdverseEvent
+
+  - AuditEvent
+
+  - Bundle
+
+  - Communication
+
+  - CommunicationRequest
+
+  - SearchParameter
+
+- Le profil IHE ATNA et son option RESTful ATNA ;
+
+- Le profil IHE mACM / ACM ;
+
+- Le profil IHE PLT ;
+
+- Le profil IHE SOLE ;
+
+- Le standard DICOM ;
+
+- Le standard GS1 ;
+
+- Le standard Syslog.
+
+Après un rappel synthétique du contexte en section 2, pour chaque
+standard analysé sont présentés :
+
+- Une description ;
+
+- Sa maturité et adoption ;
+
+- Des scénarios de mise en œuvre.
+
+Un tableau de synthèse qui reprend ces éléments afin d’en faciliter la
+comparaison ainsi qu’une analyse métier et technique sont fournis en
+section 4 et 5.
+
+A noter que cette étude se base sur le document « Organismes et
+Standards » \[3\] qui présente une description des organismes
+producteurs de standards ainsi que la manière dont ces standards sont
+gérés.
+
+**<u>Note éditoriale :</u>**
+
+Afin de préserver la fluidité de lecture, les références sont gérées de
+la manière suivante dans le document :
+
+- Les références aux documents de référence listés en annexe 2 sont
+  indiquées par le numéro du document entre crochets – \[1\] fait donc
+  référence au premier document de la liste de l’annexe 2 ;
+
+- Les références aux sites web permettant d’approfondir les aspects
+  techniques référencés sont directement intégrées sous forme de liens
+  cliquables dans des notes de bas de page.
+
+# Présentation synthétique
+
+Cette étude s’insère dans le cadre du besoin « générique »
+d’interopérabilité « Gestion des traces » pouvant être appliqué à
+différents contextes métier (gestion de la traçabilité de médicaments,
+de dispositifs médicaux, etc.). L’aspect « générique » est lié au fait
+que la fonctionnalité de « Gestion des traces » peut être instanciée
+dans différents contextes, prenant en compte différents besoins
+fonctionnels métier.
+
+Ce besoin d’interopérabilité concerne la mise en œuvre d’un mécanisme
+qui permet de gérer la traçabilité « d’objets métier » (médicaments,
+dispositifs médicaux, etc.) tout au long de leur cycle de vie. Par
+exemple, il s’agit de fournir un mécanisme de création et de
+consultation des traces associées à un dispositif médical implantable de
+sa dispensation à son implantation, en passant par sa commande, la
+réception dans la pharmacie d’un établissement de soin et son transfert
+dans l’unité de soin implantant ce dispositif. Les cas d’utilisation
+métier sont donc (cf. \[1\]) :
+
+- Créer des traces
+
+- Consulter une trace
+
+- Rechercher des traces
+
+Une étude[^1] « générique » « métier » \[1\] a été menée concernant la
+modélisation des flux entre acteurs/composants d’un système
+d’information ou entre systèmes d’information pour la mise en œuvre de
+la gestion de traces.
+
+Les standards présentés dans ce document doivent gérer l’ensemble des
+flux métiers structurés et identifiés dans l’étude métier \[1\] aussi
+bien dans un contexte de client lourd que dans un contexte de mobilité.
+
+# Les standards
+
+## Le standard FHIR
+
+### Description
+
+FHIR[^2] (*Fast Healthcare Interoperability Resources*) est un standard
+élaboré par HL7 qui décrit un ensemble de formats de données et
+d’éléments (appelés ressources) ainsi qu’une API (*Application
+Programming Interface*) pour l’échange des informations de santé. Pour
+plus d’information, se référer au document « Organismes et Standards »
+\[3\].
+
+### Maturité et adoption 
+
+FHIR a défini et mis en œuvre un modèle[^3] de maturité de ressources
+basé sur le CMM[^4] (*Capability Maturity Model*) afin de fournir aux
+développeurs une idée de la maturité d’une ressource avant son
+utilisation et son implémentation \[3\]. D’une façon générale, le
+standard FHIR dans sa version R4 offre des ressources qui sont
+considérées comme stables (spécifiquement les ressources de niveau de
+maturité 4 et 5) et qui commencent actuellement à être utilisées dans
+des implémentations réelles. Les ressources suivantes ont atteint le
+niveau de maturité « normative », c’est-à-dire qu’elles sont stables :
+
+- Niveau 1
+
+  - Module Foundation (API, XML, JSON, Binary, Bundle, OperationOutcome,
+    Parameters)
+
+- Niveau 2
+
+  - Module Conformance (CapabilityStatement, OperationDefinition,
+    StructureDefinition
+
+  - Module Exchange (RESTful API)
+
+  - Module Terminology (CodeSystem, ExpansionProfile)
+
+  - Patient / RelatedPerson / Practitioner / Organization
+
+- Niveau 3
+
+  - Module Administration (Patient)
+
+### Les ressources FHIR concernées
+
+Une analyse des ressources FHIR «métier» pouvant être appliquées au
+contexte de la « gestion générique des traces » (voir section 6.1)
+montre que ce standard couvre la majorité des concepts identifiés dans
+l’étude « générique » métier. De nouveaux concepts seront sans doute
+ajoutés lors du deuxième niveau de « profilage » lié à l’instanciation
+d’une étude métier relative à un besoin métier spécifique. Dans ce cas,
+si FHIR est retenu comme le standard à utiliser, les informations non
+couvertes feront l’objet soit d’ajout de ressources existantes FHIR,
+soit d’extensions des ressources FHIR dans le cas où celles-ci sont
+adaptées pour mettre en œuvre les spécifications d’interopérabilité pour
+ce besoin pris en compte.
+
+Ci-dessous une description succincte des ressources FHIR pouvant être
+utilisées pour la mise en œuvre des flux d’échanges entre un système
+d’information (SI) initiateur (« source des traces », « consommateur des
+traces ») et un serveur de gestion de traces (« gestionnaire des
+traces »). Un mapping de ces ressources avec les besoins métier est
+fourni au chapitre 3.1.5.
+
+- **AdverseEvent (NM 0)** [^5]: (événement indésirable) cette ressource
+  est utilisée pour décrire les données liées à un événement indésirable
+  qui a ou pourrait avoir lieu lors d’un traitement d’un patient.
+
+> Cette ressource permet de véhiculer les données de description de
+> l’événement indésirable ainsi que ses données de traçabilités :
+> identifiant métier, catégorie (comme par exemple « product-problem »
+> ou « product-use-error »), le type de l’événement, la date effective
+> de l’événement, la date de détection de l’événement, la date
+> d’enregistrement de l’événement, le lieu, l’acteur enregistreur de
+> l’événement, le contributeur, la référence du document relatif, etc.
+> Cette ressource, bien qu’intéressante à prendre en compte pour
+> spécifier de façon générique une trace d’audit, semble trop
+> spécialisée.
+
+- **AuditEvent (NM 3)**[^6] : (rapport d’évènement) cette ressource est
+  principalement utilisée pour décrire les données liées à un événement
+  de sécurité, en vue de maintenir un référentiel de traces de sécurité.
+  Ce rapport d’évènement est basé sur la définition des enregistrements
+  de sécurité décrit dans le profil IHE ATNA.
+
+> Cette ressource permet de véhiculer les données de description d’un
+> événement de sécurité ainsi que ses données de traçabilités : type et
+> sous-type de l’événement, action réalisée pendant l’événement, date
+> effective de l’événement, date d’enregistrement de l’événement, acteur
+> impliqué dans l’événement, source de l’événement, etc. Cette ressource
+> est intéressante à prendre en compte pour spécifier de façon générique
+> une trace d’audit.
+
+- **Bundle (NM N)**[^7] : Dans le cas d’une interaction SEARCH, l’API
+  RESTful de FHIR impose de retourner les résultats dans une ressource
+  bundle. Cette ressource est ainsi utilisée pour regrouper des
+  informations provenant de différentes ressources. Cette ressource
+  permet l’existence indépendante de ces ressources qui peuvent être
+  consultées directement en utilisant l’API RESTful de FHIR.
+
+- **Communication (NM 2)**[^8] : cette ressource est utilisée pour
+  décrire les informations échangées entre un émetteur et des
+  récepteurs. Ces acteurs peuvent être des « patients », des
+  « practitioners », des « organizations », des « devices » et des
+  « related persons ».
+
+> La ressource « Communication » est utilisée comme une des ressources
+> « event » dans un workflow FHIR. Cette ressource pourrait donc être
+> utilisée pour gérer les traces générées dans un workflow métier. Elle
+> est à comparer aux ressources « AdverseEvent » et « AuditEvent ».
+
+- **CommunicationRequest (NM 2)**[^9] : cette ressource est utilisée
+  pour demander une action de communication entre un émetteur et des
+  récepteurs. Ces acteurs peuvent être des « patients », des
+  « practitioners », des « organizations », des « devices » et des
+  « related persons ». A la différence de la ressource
+  « communication », cette ressource ne représente pas un flot de
+  communication.
+
+> Cette ressource pourrait être utilisée pour déclencher la génération
+> d’une trace, qui sera ensuite concrétisée par l’utilisation de la
+> ressource « communication ».
+
+- **EventDefinition (NM 0)**[^10] : cette ressource est utilisée pour
+  décrire la structure et les données « réutilisables » d’un événement.
+  Cette ressource permet de décrire différents types d’événements. Elle
+  permet de décrire aussi quand un événement particulier peut
+  apparaître.
+
+> Cette ressource permet de véhiculer les données de description d’un
+> événement, ainsi que ses données de traçabilité : définition de
+> l’événement (et le lien vers cette définition) et toutes les
+> informations liées à la description de cet événement. Cette ressource
+> pourrait être utilisée pour structurer la description d’un événement.
+
+- **SearchParameter (NM 3)** : Cette ressource est définie pour décrire
+  les attributs d’un item de recherche qui peut ensuite être utilisé
+  dans une recherche ou un filtre associé à une ressource.
+
+> Cette ressource permet de décrire les paramètres d’une recherche :
+> description du paramètre de recherche, URL de description du
+> paramètre, les attributs associés au paramètre de recherche, les
+> attributs de description de la recherche (type, expression, xpath,
+> opérande), etc.
+
+En conclusion, ces différentes ressources peuvent permettre de choisir
+les ressources « génériques » qui pourraient être utilisées pour
+spécifier techniquement et de façon « générique » la « gestion des
+traces ».
+
+### Les interactions FHIR
+
+Le standard FHIR ne se limite pas à la description de ressources ; les
+interactions possibles entre les systèmes pour échanger et agir sur les
+ressources sont également décrites en termes d’API REST.
+
+Différents niveaux d’interactions sont possibles :
+
+- **Instance** (s’applique à une ressource en particulier)
+
+- **Type** (s’applique à un ensemble de ressources de même type)
+
+- **Système** (s’applique à l’ensemble du système)
+
+Les interactions qui pourront s’appliquer dans le cas « générique » de
+la « gestion des traces » sont les suivantes :
+
+- **Read** pour « consulter une trace ». Utilise la méthode HTTP GET.
+
+- **Create** pour « créer une trace ». Utilise la méthode HTTP POST.
+
+- **Search** pour « rechercher des traces ». Utilise la méthode HTTP
+  GET.
+
+Enfin, le corps des requêtes HTTP peut être formaté en XML, JSON ou RDF
+(seul le format TURTLE est supporté).
+
+### Synthèse
+
+Plusieurs ressources FHIR ont été identifiées comme pouvant être
+utilisées pour aider à représenter les classes de l’étude métier \[1\] :
+AdverseEvent, AuditEvent, Communication, CommunicationRequest,
+eventDefinition, SearchParameter.
+
+Le tableau ci-dessous reprend les classes identifiées dans l’étude
+métier \[1\] (en lignes) ainsi que chacune des ressources pertinentes
+étudiées dans ce document (en colonnes) de façon à vérifier l’adéquation
+des ressources FHIR avec le besoin métier. L’annexe 6.1 détaille la mise
+en correspondance entre les attributs de la classe « Evénement » et
+celles des ressources FHIR étudiées.
+
+<table style="width:100%;">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 15%" />
+<col style="width: 18%" />
+<col style="width: 16%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Nom Classe</th>
+<th style="text-align: center;">Nom attribut</th>
+<th style="text-align: center;">AdverseEvent</th>
+<th style="text-align: center;">AuditEvent</th>
+<th style="text-align: center;">Communication</th>
+<th style="text-align: center;">CommunicationRequest</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Trace</td>
+<td style="text-align: center;">identifiant</td>
+<td style="text-align: center;">id</td>
+<td style="text-align: center;">id</td>
+<td style="text-align: center;">id</td>
+<td style="text-align: center;">id</td>
+</tr>
+<tr>
+<td style="text-align: center;">SourceTrace</td>
+<td style="text-align: center;">identifiant</td>
+<td style="text-align: center;">Identifier</td>
+<td style="text-align: center;">source</td>
+<td style="text-align: center;">Identifier</td>
+<td style="text-align: center;">Identifier</td>
+</tr>
+<tr>
+<td rowspan="5" style="text-align: center;">Evénement</td>
+<td style="text-align: center;">typeEvenement</td>
+<td style="text-align: center;">Category</td>
+<td style="text-align: center;">type</td>
+<td style="text-align: center;">Category</td>
+<td style="text-align: center;">Category</td>
+</tr>
+<tr>
+<td style="text-align: center;">sousTypeEvement</td>
+<td style="text-align: center;">Event</td>
+<td style="text-align: center;">Subtype</td>
+<td style="text-align: center;">topic</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">occurence</td>
+<td style="text-align: center;">Date</td>
+<td style="text-align: center;">period.start</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Occurrence.occurenceDateTime</td>
+</tr>
+<tr>
+<td style="text-align: center;">declaration</td>
+<td style="text-align: center;">RecordedDate</td>
+<td style="text-align: center;">recorded</td>
+<td style="text-align: center;">Sent</td>
+<td style="text-align: center;">authoredOn</td>
+</tr>
+<tr>
+<td style="text-align: center;">description</td>
+<td style="text-align: center;">suspectEntity.causality</td>
+<td style="text-align: center;">outcomeDesc</td>
+<td style="text-align: center;">note</td>
+<td style="text-align: center;">note</td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: center;">ActeurEvenement</td>
+<td style="text-align: center;">identifiant</td>
+<td rowspan="2" style="text-align: center;">contributor / recorder</td>
+<td style="text-align: center;">agent.who.identifier</td>
+<td rowspan="2" style="text-align: center;">sender/ recipient</td>
+<td rowspan="2" style="text-align: center;">sender / recipient</td>
+</tr>
+<tr>
+<td style="text-align: center;">role</td>
+<td style="text-align: center;">Agent.role</td>
+</tr>
+<tr>
+<td rowspan="3" style="text-align: center;">ObjectEvenement</td>
+<td style="text-align: center;">identifiant</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">entity.what.identifier</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">type</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">entity.type</td>
+<td style="text-align: center;">reasonCode</td>
+<td style="text-align: center;">reasonCode</td>
+</tr>
+<tr>
+<td style="text-align: center;">contenu</td>
+<td style="text-align: center;">referenceDocument</td>
+<td style="text-align: center;">entity.what ou entity.query ou
+entity.detail</td>
+<td style="text-align: center;">Payload</td>
+<td style="text-align: center;">Payload</td>
+</tr>
+</tbody>
+</table>
+
+Tableau 1 Résumé des ressources FHIR
+
+D’après ce tableau, nous pouvons voir :
+
+- Que les ressources « AdverseEvent », « AuditEvent », « Communication »
+  et « CommunicationRequest » pourraient être utilisées pour spécifier
+  la ressource « générique trace »,
+
+> A noter que la ressource « AdverseEvent » contient une référence
+> obligatoire *subject* qui ne trouve pas son équivalent dans l’étude
+> métier et que les ressources « Communication » et
+> « CommunicationRequest » sont plutôt dédiées à l’échange d’information
+> et non pas à la gestion d’événements.
+
+Ce deuxième tableau présente le mapping entre les paramètres de
+recherche identifiés dans la spécification fonctionnelle et les critères
+de recherche relatifs à une ressource.
+
+|  | AdverseEvent | AuditEvent | Communication | CommunicationRequest |
+|----|:--:|:--:|:--:|:--:|
+| typeEvenement | Category | subtype | Category | Category |
+| sousTypeEvenement | Event | subtype |  |  |
+| occurence | Date |  |  | authored |
+| declaration | RecordedDate | date | Sent | occurrence |
+| acteurEvenement | Contributor / recorder | agent | Sender / Recipient | Sender / Recipient |
+| Autres paramètres | *A prendre en compte en fonction du besoin métier* | *A prendre en compte en fonction du besoin métier* | *A prendre en compte en fonction du besoin métier* | *A prendre en compte en fonction du besoin métier* |
+
+Tableau 2 Mapping des critères de recherche
+
+FHIR décrit également une API REST réutilisant les méthodes HTTP,
+celle-ci sera utilisée dans les scénarios ci-après pour permettre
+l’interaction entre les différents acteurs impliqués dans le cas d’usage
+« générique » de la « gestion des traces ».
+
+### Exemple de spécification du workflow générique
+
+#### Créer des traces
+
+Ce scénario décrit la demande de création d’une trace en utilisant la
+ressource « générique » « event » (qui peut être « AdverseEvent »,
+« AuditEvent » ou « Communication » ; le choix n’est pas encore fait à
+cette étape d’analyse).
+
+La figure ci-dessous illustre le scénario.
+
+
+<div style="text-align: center; display: block; clear: both;">
+  <img src="ns_image5.png" alt="Gestion des traces" style="display:block; margin:auto;">
+</div>
+
+
+Ce scénario se décompose en deux flux :
+
+- **Flux 01 « TransmissionTrace »** : L’acteur « source de traces »
+  envoie par la méthode POST la demande de traitement de création d’une
+  trace constituée d’une ressource générique (transaction) qui
+  contient :
+
+  - **Les attributs de l’événement**
+
+  - **La description détaillée de l’événement au format non structuré**
+
+  - **La description détaillée de l’événement au format structuré**
+
+- **Le Flux 01bis** **« RetourTransmissionTrace »** : ce flux n’est pas
+  considéré dans cette étude. Il n’est donc pas décrit.
+
+#### Consulter une trace
+
+Ce scénario décrit la demande de consultation d’une trace en utilisant
+la ressource « générique » « event » (qui peut être « AdverseEvent »,
+« AuditEvent » ou « Communication » ; le choix n’est pas encore fait à
+cette étape d’analyse).
+
+La figure ci-dessous illustre le scénario.
+
+<div style="text-align: center; display: block; clear: both;">
+  <img src="ns_image6.png" alt="Gestion des traces" style="display:block; margin:auto;">
+</div>
+Ce scénario se décompose en deux flux :
+
+- **Flux 02 « ConsultationTrace »** : L’acteur « consommateur de
+  traces » envoie par la méthode GET une demande de consultation d’une
+  trace, en passant l’identifiant de la trace en paramètre. Le paramètre
+  d’interrogation est l’identifiant de la ressource « event » pour
+  laquelle l’utilisateur recherche la « trace ».
+
+- **Flux 03 « ReponseConsultationTrace »** : L’acteur « gestionnaire des
+  traces » envoie une réponse HTTP OK (code 200) avec un corps de
+  message présentant une ressource « event » qui contient le contenu de
+  la trace correspondant à l’identifiant passé en paramètre.
+
+#### Rechercher des traces
+
+Ce scénario décrit la demande de recherche de traces en utilisant la
+ressource « générique » « event » (qui peut être « AdverseEvent »,
+« AuditEvent » ou « Communication » ; le choix n’est pas encore fait à
+cette étape d’analyse).
+
+La figure ci-dessous illustre le scénario.
+
+<div style="text-align: center; display: block; clear: both;">
+  <img src="ns_image7.png" alt="Gestion des traces" style="display:block; margin:auto;">
+</div>
+Le scénario de recherche de traces est décomposé en deux flux :
+
+- **Flux 04 « RechercheTraces »** : L’acteur « consommateur de traces »
+  envoie par la méthode GET une demande de recherche de traces, en
+  passant en paramètre les critères de recherche.
+
+- **Flux 05 « ReponseRechercheTraces »** : L’acteur « gestionnaire de
+  traces » envoie une réponse HTTP OK (code 200) avec un corps de
+  message présentant, dans la ressource « bundle », la liste des traces
+  répondant aux critères de recherche.
+
+### Conclusion
+
+Le standard FHIR peut permettre de spécifier une gestion « générique »
+de traces. Néanmoins une analyse de profiles IHE et autres standards
+existants est nécessaire avant de prendre une décision définitive
+d’utiliser FHIR.
+
+## Les profils IHE ATNA et son option RESTful ATNA
+
+Cette section décrit succinctement les profils IHE ATNA et son option
+RESTful ATNA.
+
+### Profil IHE ATNA
+
+#### Description
+
+Le profil ATNA \[5\] « Audit Trail and Node Authentication » spécifie
+les caractéristiques d’un nœud sécurisé (« Secure Node ») déployé dans
+un système d’information de santé. Ce profil a été spécifié avec la
+possibilité de l’étendre avec des spécificités de domaines métier sous
+forme d’option. C’est par exemple le cas avec l’option « Radiology Audit
+Trail Option » et le profil IHE SOLE (« Standardized Operational Logs
+and Events », cf. chapitre 3.5). Le profil ATNA définit quatre acteurs
+« Audit Record Repository », « Audit Record Forwarder », « Secure
+Node », « Secure Application » et deux transactions « Authenticate Node
+\[ITI-19\] » et « Record Audit Event \[ITI-20\] ». ATNA spécifie des
+composants, briques de base d’un système de sécurité et de protection de
+la vie privée :
+
+- « Node Authentication »
+
+- « Access Control »
+
+- « Event Logging ‘Audit) »
+
+- « Secure Communications »
+
+La transaction « Authenticate Node \[ITI-19\] » décrit
+l’authentification mutuelle de nœuds sécurisés ; ce n’est pas le sujet
+principal de cette analyse de normes et standards.
+
+La transaction « Record Audit Event \[ITI-20\] » décrit comment un nœud
+sécurisé crée un rapport d’évènement et le transmet à l’acteur « Audit
+Record Repository ». Cette transaction est basée sur un certain nombre
+de standards sous-jacents comme TLS, DICOM, XML et surtout syslog (avec
+des extensions pour la couche transport comme « Transmission of Syslog
+Messages over UDP »).
+
+Le standard « syslog » (RFC 5242) ne spécifie pas la structure du
+message (« enregistrement d’audit »), c’est pourquoi le profil ATNA
+contraint l’utilisation du schéma DICOM et de HL7 pour spécifier le
+contenu du message. DICOM a défini un schéma de base pour le rapport
+d’événement et des descriptions de base pour les événements, notamment
+partie 15, annexe A.5 « Audit Trail Message Format Profile ». IHE a
+étendu ces spécifications pour définir des événements spécifiques pour
+la sécurité et la protection de la vie privée.
+
+#### Maturité et adoption
+
+Le profil IHE ATNA, dans la version 16.0 du framework ITI, datant du 12
+juillet 2019, est en « Final Text ». A la date de la rédaction de ce
+document, ce profil est largement implémenté dans plus de 200
+produits[^11]. Ce profil est testé dans tous les connectathons européens
+et américains depuis 2005[^12].
+
+#### Synthèse
+
+Le profil ATNA se base sur les standards syslog et DICOM pour spécifier
+les messages de sécurité échangées lors de la transaction « Record Audit
+Event \[ITI-20\] ». Cette démarche pourrait être utilisée pour spécifier
+les messages échangés dans le volet « générique » « gestion des
+traces ». Ce pourrait notamment permettre de mutualiser les
+infrastructures de gestion de traces comme « l’Audit Record
+Repository ».
+
+### Option RESTful ATNA
+
+#### Description
+
+Resful ATNA \[6\]  (Query and Feed) est un supplément de « l’IT
+Infrastructure Framework ». Il étend les fonctionnalités du profil ATNA
+en ajoutant des opérations RESTful, basées sur FHIR, pour soumettre et
+retrouver des enregistrements d’audit. Le profil IHE RESTful ATNA ajoute
+au profil IHE ATNA l’acteur « Audit Consummer » et deux transactions
+« Retreive ATNA Audit Event \[ITI-81\] » et « Retrieve Syslog Event
+\[ITI-82\] ». Ce profil étend aussi la transaction « Record Audit Event
+\[ITI-20\] » de la façon suivante :
+
+- « Send Audit Event Message – Syslog Interaction » : audit utilisant le
+  protocole syslog
+
+- « Send Audit Resource Request Message – FHIR Feed Interaction » :
+  audit basé sur le protocole RESTful avec envoi d’une seule ressource
+  FHIR « AuditEvent »
+
+- « Send Audit Bundle Request Message – FHIR Feed Interaction » : audit
+  basé sur le protocole RESTful avec l’envoi d’un bundle de ressource
+  FHIR « AuditEvent ».
+
+La transaction « Retrieve ATNA Audit Event \[ITI-81\] » est conforme à
+l’opération « search » FHIR, i.e. une requête « http GET » avec le type
+de ressource « AuditEvent » et les paramètres de recherche FHIR associés
+à la ressource, envoyée par l’acteur « Audit Consumer ». Cela confirme
+l’utilisation de FHIR décrit dans le chapitre 3.1.6.3 de ce document. La
+réponse à la requête « http GET » retourne un bundle de ressources
+« AuditEvent ».
+
+La transaction « Retrieve Syslog Event \[ITI-82\] » est une requête
+« http GET », avec les paramètres de recherche mappés sur les metadata
+syslog, envoyée par l’acteur « Audit Consumer ». La réponse à la requête
+est un message « Syslog Event Response » dont la structure est spécifiée
+dans l’option RESTful ATNA (comme la structure de l’événement qui est
+spécifié en DICOM – AuditMessage).
+
+Un mapping est fourni pour montrer la relation entre les champs de la
+ressource FHIR « AuditEvent » et la structure DICOM « AuditMessage ».
+
+#### Maturité et adoption
+
+L’option IHE RESTful ATNA, dans sa version 3.1, datant du 15 août 2019,
+est en « Trial Implementation ». A la date de la rédaction de ce
+document, aucun produit n’a été déclaré[^13] comme implémentant l’option
+RESTful ATNA. Ce profil n’a pas été testé lors de connectathons[^14].
+Néanmoins, le Ministère de la Santé Suisse a spécifié le profil ATC,
+basé sur RESTful ATNA (transaction ITI-81 uniquement). Ce profil est
+testé lors de projectathons en Suisse.
+
+Quelques « open issues », comme l’alignement complet entre la ressource
+FHIR « AuditEvent » et tous les champs nécessaires dans les messages
+syslog ne sont pas encore traitées et seront prises en compte dans la
+« Release 5 » de FHIR. Néanmoins, il semble intéressant de s’inspirer de
+ce profil pour spécifier techniquement le volet « générique gestion des
+traces ».
+
+#### Synthèse
+
+L’option RESTful ATNA complète le profil ATNA avec les transactions
+« Retrieve ATNA Audit Event \[ITI-81\] » (basée sur FHIR) et « Retrieve
+Syslog Event \[ITI-82\] » (basée sur syslog). Cette extension et donc ce
+profil correspond exactement aux attentes du volet « générique gestion
+des traces ».
+
+## Les profils IHE mACM / ACM
+
+Cette section décrit succinctement les profils IHE mACM / ACM.
+
+### Profil IHE mACM
+
+#### Description
+
+Le profil mACM \[7\] – « mobile Alert Communication Management » définit
+des composants d’infrastructure pour envoyer des alertes, sous forme de
+texte non structuré et fournit un mécanisme de feedback pour connaitre
+le statut d’une alerte. mACM se base sur les deux ressources FHIR
+« Communication (NM 2) et CommunicationRequest (NM 2). Ce profil
+supporte les extensions permettant d’adresser différents workflows
+métier. mACM définit deux acteurs « Alert reporter » et « Alert
+Aggregator » et deux transactions « Mobile Report Alert \[ITI-84\]),
+« Query for Alert Status \[ITI-85\] ». mACM utilise la méthode CREATE de
+l’API RESTful FHIR pour créer une alerte et utilise la méthode SEARCH de
+l’API RESTful pour consulter le statut des alertes.
+
+L’acteur « Alert reporter » peut être à l’origine d’une alerte ou
+relayer des alertes provenant de différentes sources. Dans ce dernier
+cas, l’acteur assure l’interopérabilité avec l’acteur « Alert
+Aggregator ». L’alerte contient les informations concernant le
+destinataire de l’alerte.
+
+Les réponses aux requêtes « Mobile Report Alert » et « Query for Alert
+Status » peuvent référencer des ressources FHIR comme Practitionner,
+Patient, Group, Organization and Location.
+
+Le profil mACM peut être utilisé dans un environnement qui utilise aussi
+le profil IHE ACM « Alert Communication Management ». Cette information
+est intéressante car c’est aussi le besoin du volet générique « gestion
+des traces » de pouvoir adresser un contexte général englobant des
+implémentations mobiles ou non.
+
+Les composants d’infrastructure décrits dans le profil mACM peuvent être
+utilisés dans différents cas d’utilisation métier comme par exemple la
+gestion des alertes dans un réseau contrôlé de prestations de soins. Des
+idées peuvent être repris de ce profil pour spécifier techniquement le
+volet générique « Gestion des traces », notamment l’utilisation des
+ressources « Communication » et « CommunicationRequest » et les méthodes
+« CREATE » et « SEARCH » de l’API FHIR.
+
+La spécification du profil mACM montre aussi comment ce profil peut être
+utilisé groupé au profil mCSD, qui agit comme registre des
+professionnels de santé. Cela permet d’indiquer les sources et
+destinataires des alertes, en requêtant le registre des professionnels
+de santé. Il en est de même pour les interactions entre le profil mACM
+et les profils PDQ/PDQm, qui agissent comme registre de patients pour
+indiquer et consulter les détails sur les patients concernés (comme les
+coordonnées postales, téléphoniques, etc.).
+
+#### Maturité et adoption
+
+Le profil IHE mACM, dans sa version 3.1, datant du 5 décembre 2019, est
+en « Trial Implementation ». Il est basé sur FHIR R4, utilisant des
+ressources de maturité 2. A la date de la rédaction de ce document, un
+seul produit a été déclaré[^15] comme implémentant le profil mACM. Ce
+profil a été testé lors de trois connectathons américains (2016, 2017 et
+2018)[^16].
+
+#### Synthèse
+
+Le profil mACM spécifie comment gérer (transmettre, consulter l’état)
+des traces qui peuvent être générées lors d’un workflow métier. Ce
+profil peut donc apporter des idées pour spécifier le volet générique
+« Gestion des traces ». Le point intéressant aussi de ce profil est
+qu’il peut être utilisé dans un environnement dans lequel le profil IHE
+ACM est aussi implémenté, assurant ainsi une interopérabilité globale de
+gestion des alertes.
+
+#### Description détaillée
+
+Ces informations détaillées, présentes dans le profil mACM, peuvent
+aider à spécifier le profil générique « Gestion des traces ».
+
+La transaction « Mobile Report Alert » envoyée par l’acteur « Alert
+Report » est spécifiée en FHIR par l’utilisation de la commande CREATE
+pour la ressource CommunicationRequest.
+
+FHIR CREATE CommunicationRequest REQUEST
+
+FHIR CREATE CommunicationRequest RESPONSE
+
+La transaction est générée conformément à des règles métier (qui sont
+hors scope du profil mACM).
+
+La transaction « Query for Alert Status » est spécifiée en FHIR par
+l’utilisation de l’opération SEARCH via un http GET, en indiquant les
+critères de recherche spécifiés dans les ressources Communication et
+CommunicationRequest.
+
+### Profil IHE ACM
+
+Le profil « Alert Communication Management » \[8\]  définit la
+communication d’alarmes entre sous-systèmes. ACM définit trois acteurs
+« Alarm Reporter », « Alarm Manager » et « Alarm Communicator ».et 4
+transactions « Report Alarm (PCD-04) », « Report Alarm Status
+(PCD-05) », « Disseminate Alarm (PCD-06) », « Report Dissemination Alarm
+Status (PCD-07).
+
+L’acteur « Alert Reporter » est à l’origine des alertes. Il envoie les
+alertes vers les acteurs « Alert Manager » et « Alert Consumer ». La
+façon de représenter les alertes est décrite dans le document ICE
+60601-1-8[^17]. Il peut recevoir optionnellement une transaction
+« Report Alert Status » de la part de l’acteur « Alert Manager ».
+
+L’acteur « Alert Manager » reçoit les alertes, les gère et les transmet
+à l’acteur « Alert Communicator ». Il peut envoyer optionnellement une
+transaction « Report Alert Status » à l’acteur « Alert Reporter ».
+
+L’acteur « Alert Consumer » reçoit une alerte depuis l’acteur « Alert
+Reporter ».
+
+L’acteur « Alert Communicator » reçoit des alertes provenant de l’acteur
+« Alert Manager ».
+
+Les transactions échangées sont au format HL7v2.
+
+### Maturité et adoption
+
+Le profil IHE ACM, dans sa version 1.3, datant du 16 août 2012, est en
+« Trial Implementation ». A la date de la rédaction de ce document,
+douze produits ont été déclaré[^18] comme implémentant le profil ACM. Ce
+profil a été testé à 17 reprises lors d’un connectathon (Europe 2014,
+Japon 2014-2016, 2018, Nord-Amérique 2007-2020)[^19].
+
+### Synthèse
+
+Le profil ACM spécifie comment gérer (transmettre, consulter l’état) des
+traces qui peuvent être générées lors d’un workflow métier. Ce profil
+peut donc apporter des idées pour spécifier le volet générique « Gestion
+des traces ». Le point intéressant aussi de ce profil est qu’il peut
+être utilisé dans un environnement dans lequel le profil IHE mACM est
+aussi implémenté, assurant ainsi une interopérabilité globale de gestion
+des alertes.
+
+## Le profil IHE PLT
+
+### Description
+
+Le profil PLT \[9\]  « Patient Location Tracking » définit les
+spécifications d’interopérabilité pour retrouver la localisation de
+patients. Ce profil définit trois acteurs : « Patient Location Tracking
+Manager », « Patient Location Tracking Supplier » et « Patient Location
+Tracking Consumer » et deux transactions « Patient Location Tracking
+Feed » et « Patient Location Tracking Query ».
+
+L’acteur « Patient Location Tracking Manager » stocke les traces de
+localisation de patients et offre un service de consultation.
+
+L’acteur « Patient Location Tracking Supplier » notifie la localisation
+de patients à l’acteur « Patient Location Tracking Manager ».
+
+L’acteur « Patient Location Tracking Consumer » requête la localisation
+d’un patient auprès de l’acteur « Patient Location Tracking Manager »,
+qui fournit la localisation et la date de l’événement.
+
+La transaction « Patient Location Tracking Feed \[ITI-76\] » est
+spécifiée en HL7v2 avec deux messages ADT :
+
+- A09 – Patient departing from temporary location
+
+- A10 – Patient arriving to temporary location
+
+La transaction “Patient Location Tracking Consumer \[ITI-77\] » est
+spécifiée en HL7v2 avec le trigger d’événement :
+
+- ZV3 – Patient Location Tracking Query Request
+
+Les informations suivantes sont véhiculées dans le message de trace :
+
+- Event
+
+  - EventID
+
+  - EventActionCode
+
+  - EventDateTime
+
+  - EnvetOutcomeIndicator
+
+  - EventTypeCode
+
+- Source (Patient Location Tracking Supplier)
+
+- Destination (Patient Location Tracking Manager
+
+- Audit Source (Patient Location Tracking Supplier)
+
+- Patient
+
+### Maturité et adoption
+
+Le profil IHE PLT, dans sa version 1.2, datant du 31 août 2015, est en
+« Trial Implementation ». A la date de la rédaction de ce document,
+aucun produit n’a été déclaré[^20] comme implémentant le profil PLT. Ce
+profil n’a jamais été testé lors d’un connectathon[^21].
+
+### Synthèse
+
+Ce profil IHE montre comment gérer un type de trace (« localisation des
+patients ») via des transactions HL7. Néanmoins, ce profil n’a jamais
+été implémenté ni testé.
+
+## Le profil IHE SOLE
+
+### Description
+
+Le profil SOLE \[10\] « Standardized Operational Log of Events » définit
+les spécifications d’interopérabilité pour enregistrer et collecter des
+événements opérationnels. Il définit un moyen d’échanger de
+l’information concernant des workflows métier, qui peut être collectée,
+analysée et affichée en utilisant des méthodes standards. C’est un
+supplément du « Radiology  technical framework». Ce profil définit trois
+acteurs « Event Reporter », « Event Consumer » et « Event Repository »
+et quatre transactions « Record Audit Event \[ITI-20\] », « Transfer
+multiple events \[RAD-124\] », « Retrieve syslog event \[ITI-82\] » et
+« Retrieve ATNA audit event \[ITI-81\] ».
+
+L’acteur « Event reporter » doit aussi implémenter les transactions de
+l’acteur « Consistent Time / Time Client ».
+
+Le profil IHE SOLE reprend les transactions d'accès aux traces définies
+par le supplément RESTful ATNA ,avec comme complément la requête
+« Transfer Multiple Events \[RAD-124\] », celle-ci permettant de
+transmettre plusieurs événements, si par exemple, la communication s’est
+interrompue entre les acteurs « Event Reporter » et « Event
+Repository ».
+
+Les événements SOLE et les événements ATNA peuvent être gérés par le
+même « Event Repository ». Dans ce cas, cet acteur devra offrir des
+fonctionnalités de filtrage. Pour les transactions au format syslog
+(« Retrieve syslog event \[ITI-82\] »), le champ syslog APP-NAME est
+spécifié à la valeur « IHE+SOLE ». Le champ MSG-ID est aussi spécifique
+avec des codes d’événements SOLE.
+
+### Maturité et adoption
+
+Le profil IHE SOLE, dans sa version 1.2, datant du 27 Juillet 2018, est
+en « Trial Implementation ». A la date de la rédaction de ce document,
+aucun produit n’a été déclaré[^22] comme implémentant le profil SOLE. Ce
+profil n’a jamais été testé lors d’un connectathon[^23].
+
+### Synthèse
+
+Le profil IHE SOLE n’a jamais été implémenté. Néanmoins, son approche
+est intéressante car c’est une extension des profils ATNA / RESTful ATNA
+(ajout de la transaction RAD-124 et profilage des attributs des
+événements d’audit pour les adapter au contexte métier de la
+radiologie). Cette démarche peut donc être utilisée pour rendre
+« générique » le volet « gestion des traces » et le profilage se fera
+lors de la prise en compte des besoins d’interopérabilité métier.
+
+## Le standard DICOM
+
+Le but de cette étude « Normes & Standards » n’est pas d’analyser en
+détail le standard DICOM, mais de se focaliser sur la partie « DICOM
+PS3.15 – Security and System Management Profiles », annexe « A.5 – Audit
+Trail Message Format Profile » \[11\]. En effet, cette annexe spécifie
+la structure d’un message d’audit qui est reprise dans les profils IHE
+ATNA, l’option RESTful ATNA et SOLE. Cette structure est aussi adéquate
+pour les besoins du volet « générique gestion des traces ». Il est ainsi
+possible de faire un mapping entre les concepts et les attributs des
+classes de l’étude métier « générique gestion des traces » et les
+attributs d’un message d’audit DICOM.
+
+<table style="width:77%;">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 19%" />
+<col style="width: 21%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr>
+<th rowspan="2" style="text-align: center;">Nom Classe</th>
+<th rowspan="2" style="text-align: center;">Nom attribut</th>
+<th colspan="2" style="text-align: center;">DICOM</th>
+</tr>
+<tr>
+<th style="text-align: center;"><strong>Elément du schéma
+AuditMessage</strong></th>
+<th style="text-align: center;"><strong>Sous-Elément</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Trace</td>
+<td style="text-align: center;">identifiant</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">SourceTrace</td>
+<td style="text-align: center;">identifiant</td>
+<td style="text-align: center;">SourceAuditIdentification</td>
+<td style="text-align: center;">AuditEnterpriseSiteId</td>
+</tr>
+<tr>
+<td rowspan="5" style="text-align: center;">Evénement</td>
+<td style="text-align: center;">typeEvenement</td>
+<td rowspan="5" style="text-align: center;">EventIdentification</td>
+<td style="text-align: center;">EventID</td>
+</tr>
+<tr>
+<td style="text-align: center;">sousTypeEvement</td>
+<td style="text-align: center;">EventTypeCode</td>
+</tr>
+<tr>
+<td style="text-align: center;">occurence</td>
+<td style="text-align: center;">EventDateTime</td>
+</tr>
+<tr>
+<td style="text-align: center;">declaration</td>
+<td style="text-align: center;">Possibilité utiliser le champ
+« TIMESTAMP » du protocole syslog</td>
+</tr>
+<tr>
+<td style="text-align: center;">description</td>
+<td style="text-align: center;">EventOutcomeDescription</td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: center;">ActeurEvenement</td>
+<td style="text-align: center;">identifiant</td>
+<td rowspan="2" style="text-align: center;">ActiveParticipant</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">role</td>
+<td style="text-align: center;">RoleIdCode</td>
+</tr>
+<tr>
+<td rowspan="3" style="text-align: center;">ObjectEvenement</td>
+<td style="text-align: center;">identifiant</td>
+<td rowspan="3"
+style="text-align: center;">ParticipantObjectIdentification</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">type</td>
+<td style="text-align: center;">ParticipantObjectTypeCode</td>
+</tr>
+<tr>
+<td style="text-align: center;">contenu</td>
+<td style="text-align: center;"><p>ParticipantObjectDetail.value</p>
+<p>ou ParticipantObjectQuery</p>
+<p>ou ParticipantObjectID</p></td>
+</tr>
+</tbody>
+</table>
+
+Tableau 3 Mapping DICOM avec les concepts de l’étude métier
+
+Cela confirme l’idée de s’inspirer du profil IHE ATNA, de son option
+RESTful ATNA et du profil SOLE pour spécifier techniquement la volet
+« générique gestion des traces ».
+
+## Le standard GS1
+
+### Description
+
+GS1 \[12\] : GS1 – Global Standards 1 est un organisme mondial qui
+normalise des méthodes de codage utilisées dans les chaines logistiques,
+indépendamment du domaine métier. Le but est d’assister les
+organisations et les industries dans la spécification, la conception et
+l’implémentation de systèmes de traçabilité basés le système et les
+standards GS1. GS1 se base sur la définition normative de la
+« traçabilité » : « *Traceability is the ability to trace the history,
+application use and location of an item or its characteristics through
+recorded identification data \[ISO 9001 :2015\]* ». GS1 a publié un
+certain nombre de standards pour spécifier les échanges en logistique,
+en mettant en avant l’importance de l’interopérabilité. Des
+spécifications sont dédiées au monde de la santé
+(<https://www.gs1.org/industries/healthcare>). Deux standards GS1 sont
+dédiés à la gestion des traces :
+
+- GTS2 : GS1 Global Traceability Standard - GS1's framework for the
+  design of interoperable traceability systems for supply chains,
+  notamment avec l’introduction du concept « Critical Tracking Events
+  (CTEs) »
+
+- EPCIS : Electronic Product Code Information Services
+
+GTS2 a pour but d’aider les industriels à spécifier et implémenter des
+systèmes basés sur les standards GS1. Tout se base sur les aspects de
+gestion de données de traçabilité suivant les cinq dimensions : « who,
+what, when, where, why ». Ce concept est repris dans FHIR avec le
+pattern « fivews », pour aider les groupes de travail à définir les
+ressources de façon consistante. Le standard GTS2 est générique et
+indépendant du secteur d’activité et du produit ; il est aussi
+indépendant des technologies sous-jacentes. Il est basé sur les
+principes fondamentaux : Identifier – Capturer – Partager.
+
+Le point important mis en avant par GS1 est que la fonctionnalité
+centrale d’un système de traçabilité est l’identification des objets
+tracés.
+
+Le standard EPCIS spécifie les fonctionnalités et les structures de
+données pour créer et partager la visibilité sur les événements intra et
+inter-entreprises. Le standard EPCIS repose sur deux types de données :
+« Event data » et « Master data », codées en XML. « Event Data » sont
+gérées au cours d’un processus métier ; « Master data » sont des données
+pour compléter le contexte et supporter l’interprétation des données
+« Event data ».
+
+<div style="text-align: center; display: block; clear: both;">
+  <img src="ns_image8.png" alt="Gestion des traces" style="display:block; margin:auto;">
+</div>
+
+Figure 1 « Event data » et « Master data » (source \[2\], § 6.1)
+
+Les données « Event data » sont transmises via les interfaces « Capture
+and Query » d’EPCIS. Quatre mécanismes sont fournis pour transmettre les
+données « Master data » :
+
+- Master Data Query : requête de données via l’interface EPCIS Query
+
+- ILMD : « Master data » intégrées directement dans un événement
+
+- Header of EPCIS document : document contenant un ensemble d’événements
+  avec l’inclusion de « Master data »
+
+- EPCIS master data document : document contenant des « Master data »
+
+GS1 dispose de méthodes pour étendre les spécifications EPCIS (ajout
+d’un type d’événement, ajout d’un nouveau champ dans un événement, ajout
+d’un nouveau type de vocabulaire, ajout d’un nouvel attribut « master
+data » ou ILMD, ajout d’un nouvel élément de vocabulaire).
+
+EPCIS définit 6 types d’événements :
+
+- EPCISEvent : événement générique
+
+- ObjectEvent : événement en lien avec un ou plusieurs objets digitaux
+
+- AggregationEvent : événement en lien avec l’agrégation physique de
+  plusieurs objets
+
+- QuantityEvent : événement en lien avec un certain nombre d’objets
+  partageant la même classe EPC (Electronic Product Code)
+
+- TransactionEvent : événement dans lequel un ou plusieurs objets sont
+  associés avec une ou plusieurs transactions métier
+
+- TransformationEvent : événement dans lequel des objets « entrants »
+  sont transformés en objets « sortants »
+
+Le « TransactionEvent » semble le plus se rapprocher du besoin métier
+« générique gestion des traces ».
+
+<table style="width:100%;">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 34%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr>
+<th colspan="2" style="text-align: center;">Eléments métier</th>
+<th style="text-align: center;">TransactionEvent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Trace</td>
+<td style="text-align: center;">identifiant</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">SourceTrace</td>
+<td style="text-align: center;">TransactionEvent.Source.source</td>
+<td style="text-align: center;">TransactionEvent.Source.source</td>
+</tr>
+<tr>
+<td rowspan="5" style="text-align: center;">Evénement</td>
+<td style="text-align: center;">typeEvenement</td>
+<td style="text-align: center;">eventID</td>
+</tr>
+<tr>
+<td style="text-align: center;">sousTypeEvement</td>
+<td style="text-align: center;">TransactionEvent.action</td>
+</tr>
+<tr>
+<td style="text-align: center;">occurence</td>
+<td style="text-align: center;">eventTime</td>
+</tr>
+<tr>
+<td style="text-align: center;">declaration</td>
+<td style="text-align: center;">recordTime</td>
+</tr>
+<tr>
+<td style="text-align: center;">description</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: center;">ActeurEvenement</td>
+<td style="text-align: center;">identifiant</td>
+<td rowspan="2"
+style="text-align: center;">TransactionEvent.Source.source /
+TransactionEvent.Desitnation.dest</td>
+</tr>
+<tr>
+<td style="text-align: center;">role</td>
+</tr>
+<tr>
+<td rowspan="3" style="text-align: center;">ObjectEvenement</td>
+<td style="text-align: center;">identifiant</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">type</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">contenu</td>
+<td style="text-align: center;">Master data</td>
+</tr>
+</tbody>
+</table>
+
+Tableau 4 Mise en correspondance avec l’événement « TransactionEvent »
+
+EPCIS définit trois interfaces pour la gestion des traces :
+
+- EPCIS Capture Interface : collecte des événements
+
+- EPCIS Query Control Interface : consultation synchrone/asynchrone
+  d’événements
+
+- EPCIS Query Callback Interface : consultation d’événements (dans le
+  cas d’une requête asynchrone)
+
+EPCIS spécifie aussi l’utilisation optionnelle de fonctionnalités
+d’authentification et d’autorisation de gestion des événements.
+
+L’interface « Capture » est implémentée soit via une queue de messages
+(point à point, publish/subscribe) soit en XML over http (POST).
+
+L’interface « Query Control Interface » est implémentée soit en SOAP
+over http, soit en XML over AS2 (Application Statement 2 – RFC4130).
+
+L’interface « Query Callback Interface » est implémentée soit en XML
+over http, soit en XML over HTTPS, soit en XML over AS2.
+
+Il existe différents standards GS1 dans le domaine de la santé dont
+« Automatic Identification and Data Capture Healthcare Implementation
+Guideline » et « GS1 Global Traceability Standard for Healthcare ». Ce
+dernier standard spécifie la gestion des traces dans le domaine de la
+santé, à partir de processus et exigences métier puis sous forme de cas
+d’utilisation, reprenant l’enregistrement et la consultation de traces.
+
+### Maturité et adoption
+
+GS1 a été fondé en 1974. GS1 est international avec des initiatives
+nationales dans différents pays ; GS1 est présent dans plus de 100 pays.
+
+GS1 est l’organisme central pour la création de codes-barres.
+
+GS1 est présent dans la revente, la santé, le transport et la
+logistique, le service alimentaire et les industries techniques.
+
+GS1 dispose aussi d’un processus de gestion des standards GSMP (Global
+Standards Management Process).
+
+Avant de commencer à échanger des données via GS1, il faut suivre
+quelques contraintes techniques, comme la formalisation technique des
+données échangées (qui peut se faire sous la forme d’un « interchange
+Agreement » et la réalisation d’une phase de tests.
+
+Il existe aussi un programme de conformité : GTC (Global Traceability
+Conformance Programme) et des publications de livres de références (par
+exemple GS1 Healthcare Reference Book 2016-2017).
+
+GS1 est donc mature et semble être adopté dans différents pays.
+
+### Synthèse
+
+GS1 est un ensemble de standards utilisés pour tracer la gestion
+d’objets dans différents domaines métier. GS1 spécifie de façon
+générique la gestion de ces traces et l’instancie ensuite dans
+différents domaines métier, comme dans la santé.
+
+GS1 est largement utilisé au niveau international, notamment via son
+service de gestion des codes d’identification.
+
+Ce standard peut être analysé lors de la spécification technique
+« gestion des traces » pour s’assurer que certaines informations
+véhiculées par ce standard le seront bien aussi dans les spécifications
+techniques.
+
+## Le standard Syslog
+
+### Description
+
+Syslog \[13\] est un standard (RFC 5424[^24]) qui spécifie la structure
+et l’enregistrement de messages de traces. Les implémentations de syslog
+sont basées sur une architecture « client – serveur ».
+
+Syslog est basé sur une architecture en trois couches :
+
+- « Syslog content » : gestion des informations contenues dans un
+  message syslog
+
+- « Syslog application » : génération, interprétation, routage et
+  stockage des messages syslog
+
+- « Syslog transport » : transport des messages
+
+On peut considérer 5 acteurs différents :
+
+- « originator », « collector » et « relay » qui se positionnent au
+  niveau « Syslog application »
+
+- « transport sender » et « transport receiver » qui se positionnent au
+  niveau « Syslog transport »
+
+Le standard syslog (RFC 5424) ne spécifie aucune couche pour le
+protocole de transport. D’autres standards (comme RFC 5426 –
+Transmission of syslog messages over UDP, RFC 6587 – transmission of
+syslog messages over TCP) le font. Néanmoins, le standard syslog (RFC
+5424) impose que les implémentations supportent une couche de transport
+basée sur TLS (RFC 5425).
+
+Le standard syslog (RFC 5424) spécifie la structure de l’entête d’un
+message qui est échangé entre le client et le serveur, sous forme de
+grammaire (cf. ci-dessous). Par contre, la structure du message de trace
+(« paylog ») n’est pas spécifiée. C’est pourquoi les profils IHE ATNA et
+son option RESTful ATNA (feed & query syslog) et SOLE se basent sur
+DICOM pour spécifier la structure de la trace à enregistrer.
+
+SYSLOG-MSG = HEADER SP STRUCTURED-DATA \[SP MSG\]
+
+HEADER = PRI VERSION SP TIMESTAMP SP HOSTNAME
+
+SP APP-NAME SP PROCID SP MSGID
+
+PRI = "\<" PRIVAL "\>"
+
+PRIVAL = 1\*3DIGIT ; range 0 ..
+[191](https://tools.ietf.org/html/rfc5424#page-191)
+
+VERSION = NONZERO-DIGIT 0\*2DIGIT
+
+HOSTNAME = NILVALUE / 1\*255PRINTUSASCII
+
+APP-NAME = NILVALUE / 1\*48PRINTUSASCII
+
+PROCID = NILVALUE / 1\*128PRINTUSASCII
+
+MSGID = NILVALUE / 1\*32PRINTUSASCII
+
+TIMESTAMP = NILVALUE / FULL-DATE "T" FULL-TIME
+
+FULL-DATE = DATE-FULLYEAR "-" DATE-MONTH "-" DATE-MDAY
+
+DATE-FULLYEAR = 4DIGIT
+
+DATE-MONTH = 2DIGIT ; 01-12
+
+DATE-MDAY = 2DIGIT ; 01-28, 01-29, 01-30, 01-31 based on
+
+; month/year
+
+FULL-TIME = PARTIAL-TIME TIME-OFFSET
+
+PARTIAL-TIME = TIME-HOUR ":" TIME-MINUTE ":" TIME-SECOND
+
+\[TIME-SECFRAC\]
+
+TIME-HOUR = 2DIGIT ; 00-23
+
+TIME-MINUTE = 2DIGIT ; 00-59
+
+TIME-SECOND = 2DIGIT ; 00-59
+
+TIME-SECFRAC = "." 1\*6DIGIT
+
+TIME-OFFSET = "Z" / TIME-NUMOFFSET
+
+TIME-NUMOFFSET = ("+" / "-") TIME-HOUR ":" TIME-MINUTE
+
+STRUCTURED-DATA = NILVALUE / 1\*SD-ELEMENT
+
+SD-ELEMENT = "\[" SD-ID \*(SP SD-PARAM) "\]"
+
+SD-PARAM = PARAM-NAME "=" %d34 PARAM-VALUE %d34
+
+SD-ID = SD-NAME
+
+PARAM-NAME = SD-NAME
+
+PARAM-VALUE = UTF-8-STRING ; characters '"', '\\ and
+
+; '\]' MUST be escaped.
+
+SD-NAME = 1\*32PRINTUSASCII
+
+; except '=', SP, '\]', %d34 (")
+
+MSG = MSG-ANY / MSG-UTF8
+
+MSG-ANY = \*OCTET ; not starting with BOM
+
+MSG-UTF8 = BOM UTF-8-STRING
+
+BOM = %xEF.BB.BF
+
+UTF-8-STRING = \*OCTET ; UTF-8 string as specified
+
+; in [RFC 3629](https://tools.ietf.org/html/rfc3629)
+
+OCTET = %d00-255
+
+SP = %d32
+
+PRINTUSASCII = %d33-126
+
+NONZERO-DIGIT = %d49-57
+
+DIGIT = %d48 / NONZERO-DIGIT
+
+NILVALUE = "-"
+
+L’option RESTful-ATNA et le profil SOLE utilisent les champs :
+
+- APP-NAME : pour différencier les profils (par exemple : « IHE+SOLE »
+  ou « ATNA+2881 »
+
+- MSG-ID : dans certains cas pour différencier les types de message. Par
+  exemple, le profil SOLE utilise ce champ pour véhiculer les codes des
+  événements
+
+Cette approche semble appropriée pour spécifier techniquement le volet
+« générique gestion des traces ».
+
+### Maturité et adoption
+
+Le standard syslog (RFC 5424) a été spécifié en 2009 avec une première
+version en 2001. Ces standards ont été largement implémentés et sont
+devenus des références pour la gestion des traces, notamment dans le
+monde Unix/Linux.
+
+### Synthèse
+
+Le standard syslog est largement diffusé depuis des décennies dans les
+systèmes d’information pour gérer les traces, notamment dans le monde
+Unix / Linux. Ce standard a été adopté par IHE lors de la spécification
+du profil ATNA (pour la transmission d’événements entre un nœud sécurisé
+/ une application sécurisée et un système d’enregistrement d’événements,
+couplé à l’utilisation du standard DICOM, pour la structuration des
+messages. Cette formalisation n’est pas contrainte par syslog qui laisse
+libre le contenu de messages. L’idéal, pour le volet « générique gestion
+des traces » est donc de pouvoir couvrir le protocole syslog, laissant
+ainsi la possibilité de pouvoir être interopérable avec des systèmes
+existants supportant syslog.
+
+# Synthèse comparative des standards présentés
+
+Cette section présente une synthèse comparative des standards et profils
+analysés dans les sections précédentes. Les items de cette synthèse sont
+inspirés des documents suivants :
+
+- La doctrine du CI-SIS \[2\].
+
+- Le document « Organismes et Standards » \[3\] qui décrit les
+  organismes producteurs de standards ainsi que la manière dont ces
+  standards sont gérés.
+
+- « *Evaluating HIT Standards*[^25] » document sur la comparaison des
+  standards publiés par l’organisation HIMSS[^26].
+
+- La méthode CAMSS[^27], soutenue par le programme de la commission
+  européenne concernant les solutions d’interopérabilité pour les
+  administrations publiques. Cette initiative vise à promouvoir la
+  collaboration entre les états membres de l’union européenne dans la
+  définition d’une méthode d’évaluation commune de standards pour le
+  développement des services administratifs en ligne.
+
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 6%" />
+<col style="width: 4%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 5%" />
+<col style="width: 4%" />
+<col style="width: 5%" />
+<col style="width: 6%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 5%" />
+<col style="width: 4%" />
+<col style="width: 6%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;"><p>Critères</p>
+<p>d’évaluation</p></th>
+<th colspan="4" style="text-align: center;">Ressources FHIR</th>
+<th style="text-align: center;">mACM</th>
+<th style="text-align: center;">ACM</th>
+<th style="text-align: center;">ATNA</th>
+<th style="text-align: center;">RESTful ATNA</th>
+<th style="text-align: center;">PLT</th>
+<th style="text-align: center;">SOLE</th>
+<th style="text-align: center;">DICOM</th>
+<th style="text-align: center;">GS1</th>
+<th style="text-align: center;">Syslog</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nom de la ressource FHIR</td>
+<td style="text-align: center;"><strong>AdverseEvent</strong></td>
+<td style="text-align: center;"><strong>AuditEvent</strong></td>
+<td style="text-align: center;"><strong>Communication</strong></td>
+<td
+style="text-align: center;"><strong>CommunicationRequest</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><p>Outillage</p>
+<p><em>Des outils de tests sont mis en œuvre pour valider l’adhérence au
+standard.</em></p></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">Partiel</td>
+<td style="text-align: center;"><strong>Partiel</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Partiel</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><p>Tests</p>
+<p><em>Des tests sont effectués pour les guides d’implémentation
+normatifs.</em></p></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">Partiel</td>
+<td style="text-align: center;">Partiel</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">Partiel</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Processus de prise en compte des améliorations</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td><p>Existence de guides d’implémentation<a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p><em>Les guides référencent les standards de base</em><a href="#fn2"
+class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
+<em>avec au moins un cas d’usage et une optionalité sur les paramètres
+pour permettre les extensions.</em></p></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Adapté aux dispositifs mobiles</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Stabilité de la documentation</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Adoption par le marché<a href="#fn3" class="footnote-ref"
+id="fnref3" role="doc-noteref"><sup>3</sup></a> et utilisation</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td><p>Neutralité</p>
+<p><em>les spécifications ne limitent pas la concurrence et
+l’innovation;</em></p>
+<p><em>les spécifications sont basées sur des développements
+scientifiques et technologiques de pointe.</em></p></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td><p>Qualité</p>
+<p><em>la qualité est suffisante pour permettre le développement de
+produits et de services interopérables concurrents.</em></p></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td><p>Accessibilité</p>
+<p><em>Les spécifications sont disponibles au public à des conditions
+raisonnables (y compris pour un prix raisonnable ou
+gratuitement).</em></p></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+</tr>
+<tr>
+<td>Couverture métier (gestion des traces)</td>
+<td style="text-align: center;">Partiel</td>
+<td style="text-align: center;">Partiel</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Partiel</td>
+<td style="text-align: center;">Partiel</td>
+<td style="text-align: center;">Partiel</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">Partiel</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">Partiel</td>
+</tr>
+<tr>
+<td>Mises en œuvre existantes du cas d’usage (gestion des traces)</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Partiel</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Un guide d’implémentation combine un ou plusieurs
+standards afin de traiter des cas d’usage particuliers<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Un standard de base traite des cas d’usage relativement
+génériques et diversifiés et qui restent à un niveau abstrait (et donc
+ne traitent pas des cas pointus dans un domaine spécifique)<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>L’adoption par le marché peut être démontrée par des
+exemples opérationnels d'implémentations conformes provenant de
+différents fournisseurs<a href="#fnref3" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+Tableau 5 Tableau récapitulatif de l’évaluation des standards
+
+# Analyse et Conclusion
+
+Cette étude a pour objectif de comparer les standards ***HL7 FHIR R4,
+DICOM, GS1, syslog*** et les profils **IHE mACM / ACM / ATNA et son
+option RESTful ATNA / PLT et SOLE** en vue de l’élaboration des
+spécifications d’interopérabilité du besoin « générique gestion des
+traces ». Ci-dessous une analyse métier et technique des standards et
+profils présentés dans ce document.
+
+## Analyse métier
+
+L’analyse métier reste « générique » avec le besoin principal de gestion
+des traces (création, recherche, consultation). L’argumentaire
+ci-dessous reste à ce niveau générique. Cette analyse métier sera
+instanciée lors de la prise en compte d’un besoin métier « spécifique »
+de gestion de traces.
+
+### HL7 FHIR
+
+Les informations identifiées dans l’étude métier \[1\] sont couvertes
+par les attributs proposés par les ressources FHIR identifiées et
+détaillées dans ce document (AdverseEvent et AuditEvent). De plus, les
+critères de recherche proposés sont adaptés aux critères identifiés dans
+l’étude métier \[1\].
+
+La ressource FHIR AuditEvent semble correspondre au besoin métier
+« générique gestion des traces » ; elle couvre la classe « événement »
+et ses paramètres de recherche couvrent les critères de recherche de
+l’étude métier. Enfin les opérations FHIR CREATE, READ et SEARCH
+permettent aussi de spécifier les différents flux de l’étude métier.
+
+### Les profils mACM/ACM
+
+Les profils mACM et ACM pourraient être utilisés pour répondre aux
+besoins métier « générique gestion des traces » mais ces deux profils
+sont plus orientés « gestion des alertes » que « gestion des traces ».
+Par contre, ces deux profils couvrent aussi bien les besoins IHE HL7 que
+IHE FHIR ; ce point est intéressant d’un point de vue générique pour
+adresser le maximum de besoins métier de gestion de traces.
+
+### Les profils ATNA et son option RESTful ATNA / SOLE
+
+Les profils ATNA / l’option RESTful ATNA et SOLE ont été spécifiés pour
+gérer des traces (sécurité dans le cadre de ATNA et RESTful ATNA,
+événements de workflows radiologie pour SOLE) : création de traces,
+recherche de traces, consultation de traces. Ces profils peuvent être
+utilisés pour élaborer la spécification technique « générique gestion
+des traces ». Dans la spécification fonctionnelle « générique gestion
+des traces », il y a trois transactions : « créer des traces »,
+« consulter une trace » et « rechercher des traces ». Dans l’option
+RESTful ATNA et le profil SOLE, il y a uniquement deux types de
+transactions : « record audit event » et « retrieve audit event » mais
+cette dernière transaction couvre finalement les transactions
+« consulter une trace » et « rechercher des traces ».
+
+### Le profil PLT
+
+Le profil PLT est un cas spécifique de gestion des traces concernant la
+traçabilité des mouvements d’un patient. La gestion des traces est
+spécifiée en HL7. Ce profil peut être utilisé pour réfléchir à sa
+généricité et comment il pourrait être adressé par le volet « générique
+gestion des traces ».
+
+### DICOM
+
+DICOM est un standard qui est largement utilisé dans le domaine de la
+radiologie. La partie « DICOM PS3.15 – Security and System Management
+Profiles » annexe « A.5 – Audit Trail Message Format Profile » spécifie
+la structure des messages d’audit DICOM gérés dans les workflows
+radiologie. Cette spécification est reprise dans les profils ATNA et son
+option RESTful ATNA et SOLE pour spécifier la structure interne des
+messages d’audit. Il serait intéressant de réutiliser cette
+spécification pour couvrir le besoin métier générique décrivant la
+classe « Evénement ».
+
+### GS1
+
+GS1 est un standard international, qui spécifie la gestion de la
+traçabilité d’objets produits et échangés entre différents acteurs, et
+ceci dans différents contextes métier comme la santé. GS1 couvre le
+besoin métier « générique gestion des traces » en spécifiant trois
+interfaces « EPCIS Capture Interface », « EPCIS Query Control
+Interface » et « EPCIS Query Callback Interface ».
+
+### Syslog
+
+Syslog est un standard déjà largement utilisé pour la gestion des
+traces. Il présente néanmoins une faiblesse : il ne spécifie pas la
+structure interne des traces, ce qui rend plus difficile l’analyse
+future des traces. Les profils IHE ATNA et son option RESTful ATNA et
+SOLE se basent sur le standard syslog pour l’échange des traces et la
+spécification de « l’enveloppe » des traces.
+
+## Analyse technique
+
+Comme argumenté dans l’analyse métier, FHIR peut répondre au besoin
+métier « générique ». Néanmoins, pour adresser le plus grand nombre de
+besoins métier spécifiques, il est intéressant de considérer aussi
+syslog, qui est très répandu dans les systèmes d’information pour la
+gestion des traces.
+
+### HL7 FHIR
+
+Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
+structurés et identifiés dans l’étude métier \[1\] « générique gestion
+des traces ».
+
+Les ressources FHIR permettent une implémentation en utilisant les
+standards XML ou JSON. Ces deux standards pourront être utilisés en
+fonction du contexte spécifique métier, sachant que JSON est bien adapté
+dans un contexte mobile.
+
+### Les profils mACM/ACM
+
+Le profil mACM utilise des ressources FHIR « Communication et
+« CommunicationRequest » pour spécifier les informations échangées dans
+le cadre de la gestion des alertes et se basent sur les opérations FHIR
+pour la gestion de ces alertes.
+
+Le profil ACM spécifie la gestion des alertes en HL7v2 (spécification et
+gestion des événements).
+
+Il est intéressant de s’inspirer de ces deux profils pour la
+spécification technique « générique gestion des traces », notamment
+comment ces deux profils collaborent pour adresser aussi bien le monde
+du système d’information de santé que le monde du mobile.
+
+### Les profils ATNA et son option RESTful ATNA / SOLE
+
+Les profils ATNA et son option RESTful ATNA et SOLE se positionnement de
+la façon suivante :
+
+<div style="text-align: center; display: block; clear: both;">
+  <img src="ns_image10.png" alt="Gestion des traces" style="display:block; margin:auto;">
+</div>
+Figure 2 Positionnement des profils ATNA et son option RESTful ATNA /
+SOLE
+
+L’option RESTful ATNA, avec la possibilité de l’étendre si nécessaire en
+fonction du besoin métier spécifique semble donc approprié pour la
+spécification technique « générique gestion des traces ». Il faut juste
+identifier les attributs de la spécification technique qui seront
+génériques à concrétiser lors de la prise en compte d’un besoin métier
+spécifique.
+
+### Le profil PLT
+
+Le profil PLT – Patient Location Tracking est basé sur le standard HL7
+pour la gestion et la description des événements (événements A09, A10 et
+ZV3). Ce profil est en trial implementation et n’a jamais été testé. Les
+informations véhiculés dans les messages d’événements couvrent le besoin
+métier mais ils sont très orientés « patient ». A voir comment s’en
+inspirer pour les aspects génériques de gestion des traces.
+
+### DICOM
+
+DICOM est le standard utilisé pour échanger des informations dans le
+domaine de la radiologie. L’annexe 5 – Audit Trail Message Format
+Profile, de la partie – DICOM PS3.15 spécifie le format des événements
+qui sont gérés lors d’un workflow de radiologie. Les profils ATNA et son
+option RESTful ATNA / SOLE se basent sur ce standard pour spécifier la
+structure des événements qui sont échangés (événements de sécurité et
+événements spécifiques de radiologie). La même structure de messages
+pourra être utilisée pour tous les futurs événements pour faciliter la
+mutualisation des fonctionnalités de gestion des traces.
+
+### GS1
+
+GS1 spécifie techniquement les interfaces « EPCIS Capture Interface »,
+« EPCIS Query Control Interface » et « EPCIS Query Callback Interface »
+soit via l’utilisation du protocole http en mode GET ou POST, soit via
+le protocole AS2 en échangeant des données au format XML.
+
+### Syslog
+
+Le protocole Syslog propose un premier niveau de formalisation pour
+tracer des événements, ainsi qu’une architecture de communication
+associée pour l’échange et la centralisation d’événements. Le protocole
+syslog se base sur d’autres standards pour la couche transport et la
+couche sécurité. Ces différents standards sont utilisés par les profils
+IHE ATNA et son option RESTful ATNA / SOLE pour échanger des événements
+au format syslog.
+
+## Conclusion
+
+Ce document présente une étude comparative des standards FHIR, DICOM,
+GS1 et syslog ainsi que des profils IHE mACM / ACM / ATNA et son option
+RESTful ATNA / SOLE / PLT en vue de l’élaboration des spécifications
+techniques pour supporter le besoin d’interopérabilité « générique
+gestion des traces ».
+
+Les critères à prendre en compte dans le choix de la solution sont les
+suivants :
+
+- Le standard adopté doit offrir une couverture maximale des
+  informations identifiées dans l’étude métier \[1\] ;
+
+- Le standard adopté qui permet de spécifier techniquement le besoin
+  spécifique « générique » doit pouvoir être instancié à partir d’un
+  besoin spécifique, le plus « simplement possible »,
+
+- Les efforts en matière de développements nécessaires pour la mise en
+  œuvre de la gestion des traces ne doivent pas constituer une charge
+  importante aux développeurs ;
+
+- Le standard adopté doit être adapté aux environnements mobiles ;
+
+- La solution choisie doit faire appel à un minimum de standards
+  différents.
+
+En se basant sur la synthèse des standards et profils IHE présentée dans
+les sections 5.1 et 5.1.5, l’option RESTful ATNA semble le plus adapté
+au besoin « générique gestion des traces », en s’inspirant aussi des
+spécifications GS1.
+
+# Annexes A
+
+## Annexe 1 : Mise en correspondance
+
+Cette section reprend, la mise en correspondance des objets de la SFE
+avec la ressource FHIR « AuditEvent » et la structure AuditMessage de
+DICOM :
+
+<table style="width:98%;">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 19%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr>
+<th rowspan="2" style="text-align: center;">Nom Classe</th>
+<th rowspan="2" style="text-align: center;">Nom attribut</th>
+<th rowspan="2" style="text-align: center;">AuditEvent</th>
+<th colspan="2" style="text-align: center;">DICOM</th>
+</tr>
+<tr>
+<th style="text-align: center;"><strong>Elément du schéma
+AuditMessage</strong></th>
+<th style="text-align: center;"><strong>Sous-Elément</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Trace</td>
+<td style="text-align: center;">identifiant</td>
+<td style="text-align: center;">id</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">SourceTrace</td>
+<td style="text-align: center;">identifiant</td>
+<td style="text-align: center;">source</td>
+<td style="text-align: center;">SourceAuditIdentification</td>
+<td style="text-align: center;">AuditEnterpriseSiteId</td>
+</tr>
+<tr>
+<td rowspan="5" style="text-align: center;">Evénement</td>
+<td style="text-align: center;">typeEvenement</td>
+<td style="text-align: center;">type</td>
+<td rowspan="5" style="text-align: center;">EventIdentification</td>
+<td style="text-align: center;">EventID</td>
+</tr>
+<tr>
+<td style="text-align: center;">sousTypeEvement</td>
+<td style="text-align: center;">Subtype</td>
+<td style="text-align: center;">EventTypeCode</td>
+</tr>
+<tr>
+<td style="text-align: center;">occurence</td>
+<td style="text-align: center;">period.start</td>
+<td style="text-align: center;">EventDateTime</td>
+</tr>
+<tr>
+<td style="text-align: center;">declaration</td>
+<td style="text-align: center;">recorded</td>
+<td style="text-align: center;">Possibilité utiliser le champ
+« TIMESTAMP » du protocole syslog</td>
+</tr>
+<tr>
+<td style="text-align: center;">description</td>
+<td style="text-align: center;">outcomeDesc</td>
+<td style="text-align: center;">EventOutcomeDescription</td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: center;">ActeurEvenement</td>
+<td style="text-align: center;">identifiant</td>
+<td style="text-align: center;">agent.who.identifier</td>
+<td rowspan="2" style="text-align: center;">ActiveParticipant</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">role</td>
+<td style="text-align: center;">Agent.role</td>
+<td style="text-align: center;">RoleIdCode</td>
+</tr>
+<tr>
+<td rowspan="3" style="text-align: center;">ObjectEvenement</td>
+<td style="text-align: center;">identifiant</td>
+<td style="text-align: center;">entity.what.identifier</td>
+<td rowspan="3"
+style="text-align: center;">ParticipantObjectIdentification</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">type</td>
+<td style="text-align: center;">entity.type</td>
+<td style="text-align: center;">ParticipantObjectTypeCode</td>
+</tr>
+<tr>
+<td style="text-align: center;">contenu</td>
+<td style="text-align: center;">entity.what ou entity.query ou
+entity.detail</td>
+<td style="text-align: center;"><p>ParticipantObjectDetail.value</p>
+<p>ou ParticipantObjectQuery</p>
+<p>ou ParticipantObjectID</p></td>
+</tr>
+</tbody>
+</table>
+
+Tableau 6 Mise en correspondance avec la ressource « AuditEvent » et la
+structure AuditMessage
+
+# Annexes B
+
+## Annexe 1 : Glossaire
+
+| Sigle / Acronyme | Signification |
+|----|----|
+| ASIP Santé | Agence Française de la Santé Numérique |
+| HL7 | *Health Level 7* |
+| FHIR | *Fast Healthcare Interoperability Ressources* |
+| CI-SIS | Cadre d’interopérabilité des systèmes d’information de santé |
+| DICOM | Digital Imaging and COmmunication in Medecine |
+| GS1 | Global Standards 1 |
+
+## Annexe 2 : Documents de référence
+
+<table style="width:99%;">
+<colgroup>
+<col style="width: 99%" />
+</colgroup>
+<thead>
+<tr>
+<th>Documents de référence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><ol type="1">
+<li><p>Étude métier – Gestion des traces</p></li>
+<li><p>Doctrine du CI-SIS mise en concertation publique en octobre 2016
+(<a
+href="http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration">http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration</a>)</p></li>
+<li><p>Organismes et Standards – (<a
+href="http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/annexes-transverses">http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/annexes-transverses</a>
+)</p></li>
+<li><p>Modèle des Objets de Santé – MOS (<a
+href="http://esante.gouv.fr/services/referentiels/mos">http://esante.gouv.fr/services/referentiels/mos</a>)</p></li>
+<li><p>Audit Trail and Node Authentication – IHE ITI TF Volume 1 –
+Section 9 (<a
+href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf">https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf</a>)</p></li>
+<li><p>RESTful ATNA – IHE ITI TF Supplement (<a
+href="https://www.ihe.net/resources/technical_frameworks/#IT">https://www.ihe.net/resources/technical_frameworks/#IT</a>)</p></li>
+<li><p><a
+href="file:///E:/Transfert/00-KEREVAL-2020/Réalisation/Conseil/ASIP/Généricisation/Gestion%20des%20traces/mobile">mobile</a>
+Alert Communication Management – IHE ITI TF Supplement (<a
+href="https://www.ihe.net/resources/technical_frameworks/#IT">https://www.ihe.net/resources/technical_frameworks/#IT</a>)</p></li>
+<li><p>Alert Communication Management – IHE PCD TF Volume 1 – Section 6
+(<a
+href="https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol1.pdf">https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol1.pdf</a>)</p></li>
+<li><p>Patient Location Tracking – IHE ITI TF Supplement (<a
+href="https://www.ihe.net/resources/technical_frameworks/#IT">https://www.ihe.net/resources/technical_frameworks/#IT</a>)</p></li>
+<li><p>Standardized Operational Log of Events – IHE Radiology TF
+Supplement (<a
+href="https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_SOLE.pdf">https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_SOLE.pdf</a>)</p></li>
+<li><p>DICOM PS3.15 – Security and System Management Profiles, Annexe
+A.5 – Audit Trail Message Format Profiles (<a
+href="http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html">http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html</a>)</p></li>
+<li><p>GS1 – Global Standards 1 (<a
+href="https://www.gs1.org/standards">https://www.gs1.org/standards</a>)</p></li>
+<li><p>The Syslog Protocol (<a
+href="https://tools.ietf.org/html/rfc5424">https://tools.ietf.org/html/rfc5424</a>)</p></li>
+<li><p>Décision (UE) 2015/1302 de la Commission du 28 juillet 2015
+relative à l'identification des profils «Integrating the Healthcare
+Enterprise» pouvant servir de référence dans la passation des marchés
+publics (<a
+href="https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32015D1302&amp;from=FR">https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32015D1302&amp;from=FR</a>)</p></li>
+<li><p>Mobile Health et le dossier électronique du patient –
+eHealthSuisse (<a
+href="https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/2018/F/182214_Empfehlungen_Standards_mHealth_frz.pdf">https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/2018/F/182214_Empfehlungen_Standards_mHealth_frz.pdf</a>)</p></li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+
+[^1]: Cette étude ne fait pas l’objet de ce document. Elle fait partie
+    du document « Etude métier – Gestion des traces » \[1\]
+
+[^2]: <https://www.hl7.org/fhir/>
+
+[^3]: <http://wiki.hl7.org/index.php?title=FHIR_Maturity_Model>
+
+[^4]: <http://www.selectbs.com/process-maturity/what-is-the-capability-maturity-model>
+
+[^5]: https://www.hl7.org/fhir/adverseevent.html
+
+[^6]: https://www.hl7.org/fhir/auditevent.html
+
+[^7]: https://www.hl7.org/fhir/bundle.html
+
+[^8]: https://www.hl7.org/fhir/communication.html
+
+[^9]: https://www.hl7.org/fhir/communicationrequest.html
+
+[^10]: https://www.hl7.org/fhir/eventdefinition.html
+
+[^11]: IHE Product Registry : <https://product-registry.ihe.net>
+
+[^12]: IHE Connectathon results : <https://connectathon-results.ihe.net>
+
+[^13]: IHE Product Registry : <https://product-registry.ihe.net>
+
+[^14]: IHE Connectathon results : <https://connectathon-results.ihe.net>
+
+[^15]: IHE Product Registry : <https://product-registry.ihe.net>
+
+[^16]: IHE Connectathon results : <https://connectathon-results.ihe.net>
+
+[^17]: IEC 60601-1-8 Medical electrical equipment - Part 1-8: General
+    requirements for basic safety and essential performance - Collateral
+    Standard: General requirements, tests and guidance for alarm systems
+    in medical electrical equipment and medical electrical systems
+
+[^18]: IHE Product Registry : <https://product-registry.ihe.net>
+
+[^19]: IHE Connectathon results : <https://connectathon-results.ihe.net>
+
+[^20]: IHE Product Registry : <https://product-registry.ihe.net>
+
+[^21]: IHE Connectathon results : <https://connectathon-results.ihe.net>
+
+[^22]: IHE Product Registry : <https://product-registry.ihe.net>
+
+[^23]: IHE Connectathon results : <https://connectathon-results.ihe.net>
+
+[^24]: Syslog : https://tools.ietf.org/html/rfc5424
+
+[^25]: <http://www.himss.org/evaluating-hit-standards?ItemNumber=22775>
+
+[^26]: <http://www.himss.org/>
+
+[^27]: Common Assessment method for standards and specifications :
+    <http://ec.europa.eu/isa/ready-to-use-solutions/camss_en.htm>
