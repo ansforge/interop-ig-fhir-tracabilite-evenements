@@ -32,7 +32,7 @@ Type de carte professionnelle et personnelle.
   "name" : "TypeCarteCS",
   "title" : "Type de carte",
   "status" : "draft",
-  "date" : "2025-11-19T14:13:52+00:00",
+  "date" : "2025-11-19T14:50:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

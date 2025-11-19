@@ -10,7 +10,7 @@
   <name value="ExampleIG"/>
   <title value="ANS IG Example"/>
   <status value="draft"/>
-  <date value="2025-11-19T14:13:52+00:00"/>
+  <date value="2025-11-19T14:50:27+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -615,6 +615,14 @@
           <title value="Vue d'ensemble"/>
           <generation value="markdown"/>
         </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="ns.html"/>
+        </extension>
+        <nameUrl value="ns.html"/>
+        <title value="Etude norme et standards"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
