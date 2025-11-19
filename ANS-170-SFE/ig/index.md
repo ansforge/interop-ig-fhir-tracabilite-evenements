@@ -63,7 +63,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "ExampleIG",
   "title" : "ANS IG Example",
   "status" : "draft",
-  "date" : "2025-11-19T14:11:52+00:00",
+  "date" : "2025-11-19T14:13:21+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -996,10 +996,10 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
               "extension" : [
                 {
                   "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "sf1.html"
+                  "valueUrl" : "sfe.html"
                 }
               ],
-              "nameUrl" : "sf1.html",
+              "nameUrl" : "sfe.html",
               "title" : "Vue d'ensemble",
               "generation" : "markdown"
             }
