@@ -28,12 +28,13 @@ pages:
         sf1.md:
             title: Vue d'ensemble
     st.md:
-        construction_des_flux.md:
-            title: Vue d'ensemble
-        st_flux1.md:
-            title: Flux 01
-        st_flux2.md:
-            title: Flux 02
+        title: Spécifications techniques
+    construction_des_flux.md:
+        title: Vue d'ensemble
+    st_flux1.md:
+        title: Flux 01
+    st_flux2.md:
+        title: Flux 02
     change-log.md:
         title: Historique des versions
     autres_ressources.md:
