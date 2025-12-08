@@ -1,0 +1,55 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/TDE-AuditEvent-period-start> a fhir:SearchParameter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "TDE-AuditEvent-period-start"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2021-10-21T14:10:19.925+00:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ParamètreRecherche TDE-AuditEvent-period-start</b></p><a name=\"TDE-AuditEvent-period-start\"> </a><a name=\"hcTDE-AuditEvent-period-start\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Dernière mise à jour : 2021-10-21 14:10:19+0000</p></div><h2>TDE_AuditEvent_period-start</h2><p>Paramètre <code>period-start</code>:<code>date</code></p><div><p>Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément context.period.start correspondant à lobjet dateDebutActe</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/auditevent.html\">AuditEvent</a></td></tr><tr><td>Expression</td><td><code>DocumentReference.context.period.start</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : Le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : Le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr><tr><td>Comparateurs</td><td>Autorisé : eq, ne, gt, lt, ge, le, sa, eb, ap</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/TDE_AuditEvent_period-start"^^xsd:anyURI ;
+     fhir:l <http://esante.gouv.fr/ci-sis/fhir/SearchParameter/TDE_AuditEvent_period-start>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "TDE_AuditEvent_period-start"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2021-12-01"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://esante.gouv.fr" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément context.period.start correspondant à lobjet dateDebutActe"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:code [ fhir:v "period-start"] ; # 
+  fhir:base ( [ fhir:v "AuditEvent"] ) ; # 
+  fhir:type [ fhir:v "date"] ; # 
+  fhir:expression [ fhir:v "DocumentReference.context.period.start"] ; # 
+  fhir:multipleOr [ fhir:v true] ; # 
+  fhir:multipleAnd [ fhir:v true] ; # 
+  fhir:comparator ( [ fhir:v "eq"] [ fhir:v "ne"] [ fhir:v "gt"] [ fhir:v "lt"] [ fhir:v "ge"] [ fhir:v "le"] [ fhir:v "sa"] [ fhir:v "eb"] [ fhir:v "ap"] ) . # 
+
+# -------------------------------------------------------------------------------------
+

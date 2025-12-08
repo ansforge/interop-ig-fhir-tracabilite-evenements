@@ -1,0 +1,76 @@
+# TDE-AuditEvent-period-start - ANS IG Example v0.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **TDE-AuditEvent-period-start**
+
+## SearchParameter: TDE-AuditEvent-period-start 
+
+| | |
+| :--- | :--- |
+| *Official URL*:http://esante.gouv.fr/ci-sis/fhir/SearchParameter/TDE_AuditEvent_period-start | *Version*:0.1.0 |
+| Active as of 2021-12-01 | *Computable Name*:TDE_AuditEvent_period-start |
+
+ 
+Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément context.period.start correspondant à lobjet dateDebutActe 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "SearchParameter",
+  "id" : "TDE-AuditEvent-period-start",
+  "meta" : {
+    "lastUpdated" : "2021-10-21T14:10:19.925+00:00"
+  },
+  "url" : "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/TDE_AuditEvent_period-start",
+  "version" : "0.1.0",
+  "name" : "TDE_AuditEvent_period-start",
+  "status" : "active",
+  "date" : "2021-12-01",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [
+    {
+      "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "https://esante.gouv.fr"
+        }
+      ]
+    }
+  ],
+  "description" : "Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément context.period.start correspondant à lobjet dateDebutActe",
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "FR",
+          "display" : "FRANCE"
+        }
+      ]
+    }
+  ],
+  "code" : "period-start",
+  "base" : ["AuditEvent"],
+  "type" : "date",
+  "expression" : "DocumentReference.context.period.start",
+  "multipleOr" : true,
+  "multipleAnd" : true,
+  "comparator" : [
+    "eq",
+    "ne",
+    "gt",
+    "lt",
+    "ge",
+    "le",
+    "sa",
+    "eb",
+    "ap"
+  ]
+}
+
+```

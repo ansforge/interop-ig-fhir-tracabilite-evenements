@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "TDE-AuditEvent-period-start",
+    "type" : "SearchParameter",
+    "url" : "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/TDE_AuditEvent_period-start",
+    "version" : "0.1.0",
+    "name" : "TDE_AuditEvent_period-start"
+  },
+  {
+    "id" : "TDE-BundleResultatReponseRechercheTraces",
+    "type" : "StructureDefinition",
+    "url" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/TDE_BundleResultatReponseRechercheTraces",
+    "version" : "0.1.0",
+    "name" : "TDE_BundleResultatReponseRechercheTraces"
+  },
+  {
+    "id" : "TDE-AuditEvent",
+    "type" : "StructureDefinition",
+    "url" : "https://esante.gouv.fr/ci-sis/FHIR/StructureDefinition/TDE_AuditEvent",
+    "version" : "0.1.0",
+    "name" : "TDE_AuditEvent"
+  },
+  {
+    "id" : "ans.fhir.fr.[code]",
+    "type" : "ImplementationGuide",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]",
+    "version" : "0.1.0",
+    "name" : "ExampleIG"
+  }
+]
