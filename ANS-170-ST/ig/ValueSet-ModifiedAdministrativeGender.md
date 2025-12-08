@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/ModifiedAdministrativeGender | *Version*:0.1.0 |
-| Draft as of 2025-11-26 | *Computable Name*:ModifiedAdministrativeGender |
+| Draft as of 2025-12-08 | *Computable Name*:ModifiedAdministrativeGender |
 
  
 AdministrativeGender without unknown code 
@@ -18,15 +18,7 @@ AdministrativeGender without unknown code
 
 * [Patient français](StructureDefinition-fr-patient.md)
 
-### Logical Definition (CLD)
-
-Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :
-
-* Inclut tous les codes définis dans [`http://hl7.org/fhir/administrative-gender`](http://hl7.org/fhir/R4/codesystem-administrative-gender.html)version 📦4.0.1
-
-Ce jeu de valeur (ValueSet) exclut les codes selon les règles suivantes :
-
-* Exclude ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`http://hl7.org/fhir/administrative-gender`](http://hl7.org/fhir/R4/codesystem-administrative-gender.html)version 📦4.0.1
+### Définition logique (CLD)
 
  
 
@@ -58,7 +50,7 @@ Ce jeu de valeur (ValueSet) exclut les codes selon les règles suivantes :
   "name" : "ModifiedAdministrativeGender",
   "title" : "ModifiedAdministrativeGender",
   "status" : "draft",
-  "date" : "2025-11-26T08:14:22+00:00",
+  "date" : "2025-12-08T10:44:14+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

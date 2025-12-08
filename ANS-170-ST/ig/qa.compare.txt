@@ -1,10 +1,10 @@
 ExampleIG : Validation Results
 =========================================
 
-err = 3, warn = 14, info = 8
+err = 3, warn = 15, info = 8
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.[code]#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/[code])
- Build Errors : 0 / 3 / 0
+ Build Errors : 0 / 4 / 0
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CodeSystem-competence-code-system : 0 / 2 / 2
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CodeSystem-type-carte-code-system : 0 / 2 / 2
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.[code] : 3 / 0 / 1
@@ -17,6 +17,108 @@ Generated $--. FHIR version $-- for ans.fhir.fr.[code]#$-- (canonical = https://
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-TypeCarteVS : 0 / 1 / 1
 </table>
 == n/a ==
+WARNING: /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/output/st.html: Illegal HTML: illegal html element: tbody (
+
+
+agent
+
+ 
+
+type
+
+ 
+
+CodeableConcept [0..1]
+
+ 
+ 
+
+Type d’acteur
+
+Jeu de valeur : ParticipationRoleType
+(Extensible)
+
+ 
+
+
+
+
+role
+
+ 
+
+CodeableConcept [0..1]
+
+ 
+ 
+
+Rôle de l’acteur dans l’évenement
+
+Jeu de valeur : SecurityRoleType
+(example)
+
+ 
+
+
+
+
+who
+
+ 
+
+Reference(Practitione rRole | Practitioner | Organization |
+Device
+
+| Patient | RelatedPerson) [0..1]
+
+ 
+
+Cardinalité contrainte à [1..1]
+
+A noter que l’attribut identifier de la ressource référencée est
+contrainte à la cardinalité [1..*]
+
+ 
+
+Si l’acteur est représenté par une ressource dans le système
+d’information, cette dernière doit être référencée ici
+
+ 
+
+
+
+
+altId
+
+ 
+
+string [0..1]
+
+ 
+ 
+
+Identification alternative de l’acteur
+
+ 
+
+
+
+
+name
+
+ 
+
+string [0..1]
+
+ 
+ 
+
+Nom de l’acteur (compréhensible par un utilisateur)
+
+ 
+
+
+)
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 5: The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide

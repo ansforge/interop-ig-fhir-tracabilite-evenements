@@ -3,7 +3,7 @@
 ## Pages
 
 * [Accueil](index.md)
-* [St](st.md)
+* [Spécifications techniques](st.md)
 * [Historique des versions](change-log.md)
 * [Vue d'ensemble](sf1.md)
 * [Flux 02](st_flux2.md)
