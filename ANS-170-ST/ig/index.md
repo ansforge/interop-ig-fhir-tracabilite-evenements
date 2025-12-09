@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code] | *Version*:0.1.0 |
-| Draft as of 2025-12-08 | *Computable Name*:ExampleIG |
+| Draft as of 2025-12-09 | *Computable Name*:ExampleIG |
 
  **Brief description of this Implementation Guide**
  [Add a brief description of this IG in English] 
@@ -63,7 +63,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "ExampleIG",
   "title" : "ANS IG Example",
   "status" : "draft",
-  "date" : "2025-12-08T10:44:14+00:00",
+  "date" : "2025-12-09T14:31:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -1031,22 +1031,22 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           "extension" : [
             {
               "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "st_flux1.html"
+              "valueUrl" : "api.html"
             }
           ],
-          "nameUrl" : "st_flux1.html",
-          "title" : "Flux 01",
+          "nameUrl" : "api.html",
+          "title" : "Via API REST",
           "generation" : "markdown"
         },
         {
           "extension" : [
             {
               "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "st_flux2.html"
+              "valueUrl" : "syslog.html"
             }
           ],
-          "nameUrl" : "st_flux2.html",
-          "title" : "Flux 02",
+          "nameUrl" : "syslog.html",
+          "title" : "Via syslog",
           "generation" : "markdown"
         },
         {
@@ -1094,6 +1094,17 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
               "generation" : "markdown"
             }
           ]
+        },
+        {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "correspondance_metier.html"
+            }
+          ],
+          "nameUrl" : "correspondance_metier.html",
+          "title" : "Correspondances métier",
+          "generation" : "markdown"
         }
       ]
     },

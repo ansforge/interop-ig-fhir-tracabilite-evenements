@@ -10,7 +10,7 @@
   "name" : "ExampleIG",
   "title" : "ANS IG Example",
   "status" : "draft",
-  "date" : "2025-12-08T10:44:14+00:00",
+  "date" : "2025-12-09T14:31:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -818,19 +818,19 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "st_flux1.html"
+          "valueUrl" : "api.html"
         }],
-        "nameUrl" : "st_flux1.html",
-        "title" : "Flux 01",
+        "nameUrl" : "api.html",
+        "title" : "Via API REST",
         "generation" : "markdown"
       },
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "st_flux2.html"
+          "valueUrl" : "syslog.html"
         }],
-        "nameUrl" : "st_flux2.html",
-        "title" : "Flux 02",
+        "nameUrl" : "syslog.html",
+        "title" : "Via syslog",
         "generation" : "markdown"
       },
       {
@@ -868,6 +868,15 @@
           "title" : "Téléchargements et usages",
           "generation" : "markdown"
         }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "correspondance_metier.html"
+        }],
+        "nameUrl" : "correspondance_metier.html",
+        "title" : "Correspondances métier",
+        "generation" : "markdown"
       }]
     },
     "parameter" : [{
