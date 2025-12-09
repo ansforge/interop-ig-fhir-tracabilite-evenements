@@ -1,0 +1,166 @@
+### Solution 2 : Audit message DICOM, protocole Syslog et opération HTTP
+
+La construction des flux consiste en la construction des requêtes ou des
+réponses syslog (pour la transmission de trace) et HTTP (pour la
+consultation et la recherche de trace).
+<div style="text-align: center; display: block; clear: both;">
+  <img src="st_image6.png" alt="Gestion des traces" style="display:block; margin:auto;">
+</div>
+
+
+Contrairement à la solution basée sur HL7 FHIR, il n’est pas prévu de
+pouvoir consulter une trace en particulier, le protocol Syslog ne
+permettant pas d’identifier de manière unique les messages échangés. En
+revanche, le message « Syslog Event Response message » est défini de
+telle sorte que l’entièreté des données des traces soit retournée au
+Consommateur de traces.
+
+## Flux 1 : TransmissionTrace
+### Construction du flux Syslog
+
+Ce flux est construit selon les exigences de la transaction IHE
+ITI-20[^6] « Record Audit Event » dans sa version Syslog : « Send Audit
+Event Message - Syslog Interaction ». Certaines contraintes de cette
+transaction doivent être adaptées à chaque contexte métier, en
+particulier les éléments suivants de l’en-tête Syslog :
+
+- PRI : défini la priorité. Le profil ATNA est destiné à tracer tous les
+  évènements liées à la sécurité des données de santé ; les codes
+  choisis par IHE peuvent ne pas être pertinent pour certains cas
+  d’usage concrétisant cette spécification.
+
+- MSGID : identifie le type de message. Devrait être propre à chaque cas
+  d’usage pour permettre une identification rapide du contexte
+  d’émission de la trace.
+
+La première étape de construction de ce flux consiste à créer le message
+qui constituera le corps du message Syslog, le message d’audit au format
+DICOM si la concrétion de se volet ne définit pas un autre format pour
+le contenu de la trace.
+
+Ce contenu est ensuite encapsulé dans un message syslog qui sera
+transmis via UDP ou TLS au gestionnaire de traces.
+
+Un exemple de flux est joint (cf [annexe
+3 ](#annexe-3-exemples-de-flux): **Erreur ! Source du renvoi
+introuvable.**).
+## Flux 4 : RechercheTraces
+
+Ce flux est utilisé par le consommateur de traces pour faire une
+recherche de traces auprès du gestionnaire de traces.
+
+
+### Construction du flux HTTP
+
+Dans le contexte d’une implémentation reposant sur le protocole Syslog
+pour le flux de transmission des traces, le flux 4 « RechercheTraces »
+est construit selon les exigences de la transaction IHE ITI-82
+« Retrieve Syslog Event ». Cette transaction est une requête HTTP GET.
+
+Les paramètres de recherche possibles sont ceux définis dans le cadre
+technique IHE ; ils font référence aux champs de l’en-tête syslog.
+
+L’URL suivante est utilisée :
+
+GET
+\[base\]/syslogsearch?date=le\[start-time\]&date=ge\[stoptime\]&\<query\>
+
+Où \[base\] est le point de contact FHIR du gestionnaire de traces,
+\[start-time\] et \[stop-time\] indique l’intervalle de temps dans
+lequel les traces sont recherchées (date se réfère à la date
+d’enregistrement de l’évènement). \<query\> représente les autres
+paramètres, sous la forme param=valeur, permettant d’affiner la
+recherche.
+
+#### Paramètres de recherche
+
+La transaction \[ITI-82\] Retrieve Syslog Event exige que la recherche
+de traces soit bornée dans le temps. C’est-à-dire que le paramètre de
+recherche « date » qui correspond à la date d’enregistrement de
+l’évènement doit être présent pour préciser une limite de temps (avant,
+après ou un intervalle). Le tableau ci-dessous précise la mise en
+correspondance des paramètres de recherche identifiés dans l’étude
+métier avec les paramètres de recherche défini par IHE.
+
+Le tableau ci-dessous propose des critères de recherche supplémentaires
+dans le cas où la trace est véhiculé au format DICOM AuditMessage. Dans
+le cas où la concrétisation de ce volet utilise un autre format de
+trace, ce tableau devra être revu.
+
+<table>
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr>
+<th>Critère de recherche « métier »</th>
+<th>Nom du paramètre</th>
+<th>Type de donnée</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>typeEvenement</td>
+<td>eventID</td>
+<td>texte</td>
+<td>Type de l’évènement. Permet de filtrer sur le champ EventID</td>
+</tr>
+<tr>
+<td>sousTypeEvement</td>
+<td>EventTypeCode</td>
+<td>texte</td>
+<td>Sous-type de l’évènement. Permet de filtrer sur le champ
+EventTypeCode</td>
+</tr>
+<tr>
+<td>dateOccurence</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>dateDeclaration</td>
+<td>recorded</td>
+<td>dateTime</td>
+<td>Date à laquelle l’évènement a été enregistré</td>
+</tr>
+<tr>
+<td>origine</td>
+<td>Requestor</td>
+<td>texte</td>
+<td>Requestor identifie l’élément ActiveParticipant dont
+UserIsRequestor=true et userID correspond à la valeur du paramètre.</td>
+</tr>
+<tr>
+<td>destinataire</td>
+<td>Receiver</td>
+<td>texte</td>
+<td>Requestor identifie l’élément ActiveParticipant dont
+UserIsRequestor=false et userID correspond à la valeur du
+paramètre.</td>
+</tr>
+<tr>
+<td>autreParametre</td>
+<td colspan="3">Chaque concrétisation de ses spécifications génériques
+peut ajouter des paramètres de recherche.</td>
+</tr>
+</tbody>
+</table>
+
+## Flux 5 : ReponseRechercheTraces
+
+Ce flux véhicule le résultat de la recherche de traces.
+### Construction du flux HTTP
+
+Dans le contexte d’un échange basé sur la transaction IHE ITI-82, ce
+flux est composé d’un code HTTP 200 ok et le corps de la réponse HTTP
+est un tableau de messages Syslog au format demandé par le consommateur
+de traces (JSON ou XML).
+
+Pour des informations sur les autres codes HTTP (HTTP status code)
+retournés en cas d’échec, consulter le cadre technique IHE, section
+3.82.4.2.2.

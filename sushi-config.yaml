@@ -18,9 +18,6 @@ parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/Code
     shownav: 'true'
     path-expansion-params: '../../expansion-params.json' # for using French SNOMED CT Extension
 
-
-
-
 pages:
     index.md:
         title: Accueil
@@ -31,10 +28,10 @@ pages:
         title: Spécifications techniques
     construction_des_flux.md:
         title: Vue d'ensemble
-    st_flux1.md:
-        title: Flux 01
-    st_flux2.md:
-        title: Flux 02
+    api.md:
+        title: Via API REST
+    syslog.md:
+        title: Via syslog
     change-log.md:
         title: Historique des versions
     autres_ressources.md:
@@ -43,14 +40,16 @@ pages:
             title: Sécurité
         downloads.md:
             title: Téléchargements et usages
+    correspondance_metier.md:
+        title: Correspondances métier
 
 menu:
     Accueil: index.html
     Volume 1 - Etude fonctionnelle: index.html
     Volume 2 - Détail des transactions:
-        Construction des flux: construction_des_flux.html
-        Flux 01: st_flux1.html
-        Flux 02: st_flux2.html
+        Correspondances métier: correspondance_metier.html
+        Via API REST: api.html
+        Via syslog: syslog.html
     Ressources de conformité: artifacts.html
     Autres ressources:
         Sécurité: securite.html
