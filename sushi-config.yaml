@@ -25,8 +25,7 @@ pages:
     index.md:
         title: Accueil
     specifications_fonctionnelles.md:
-        sfe.md:
-            title: Vue d'ensemble
+        title: Vue d'ensemble
     specifications_techniques.md:
         construction_des_flux.md:
             title: Vue d'ensemble
@@ -45,7 +44,7 @@ pages:
 
 menu:
     Accueil: index.html
-    Volume 1 - Etude fonctionnelle: index.html
+    Volume 1 - Etude fonctionnelle: specifications_fonctionnelles.html
     Volume 2 - Détail des transactions:
         Construction des flux: construction_des_flux.html
         Flux 01: st_flux1.html
