@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 1, errors = 3, warn = 15, info = 8-->
+<!-- broken links = 2, errors = 3, warn = 15, info = 17-->
 <head>
   <title>ExampleIG : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -47,13 +47,13 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for ExampleIG</h1>
- <p>Generated Wed Nov 19 14:51:28 UTC 2025, FHIR version 4.0.1 for ans.fhir.fr.[code]#0.1.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/[code]">https://interop.esante.gouv.fr/ig/fhir/[code]</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/[code]/history.html">history</a>)). See <a href="qa.html">Full QA Report</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+ <p>Generated Wed Dec 10 10:49:29 UTC 2025, FHIR version 4.0.1 for ans.fhir.fr.[code]#0.1.0 (canonical = <a href="https://interop.esante.gouv.fr/ig/fhir/[code]">https://interop.esante.gouv.fr/ig/fhir/[code]</a> (<a href="https://interop.esante.gouv.fr/ig/fhir/[code]/history.html">history</a>)). See <a href="qa.html">Full QA Report</a> &amp; <a href="qa-ipreview.html">IP</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
- <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.0.26</span></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.0.28</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ans.fhir.fr.[code], Canonical = https://interop.esante.gouv.fr/ig/fhir/[code]</td></tr>
  <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
  <tr><td>Language Info:</td><td>This IG has no language information</td></tr>
- <tr><td>Publication Request:</td><td><ul><li><span title="Not Found">This IG has never been published</span> <img src="information.png" height="16px" width="16px"/></li>
+ <tr><td>Publication Request:</td><td><ul><li>Error fetching package-list from https://interop.esante.gouv.fr/ig/fhir/[code]: Error parsing JSON source: Unexpected content '<' in json format at Line 1 (path=[null]) <img src="icon-error.gif" height="16px" width="16px"/></li>
 <li>No publication request found <img src="information.png" height="16px" width="16px"/></li>
 </ul>
 </td></tr>
@@ -88,41 +88,44 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
  <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
- <tr><td>Summary:</td><td> errors = 3, warn = 15, info = 8, broken links = 1, pinned = n/a.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
+ <tr><td>Summary:</td><td> errors = 3, warn = 15, info = 17, broken links = 2, pinned = n/a.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
 </table>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>1</b></td><td><b>4</b></td><td><b>0</b></td>
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>2</b></td><td><b>4</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_CodeSystem-competence-code-system"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CodeSystem-competence-code-system</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>1</b></td>
+     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_CodeSystem-competence-code-system"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CodeSystem-competence-code-system</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>2</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_CodeSystem-type-carte-code-system"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CodeSystem-type-carte-code-system</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>1</b></td>
+     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_CodeSystem-type-carte-code-system"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CodeSystem-type-carte-code-system</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>2</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ImplementationGuide-ans.fhir.fr.[code]"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.[code]</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ImplementationGuide-ans.fhir.fr.[code]"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.[code]</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_Patient-frpatient-exemple"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/Patient-frpatient-exemple</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_StructureDefinition-EyeColor"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/StructureDefinition-EyeColor</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
+     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_StructureDefinition-EyeColor"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/StructureDefinition-EyeColor</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-EyeColorVS"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-EyeColorVS</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_StructureDefinition-fr-patient"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/StructureDefinition-fr-patient</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>4</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-MeltingPotVS"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-MeltingPotVS</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>2</b></td>
+     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-EyeColorVS"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-EyeColorVS</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>2</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-ModifiedAdministrativeGender"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-ModifiedAdministrativeGender</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-MeltingPotVS"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-MeltingPotVS</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>3</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-TypeCarteVS"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-TypeCarteVS</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-ModifiedAdministrativeGender"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-ModifiedAdministrativeGender</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-TypeCarteVS"><b>/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-TypeCarteVS</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
    </tr>
 </table>
 <hr/>
@@ -134,7 +137,10 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>output/ns.html</b></td><td><b>warning</b></td><td><b>Illegal HTML: Illegal HTML element: section</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="ns.html#l4227">ns&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/table&#8203;/tbody&#8203;/tr&#8203;/td&#8203;/ol&#8203;/li&#8203;/p&#8203;/a at Line 2656, column 9</a></b></td><td><b>error</b></td><td><b>The link 'file:///E:/Transfert/00-KEREVAL-2020/Réalisation/Conseil/ASIP/Généricisation/Gestion%20des%20traces/mobile' for &quot;mobile&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+     <td><b><a href="ns.html#l3972">ns&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/table&#8203;/tbody&#8203;/tr&#8203;/td&#8203;/ol&#8203;/li&#8203;/p&#8203;/a at Line 2581, column 9</a></b></td><td><b>error</b></td><td><b>The link 'file:///E:/Transfert/00-KEREVAL-2020/Réalisation/Conseil/ASIP/Généricisation/Gestion%20des%20traces/mobile' for &quot;mobile&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_LINK_CHECK_FAILED</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="searchform.html#l85">searchform&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/a&#8203;/img&#8203;/div&#8203;/a&#8203;/img&#8203;/div&#8203;/p&#8203;/img at Line 57, column 3</a></b></td><td><b>error</b></td><td><b>The image source 'assets/images/fra.svg' cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">HTML_IMG_SRC_CHECK_FAILED</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>2</b></td><td><b>warning</b></td><td><b>An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
@@ -156,13 +162,16 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.jurisdiction[0] (l1/c8550)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
      <td><b>CodeSystem</b></td><td><b>information</b></td><td><b>CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>CodeSystem (l1/c12982)</b></td><td><b>warning</b></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING</span></td>
+     <td><b>CodeSystem (l1/c12984)</b></td><td><b>warning</b></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>CodeSystem (l1/c12982)</b></td><td><b>warning</b></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING</span></td>
+     <td><b>CodeSystem (l1/c12984)</b></td><td><b>warning</b></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING</span></td>
    </tr>
 </table>
 <hr/>
@@ -175,13 +184,16 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.jurisdiction[0] (l1/c1999)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
      <td><b>CodeSystem</b></td><td><b>information</b></td><td><b>CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>CodeSystem (l1/c2548)</b></td><td><b>warning</b></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING</span></td>
+     <td><b>CodeSystem (l1/c2550)</b></td><td><b>warning</b></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>CodeSystem (l1/c2548)</b></td><td><b>warning</b></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING</span></td>
+     <td><b>CodeSystem (l1/c2550)</b></td><td><b>warning</b></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING</span></td>
    </tr>
 </table>
 <hr/>
@@ -195,6 +207,9 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>ImplementationGuide.id (l1/c64)</b></td><td><b>error</b></td><td><b>Invalid Resource id: Invalid Characters ('ans.fhir.fr.[code]')</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Resource_RES_ID_Malformed_Chars</span></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ImplementationGuide&#8203;.jurisdiction[0] (l1&#8203;/c1051)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>ImplementationGuide&#8203;.packageId (l1&#8203;/c1085)</b></td><td><b>error</b></td><td><b>id value 'ans.fhir.fr.[code]' is not valid</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_ID_Valid</span></td>
@@ -225,6 +240,9 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.jurisdiction[0] (l1&#8203;/c12873)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
+   </tr>
    <tr style="background-color: #ffebcc">
      <td><b>StructureDefinition.context[0]</b></td><td><b>warning</b></td><td><b>Review the extension type for EyeColor: extensions should not have a context of Element unless it's really intended that they can be used anywhere</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_CONTEXT_SHOULD_NOT_BE_ELEMENT</span></td>
    </tr>
@@ -233,24 +251,30 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-EyeColorVS"> </a>
-<h2><a href="ValueSet-EyeColorVS.html">fsh-generated/resources/ValueSet-EyeColorVS.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+<a name="_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_StructureDefinition-fr-patient"> </a>
+<h2><a href="StructureDefinition-fr-patient.html">fsh-generated/resources/StructureDefinition-fr-patient.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>ValueSet.compose.include[0] (l1/c1747)</b></td><td><b>information</b></td><td><b>The concepts in the value set include have not been validated because the terminology server https://smt.esante.gouv.fr/fhir does not support batch validation (tests version &lt; 1.7.8)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_INC_NO_BATCH_ON_SERVER</span></td>
+     <td><b>StructureDefinition&#8203;.jurisdiction[0] (l1&#8203;/c19952)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
    </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>ValueSet (l1/c1750)</b></td><td><b>warning</b></td><td><b>Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[4]&#8203;.binding&#8203;.extension[0] (l1&#8203;/c28334)</b></td><td><b>information</b></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DEPENDS_ON_DEPRECATED</span></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.differential&#8203;.element[3]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c93830)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[10]&#8203;.slicing&#8203;.discriminator[0] (l1&#8203;/c35502)</b></td><td><b>information</b></td><td><b>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_PATH_SLICING_DEPRECATED</span></td>
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-MeltingPotVS"> </a>
-<h2><a href="ValueSet-MeltingPotVS.html">fsh-generated/resources/ValueSet-MeltingPotVS.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
+<a name="_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-EyeColorVS"> </a>
+<h2><a href="ValueSet-EyeColorVS.html">fsh-generated/resources/ValueSet-EyeColorVS.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
 </div>
  <table class="grid">
@@ -258,39 +282,67 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>ValueSet.compose.include[0] (l1/c2841)</b></td><td><b>information</b></td><td><b>The concepts in the value set include have not been validated because the terminology server https://smt.esante.gouv.fr/fhir does not support batch validation (tests version &lt; 1.7.8)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_INC_NO_BATCH_ON_SERVER</span></td>
+     <td><b>ValueSet.jurisdiction[0] (l1/c1588)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>ValueSet&#8203;.compose&#8203;.include[1]&#8203;.concept[0] (l1&#8203;/c2959)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/competence-code-system|0.1.0</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
+     <td><b>ValueSet.compose.include[0] (l1/c1792)</b></td><td><b>information</b></td><td><b>The concepts in the value set include have not been validated because the terminology server https://smt.esante.gouv.fr/fhir does not support batch validation (tests version &lt; 1.7.8)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_INC_NO_BATCH_ON_SERVER</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet (l1/c3057)</b></td><td><b>warning</b></td><td><b>Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+     <td><b>ValueSet (l1/c1795)</b></td><td><b>warning</b></td><td><b>Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-ModifiedAdministrativeGender"> </a>
-<h2><a href="ValueSet-ModifiedAdministrativeGender.html">fsh-generated/resources/ValueSet-ModifiedAdministrativeGender.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
+<a name="_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-MeltingPotVS"> </a>
+<h2><a href="ValueSet-MeltingPotVS.html">fsh-generated/resources/ValueSet-MeltingPotVS.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ValueSet.jurisdiction[0] (l1/c2772)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ValueSet.compose.include[0] (l1/c2926)</b></td><td><b>information</b></td><td><b>The concepts in the value set include have not been validated because the terminology server https://smt.esante.gouv.fr/fhir does not support batch validation (tests version &lt; 1.7.8)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_INC_NO_BATCH_ON_SERVER</span></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ValueSet&#8203;.compose&#8203;.include[1]&#8203;.concept[0] (l1&#8203;/c3044)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/competence-code-system|0.1.0</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
+   </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet (l1/c2380)</b></td><td><b>warning</b></td><td><b>Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+     <td><b>ValueSet (l1/c3142)</b></td><td><b>warning</b></td><td><b>Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
 </table>
 <hr/>
-<a name="_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-TypeCarteVS"> </a>
-<h2><a href="ValueSet-TypeCarteVS.html">fsh-generated/resources/ValueSet-TypeCarteVS.json</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(1)</span></h2>
+<a name="_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-ModifiedAdministrativeGender"> </a>
+<h2><a href="ValueSet-ModifiedAdministrativeGender.html">fsh-generated/resources/ValueSet-ModifiedAdministrativeGender.json</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(1)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi9"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ValueSet.jurisdiction[0] (l1/c2238)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
+   </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet (l1/c1334)</b></td><td><b>warning</b></td><td><b>Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+     <td><b>ValueSet (l1/c2417)</b></td><td><b>warning</b></td><td><b>Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_interop-ig-fhir-tracabilite-evenements_interop-ig-fhir-tracabilite-evenements_igSource_fsh-generated_resources_ValueSet-TypeCarteVS"> </a>
+<h2><a href="ValueSet-TypeCarteVS.html">fsh-generated/resources/ValueSet-TypeCarteVS.json</a> <span id="svi10" class="toggle" onclick="toggle('vi10')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi10')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi10"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ValueSet.jurisdiction[0] (l1/c1234)</b></td><td><b>information</b></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DRAFT</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet (l1/c1353)</b></td><td><b>warning</b></td><td><b>Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
 </table>
 <a name="suppressed"> </a>
@@ -362,7 +414,34 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 <h2>MSG_DRAFT</h2>
  <table class="grid">
    <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-competence-code-system.html">fsh-generated/resources/CodeSystem-competence-code-system.json</a></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-type-carte-code-system.html">fsh-generated/resources/CodeSystem-type-carte-code-system.json</a></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="index.html">fsh-generated/resources/ImplementationGuide-ans.fhir.fr.[code].json</a></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-EyeColor.html">fsh-generated/resources/StructureDefinition-EyeColor.json</a></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-fr-patient.html">fsh-generated/resources/StructureDefinition-fr-patient.json</a></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="ValueSet-EyeColorVS.html">fsh-generated/resources/ValueSet-EyeColorVS.json</a></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="ValueSet-MeltingPotVS.html">fsh-generated/resources/ValueSet-MeltingPotVS.json</a></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
      <td><a href="ValueSet-MeltingPotVS.html">fsh-generated/resources/ValueSet-MeltingPotVS.json</a></td><td><b>Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/competence-code-system|0.1.0</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="ValueSet-ModifiedAdministrativeGender.html">fsh-generated/resources/ValueSet-ModifiedAdministrativeGender.json</a></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="ValueSet-TypeCarteVS.html">fsh-generated/resources/ValueSet-TypeCarteVS.json</a></td><td><b>Reference to draft CodeSystem urn:iso:std:iso:3166|20210120</b></td>
    </tr>
 </table>
 <hr/>

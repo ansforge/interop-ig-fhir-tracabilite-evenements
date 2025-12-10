@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
     <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
   	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
     <link rel="stylesheet" href="assets/css/style-ans.css"/>
     <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
       <!-- Placeholder for child template CSS declarations -->
@@ -46,6 +47,7 @@
     h3,h4,h5,h6{--heading-prefix:"3"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
+
           <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
     <a id="hl7-search-lnk" href="http://hl7.org/fhir" data-no-external="true"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
@@ -66,7 +68,7 @@
 
 
 
-  <img src="assets/images/fra.svg" alt="France flag" title="France" height="16"/>
+  <span title="null">FR</span>
 
 
             </span>
@@ -98,6 +100,9 @@
   </li>
   <li>
     <a href="index.html">Volume 1 - Etude fonctionnelle</a>
+  </li>
+  <li>
+    <a href="ns.html">Normes et standards</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 - Détail des transactions
@@ -176,7 +181,6 @@
       <div class="container">    <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
-
 <style type="text/css">
 h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
 h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
@@ -185,7 +189,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">ANS IG Example - Local Development build (v0.1.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://interop.esante.gouv.fr/ig/fhir/[code]/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">ANS IG Example - version de développement local (v0.1.0) construite par les outils de publication FHIR (HL7&reg; FHIR&reg; Standard). Voir le <a href="https://interop.esante.gouv.fr/ig/fhir/[code]/history.html">répertoire des versions publiées</a></p>  <!-- EndReleaseHeader -->
   <h2>Etude norme et standards</h2>
   
 
@@ -205,94 +209,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
   <li><a href="#présentation-synthétique" id="markdown-toc-présentation-synthétique">Présentation synthétique</a></li>
-  <li><a href="#les-standards" id="markdown-toc-les-standards">Les standards</a>    <ul>
-      <li><a href="#le-standard-fhir" id="markdown-toc-le-standard-fhir">Le standard FHIR</a>        <ul>
-          <li><a href="#description" id="markdown-toc-description">Description</a></li>
-          <li><a href="#maturité-et-adoption" id="markdown-toc-maturité-et-adoption">Maturité et adoption</a></li>
-          <li><a href="#les-ressources-fhir-concernées" id="markdown-toc-les-ressources-fhir-concernées">Les ressources FHIR concernées</a></li>
-          <li><a href="#les-interactions-fhir" id="markdown-toc-les-interactions-fhir">Les interactions FHIR</a></li>
-          <li><a href="#synthèse" id="markdown-toc-synthèse">Synthèse</a></li>
-          <li><a href="#exemple-de-spécification-du-workflow-générique" id="markdown-toc-exemple-de-spécification-du-workflow-générique">Exemple de spécification du workflow générique</a></li>
-          <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
-        </ul>
-      </li>
-      <li><a href="#les-profils-ihe-atna-et-son-option-restful-atna" id="markdown-toc-les-profils-ihe-atna-et-son-option-restful-atna">Les profils IHE ATNA et son option RESTful ATNA</a>        <ul>
-          <li><a href="#profil-ihe-atna" id="markdown-toc-profil-ihe-atna">Profil IHE ATNA</a></li>
-          <li><a href="#option-restful-atna" id="markdown-toc-option-restful-atna">Option RESTful ATNA</a></li>
-        </ul>
-      </li>
-      <li><a href="#les-profils-ihe-macm--acm" id="markdown-toc-les-profils-ihe-macm--acm">Les profils IHE mACM / ACM</a>        <ul>
-          <li><a href="#profil-ihe-macm" id="markdown-toc-profil-ihe-macm">Profil IHE mACM</a></li>
-          <li><a href="#profil-ihe-acm" id="markdown-toc-profil-ihe-acm">Profil IHE ACM</a></li>
-          <li><a href="#maturité-et-adoption-4" id="markdown-toc-maturité-et-adoption-4">Maturité et adoption</a></li>
-          <li><a href="#synthèse-4" id="markdown-toc-synthèse-4">Synthèse</a></li>
-        </ul>
-      </li>
-      <li><a href="#le-profil-ihe-plt" id="markdown-toc-le-profil-ihe-plt">Le profil IHE PLT</a>        <ul>
-          <li><a href="#description-4" id="markdown-toc-description-4">Description</a></li>
-          <li><a href="#maturité-et-adoption-5" id="markdown-toc-maturité-et-adoption-5">Maturité et adoption</a></li>
-          <li><a href="#synthèse-5" id="markdown-toc-synthèse-5">Synthèse</a></li>
-        </ul>
-      </li>
-      <li><a href="#le-profil-ihe-sole" id="markdown-toc-le-profil-ihe-sole">Le profil IHE SOLE</a>        <ul>
-          <li><a href="#description-5" id="markdown-toc-description-5">Description</a></li>
-          <li><a href="#maturité-et-adoption-6" id="markdown-toc-maturité-et-adoption-6">Maturité et adoption</a></li>
-          <li><a href="#synthèse-6" id="markdown-toc-synthèse-6">Synthèse</a></li>
-        </ul>
-      </li>
-      <li><a href="#le-standard-dicom" id="markdown-toc-le-standard-dicom">Le standard DICOM</a></li>
-      <li><a href="#le-standard-gs1" id="markdown-toc-le-standard-gs1">Le standard GS1</a>        <ul>
-          <li><a href="#description-6" id="markdown-toc-description-6">Description</a></li>
-          <li><a href="#maturité-et-adoption-7" id="markdown-toc-maturité-et-adoption-7">Maturité et adoption</a></li>
-          <li><a href="#synthèse-7" id="markdown-toc-synthèse-7">Synthèse</a></li>
-        </ul>
-      </li>
-      <li><a href="#le-standard-syslog" id="markdown-toc-le-standard-syslog">Le standard Syslog</a>        <ul>
-          <li><a href="#description-7" id="markdown-toc-description-7">Description</a></li>
-          <li><a href="#maturité-et-adoption-8" id="markdown-toc-maturité-et-adoption-8">Maturité et adoption</a></li>
-          <li><a href="#synthèse-8" id="markdown-toc-synthèse-8">Synthèse</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+  <li><a href="#les-standards" id="markdown-toc-les-standards">Les standards</a></li>
   <li><a href="#synthèse-comparative-des-standards-présentés" id="markdown-toc-synthèse-comparative-des-standards-présentés">Synthèse comparative des standards présentés</a></li>
-  <li><a href="#analyse-et-conclusion" id="markdown-toc-analyse-et-conclusion">Analyse et Conclusion</a>    <ul>
-      <li><a href="#analyse-métier" id="markdown-toc-analyse-métier">Analyse métier</a>        <ul>
-          <li><a href="#hl7-fhir" id="markdown-toc-hl7-fhir">HL7 FHIR</a></li>
-          <li><a href="#les-profils-macmacm" id="markdown-toc-les-profils-macmacm">Les profils mACM/ACM</a></li>
-          <li><a href="#les-profils-atna-et-son-option-restful-atna--sole" id="markdown-toc-les-profils-atna-et-son-option-restful-atna--sole">Les profils ATNA et son option RESTful ATNA / SOLE</a></li>
-          <li><a href="#le-profil-plt" id="markdown-toc-le-profil-plt">Le profil PLT</a></li>
-          <li><a href="#dicom" id="markdown-toc-dicom">DICOM</a></li>
-          <li><a href="#gs1" id="markdown-toc-gs1">GS1</a></li>
-          <li><a href="#syslog" id="markdown-toc-syslog">Syslog</a></li>
-        </ul>
-      </li>
-      <li><a href="#analyse-technique" id="markdown-toc-analyse-technique">Analyse technique</a>        <ul>
-          <li><a href="#hl7-fhir-1" id="markdown-toc-hl7-fhir-1">HL7 FHIR</a></li>
-          <li><a href="#les-profils-macmacm-1" id="markdown-toc-les-profils-macmacm-1">Les profils mACM/ACM</a></li>
-          <li><a href="#les-profils-atna-et-son-option-restful-atna--sole-1" id="markdown-toc-les-profils-atna-et-son-option-restful-atna--sole-1">Les profils ATNA et son option RESTful ATNA / SOLE</a></li>
-          <li><a href="#le-profil-plt-1" id="markdown-toc-le-profil-plt-1">Le profil PLT</a></li>
-          <li><a href="#dicom-1" id="markdown-toc-dicom-1">DICOM</a></li>
-          <li><a href="#gs1-1" id="markdown-toc-gs1-1">GS1</a></li>
-          <li><a href="#syslog-1" id="markdown-toc-syslog-1">Syslog</a></li>
-        </ul>
-      </li>
-      <li><a href="#conclusion-1" id="markdown-toc-conclusion-1">Conclusion</a></li>
-    </ul>
-  </li>
-  <li><a href="#annexes-a" id="markdown-toc-annexes-a">Annexes A</a>    <ul>
-      <li><a href="#annexe-1-mise-en-correspondance" id="markdown-toc-annexe-1-mise-en-correspondance">Annexe 1&nbsp;: Mise en correspondance</a></li>
-    </ul>
-  </li>
-  <li><a href="#annexes-b" id="markdown-toc-annexes-b">Annexes B</a>    <ul>
-      <li><a href="#annexe-1-glossaire" id="markdown-toc-annexe-1-glossaire">Annexe 1&nbsp;: Glossaire</a></li>
-      <li><a href="#annexe-2-documents-de-référence" id="markdown-toc-annexe-2-documents-de-référence">Annexe 2&nbsp;: Documents de référence</a></li>
-    </ul>
-  </li>
+  <li><a href="#analyse-et-conclusion" id="markdown-toc-analyse-et-conclusion">Analyse et Conclusion</a></li>
+  <li><a href="#annexes-a" id="markdown-toc-annexes-a">Annexes A</a></li>
+  <li><a href="#annexes-b" id="markdown-toc-annexes-b">Annexes B</a></li>
 </ul>
 
 </div>
-<h1 id="introduction">Introduction</h1>
+<h3 id="introduction">Introduction</h3>
 
 <p>Ce document regroupe l’analyse des standards identifiés comme
 potentiellement adaptés pour la mise en œuvre, d’un point de vue
@@ -391,7 +316,7 @@ cliquables dans des notes de bas de page.</p>
   </li>
 </ul>
 
-<h1 id="présentation-synthétique">Présentation synthétique</h1>
+<h3 id="présentation-synthétique">Présentation synthétique</h3>
 
 <p>Cette étude s’insère dans le cadre du besoin «&nbsp;générique&nbsp;»
 d’interopérabilité «&nbsp;Gestion des traces&nbsp;» pouvant être appliqué à
@@ -432,11 +357,11 @@ la gestion de traces.</p>
 flux métiers structurés et identifiés dans l’étude métier [1] aussi
 bien dans un contexte de client lourd que dans un contexte de mobilité.</p>
 
-<h1 id="les-standards">Les standards</h1>
+<h3 id="les-standards">Les standards</h3>
 
-<h2 id="le-standard-fhir">Le standard FHIR</h2>
+<h4 id="le-standard-fhir">Le standard FHIR</h4>
 
-<h3 id="description">Description</h3>
+<h5 id="description">Description</h5>
 
 <p>FHIR<sup id="fnref:2"><a role="doc-noteref" rel="footnote" href="#fn:2" class="footnote">2</a></sup> (<em>Fast Healthcare Interoperability Resources</em>) est un standard
 élaboré par HL7 qui décrit un ensemble de formats de données et
@@ -445,7 +370,7 @@ Programming Interface</em>) pour l’échange des informations de santé. Pour
 plus d’information, se référer au document «&nbsp;Organismes et Standards&nbsp;»
 [3].</p>
 
-<h3 id="maturité-et-adoption">Maturité et adoption</h3>
+<h5 id="maturité-et-adoption">Maturité et adoption</h5>
 
 <p>FHIR a défini et mis en œuvre un modèle<sup id="fnref:3"><a role="doc-noteref" rel="footnote" href="#fn:3" class="footnote">3</a></sup> de maturité de ressources
 basé sur le CMM<sup id="fnref:4"><a role="doc-noteref" rel="footnote" href="#fn:4" class="footnote">4</a></sup> (<em>Capability Maturity Model</em>) afin de fournir aux
@@ -494,7 +419,7 @@ StructureDefinition</p>
   </li>
 </ul>
 
-<h3 id="les-ressources-fhir-concernées">Les ressources FHIR concernées</h3>
+<h5 id="les-ressources-fhir-concernées">Les ressources FHIR concernées</h5>
 
 <p>Une analyse des ressources FHIR «métier» pouvant être appliquées au
 contexte de la «&nbsp;gestion générique des traces&nbsp;» (voir section 6.1)
@@ -628,7 +553,7 @@ les ressources «&nbsp;génériques&nbsp;» qui pourraient être utilisées pour
 spécifier techniquement et de façon «&nbsp;générique&nbsp;» la «&nbsp;gestion des
 traces&nbsp;».</p>
 
-<h3 id="les-interactions-fhir">Les interactions FHIR</h3>
+<h5 id="les-interactions-fhir">Les interactions FHIR</h5>
 
 <p>Le standard FHIR ne se limite pas à la description de ressources&nbsp;; les
 interactions possibles entre les systèmes pour échanger et agir sur les
@@ -667,7 +592,7 @@ GET.</p>
 <p>Enfin, le corps des requêtes HTTP peut être formaté en XML, JSON ou RDF
 (seul le format TURTLE est supporté).</p>
 
-<h3 id="synthèse">Synthèse</h3>
+<h5 id="synthèse">Synthèse</h5>
 
 <p>Plusieurs ressources FHIR ont été identifiées comme pouvant être
 utilisées pour aider à représenter les classes de l’étude métier [1]&nbsp;:
@@ -876,9 +801,9 @@ celle-ci sera utilisée dans les scénarios ci-après pour permettre
 l’interaction entre les différents acteurs impliqués dans le cas d’usage
 «&nbsp;générique&nbsp;» de la «&nbsp;gestion des traces&nbsp;».</p>
 
-<h3 id="exemple-de-spécification-du-workflow-générique">Exemple de spécification du workflow générique</h3>
+<h5 id="exemple-de-spécification-du-workflow-générique">Exemple de spécification du workflow générique</h5>
 
-<h4 id="créer-des-traces">Créer des traces</h4>
+<h6 id="créer-des-traces">Créer des traces</h6>
 
 <p>Ce scénario décrit la demande de création d’une trace en utilisant la
 ressource «&nbsp;générique&nbsp;» «&nbsp;event&nbsp;» (qui peut être «&nbsp;AdverseEvent&nbsp;»,
@@ -918,7 +843,7 @@ considéré dans cette étude. Il n’est donc pas décrit.</p>
   </li>
 </ul>
 
-<h4 id="consulter-une-trace">Consulter une trace</h4>
+<h6 id="consulter-une-trace">Consulter une trace</h6>
 
 <p>Ce scénario décrit la demande de consultation d’une trace en utilisant
 la ressource «&nbsp;générique&nbsp;» «&nbsp;event&nbsp;» (qui peut être «&nbsp;AdverseEvent&nbsp;»,
@@ -948,7 +873,7 @@ la trace correspondant à l’identifiant passé en paramètre.</p>
   </li>
 </ul>
 
-<h4 id="rechercher-des-traces">Rechercher des traces</h4>
+<h6 id="rechercher-des-traces">Rechercher des traces</h6>
 
 <p>Ce scénario décrit la demande de recherche de traces en utilisant la
 ressource «&nbsp;générique&nbsp;» «&nbsp;event&nbsp;» (qui peut être «&nbsp;AdverseEvent&nbsp;»,
@@ -976,21 +901,21 @@ répondant aux critères de recherche.</p>
   </li>
 </ul>
 
-<h3 id="conclusion">Conclusion</h3>
+<h5 id="conclusion">Conclusion</h5>
 
 <p>Le standard FHIR peut permettre de spécifier une gestion «&nbsp;générique&nbsp;»
 de traces. Néanmoins une analyse de profiles IHE et autres standards
 existants est nécessaire avant de prendre une décision définitive
 d’utiliser FHIR.</p>
 
-<h2 id="les-profils-ihe-atna-et-son-option-restful-atna">Les profils IHE ATNA et son option RESTful ATNA</h2>
+<h4 id="les-profils-ihe-atna-et-son-option-restful-atna">Les profils IHE ATNA et son option RESTful ATNA</h4>
 
 <p>Cette section décrit succinctement les profils IHE ATNA et son option
 RESTful ATNA.</p>
 
-<h3 id="profil-ihe-atna">Profil IHE ATNA</h3>
+<h5 id="profil-ihe-atna">Profil IHE ATNA</h5>
 
-<h4 id="description-1">Description</h4>
+<h6 id="description-1">Description</h6>
 
 <p>Le profil ATNA [5] «&nbsp;Audit Trail and Node Authentication&nbsp;» spécifie
 les caractéristiques d’un nœud sécurisé («&nbsp;Secure Node&nbsp;») déployé dans
@@ -1040,7 +965,7 @@ partie 15, annexe A.5 «&nbsp;Audit Trail Message Format Profile&nbsp;». IHE a
 étendu ces spécifications pour définir des événements spécifiques pour
 la sécurité et la protection de la vie privée.</p>
 
-<h4 id="maturité-et-adoption-1">Maturité et adoption</h4>
+<h6 id="maturité-et-adoption-1">Maturité et adoption</h6>
 
 <p>Le profil IHE ATNA, dans la version 16.0 du framework ITI, datant du 12
 juillet 2019, est en «&nbsp;Final Text&nbsp;». A la date de la rédaction de ce
@@ -1048,7 +973,7 @@ document, ce profil est largement implémenté dans plus de 200
 produits<sup id="fnref:11"><a role="doc-noteref" rel="footnote" href="#fn:11" class="footnote">11</a></sup>. Ce profil est testé dans tous les connectathons européens
 et américains depuis 2005<sup id="fnref:12"><a role="doc-noteref" rel="footnote" href="#fn:12" class="footnote">12</a></sup>.</p>
 
-<h4 id="synthèse-1">Synthèse</h4>
+<h6 id="synthèse-1">Synthèse</h6>
 
 <p>Le profil ATNA se base sur les standards syslog et DICOM pour spécifier
 les messages de sécurité échangées lors de la transaction «&nbsp;Record Audit
@@ -1058,9 +983,9 @@ traces&nbsp;». Ce pourrait notamment permettre de mutualiser les
 infrastructures de gestion de traces comme «&nbsp;l’Audit Record
 Repository&nbsp;».</p>
 
-<h3 id="option-restful-atna">Option RESTful ATNA</h3>
+<h5 id="option-restful-atna">Option RESTful ATNA</h5>
 
-<h4 id="description-2">Description</h4>
+<h6 id="description-2">Description</h6>
 
 <p>Resful ATNA [6]&nbsp; (Query and Feed) est un supplément de «&nbsp;l’IT
 Infrastructure Framework&nbsp;». Il étend les fonctionnalités du profil ATNA
@@ -1106,7 +1031,7 @@ spécifié en DICOM – AuditMessage).</p>
 <p>Un mapping est fourni pour montrer la relation entre les champs de la
 ressource FHIR «&nbsp;AuditEvent&nbsp;» et la structure DICOM «&nbsp;AuditMessage&nbsp;».</p>
 
-<h4 id="maturité-et-adoption-2">Maturité et adoption</h4>
+<h6 id="maturité-et-adoption-2">Maturité et adoption</h6>
 
 <p>L’option IHE RESTful ATNA, dans sa version 3.1, datant du 15 août 2019,
 est en «&nbsp;Trial Implementation&nbsp;». A la date de la rédaction de ce
@@ -1123,7 +1048,7 @@ syslog ne sont pas encore traitées et seront prises en compte dans la
 ce profil pour spécifier techniquement le volet «&nbsp;générique gestion des
 traces&nbsp;».</p>
 
-<h4 id="synthèse-2">Synthèse</h4>
+<h6 id="synthèse-2">Synthèse</h6>
 
 <p>L’option RESTful ATNA complète le profil ATNA avec les transactions
 «&nbsp;Retrieve ATNA Audit Event [ITI-81]&nbsp;» (basée sur FHIR) et «&nbsp;Retrieve
@@ -1131,13 +1056,13 @@ Syslog Event [ITI-82]&nbsp;» (basée sur syslog). Cette extension et donc ce
 profil correspond exactement aux attentes du volet «&nbsp;générique gestion
 des traces&nbsp;».</p>
 
-<h2 id="les-profils-ihe-macm--acm">Les profils IHE mACM / ACM</h2>
+<h4 id="les-profils-ihe-macm--acm">Les profils IHE mACM / ACM</h4>
 
 <p>Cette section décrit succinctement les profils IHE mACM / ACM.</p>
 
-<h3 id="profil-ihe-macm">Profil IHE mACM</h3>
+<h5 id="profil-ihe-macm">Profil IHE mACM</h5>
 
-<h4 id="description-3">Description</h4>
+<h6 id="description-3">Description</h6>
 
 <p>Le profil mACM [7]&nbsp;– «&nbsp;mobile Alert Communication Management&nbsp;» définit
 des composants d’infrastructure pour envoyer des alertes, sous forme de
@@ -1184,7 +1109,7 @@ et les profils PDQ/PDQm, qui agissent comme registre de patients pour
 indiquer et consulter les détails sur les patients concernés (comme les
 coordonnées postales, téléphoniques, etc.).</p>
 
-<h4 id="maturité-et-adoption-3">Maturité et adoption</h4>
+<h6 id="maturité-et-adoption-3">Maturité et adoption</h6>
 
 <p>Le profil IHE mACM, dans sa version 3.1, datant du 5 décembre 2019, est
 en «&nbsp;Trial Implementation&nbsp;». Il est basé sur FHIR R4, utilisant des
@@ -1193,7 +1118,7 @@ seul produit a été déclaré<sup id="fnref:15"><a role="doc-noteref" rel="foot
 profil a été testé lors de trois connectathons américains (2016, 2017 et
 2018)<sup id="fnref:16"><a role="doc-noteref" rel="footnote" href="#fn:16" class="footnote">16</a></sup>.</p>
 
-<h4 id="synthèse-3">Synthèse</h4>
+<h6 id="synthèse-3">Synthèse</h6>
 
 <p>Le profil mACM spécifie comment gérer (transmettre, consulter l’état)
 des traces qui peuvent être générées lors d’un workflow métier. Ce
@@ -1203,7 +1128,7 @@ qu’il peut être utilisé dans un environnement dans lequel le profil IHE
 ACM est aussi implémenté, assurant ainsi une interopérabilité globale de
 gestion des alertes.</p>
 
-<h4 id="description-détaillée">Description détaillée</h4>
+<h6 id="description-détaillée">Description détaillée</h6>
 
 <p>Ces informations détaillées, présentes dans le profil mACM, peuvent
 aider à spécifier le profil générique «&nbsp;Gestion des traces&nbsp;».</p>
@@ -1224,7 +1149,7 @@ l’utilisation de l’opération SEARCH via un http GET, en indiquant les
 critères de recherche spécifiés dans les ressources Communication et
 CommunicationRequest.</p>
 
-<h3 id="profil-ihe-acm">Profil IHE ACM</h3>
+<h5 id="profil-ihe-acm">Profil IHE ACM</h5>
 
 <p>Le profil «&nbsp;Alert Communication Management&nbsp;» [8]&nbsp; définit la
 communication d’alarmes entre sous-systèmes. ACM définit trois acteurs
@@ -1251,7 +1176,7 @@ Reporter&nbsp;».</p>
 
 <p>Les transactions échangées sont au format HL7v2.</p>
 
-<h3 id="maturité-et-adoption-4">Maturité et adoption</h3>
+<h5 id="maturité-et-adoption-4">Maturité et adoption</h5>
 
 <p>Le profil IHE ACM, dans sa version 1.3, datant du 16 août 2012, est en
 «&nbsp;Trial Implementation&nbsp;». A la date de la rédaction de ce document,
@@ -1259,7 +1184,7 @@ douze produits ont été déclaré<sup id="fnref:18"><a role="doc-noteref" rel="
 profil a été testé à 17 reprises lors d’un connectathon (Europe 2014,
 Japon 2014-2016, 2018, Nord-Amérique 2007-2020)<sup id="fnref:19"><a role="doc-noteref" rel="footnote" href="#fn:19" class="footnote">19</a></sup>.</p>
 
-<h3 id="synthèse-4">Synthèse</h3>
+<h5 id="synthèse-4">Synthèse</h5>
 
 <p>Le profil ACM spécifie comment gérer (transmettre, consulter l’état) des
 traces qui peuvent être générées lors d’un workflow métier. Ce profil
@@ -1269,9 +1194,9 @@ des traces&nbsp;». Le point intéressant aussi de ce profil est qu’il peut
 aussi implémenté, assurant ainsi une interopérabilité globale de gestion
 des alertes.</p>
 
-<h2 id="le-profil-ihe-plt">Le profil IHE PLT</h2>
+<h4 id="le-profil-ihe-plt">Le profil IHE PLT</h4>
 
-<h3 id="description-4">Description</h3>
+<h5 id="description-4">Description</h5>
 
 <p>Le profil PLT [9]&nbsp; «&nbsp;Patient Location Tracking&nbsp;» définit les
 spécifications d’interopérabilité pour retrouver la localisation de
@@ -1347,22 +1272,22 @@ spécifiée en HL7v2 avec le trigger d’événement&nbsp;:</p>
   </li>
 </ul>
 
-<h3 id="maturité-et-adoption-5">Maturité et adoption</h3>
+<h5 id="maturité-et-adoption-5">Maturité et adoption</h5>
 
 <p>Le profil IHE PLT, dans sa version 1.2, datant du 31 août 2015, est en
 «&nbsp;Trial Implementation&nbsp;». A la date de la rédaction de ce document,
 aucun produit n’a été déclaré<sup id="fnref:20"><a role="doc-noteref" rel="footnote" href="#fn:20" class="footnote">20</a></sup> comme implémentant le profil PLT. Ce
 profil n’a jamais été testé lors d’un connectathon<sup id="fnref:21"><a role="doc-noteref" rel="footnote" href="#fn:21" class="footnote">21</a></sup>.</p>
 
-<h3 id="synthèse-5">Synthèse</h3>
+<h5 id="synthèse-5">Synthèse</h5>
 
 <p>Ce profil IHE montre comment gérer un type de trace («&nbsp;localisation des
 patients&nbsp;») via des transactions HL7. Néanmoins, ce profil n’a jamais
 été implémenté ni testé.</p>
 
-<h2 id="le-profil-ihe-sole">Le profil IHE SOLE</h2>
+<h4 id="le-profil-ihe-sole">Le profil IHE SOLE</h4>
 
-<h3 id="description-5">Description</h3>
+<h5 id="description-5">Description</h5>
 
 <p>Le profil SOLE [10]&nbsp;«&nbsp;Standardized Operational Log of Events&nbsp;» définit
 les spécifications d’interopérabilité pour enregistrer et collecter des
@@ -1392,14 +1317,14 @@ fonctionnalités de filtrage. Pour les transactions au format syslog
 spécifié à la valeur «&nbsp;IHE+SOLE&nbsp;». Le champ MSG-ID est aussi spécifique
 avec des codes d’événements SOLE.</p>
 
-<h3 id="maturité-et-adoption-6">Maturité et adoption</h3>
+<h5 id="maturité-et-adoption-6">Maturité et adoption</h5>
 
 <p>Le profil IHE SOLE, dans sa version 1.2, datant du 27 Juillet 2018, est
 en «&nbsp;Trial Implementation&nbsp;». A la date de la rédaction de ce document,
 aucun produit n’a été déclaré<sup id="fnref:22"><a role="doc-noteref" rel="footnote" href="#fn:22" class="footnote">22</a></sup> comme implémentant le profil SOLE. Ce
 profil n’a jamais été testé lors d’un connectathon<sup id="fnref:23"><a role="doc-noteref" rel="footnote" href="#fn:23" class="footnote">23</a></sup>.</p>
 
-<h3 id="synthèse-6">Synthèse</h3>
+<h5 id="synthèse-6">Synthèse</h5>
 
 <p>Le profil IHE SOLE n’a jamais été implémenté. Néanmoins, son approche
 est intéressante car c’est une extension des profils ATNA / RESTful ATNA
@@ -1409,7 +1334,7 @@ radiologie). Cette démarche peut donc être utilisée pour rendre
 «&nbsp;générique&nbsp;» le volet «&nbsp;gestion des traces&nbsp;» et le profilage se fera
 lors de la prise en compte des besoins d’interopérabilité métier.</p>
 
-<h2 id="le-standard-dicom">Le standard DICOM</h2>
+<h4 id="le-standard-dicom">Le standard DICOM</h4>
 
 <p>Le but de cette étude «&nbsp;Normes &amp; Standards&nbsp;» n’est pas d’analyser en
 détail le standard DICOM, mais de se focaliser sur la partie «&nbsp;DICOM
@@ -1512,9 +1437,9 @@ AuditMessage</strong></th>
 RESTful ATNA et du profil SOLE pour spécifier techniquement la volet
 «&nbsp;générique gestion des traces&nbsp;».</p>
 
-<h2 id="le-standard-gs1">Le standard GS1</h2>
+<h4 id="le-standard-gs1">Le standard GS1</h4>
 
-<h3 id="description-6">Description</h3>
+<h5 id="description-6">Description</h5>
 
 <p>GS1 [12]&nbsp;: GS1 – Global Standards 1 est un organisme mondial qui
 normalise des méthodes de codage utilisées dans les chaines logistiques,
@@ -1732,7 +1657,7 @@ dernier standard spécifie la gestion des traces dans le domaine de la
 santé, à partir de processus et exigences métier puis sous forme de cas
 d’utilisation, reprenant l’enregistrement et la consultation de traces.</p>
 
-<h3 id="maturité-et-adoption-7">Maturité et adoption</h3>
+<h5 id="maturité-et-adoption-7">Maturité et adoption</h5>
 
 <p>GS1 a été fondé en 1974. GS1 est international avec des initiatives
 nationales dans différents pays&nbsp;; GS1 est présent dans plus de 100 pays.</p>
@@ -1756,7 +1681,7 @@ exemple GS1 Healthcare Reference Book 2016-2017).</p>
 
 <p>GS1 est donc mature et semble être adopté dans différents pays.</p>
 
-<h3 id="synthèse-7">Synthèse</h3>
+<h5 id="synthèse-7">Synthèse</h5>
 
 <p>GS1 est un ensemble de standards utilisés pour tracer la gestion
 d’objets dans différents domaines métier. GS1 spécifie de façon
@@ -1771,9 +1696,9 @@ service de gestion des codes d’identification.</p>
 véhiculées par ce standard le seront bien aussi dans les spécifications
 techniques.</p>
 
-<h2 id="le-standard-syslog">Le standard Syslog</h2>
+<h4 id="le-standard-syslog">Le standard Syslog</h4>
 
-<h3 id="description-7">Description</h3>
+<h5 id="description-7">Description</h5>
 
 <p>Syslog [13] est un standard (RFC 5424<sup id="fnref:24"><a role="doc-noteref" rel="footnote" href="#fn:24" class="footnote">24</a></sup>) qui spécifie la structure
 et l’enregistrement de messages de traces. Les implémentations de syslog
@@ -1932,14 +1857,14 @@ exemple, le profil SOLE utilise ce champ pour véhiculer les codes des
 <p>Cette approche semble appropriée pour spécifier techniquement le volet
 «&nbsp;générique gestion des traces&nbsp;».</p>
 
-<h3 id="maturité-et-adoption-8">Maturité et adoption</h3>
+<h5 id="maturité-et-adoption-8">Maturité et adoption</h5>
 
 <p>Le standard syslog (RFC 5424) a été spécifié en 2009 avec une première
 version en 2001. Ces standards ont été largement implémentés et sont
 devenus des références pour la gestion des traces, notamment dans le
 monde Unix/Linux.</p>
 
-<h3 id="synthèse-8">Synthèse</h3>
+<h5 id="synthèse-8">Synthèse</h5>
 
 <p>Le standard syslog est largement diffusé depuis des décennies dans les
 systèmes d’information pour gérer les traces, notamment dans le monde
@@ -1953,7 +1878,7 @@ des traces&nbsp;» est donc de pouvoir couvrir le protocole syslog, laissant
 ainsi la possibilité de pouvoir être interopérable avec des systèmes
 existants supportant syslog.</p>
 
-<h1 id="synthèse-comparative-des-standards-présentés">Synthèse comparative des standards présentés</h1>
+<h3 id="synthèse-comparative-des-standards-présentés">Synthèse comparative des standards présentés</h3>
 
 <p>Cette section présente une synthèse comparative des standards et profils
 analysés dans les sections précédentes. Les items de cette synthèse sont
@@ -2258,7 +2183,7 @@ différents fournisseurs<a role="doc-backlink" href="#fnref3" class="footnote-ba
 
 <p>Tableau 5 Tableau récapitulatif de l’évaluation des standards</p>
 
-<h1 id="analyse-et-conclusion">Analyse et Conclusion</h1>
+<h3 id="analyse-et-conclusion">Analyse et Conclusion</h3>
 
 <p>Cette étude a pour objectif de comparer les standards <strong><em>HL7 FHIR R4,
 DICOM, GS1, syslog</em></strong> et les profils <strong>IHE mACM / ACM / ATNA et son
@@ -2267,7 +2192,7 @@ spécifications d’interopérabilité du besoin «&nbsp;générique gestion des
 traces&nbsp;». Ci-dessous une analyse métier et technique des standards et
 profils présentés dans ce document.</p>
 
-<h2 id="analyse-métier">Analyse métier</h2>
+<h4 id="analyse-métier">Analyse métier</h4>
 
 <p>L’analyse métier reste «&nbsp;générique&nbsp;» avec le besoin principal de gestion
 des traces (création, recherche, consultation). L’argumentaire
@@ -2275,7 +2200,7 @@ ci-dessous reste à ce niveau générique. Cette analyse métier sera
 instanciée lors de la prise en compte d’un besoin métier «&nbsp;spécifique&nbsp;»
 de gestion de traces.</p>
 
-<h3 id="hl7-fhir">HL7 FHIR</h3>
+<h5 id="hl7-fhir">HL7 FHIR</h5>
 
 <p>Les informations identifiées dans l’étude métier [1] sont couvertes
 par les attributs proposés par les ressources FHIR identifiées et
@@ -2289,7 +2214,7 @@ et ses paramètres de recherche couvrent les critères de recherche de
 l’étude métier. Enfin les opérations FHIR CREATE, READ et SEARCH
 permettent aussi de spécifier les différents flux de l’étude métier.</p>
 
-<h3 id="les-profils-macmacm">Les profils mACM/ACM</h3>
+<h5 id="les-profils-macmacm">Les profils mACM/ACM</h5>
 
 <p>Les profils mACM et ACM pourraient être utilisés pour répondre aux
 besoins métier «&nbsp;générique gestion des traces&nbsp;» mais ces deux profils
@@ -2298,7 +2223,7 @@ Par contre, ces deux profils couvrent aussi bien les besoins IHE HL7 que
 IHE FHIR&nbsp;; ce point est intéressant d’un point de vue générique pour
 adresser le maximum de besoins métier de gestion de traces.</p>
 
-<h3 id="les-profils-atna-et-son-option-restful-atna--sole">Les profils ATNA et son option RESTful ATNA / SOLE</h3>
+<h5 id="les-profils-atna-et-son-option-restful-atna--sole">Les profils ATNA et son option RESTful ATNA / SOLE</h5>
 
 <p>Les profils ATNA / l’option RESTful ATNA et SOLE ont été spécifiés pour
 gérer des traces (sécurité dans le cadre de ATNA et RESTful ATNA,
@@ -2313,7 +2238,7 @@ transactions&nbsp;: «&nbsp;record audit event&nbsp;» et «&nbsp;retrieve audit
 cette dernière transaction couvre finalement les transactions
 «&nbsp;consulter une trace&nbsp;» et «&nbsp;rechercher des traces&nbsp;».</p>
 
-<h3 id="le-profil-plt">Le profil PLT</h3>
+<h5 id="le-profil-plt">Le profil PLT</h5>
 
 <p>Le profil PLT est un cas spécifique de gestion des traces concernant la
 traçabilité des mouvements d’un patient. La gestion des traces est
@@ -2321,7 +2246,7 @@ spécifiée en HL7. Ce profil peut être utilisé pour réfléchir à sa
 généricité et comment il pourrait être adressé par le volet «&nbsp;générique
 gestion des traces&nbsp;».</p>
 
-<h3 id="dicom">DICOM</h3>
+<h5 id="dicom">DICOM</h5>
 
 <p>DICOM est un standard qui est largement utilisé dans le domaine de la
 radiologie. La partie «&nbsp;DICOM PS3.15 – Security and System Management
@@ -2333,7 +2258,7 @@ messages d’audit. Il serait intéressant de réutiliser cette
 spécification pour couvrir le besoin métier générique décrivant la
 classe «&nbsp;Evénement&nbsp;».</p>
 
-<h3 id="gs1">GS1</h3>
+<h5 id="gs1">GS1</h5>
 
 <p>GS1 est un standard international, qui spécifie la gestion de la
 traçabilité d’objets produits et échangés entre différents acteurs, et
@@ -2342,7 +2267,7 @@ besoin métier «&nbsp;générique gestion des traces&nbsp;» en spécifiant tro
 interfaces «&nbsp;EPCIS Capture Interface&nbsp;», «&nbsp;EPCIS Query Control
 Interface&nbsp;» et «&nbsp;EPCIS Query Callback Interface&nbsp;».</p>
 
-<h3 id="syslog">Syslog</h3>
+<h5 id="syslog">Syslog</h5>
 
 <p>Syslog est un standard déjà largement utilisé pour la gestion des
 traces. Il présente néanmoins une faiblesse&nbsp;: il ne spécifie pas la
@@ -2351,7 +2276,7 @@ future des traces. Les profils IHE ATNA et son option RESTful ATNA et
 SOLE se basent sur le standard syslog pour l’échange des traces et la
 spécification de «&nbsp;l’enveloppe&nbsp;» des traces.</p>
 
-<h2 id="analyse-technique">Analyse technique</h2>
+<h4 id="analyse-technique">Analyse technique</h4>
 
 <p>Comme argumenté dans l’analyse métier, FHIR peut répondre au besoin
 métier «&nbsp;générique&nbsp;». Néanmoins, pour adresser le plus grand nombre de
@@ -2359,7 +2284,7 @@ besoins métier spécifiques, il est intéressant de considérer aussi
 syslog, qui est très répandu dans les systèmes d’information pour la
 gestion des traces.</p>
 
-<h3 id="hl7-fhir-1">HL7 FHIR</h3>
+<h5 id="hl7-fhir-1">HL7 FHIR</h5>
 
 <p>Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
 structurés et identifiés dans l’étude métier [1] «&nbsp;générique gestion
@@ -2370,7 +2295,7 @@ standards XML ou JSON. Ces deux standards pourront être utilisés en
 fonction du contexte spécifique métier, sachant que JSON est bien adapté
 dans un contexte mobile.</p>
 
-<h3 id="les-profils-macmacm-1">Les profils mACM/ACM</h3>
+<h5 id="les-profils-macmacm-1">Les profils mACM/ACM</h5>
 
 <p>Le profil mACM utilise des ressources FHIR «&nbsp;Communication et
 «&nbsp;CommunicationRequest&nbsp;» pour spécifier les informations échangées dans
@@ -2385,7 +2310,7 @@ spécification technique «&nbsp;générique gestion des traces&nbsp;», notamme
 comment ces deux profils collaborent pour adresser aussi bien le monde
 du système d’information de santé que le monde du mobile.</p>
 
-<h3 id="les-profils-atna-et-son-option-restful-atna--sole-1">Les profils ATNA et son option RESTful ATNA / SOLE</h3>
+<h5 id="les-profils-atna-et-son-option-restful-atna--sole-1">Les profils ATNA et son option RESTful ATNA / SOLE</h5>
 
 <p>Les profils ATNA et son option RESTful ATNA et SOLE se positionnement de
 la façon suivante&nbsp;:</p>
@@ -2403,7 +2328,7 @@ identifier les attributs de la spécification technique qui seront
 génériques à concrétiser lors de la prise en compte d’un besoin métier
 spécifique.</p>
 
-<h3 id="le-profil-plt-1">Le profil PLT</h3>
+<h5 id="le-profil-plt-1">Le profil PLT</h5>
 
 <p>Le profil PLT – Patient Location Tracking est basé sur le standard HL7
 pour la gestion et la description des événements (événements A09, A10 et
@@ -2412,7 +2337,7 @@ informations véhiculés dans les messages d’événements couvrent le besoin
 métier mais ils sont très orientés «&nbsp;patient&nbsp;». A voir comment s’en
 inspirer pour les aspects génériques de gestion des traces.</p>
 
-<h3 id="dicom-1">DICOM</h3>
+<h5 id="dicom-1">DICOM</h5>
 
 <p>DICOM est le standard utilisé pour échanger des informations dans le
 domaine de la radiologie. L’annexe 5 – Audit Trail Message Format
@@ -2424,14 +2349,14 @@ structure des événements qui sont échangés (événements de sécurité et
 pourra être utilisée pour tous les futurs événements pour faciliter la
 mutualisation des fonctionnalités de gestion des traces.</p>
 
-<h3 id="gs1-1">GS1</h3>
+<h5 id="gs1-1">GS1</h5>
 
 <p>GS1 spécifie techniquement les interfaces «&nbsp;EPCIS Capture Interface&nbsp;»,
 «&nbsp;EPCIS Query Control Interface&nbsp;» et «&nbsp;EPCIS Query Callback Interface&nbsp;»
 soit via l’utilisation du protocole http en mode GET ou POST, soit via
 le protocole AS2 en échangeant des données au format XML.</p>
 
-<h3 id="syslog-1">Syslog</h3>
+<h5 id="syslog-1">Syslog</h5>
 
 <p>Le protocole Syslog propose un premier niveau de formalisation pour
 tracer des événements, ainsi qu’une architecture de communication
@@ -2441,7 +2366,7 @@ couche sécurité. Ces différents standards sont utilisés par les profils
 IHE ATNA et son option RESTful ATNA / SOLE pour échanger des événements
 au format syslog.</p>
 
-<h2 id="conclusion-1">Conclusion</h2>
+<h4 id="conclusion-1">Conclusion</h4>
 
 <p>Ce document présente une étude comparative des standards FHIR, DICOM,
 GS1 et syslog ainsi que des profils IHE mACM / ACM / ATNA et son option
@@ -2481,9 +2406,9 @@ les sections 5.1 et 5.1.5, l’option RESTful ATNA semble le plus adapté
 au besoin «&nbsp;générique gestion des traces&nbsp;», en s’inspirant aussi des
 spécifications GS1.</p>
 
-<h1 id="annexes-a">Annexes A</h1>
+<h3 id="annexes-a">Annexes A</h3>
 
-<h2 id="annexe-1-mise-en-correspondance">Annexe 1&nbsp;: Mise en correspondance</h2>
+<h4 id="annexe-1-mise-en-correspondance">Annexe 1&nbsp;: Mise en correspondance</h4>
 
 <p>Cette section reprend, la mise en correspondance des objets de la SFE
 avec la ressource FHIR «&nbsp;AuditEvent&nbsp;» et la structure AuditMessage de
@@ -2591,9 +2516,9 @@ entity.detail</td>
 <p>Tableau 6 Mise en correspondance avec la ressource «&nbsp;AuditEvent&nbsp;» et la
 structure AuditMessage</p>
 
-<h1 id="annexes-b">Annexes B</h1>
+<h3 id="annexes-b">Annexes B</h3>
 
-<h2 id="annexe-1-glossaire">Annexe 1&nbsp;: Glossaire</h2>
+<h4 id="annexe-1-glossaire">Annexe 1&nbsp;: Glossaire</h4>
 
 <table>
   <thead>
@@ -2630,7 +2555,7 @@ structure AuditMessage</p>
   </tbody>
 </table>
 
-<h2 id="annexe-2-documents-de-référence">Annexe 2&nbsp;: Documents de référence</h2>
+<h4 id="annexe-2-documents-de-référence">Annexe 2&nbsp;: Documents de référence</h4>
 
 <table style="width:99%;">
 <colgroup>
@@ -2653,7 +2578,7 @@ structure AuditMessage</p>
 <li><p>Audit Trail and Node Authentication – IHE ITI TF Volume 1 –
 Section 9 (<a href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf">https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf</a>)</p></li>
 <li><p>RESTful ATNA – IHE ITI TF Supplement (<a href="https://www.ihe.net/resources/technical_frameworks/#IT">https://www.ihe.net/resources/technical_frameworks/#IT</a>)</p></li>
-<li><p><a name="l4227">​</a><a href="file:///E:/Transfert/00-KEREVAL-2020/Réalisation/Conseil/ASIP/Généricisation/Gestion%20des%20traces/mobile">mobile</a>
+<li><p><a name="l3972">​</a><a href="file:///E:/Transfert/00-KEREVAL-2020/Réalisation/Conseil/ASIP/Généricisation/Gestion%20des%20traces/mobile">mobile</a>
 Alert Communication Management – IHE ITI TF Supplement (<a href="https://www.ihe.net/resources/technical_frameworks/#IT">https://www.ihe.net/resources/technical_frameworks/#IT</a>)</p></li>
 <li><p>Alert Communication Management – IHE PCD TF Volume 1 – Section 6
 (<a href="https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol1.pdf">https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol1.pdf</a>)</p></li>
@@ -2806,7 +2731,7 @@ in medical electrical equipment and medical electrical systems&nbsp;<a role="doc
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 19, 2025 14:50+0000">2025-11-19</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 10, 2025 10:48+0000">2025-12-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

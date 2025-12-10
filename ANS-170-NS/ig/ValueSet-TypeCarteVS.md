@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/TypeCarteVS | *Version*:0.1.0 |
-| Draft as of 2025-11-19 | *Computable Name*:TypeCarteVS |
+| Draft as of 2025-12-10 | *Computable Name*:TypeCarteVS |
 
  
 Type Carte Value Set. 
@@ -18,9 +18,7 @@ Type Carte Value Set.
 
 Ce jeu de valeurs nest pas utilisé ici ; il peut être utilisé autre part (par exemple dans les spécifications et / ou implémentations qui utilisent ce contenu)
 
-### Logical Definition (CLD)
-
-* Include tous les codes définis dans [`https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/type-carte-code-system`](CodeSystem-type-carte-code-system.md)version 📦0.1.0
+### Définition logique (CLD)
 
  
 
@@ -52,7 +50,7 @@ Ce jeu de valeurs nest pas utilisé ici ; il peut être utilisé autre part (par
   "name" : "TypeCarteVS",
   "title" : "Type Carte Value Set",
   "status" : "draft",
-  "date" : "2025-11-19T14:50:27+00:00",
+  "date" : "2025-12-10T10:48:22+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
