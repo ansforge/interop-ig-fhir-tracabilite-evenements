@@ -1,4 +1,4 @@
-# Introduction
+### Introduction
 
 Ce document regroupe l’analyse des standards identifiés comme
 potentiellement adaptés pour la mise en œuvre, d’un point de vue
@@ -66,7 +66,7 @@ la manière suivante dans le document :
   techniques référencés sont directement intégrées sous forme de liens
   cliquables dans des notes de bas de page.
 
-# Présentation synthétique
+### Présentation synthétique
 
 Cette étude s’insère dans le cadre du besoin « générique »
 d’interopérabilité « Gestion des traces » pouvant être appliqué à
@@ -101,11 +101,11 @@ Les standards présentés dans ce document doivent gérer l’ensemble des
 flux métiers structurés et identifiés dans l’étude métier \[1\] aussi
 bien dans un contexte de client lourd que dans un contexte de mobilité.
 
-# Les standards
+### Les standards
 
-## Le standard FHIR
+#### Le standard FHIR
 
-### Description
+##### Description
 
 FHIR[^2] (*Fast Healthcare Interoperability Resources*) est un standard
 élaboré par HL7 qui décrit un ensemble de formats de données et
@@ -114,7 +114,7 @@ Programming Interface*) pour l’échange des informations de santé. Pour
 plus d’information, se référer au document « Organismes et Standards »
 \[3\].
 
-### Maturité et adoption 
+##### Maturité et adoption 
 
 FHIR a défini et mis en œuvre un modèle[^3] de maturité de ressources
 basé sur le CMM[^4] (*Capability Maturity Model*) afin de fournir aux
@@ -146,7 +146,7 @@ niveau de maturité « normative », c’est-à-dire qu’elles sont stables 
 
   - Module Administration (Patient)
 
-### Les ressources FHIR concernées
+##### Les ressources FHIR concernées
 
 Une analyse des ressources FHIR «métier» pouvant être appliquées au
 contexte de la « gestion générique des traces » (voir section 6.1)
@@ -253,7 +253,7 @@ les ressources « génériques » qui pourraient être utilisées pour
 spécifier techniquement et de façon « générique » la « gestion des
 traces ».
 
-### Les interactions FHIR
+##### Les interactions FHIR
 
 Le standard FHIR ne se limite pas à la description de ressources ; les
 interactions possibles entre les systèmes pour échanger et agir sur les
@@ -280,7 +280,7 @@ la « gestion des traces » sont les suivantes :
 Enfin, le corps des requêtes HTTP peut être formaté en XML, JSON ou RDF
 (seul le format TURTLE est supporté).
 
-### Synthèse
+##### Synthèse
 
 Plusieurs ressources FHIR ont été identifiées comme pouvant être
 utilisées pour aider à représenter les classes de l’étude métier \[1\] :
@@ -438,9 +438,9 @@ celle-ci sera utilisée dans les scénarios ci-après pour permettre
 l’interaction entre les différents acteurs impliqués dans le cas d’usage
 « générique » de la « gestion des traces ».
 
-### Exemple de spécification du workflow générique
+##### Exemple de spécification du workflow générique
 
-#### Créer des traces
+###### Créer des traces
 
 Ce scénario décrit la demande de création d’une trace en utilisant la
 ressource « générique » « event » (qui peut être « AdverseEvent »,
@@ -471,7 +471,7 @@ Ce scénario se décompose en deux flux :
 - **Le Flux 01bis** **« RetourTransmissionTrace »** : ce flux n’est pas
   considéré dans cette étude. Il n’est donc pas décrit.
 
-#### Consulter une trace
+###### Consulter une trace
 
 Ce scénario décrit la demande de consultation d’une trace en utilisant
 la ressource « générique » « event » (qui peut être « AdverseEvent »,
@@ -496,7 +496,7 @@ Ce scénario se décompose en deux flux :
   message présentant une ressource « event » qui contient le contenu de
   la trace correspondant à l’identifiant passé en paramètre.
 
-#### Rechercher des traces
+###### Rechercher des traces
 
 Ce scénario décrit la demande de recherche de traces en utilisant la
 ressource « générique » « event » (qui peut être « AdverseEvent »,
@@ -519,21 +519,21 @@ Le scénario de recherche de traces est décomposé en deux flux :
   message présentant, dans la ressource « bundle », la liste des traces
   répondant aux critères de recherche.
 
-### Conclusion
+##### Conclusion
 
 Le standard FHIR peut permettre de spécifier une gestion « générique »
 de traces. Néanmoins une analyse de profiles IHE et autres standards
 existants est nécessaire avant de prendre une décision définitive
 d’utiliser FHIR.
 
-## Les profils IHE ATNA et son option RESTful ATNA
+#### Les profils IHE ATNA et son option RESTful ATNA
 
 Cette section décrit succinctement les profils IHE ATNA et son option
 RESTful ATNA.
 
-### Profil IHE ATNA
+##### Profil IHE ATNA
 
-#### Description
+###### Description
 
 Le profil ATNA \[5\] « Audit Trail and Node Authentication » spécifie
 les caractéristiques d’un nœud sécurisé (« Secure Node ») déployé dans
@@ -576,7 +576,7 @@ partie 15, annexe A.5 « Audit Trail Message Format Profile ». IHE a
 étendu ces spécifications pour définir des événements spécifiques pour
 la sécurité et la protection de la vie privée.
 
-#### Maturité et adoption
+###### Maturité et adoption
 
 Le profil IHE ATNA, dans la version 16.0 du framework ITI, datant du 12
 juillet 2019, est en « Final Text ». A la date de la rédaction de ce
@@ -584,7 +584,7 @@ document, ce profil est largement implémenté dans plus de 200
 produits[^11]. Ce profil est testé dans tous les connectathons européens
 et américains depuis 2005[^12].
 
-#### Synthèse
+###### Synthèse
 
 Le profil ATNA se base sur les standards syslog et DICOM pour spécifier
 les messages de sécurité échangées lors de la transaction « Record Audit
@@ -594,9 +594,9 @@ traces ». Ce pourrait notamment permettre de mutualiser les
 infrastructures de gestion de traces comme « l’Audit Record
 Repository ».
 
-### Option RESTful ATNA
+##### Option RESTful ATNA
 
-#### Description
+###### Description
 
 Resful ATNA \[6\]  (Query and Feed) est un supplément de « l’IT
 Infrastructure Framework ». Il étend les fonctionnalités du profil ATNA
@@ -636,7 +636,7 @@ spécifié en DICOM – AuditMessage).
 Un mapping est fourni pour montrer la relation entre les champs de la
 ressource FHIR « AuditEvent » et la structure DICOM « AuditMessage ».
 
-#### Maturité et adoption
+###### Maturité et adoption
 
 L’option IHE RESTful ATNA, dans sa version 3.1, datant du 15 août 2019,
 est en « Trial Implementation ». A la date de la rédaction de ce
@@ -653,7 +653,7 @@ syslog ne sont pas encore traitées et seront prises en compte dans la
 ce profil pour spécifier techniquement le volet « générique gestion des
 traces ».
 
-#### Synthèse
+###### Synthèse
 
 L’option RESTful ATNA complète le profil ATNA avec les transactions
 « Retrieve ATNA Audit Event \[ITI-81\] » (basée sur FHIR) et « Retrieve
@@ -661,13 +661,13 @@ Syslog Event \[ITI-82\] » (basée sur syslog). Cette extension et donc ce
 profil correspond exactement aux attentes du volet « générique gestion
 des traces ».
 
-## Les profils IHE mACM / ACM
+#### Les profils IHE mACM / ACM
 
 Cette section décrit succinctement les profils IHE mACM / ACM.
 
-### Profil IHE mACM
+##### Profil IHE mACM
 
-#### Description
+###### Description
 
 Le profil mACM \[7\] – « mobile Alert Communication Management » définit
 des composants d’infrastructure pour envoyer des alertes, sous forme de
@@ -714,7 +714,7 @@ et les profils PDQ/PDQm, qui agissent comme registre de patients pour
 indiquer et consulter les détails sur les patients concernés (comme les
 coordonnées postales, téléphoniques, etc.).
 
-#### Maturité et adoption
+###### Maturité et adoption
 
 Le profil IHE mACM, dans sa version 3.1, datant du 5 décembre 2019, est
 en « Trial Implementation ». Il est basé sur FHIR R4, utilisant des
@@ -723,7 +723,7 @@ seul produit a été déclaré[^15] comme implémentant le profil mACM. Ce
 profil a été testé lors de trois connectathons américains (2016, 2017 et
 2018)[^16].
 
-#### Synthèse
+###### Synthèse
 
 Le profil mACM spécifie comment gérer (transmettre, consulter l’état)
 des traces qui peuvent être générées lors d’un workflow métier. Ce
@@ -733,7 +733,7 @@ qu’il peut être utilisé dans un environnement dans lequel le profil IHE
 ACM est aussi implémenté, assurant ainsi une interopérabilité globale de
 gestion des alertes.
 
-#### Description détaillée
+###### Description détaillée
 
 Ces informations détaillées, présentes dans le profil mACM, peuvent
 aider à spécifier le profil générique « Gestion des traces ».
@@ -754,7 +754,7 @@ l’utilisation de l’opération SEARCH via un http GET, en indiquant les
 critères de recherche spécifiés dans les ressources Communication et
 CommunicationRequest.
 
-### Profil IHE ACM
+##### Profil IHE ACM
 
 Le profil « Alert Communication Management » \[8\]  définit la
 communication d’alarmes entre sous-systèmes. ACM définit trois acteurs
@@ -781,7 +781,7 @@ L’acteur « Alert Communicator » reçoit des alertes provenant de l’acteu
 
 Les transactions échangées sont au format HL7v2.
 
-### Maturité et adoption
+##### Maturité et adoption
 
 Le profil IHE ACM, dans sa version 1.3, datant du 16 août 2012, est en
 « Trial Implementation ». A la date de la rédaction de ce document,
@@ -789,7 +789,7 @@ douze produits ont été déclaré[^18] comme implémentant le profil ACM. Ce
 profil a été testé à 17 reprises lors d’un connectathon (Europe 2014,
 Japon 2014-2016, 2018, Nord-Amérique 2007-2020)[^19].
 
-### Synthèse
+##### Synthèse
 
 Le profil ACM spécifie comment gérer (transmettre, consulter l’état) des
 traces qui peuvent être générées lors d’un workflow métier. Ce profil
@@ -799,9 +799,9 @@ des traces ». Le point intéressant aussi de ce profil est qu’il peut
 aussi implémenté, assurant ainsi une interopérabilité globale de gestion
 des alertes.
 
-## Le profil IHE PLT
+#### Le profil IHE PLT
 
-### Description
+##### Description
 
 Le profil PLT \[9\]  « Patient Location Tracking » définit les
 spécifications d’interopérabilité pour retrouver la localisation de
@@ -854,22 +854,22 @@ Les informations suivantes sont véhiculées dans le message de trace :
 
 - Patient
 
-### Maturité et adoption
+##### Maturité et adoption
 
 Le profil IHE PLT, dans sa version 1.2, datant du 31 août 2015, est en
 « Trial Implementation ». A la date de la rédaction de ce document,
 aucun produit n’a été déclaré[^20] comme implémentant le profil PLT. Ce
 profil n’a jamais été testé lors d’un connectathon[^21].
 
-### Synthèse
+##### Synthèse
 
 Ce profil IHE montre comment gérer un type de trace (« localisation des
 patients ») via des transactions HL7. Néanmoins, ce profil n’a jamais
 été implémenté ni testé.
 
-## Le profil IHE SOLE
+#### Le profil IHE SOLE
 
-### Description
+##### Description
 
 Le profil SOLE \[10\] « Standardized Operational Log of Events » définit
 les spécifications d’interopérabilité pour enregistrer et collecter des
@@ -899,14 +899,14 @@ fonctionnalités de filtrage. Pour les transactions au format syslog
 spécifié à la valeur « IHE+SOLE ». Le champ MSG-ID est aussi spécifique
 avec des codes d’événements SOLE.
 
-### Maturité et adoption
+##### Maturité et adoption
 
 Le profil IHE SOLE, dans sa version 1.2, datant du 27 Juillet 2018, est
 en « Trial Implementation ». A la date de la rédaction de ce document,
 aucun produit n’a été déclaré[^22] comme implémentant le profil SOLE. Ce
 profil n’a jamais été testé lors d’un connectathon[^23].
 
-### Synthèse
+##### Synthèse
 
 Le profil IHE SOLE n’a jamais été implémenté. Néanmoins, son approche
 est intéressante car c’est une extension des profils ATNA / RESTful ATNA
@@ -916,7 +916,7 @@ radiologie). Cette démarche peut donc être utilisée pour rendre
 « générique » le volet « gestion des traces » et le profilage se fera
 lors de la prise en compte des besoins d’interopérabilité métier.
 
-## Le standard DICOM
+#### Le standard DICOM
 
 Le but de cette étude « Normes & Standards » n’est pas d’analyser en
 détail le standard DICOM, mais de se focaliser sur la partie « DICOM
@@ -1020,9 +1020,9 @@ Cela confirme l’idée de s’inspirer du profil IHE ATNA, de son option
 RESTful ATNA et du profil SOLE pour spécifier techniquement la volet
 « générique gestion des traces ».
 
-## Le standard GS1
+#### Le standard GS1
 
-### Description
+##### Description
 
 GS1 \[12\] : GS1 – Global Standards 1 est un organisme mondial qui
 normalise des méthodes de codage utilisées dans les chaines logistiques,
@@ -1214,7 +1214,7 @@ dernier standard spécifie la gestion des traces dans le domaine de la
 santé, à partir de processus et exigences métier puis sous forme de cas
 d’utilisation, reprenant l’enregistrement et la consultation de traces.
 
-### Maturité et adoption
+##### Maturité et adoption
 
 GS1 a été fondé en 1974. GS1 est international avec des initiatives
 nationales dans différents pays ; GS1 est présent dans plus de 100 pays.
@@ -1238,7 +1238,7 @@ exemple GS1 Healthcare Reference Book 2016-2017).
 
 GS1 est donc mature et semble être adopté dans différents pays.
 
-### Synthèse
+##### Synthèse
 
 GS1 est un ensemble de standards utilisés pour tracer la gestion
 d’objets dans différents domaines métier. GS1 spécifie de façon
@@ -1253,9 +1253,9 @@ Ce standard peut être analysé lors de la spécification technique
 véhiculées par ce standard le seront bien aussi dans les spécifications
 techniques.
 
-## Le standard Syslog
+#### Le standard Syslog
 
-### Description
+##### Description
 
 Syslog \[13\] est un standard (RFC 5424[^24]) qui spécifie la structure
 et l’enregistrement de messages de traces. Les implémentations de syslog
@@ -1398,14 +1398,14 @@ L’option RESTful-ATNA et le profil SOLE utilisent les champs :
 Cette approche semble appropriée pour spécifier techniquement le volet
 « générique gestion des traces ».
 
-### Maturité et adoption
+##### Maturité et adoption
 
 Le standard syslog (RFC 5424) a été spécifié en 2009 avec une première
 version en 2001. Ces standards ont été largement implémentés et sont
 devenus des références pour la gestion des traces, notamment dans le
 monde Unix/Linux.
 
-### Synthèse
+##### Synthèse
 
 Le standard syslog est largement diffusé depuis des décennies dans les
 systèmes d’information pour gérer les traces, notamment dans le monde
@@ -1419,7 +1419,7 @@ des traces » est donc de pouvoir couvrir le protocole syslog, laissant
 ainsi la possibilité de pouvoir être interopérable avec des systèmes
 existants supportant syslog.
 
-# Synthèse comparative des standards présentés
+### Synthèse comparative des standards présentés
 
 Cette section présente une synthèse comparative des standards et profils
 analysés dans les sections précédentes. Les items de cette synthèse sont
@@ -1725,7 +1725,7 @@ role="doc-backlink">↩︎</a></p></li>
 
 Tableau 5 Tableau récapitulatif de l’évaluation des standards
 
-# Analyse et Conclusion
+### Analyse et Conclusion
 
 Cette étude a pour objectif de comparer les standards ***HL7 FHIR R4,
 DICOM, GS1, syslog*** et les profils **IHE mACM / ACM / ATNA et son
@@ -1734,7 +1734,7 @@ spécifications d’interopérabilité du besoin « générique gestion des
 traces ». Ci-dessous une analyse métier et technique des standards et
 profils présentés dans ce document.
 
-## Analyse métier
+#### Analyse métier
 
 L’analyse métier reste « générique » avec le besoin principal de gestion
 des traces (création, recherche, consultation). L’argumentaire
@@ -1742,7 +1742,7 @@ ci-dessous reste à ce niveau générique. Cette analyse métier sera
 instanciée lors de la prise en compte d’un besoin métier « spécifique »
 de gestion de traces.
 
-### HL7 FHIR
+##### HL7 FHIR
 
 Les informations identifiées dans l’étude métier \[1\] sont couvertes
 par les attributs proposés par les ressources FHIR identifiées et
@@ -1756,7 +1756,7 @@ et ses paramètres de recherche couvrent les critères de recherche de
 l’étude métier. Enfin les opérations FHIR CREATE, READ et SEARCH
 permettent aussi de spécifier les différents flux de l’étude métier.
 
-### Les profils mACM/ACM
+##### Les profils mACM/ACM
 
 Les profils mACM et ACM pourraient être utilisés pour répondre aux
 besoins métier « générique gestion des traces » mais ces deux profils
@@ -1765,7 +1765,7 @@ Par contre, ces deux profils couvrent aussi bien les besoins IHE HL7 que
 IHE FHIR ; ce point est intéressant d’un point de vue générique pour
 adresser le maximum de besoins métier de gestion de traces.
 
-### Les profils ATNA et son option RESTful ATNA / SOLE
+##### Les profils ATNA et son option RESTful ATNA / SOLE
 
 Les profils ATNA / l’option RESTful ATNA et SOLE ont été spécifiés pour
 gérer des traces (sécurité dans le cadre de ATNA et RESTful ATNA,
@@ -1780,7 +1780,7 @@ transactions : « record audit event » et « retrieve audit event » mais
 cette dernière transaction couvre finalement les transactions
 « consulter une trace » et « rechercher des traces ».
 
-### Le profil PLT
+##### Le profil PLT
 
 Le profil PLT est un cas spécifique de gestion des traces concernant la
 traçabilité des mouvements d’un patient. La gestion des traces est
@@ -1788,7 +1788,7 @@ spécifiée en HL7. Ce profil peut être utilisé pour réfléchir à sa
 généricité et comment il pourrait être adressé par le volet « générique
 gestion des traces ».
 
-### DICOM
+##### DICOM
 
 DICOM est un standard qui est largement utilisé dans le domaine de la
 radiologie. La partie « DICOM PS3.15 – Security and System Management
@@ -1800,7 +1800,7 @@ messages d’audit. Il serait intéressant de réutiliser cette
 spécification pour couvrir le besoin métier générique décrivant la
 classe « Evénement ».
 
-### GS1
+##### GS1
 
 GS1 est un standard international, qui spécifie la gestion de la
 traçabilité d’objets produits et échangés entre différents acteurs, et
@@ -1809,7 +1809,7 @@ besoin métier « générique gestion des traces » en spécifiant trois
 interfaces « EPCIS Capture Interface », « EPCIS Query Control
 Interface » et « EPCIS Query Callback Interface ».
 
-### Syslog
+##### Syslog
 
 Syslog est un standard déjà largement utilisé pour la gestion des
 traces. Il présente néanmoins une faiblesse : il ne spécifie pas la
@@ -1818,7 +1818,7 @@ future des traces. Les profils IHE ATNA et son option RESTful ATNA et
 SOLE se basent sur le standard syslog pour l’échange des traces et la
 spécification de « l’enveloppe » des traces.
 
-## Analyse technique
+#### Analyse technique
 
 Comme argumenté dans l’analyse métier, FHIR peut répondre au besoin
 métier « générique ». Néanmoins, pour adresser le plus grand nombre de
@@ -1826,7 +1826,7 @@ besoins métier spécifiques, il est intéressant de considérer aussi
 syslog, qui est très répandu dans les systèmes d’information pour la
 gestion des traces.
 
-### HL7 FHIR
+##### HL7 FHIR
 
 Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
 structurés et identifiés dans l’étude métier \[1\] « générique gestion
@@ -1837,7 +1837,7 @@ standards XML ou JSON. Ces deux standards pourront être utilisés en
 fonction du contexte spécifique métier, sachant que JSON est bien adapté
 dans un contexte mobile.
 
-### Les profils mACM/ACM
+##### Les profils mACM/ACM
 
 Le profil mACM utilise des ressources FHIR « Communication et
 « CommunicationRequest » pour spécifier les informations échangées dans
@@ -1852,7 +1852,7 @@ spécification technique « générique gestion des traces », notamment
 comment ces deux profils collaborent pour adresser aussi bien le monde
 du système d’information de santé que le monde du mobile.
 
-### Les profils ATNA et son option RESTful ATNA / SOLE
+##### Les profils ATNA et son option RESTful ATNA / SOLE
 
 Les profils ATNA et son option RESTful ATNA et SOLE se positionnement de
 la façon suivante :
@@ -1870,7 +1870,7 @@ identifier les attributs de la spécification technique qui seront
 génériques à concrétiser lors de la prise en compte d’un besoin métier
 spécifique.
 
-### Le profil PLT
+##### Le profil PLT
 
 Le profil PLT – Patient Location Tracking est basé sur le standard HL7
 pour la gestion et la description des événements (événements A09, A10 et
@@ -1879,7 +1879,7 @@ informations véhiculés dans les messages d’événements couvrent le besoin
 métier mais ils sont très orientés « patient ». A voir comment s’en
 inspirer pour les aspects génériques de gestion des traces.
 
-### DICOM
+##### DICOM
 
 DICOM est le standard utilisé pour échanger des informations dans le
 domaine de la radiologie. L’annexe 5 – Audit Trail Message Format
@@ -1891,14 +1891,14 @@ structure des événements qui sont échangés (événements de sécurité et
 pourra être utilisée pour tous les futurs événements pour faciliter la
 mutualisation des fonctionnalités de gestion des traces.
 
-### GS1
+##### GS1
 
 GS1 spécifie techniquement les interfaces « EPCIS Capture Interface »,
 « EPCIS Query Control Interface » et « EPCIS Query Callback Interface »
 soit via l’utilisation du protocole http en mode GET ou POST, soit via
 le protocole AS2 en échangeant des données au format XML.
 
-### Syslog
+##### Syslog
 
 Le protocole Syslog propose un premier niveau de formalisation pour
 tracer des événements, ainsi qu’une architecture de communication
@@ -1908,7 +1908,7 @@ couche sécurité. Ces différents standards sont utilisés par les profils
 IHE ATNA et son option RESTful ATNA / SOLE pour échanger des événements
 au format syslog.
 
-## Conclusion
+#### Conclusion
 
 Ce document présente une étude comparative des standards FHIR, DICOM,
 GS1 et syslog ainsi que des profils IHE mACM / ACM / ATNA et son option
@@ -1940,9 +1940,9 @@ les sections 5.1 et 5.1.5, l’option RESTful ATNA semble le plus adapté
 au besoin « générique gestion des traces », en s’inspirant aussi des
 spécifications GS1.
 
-# Annexes A
+### Annexes A
 
-## Annexe 1 : Mise en correspondance
+#### Annexe 1 : Mise en correspondance
 
 Cette section reprend, la mise en correspondance des objets de la SFE
 avec la ressource FHIR « AuditEvent » et la structure AuditMessage de
@@ -2051,9 +2051,9 @@ entity.detail</td>
 Tableau 6 Mise en correspondance avec la ressource « AuditEvent » et la
 structure AuditMessage
 
-# Annexes B
+### Annexes B
 
-## Annexe 1 : Glossaire
+#### Annexe 1 : Glossaire
 
 | Sigle / Acronyme | Signification |
 |----|----|
@@ -2064,7 +2064,7 @@ structure AuditMessage
 | DICOM | Digital Imaging and COmmunication in Medecine |
 | GS1 | Global Standards 1 |
 
-## Annexe 2 : Documents de référence
+#### Annexe 2 : Documents de référence
 
 <table style="width:99%;">
 <colgroup>

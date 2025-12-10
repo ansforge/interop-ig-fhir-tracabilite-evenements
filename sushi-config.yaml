@@ -44,10 +44,10 @@ pages:
             title: Sécurité
         downloads.md:
             title: Téléchargements et usages
-
 menu:
     Accueil: index.html
     Volume 1 - Etude fonctionnelle: index.html
+    Normes et standards: ns.html
     Volume 2 - Détail des transactions:
         Construction des flux: construction_des_flux.html
         Flux 01: st_flux1.html
