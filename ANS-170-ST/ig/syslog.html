@@ -202,23 +202,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p>  <!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#solution-2-audit-message-dicom-protocole-syslog-et-opération-http" id="markdown-toc-solution-2-audit-message-dicom-protocole-syslog-et-opération-http">Solution 2&nbsp;: Audit message DICOM, protocole Syslog et opération HTTP</a></li>
-  <li><a href="#flux-1-transmissiontrace" id="markdown-toc-flux-1-transmissiontrace">Flux 1&nbsp;: TransmissionTrace</a>    <ul>
-      <li><a href="#construction-du-flux-syslog" id="markdown-toc-construction-du-flux-syslog">Construction du flux Syslog</a></li>
-    </ul>
-  </li>
-  <li><a href="#flux-4-recherchetraces" id="markdown-toc-flux-4-recherchetraces">Flux 4&nbsp;: RechercheTraces</a>    <ul>
-      <li><a href="#construction-du-flux-http" id="markdown-toc-construction-du-flux-http">Construction du flux HTTP</a></li>
-    </ul>
-  </li>
-  <li><a href="#flux-5-reponserecherchetraces" id="markdown-toc-flux-5-reponserecherchetraces">Flux 5&nbsp;: ReponseRechercheTraces</a>    <ul>
-      <li><a href="#construction-du-flux-http-1" id="markdown-toc-construction-du-flux-http-1">Construction du flux HTTP</a></li>
-    </ul>
-  </li>
-</ul>
-
+<div>
+  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
 </div>
 <h3 id="solution-2-audit-message-dicom-protocole-syslog-et-opération-http">Solution 2&nbsp;: Audit message DICOM, protocole Syslog et opération HTTP</h3>
 
@@ -236,8 +221,8 @@ revanche, le message «&nbsp;Syslog Event Response message&nbsp;» est défini d
 telle sorte que l’entièreté des données des traces soit retournée au
 Consommateur de traces.</p>
 
-<h2 id="flux-1-transmissiontrace">Flux 1&nbsp;: TransmissionTrace</h2>
-<h3 id="construction-du-flux-syslog">Construction du flux Syslog</h3>
+<h4 id="flux-1-transmissiontrace">Flux 1&nbsp;: TransmissionTrace</h4>
+<h5 id="construction-du-flux-syslog">Construction du flux Syslog</h5>
 
 <p>Ce flux est construit selon les exigences de la transaction IHE
 ITI-20[^6] «&nbsp;Record Audit Event&nbsp;» dans sa version Syslog&nbsp;: «&nbsp;Send Audit
@@ -267,15 +252,15 @@ le contenu de la trace.</p>
 <p>Ce contenu est ensuite encapsulé dans un message syslog qui sera
 transmis via UDP ou TLS au gestionnaire de traces.</p>
 
-<p><a name="l437">​</a>Un exemple de flux est joint&nbsp;(cf <a href="#annexe-3-exemples-de-flux">annexe
+<p><a name="l396">​</a>Un exemple de flux est joint&nbsp;(cf <a href="#annexe-3-exemples-de-flux">annexe
 3&nbsp;</a>: <strong>Erreur&nbsp;! Source du renvoi
 introuvable.</strong>).</p>
-<h2 id="flux-4-recherchetraces">Flux 4&nbsp;: RechercheTraces</h2>
+<h4 id="flux-4-recherchetraces">Flux 4&nbsp;: RechercheTraces</h4>
 
 <p>Ce flux est utilisé par le consommateur de traces pour faire une
 recherche de traces auprès du gestionnaire de traces.</p>
 
-<h3 id="construction-du-flux-http">Construction du flux HTTP</h3>
+<h5 id="construction-du-flux-http">Construction du flux HTTP</h5>
 
 <p>Dans le contexte d’une implémentation reposant sur le protocole Syslog
 pour le flux de transmission des traces, le flux 4 «&nbsp;RechercheTraces&nbsp;»
@@ -297,7 +282,7 @@ d’enregistrement de l’évènement). &lt;query&gt; représente les autres
 paramètres, sous la forme param=valeur, permettant d’affiner la
 recherche.</p>
 
-<h4 id="paramètres-de-recherche">Paramètres de recherche</h4>
+<h6 id="paramètres-de-recherche">Paramètres de recherche</h6>
 
 <p>La transaction [ITI-82] Retrieve Syslog Event exige que la recherche
 de traces soit bornée dans le temps. C’est-à-dire que le paramètre de
@@ -376,10 +361,10 @@ peut ajouter des paramètres de recherche.</td>
 </tbody>
 </table>
 
-<h2 id="flux-5-reponserecherchetraces">Flux 5&nbsp;: ReponseRechercheTraces</h2>
+<h4 id="flux-5-reponserecherchetraces">Flux 5&nbsp;: ReponseRechercheTraces</h4>
 
 <p>Ce flux véhicule le résultat de la recherche de traces.</p>
-<h3 id="construction-du-flux-http-1">Construction du flux HTTP</h3>
+<h5 id="construction-du-flux-http-1">Construction du flux HTTP</h5>
 
 <p>Dans le contexte d’un échange basé sur la transaction IHE ITI-82, ce
 flux est composé d’un code HTTP 200 ok et le corps de la réponse HTTP
@@ -431,7 +416,7 @@ retournés en cas d’échec, consulter le cadre technique IHE, section
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 9, 2025 14:31+0000">2025-12-09</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 10, 2025 14:01+0000">2025-12-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

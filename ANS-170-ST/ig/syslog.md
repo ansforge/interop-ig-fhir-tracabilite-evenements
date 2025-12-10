@@ -11,9 +11,9 @@ La construction des flux consiste en la construction des requêtes ou des répon
 
 Contrairement à la solution basée sur HL7 FHIR, il n’est pas prévu de pouvoir consulter une trace en particulier, le protocol Syslog ne permettant pas d’identifier de manière unique les messages échangés. En revanche, le message « Syslog Event Response message » est défini de telle sorte que l’entièreté des données des traces soit retournée au Consommateur de traces.
 
-## Flux 1 : TransmissionTrace
+#### Flux 1 : TransmissionTrace
 
-### Construction du flux Syslog
+##### Construction du flux Syslog
 
 Ce flux est construit selon les exigences de la transaction IHE ITI-20[^6] « Record Audit Event » dans sa version Syslog : « Send Audit Event Message - Syslog Interaction ». Certaines contraintes de cette transaction doivent être adaptées à chaque contexte métier, en particulier les éléments suivants de l’en-tête Syslog :
 
@@ -26,11 +26,11 @@ Ce contenu est ensuite encapsulé dans un message syslog qui sera transmis via U
 
 Un exemple de flux est joint (cf [annexe 3 ](#annexe-3-exemples-de-flux): **Erreur ! Source du renvoi introuvable.**).
 
-## Flux 4 : RechercheTraces
+#### Flux 4 : RechercheTraces
 
 Ce flux est utilisé par le consommateur de traces pour faire une recherche de traces auprès du gestionnaire de traces.
 
-### Construction du flux HTTP
+##### Construction du flux HTTP
 
 Dans le contexte d’une implémentation reposant sur le protocole Syslog pour le flux de transmission des traces, le flux 4 « RechercheTraces » est construit selon les exigences de la transaction IHE ITI-82 « Retrieve Syslog Event ». Cette transaction est une requête HTTP GET.
 
@@ -42,7 +42,7 @@ GET [base]/syslogsearch?date=le[start-time]&date=ge[stoptime]&<query>
 
 Où [base] est le point de contact FHIR du gestionnaire de traces, [start-time] et [stop-time] indique l’intervalle de temps dans lequel les traces sont recherchées (date se réfère à la date d’enregistrement de l’évènement). <query> représente les autres paramètres, sous la forme param=valeur, permettant d’affiner la recherche.
 
-#### Paramètres de recherche
+###### Paramètres de recherche
 
 La transaction [ITI-82] Retrieve Syslog Event exige que la recherche de traces soit bornée dans le temps. C’est-à-dire que le paramètre de recherche « date » qui correspond à la date d’enregistrement de l’évènement doit être présent pour préciser une limite de temps (avant, après ou un intervalle). Le tableau ci-dessous précise la mise en correspondance des paramètres de recherche identifiés dans l’étude métier avec les paramètres de recherche défini par IHE.
 
@@ -58,11 +58,11 @@ Le tableau ci-dessous propose des critères de recherche supplémentaires dans l
 | destinataire | Receiver | texte | Requestor identifie l’élément ActiveParticipant dont UserIsRequestor=false et userID correspond à la valeur du paramètre. |
 | autreParametre | Chaque concrétisation de ses spécifications génériques peut ajouter des paramètres de recherche. | | |
 
-## Flux 5 : ReponseRechercheTraces
+#### Flux 5 : ReponseRechercheTraces
 
 Ce flux véhicule le résultat de la recherche de traces.
 
-### Construction du flux HTTP
+##### Construction du flux HTTP
 
 Dans le contexte d’un échange basé sur la transaction IHE ITI-82, ce flux est composé d’un code HTTP 200 ok et le corps de la réponse HTTP est un tableau de messages Syslog au format demandé par le consommateur de traces (JSON ou XML).
 

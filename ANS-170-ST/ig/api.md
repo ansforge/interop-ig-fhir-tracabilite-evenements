@@ -5,8 +5,6 @@
 
 ## Via API REST
 
-## Synthèse des flux
-
 ### Solution 1 : Ressource AuditEvent et API FHIR REST
 
 La construction des flux consiste en la construction des requêtes ou des réponses HTTP de l’API REST pour FHIR. Cette section présente les flux permettant d’échanger les informations identifiées dans les chapitres précédents.
