@@ -15,8 +15,8 @@ revanche, le message « Syslog Event Response message » est défini de
 telle sorte que l’entièreté des données des traces soit retournée au
 Consommateur de traces.
 
-## Flux 1 : TransmissionTrace
-### Construction du flux Syslog
+#### Flux 1 : TransmissionTrace
+##### Construction du flux Syslog
 
 Ce flux est construit selon les exigences de la transaction IHE
 ITI-20[^6] « Record Audit Event » dans sa version Syslog : « Send Audit
@@ -44,13 +44,13 @@ transmis via UDP ou TLS au gestionnaire de traces.
 Un exemple de flux est joint (cf [annexe
 3 ](#annexe-3-exemples-de-flux): **Erreur ! Source du renvoi
 introuvable.**).
-## Flux 4 : RechercheTraces
+#### Flux 4 : RechercheTraces
 
 Ce flux est utilisé par le consommateur de traces pour faire une
 recherche de traces auprès du gestionnaire de traces.
 
 
-### Construction du flux HTTP
+##### Construction du flux HTTP
 
 Dans le contexte d’une implémentation reposant sur le protocole Syslog
 pour le flux de transmission des traces, le flux 4 « RechercheTraces »
@@ -72,7 +72,7 @@ d’enregistrement de l’évènement). \<query\> représente les autres
 paramètres, sous la forme param=valeur, permettant d’affiner la
 recherche.
 
-#### Paramètres de recherche
+###### Paramètres de recherche
 
 La transaction \[ITI-82\] Retrieve Syslog Event exige que la recherche
 de traces soit bornée dans le temps. C’est-à-dire que le paramètre de
@@ -151,10 +151,10 @@ peut ajouter des paramètres de recherche.</td>
 </tbody>
 </table>
 
-## Flux 5 : ReponseRechercheTraces
+#### Flux 5 : ReponseRechercheTraces
 
 Ce flux véhicule le résultat de la recherche de traces.
-### Construction du flux HTTP
+##### Construction du flux HTTP
 
 Dans le contexte d’un échange basé sur la transaction IHE ITI-82, ce
 flux est composé d’un code HTTP 200 ok et le corps de la réponse HTTP

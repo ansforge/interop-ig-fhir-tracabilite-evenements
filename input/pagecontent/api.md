@@ -1,5 +1,3 @@
-## Synthèse des flux
-
 ### Solution 1 : Ressource AuditEvent et API FHIR REST
 
 La construction des flux consiste en la construction des requêtes ou des
@@ -10,6 +8,7 @@ précédents.
 <div style="text-align: center; display: block; clear: both;">
   <img src="st_image5.png" alt="Gestion des traces" style="display:block; margin:auto;">
 </div>
+
 ## Flux 1 : TransmissionTrace
 
 Ce flux permet de transmettre une trace « générique » de la « source des
