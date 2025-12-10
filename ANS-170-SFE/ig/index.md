@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code] | *Version*:0.1.0 |
-| Draft as of 2025-11-19 | *Computable Name*:ExampleIG |
+| Draft as of 2025-12-10 | *Computable Name*:ExampleIG |
 
  **Brief description of this Implementation Guide**
  [Add a brief description of this IG in English] 
@@ -63,7 +63,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "ExampleIG",
   "title" : "ANS IG Example",
   "status" : "draft",
-  "date" : "2025-11-19T14:13:21+00:00",
+  "date" : "2025-12-10T10:19:35+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -989,21 +989,8 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
             }
           ],
           "nameUrl" : "specifications_fonctionnelles.html",
-          "title" : "Specifications Fonctionnelles",
-          "generation" : "markdown",
-          "page" : [
-            {
-              "extension" : [
-                {
-                  "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                  "valueUrl" : "sfe.html"
-                }
-              ],
-              "nameUrl" : "sfe.html",
-              "title" : "Vue d'ensemble",
-              "generation" : "markdown"
-            }
-          ]
+          "title" : "Vue d'ensemble",
+          "generation" : "markdown"
         },
         {
           "extension" : [

@@ -9,9 +9,8 @@
 * [Artifacts Summary](artifacts.md)
 * [Specifications Techniques](specifications_techniques.md)
 * [Sécurité](securite.md)
-* [Vue d'ensemble](sfe.md)
 * [Autres Ressources](autres_ressources.md)
-* [Specifications Fonctionnelles](specifications_fonctionnelles.md)
+* [Vue d'ensemble](specifications_fonctionnelles.md)
 * [Vue d'ensemble](construction_des_flux.md)
 * [Téléchargements et usages](downloads.md)
 

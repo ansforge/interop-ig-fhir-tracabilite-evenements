@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Specifications Fonctionnelles - ANS IG Example v0.1.0</title>
+    <title>Vue d&#39;ensemble - ANS IG Example v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style-ans.css"/>
     <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
     <!-- Placeholder for child template CSS declarations -->
@@ -43,9 +44,10 @@
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"2"}
-    h3,h4,h5,h6{--heading-prefix:"2.0"}</style>
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 <div id="family-nav">
     <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
@@ -66,7 +68,7 @@
 
 
 
-  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
+  <span title="">FR</span>
 
 
             </span>
@@ -97,7 +99,7 @@
     <a href="index.html">Accueil</a>
   </li>
   <li>
-    <a href="index.html">Volume 1 - Etude fonctionnelle</a>
+    <a href="specifications_fonctionnelles.html">Volume 1 - Etude fonctionnelle</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 - Détail des transactions
@@ -155,7 +157,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Specifications Fonctionnelles</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Vue d'ensemble</b></li>
 
           <span style="float:right;">
 
@@ -163,7 +165,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="sfe.html">next&gt;</a>
+          | <a href="specifications_techniques.html">next&gt;</a>
 
           </span>
 
@@ -176,7 +178,6 @@
       <div class="container">  <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
-
 <style type="text/css">
 h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
 h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
@@ -185,8 +186,8 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">ANS IG Example - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://interop.esante.gouv.fr/ig/fhir/[code]/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Specifications Fonctionnelles</h2>
+  <!--ReleaseHeader--><p id="publish-box">ANS IG Example - version de développement local (v0.1.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/fhir/[code]/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
+  <h2>Vue d&#39;ensemble</h2>
   
 
 
@@ -201,9 +202,925 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#cadre-juridique-et-orientations-organisationnelles" id="markdown-toc-cadre-juridique-et-orientations-organisationnelles">Cadre juridique et orientations organisationnelles</a></li>
+  <li><a href="#organisation-du-contexte-métier" id="markdown-toc-organisation-du-contexte-métier">Organisation du contexte métier</a></li>
+  <li><a href="#définition-des-processus-collaboratifs" id="markdown-toc-définition-des-processus-collaboratifs">Définition des processus collaboratifs</a></li>
+  <li><a href="#description-des-processus-collaboratifs-et-identification-des-flux" id="markdown-toc-description-des-processus-collaboratifs-et-identification-des-flux">Description des processus collaboratifs et identification des flux</a></li>
+  <li><a href="#identification-des-concepts-véhiculés-dans-les-flux-dinformations-et-correspondance-avec-les-classes-et-attributs-du-mos" id="markdown-toc-identification-des-concepts-véhiculés-dans-les-flux-dinformations-et-correspondance-avec-les-classes-et-attributs-du-mos">Identification des concepts véhiculés dans les flux d’informations et correspondance avec les classes et attributs du MOS</a></li>
+  <li><a href="#modélisation-des-flux-dinformations" id="markdown-toc-modélisation-des-flux-dinformations">Modélisation des flux d'informations</a></li>
+</ul>
+
 </div>
+<h3 id="cadre-juridique-et-orientations-organisationnelles">Cadre juridique et orientations organisationnelles</h3>
+
+<p>Ce document présente une spécification fonctionnelle générique des
+échanges pour la gestion des traces. Cette étude propose, d’une part,
+l’identification des processus métiers du périmètre d’étude ainsi que
+les interactions entre leurs systèmes et/ou composants et, d’autre part,
+la modélisation et la qualification des flux d’échanges qui
+caractérisent ces interactions.</p>
+
+<p>Il est à noter que les contraintes de sécurité concernant les flux
+d’échanges ne sont pas traitées dans ce document. Celles-ci sont du
+ressort de chaque responsable de l’implémentation du mécanisme qui est
+dans l’obligation de se conformer au cadre juridique en la matière.
+L’Agence du Numérique en Santé (ANS) propose des référentiels dédiés à
+la politique de sécurité (la PGSSI-S) et des mécanismes de sécurisation
+sont définis dans les volets de la couche Transport du Cadre
+d’Interopérabilité des systèmes d’information de santé (CI-SIS).</p>
+
+<p>Les traces est l’ensemble des informations enregistrées relatant les
+actions entreprises par un système en conséquence d’un événement. Les
+informations peuvent aussi bien porter sur des dispositifs physiques,
+comme par exemple un dispositif médical implantable (changement de lieu,
+mise à jour du statut), que sur des actions utilisateurs (connexion à un
+système, création d'un utilisateur). Dans le cadre de cette étude, les
+processus qui sont à l'origine des traces sont hors périmètre.</p>
+
+<p>Cette documentation générique a pour vocation d’offrir une base
+fonctionnelle de flux d’échange pour la description de tous les cas
+d’usage ayant à implémenter la gestion des traces.</p>
+
+<h4 id="exemple-de-cas-dusage">Exemple de cas d'usage</h4>
+
+<p>Les cas d’utilisation seront renseignés dans les implémentations
+spécifiques des spécifications.</p>
+
+<h4 id="définitions-et-cadre-juridique">Définitions et cadre juridique</h4>
+
+<p>Les cadres juridiques seront renseignés dans les implémentations
+spécifiques des spécifications.</p>
+
+<h4 id="lectorat-cible">Lectorat cible</h4>
+
+<p>Les lecteurs cibles sont principalement des chefs de projets ainsi que
+toute personne concernée par la maitrise d’ouvrage et qui spécifie des
+projets avec des interfaces interopérables.</p>
+
+<h3 id="organisation-du-contexte-métier">Organisation du contexte métier</h3>
+
+<p>Le domaine « Traçabilité » regroupe les groupes de processus qui
+décrivent la gestion des informations de traçabilité, informations qu'un
+système enregistre à chaque action qui lui est associée. Dans le cadre
+de la présente étude, ce domaine est constitué d’un unique groupe de
+processus « Gestion des traces ».</p>
+<div style="text-align: center; display: block; clear: both;">
+<img src="sfe_image4.png" style="width:5.42708in;height:3.42708in" />
+</div>
+<p>Figure 1 Organisation du contexte métier de l'étude "Gestion des traces"</p>
+
+<p>Le périmètre de l'étude englobe les processus en couleur sur le
+diagramme de paquetage.</p>
+
+<h4 id="gestion-des-traces">Gestion des traces</h4>
+
+<p>Le groupe de processus « Gestion des traces » regroupe les processus qui
+permettent de gérer les traces produites lors de la vie d’un produit :</p>
+<ul>
+  <li>Créer des traces ;</li>
+  <li>Consulter une trace ;</li>
+  <li>Recherches des traces.</li>
+</ul>
+
+<p>A noter que la gestion consiste en la création des traces et leur
+consultation. La suppression des traces ne fait pas partie du périmètre
+de l’étude.</p>
+
+<p><span id="_Toc77062398" class="anchor"></span></p>
+
+<h3 id="définition-des-processus-collaboratifs">Définition des processus collaboratifs</h3>
+
+<h4 id="cas-dutilisations">Cas d'utilisations</h4>
+
+<h5 id="processus-collaboratif-créer-des-traces">Processus collaboratif "Créer des traces"</h5>
+<div style="text-align: center; display: block; clear: both;">
+<img src="sfe_image5.png" style="width:6.25in;height:1.04167in" />
+
+</div>
+
+<p>Figure 2 : Processus collaboratif "Créer des traces"</p>
+
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 79%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Service attendu</th>
+<th style="text-align: left;">Ce processus permet de créer des traces.
+Cette traçabilité se déclenche à chaque fois qu'une étape significative
+dans un processus métier est réalisée. Les catégories d'évènements qui
+peuvent déclencher le processus de traçabilité sont par exemple :<br />
+- Un changement de statut,<br />
+- Un changement de lieu,<br />
+- Une action réalisée.<br />
+Les informations à tracer sont fonction du processus métier dont on
+souhaite faire le suivi.<br />
+La finalité de la traçabilité est de pouvoir proposer des pistes d'audit
+en cas d'enquête.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Pré-conditions</td>
+<td style="text-align: left;">La source des traces est habilitée à
+enregistrer des traces auprès du gestionnaire des traces.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Post-conditions</td>
+<td style="text-align: left;">N/A</td>
+</tr>
+<tr>
+<td style="text-align: center;">Contraintes fonctionnelles</td>
+<td style="text-align: left;">N/A</td>
+</tr>
+<tr>
+<td style="text-align: center;">Scénario nominal</td>
+<td style="text-align: left;">1 - La source des traces transmet les
+informations au gestionnaire de traces.<br />
+2 - Le gestionnaire des traces confirme ou non l'enregistrement des
+traces.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Table 1 Caractéristiques du processus collaboratif</p>
+
+<p><span id="_Toc77062401" class="anchor"></span></p>
+
+<h5 id="processus-collaboratif-consulter-une-trace">Processus collaboratif "Consulter une trace"</h5>
+<div style="text-align: center; display: block; clear: both;">
+<img src="sfe_image6.png" style="width:6.25in;height:0.96875in" />
+
+</div>
+
+<p>Figure 3 : Processus collaboratif "Consulter une trace"</p>
+
+<table>
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Service attendu</th>
+<th style="text-align: left;">Ce processus permet de consulter le détail
+d'une trace.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Pré-conditions</td>
+<td style="text-align: left;">Le consommateur des traces est habilité à
+consulter des traces auprès du gestionnaire des traces.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Post-conditions</td>
+<td style="text-align: left;">N/A</td>
+</tr>
+<tr>
+<td style="text-align: center;">Contraintes fonctionnelles</td>
+<td style="text-align: left;">N/A</td>
+</tr>
+<tr>
+<td style="text-align: center;">Scénario nominal</td>
+<td style="text-align: left;">1 - Le consommateur des traces effectue
+une demande de consultation d'une trace auprès du gestionnaire des
+traces.<br />
+2 - Le gestionnaire des traces renvoie le détail de la trace au
+consommateur des traces.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Table 2 Caractéristiques du processus collaboratif</p>
+
+<p><span id="_Toc77062402" class="anchor"></span></p>
+
+<h5 id="processus-collaboratif-rechercher-des-traces">Processus collaboratif "Rechercher des traces"</h5>
+
+<div style="text-align: center; display: block; clear: both;">
+<img src="sfe_image7.png" style="width:6.25in;height:0.9375in" />
+
+</div>
+
+<p>Figure 4 : Processus collaboratif "Rechercher des traces"</p>
+
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Service attendu</th>
+<th style="text-align: left;">Ce processus permet de rechercher une
+liste de traces répondant aux critères de recherche.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Pré-conditions</td>
+<td style="text-align: left;">Le consommateur des traces est habilité à
+rechercher des traces auprès du gestionnaire des traces.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Post-conditions</td>
+<td style="text-align: left;">N/A</td>
+</tr>
+<tr>
+<td style="text-align: center;">Contraintes fonctionnelles</td>
+<td style="text-align: left;">N/A</td>
+</tr>
+<tr>
+<td style="text-align: center;">Scénario nominal</td>
+<td style="text-align: left;">1 - Le consommateur des traces effectue
+une recherche de traces auprès du gestionnaire des traces.<br />
+2 - Le gestionnaire des traces renvoie la liste des traces répondant aux
+critères de recherche.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Table 3 Caractéristiques du processus collaboratif</p>
+
+<h4 id="liste-des-acteurs-pour-lensemble-des-processus">Liste des acteurs pour l'ensemble des processus</h4>
+
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 79%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Acteur</th>
+<th style="text-align: center;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Consommateur des traces</td>
+<td style="text-align: left;">Il s'agit d'un acteur système interne ou
+externe habilité à accéder aux traces.<br />
+Les personnes utilisant ce système peuvent être rattachées par exemple à
+la pharmacie hospitalière (traçabilité des médicaments), au bloc
+opératoire (traçabilité des actes chirurgicaux), à la sécurité
+(traçabilité de sécurité).</td>
+</tr>
+<tr>
+<td style="text-align: left;">Gestionnaire des traces</td>
+<td style="text-align: left;">Il s'agit d'un acteur système qui
+enregistre les informations de traçabilité et fournit les traces en cas
+de consultation ou de recherches.<br />
+Le gestionnaire des tr aces peut être, par exemple, un logiciel de
+traçabilité ou le module de traçabilité d'un logiciel métier.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Source des traces</td>
+<td style="text-align: left;">Il s'agit d'un acteur système qui transmet
+les informations de traçabilité relatives à une étape significative d'un
+processus métier suite à un événement au gestionnaire.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Table 4 Table des acteurs</p>
+
+<h3 id="description-des-processus-collaboratifs-et-identification-des-flux">Description des processus collaboratifs et identification des flux</h3>
+
+<h4 id="créer-des-traces">Créer des traces</h4>
+<div style="text-align: center; display: block; clear: both;">
+<img src="sfe_image8.png" style="width:6.77222in;height:2.725in" />
+
+</div>
+
+<p>Figure 5 : Processus collaboratif "Créer des traces"</p>
+
+<h5 id="description-des-actions">Description des actions</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Action</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Créer des traces</td>
+      <td style="text-align: left">Envoyer les informations de traçabilité de la source au gestionnaire des traces.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Recevoir et enregistrer les traces</td>
+      <td style="text-align: left">Recevoir et enregistrer les informations de traçabilité.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 5 Tableau des actions</p>
+
+<h5 id="identification-des-flux">Identification des flux</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Flux</th>
+      <th style="text-align: left">Processus</th>
+      <th style="text-align: left">Emetteur</th>
+      <th style="text-align: left">Récepteur</th>
+      <th style="text-align: left">Périmètre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Flux 1 : TransmissionTrace</td>
+      <td style="text-align: left">Créer des traces</td>
+      <td style="text-align: left">Source des traces</td>
+      <td style="text-align: left">Gestionnaire des traces</td>
+      <td style="text-align: left">Oui</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Flux 1bis : RetourTransmissionTrace</td>
+      <td style="text-align: left">Créer des traces</td>
+      <td style="text-align: left">Gestionnaire des traces</td>
+      <td style="text-align: left">Source des traces</td>
+      <td style="text-align: left">Flux technique hors étude</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 6 Flux</p>
+
+<p><span id="_Toc77062408" class="anchor"></span></p>
+
+<h4 id="consulter-une-trace">Consulter une trace</h4>
+<div style="text-align: center; display: block; clear: both;">
+<img src="sfe_image9.png" style="width:5.76573in;height:3.79026in" />
+
+</div>
+
+<p>Figure 6 : Processus collaboratif "Consulter une trace"</p>
+
+<h5 id="description-des-actions-1">Description des actions</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Action</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Demander à consulter une trace</td>
+      <td style="text-align: left">Le consommateur des traces demande à consulter une trace.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Consulter la réponse</td>
+      <td style="text-align: left">Le consommateur des traces reçoit et traite le retour du gestionnaire des traces.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Réceptionner la demande</td>
+      <td style="text-align: left">Le gestionnaire réceptionne la demande de consultation d'une trace.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Fournir la trace</td>
+      <td style="text-align: left">Le gestionnaire des traces fournit la trace demandée.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 7 Tableau des actions</p>
+
+<h5 id="identification-des-flux-1">Identification des flux</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Flux</th>
+      <th style="text-align: left">Processus</th>
+      <th style="text-align: left">Emetteur</th>
+      <th style="text-align: left">Récepteur</th>
+      <th style="text-align: left">Périmètre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Flux 2 : ConsultationTrace</td>
+      <td style="text-align: left">Consulter une trace</td>
+      <td style="text-align: left">Consommateur des traces</td>
+      <td style="text-align: left">Gestionnaire des traces</td>
+      <td style="text-align: left">Oui</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Flux 3 : ReponseConsultationTrace</td>
+      <td style="text-align: left">Consulter une trace</td>
+      <td style="text-align: left">Gestionnaire des traces</td>
+      <td style="text-align: left">Consommateur des traces</td>
+      <td style="text-align: left">Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 8 Flux</p>
+
+<h4 id="rechercher-des-traces">Rechercher des traces</h4>
+<div style="text-align: center; display: block; clear: both;">
+<img src="sfe_image10.png" style="width:5.253in;height:3.28431in" />
+
+</div>
+
+<p>Figure 7 : Processus collaboratif "Rechercher des traces"</p>
+
+<h5 id="description-des-actions-2">Description des actions</h5>
+
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Action</th>
+<th style="text-align: center;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Rechercher des traces</td>
+<td style="text-align: left;">Le consommateur des traces effectue une
+recherche de traces auprès du gestionnaire des traces en précisant les
+critères de sa recherche.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Consulter la réponse</td>
+<td style="text-align: left;">Le consommateur des traces consulte les
+traces retournées par le gestionnaire des traces.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Réceptionner la recherche</td>
+<td style="text-align: left;">Le gestionnaire des traces reçoit les
+critères de recherches.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rechercher et fournir les traces</td>
+<td style="text-align: left;">Les traces sont recherchées par le
+gestionnaire des traces selon les critères définis par le consommateur
+des traces.<br />
+Les traces trouvées sont ensuite retournées au consommateur.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Table 9 Tableau des actions</p>
+
+<h5 id="identification-des-flux-2">Identification des flux</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Flux</th>
+      <th style="text-align: left">Processus</th>
+      <th style="text-align: left">Emetteur</th>
+      <th style="text-align: left">Récepteur</th>
+      <th style="text-align: left">Périmètre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Flux 4 : RechercheTraces</td>
+      <td style="text-align: left">Rechercher des traces</td>
+      <td style="text-align: left">Consommateur des traces</td>
+      <td style="text-align: left">Gestionnaire des traces</td>
+      <td style="text-align: left">Oui</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Flux 5 : ReponseRechercheTraces</td>
+      <td style="text-align: left">Rechercher des traces</td>
+      <td style="text-align: left">Gestionnaire des traces</td>
+      <td style="text-align: left">Consommateur des traces</td>
+      <td style="text-align: left">Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 10 Flux</p>
+
+<h4 id="synthèse-des-flux">Synthèse des flux</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Flux</th>
+      <th style="text-align: left">Processus</th>
+      <th style="text-align: left">Emetteur</th>
+      <th style="text-align: left">Récepteur</th>
+      <th style="text-align: left">Périmètre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Flux 1 : TransmissionTrace</td>
+      <td style="text-align: left">Créer des traces</td>
+      <td style="text-align: left">Source des traces</td>
+      <td style="text-align: left">Gestionnaire des traces</td>
+      <td style="text-align: left">Oui</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Flux 1bis : RetourTransmissionTrace</td>
+      <td style="text-align: left">Créer des traces</td>
+      <td style="text-align: left">Gestionnaire des traces</td>
+      <td style="text-align: left">Source des traces</td>
+      <td style="text-align: left">Flux technique hors étude</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Flux 2 : ConsultationTrace</td>
+      <td style="text-align: left">Consulter une trace</td>
+      <td style="text-align: left">Consommateur des traces</td>
+      <td style="text-align: left">Gestionnaire des traces</td>
+      <td style="text-align: left">Oui</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Flux 3 : ReponseConsultationTrace</td>
+      <td style="text-align: left">Consulter une trace</td>
+      <td style="text-align: left">Gestionnaire des traces</td>
+      <td style="text-align: left">Consommateur des traces</td>
+      <td style="text-align: left">Oui</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Flux 4 : RechercheTraces</td>
+      <td style="text-align: left">Rechercher des traces</td>
+      <td style="text-align: left">Consommateur des traces</td>
+      <td style="text-align: left">Gestionnaire des traces</td>
+      <td style="text-align: left">Oui</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Flux 5 : ReponseRechercheTraces</td>
+      <td style="text-align: left">Rechercher des traces</td>
+      <td style="text-align: left">Gestionnaire des traces</td>
+      <td style="text-align: left">Consommateur des traces</td>
+      <td style="text-align: left">Oui</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 11 Synthèse des flux identifiés</p>
+
+<h3 id="identification-des-concepts-véhiculés-dans-les-flux-dinformations-et-correspondance-avec-les-classes-et-attributs-du-mos">Identification des concepts véhiculés dans les flux d’informations et correspondance avec les classes et attributs du MOS</h3>
+
+<h4 id="concepts-métier---factorisation-par-concept">Concepts métier - Factorisation par concept</h4>
+
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 52%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Nom</th>
+<th style="text-align: center;">Description</th>
+<th style="text-align: center;">Flux</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Trace</td>
+<td style="text-align: left;">Ensemble des informations enregistrées
+relatant les actions entreprises par un système en conséquence d’un
+événement.</td>
+<td style="text-align: left;"><p>Flux 1 - TransmissionTrace</p>
+<p>Flux 2 - ConsultationTrace</p>
+<p>Flux 3 - ReponseConsultationTrace</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Source</td>
+<td style="text-align: left;">Système qui transmet les informations de
+traçabilité relatives à une étape significative d'un processus
+métier.</td>
+<td style="text-align: left;"><p>Flux 1 - TransmissionTrace</p>
+<p>Flux 3 - ReponseConsultationTrace</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Evènement</td>
+<td style="text-align: left;">Fait marquant relatif à un objet, une
+personne, un processus, etc</td>
+<td style="text-align: left;"><p>Flux 1 - TransmissionTrace</p>
+<p>Flux 3 - ReponseConsultationTrace</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Acteurs de l'évènement</td>
+<td style="text-align: left;">Acteurs liés à l'évènement. Il peut s'agir
+d'une personne (physique ou morale) ou d'un système à l'origine de
+l'évènement (émetteur) ou destinataire de l'évènement (récepteur).</td>
+<td style="text-align: left;"><p>Flux 1 - TransmissionTrace</p>
+<p>Flux 3 - ReponseConsultationTrace</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">Objet de l'évènement</td>
+<td style="text-align: left;">Tout objet impacté par un évènement qui
+doit être tracé.<br />
+Le contenu correspond aux informations associées à l’évènement envoyées
+au gestionnaire de traces et qui doivent être conservées</td>
+<td style="text-align: left;"><p>Flux 1 - TransmissionTrace</p>
+<p>Flux 3 - ReponseConsultationTrace</p></td>
+</tr>
+</tbody>
+</table>
+
+<p>Table 12 Concepts métier</p>
+
+<p><span id="_Toc77062418" class="anchor"></span></p>
+
+<h4 id="mise-en-équivalence-mos">Mise en équivalence MOS</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Concept métier</th>
+      <th>Extension</th>
+      <th>Restriction</th>
+      <th>Equivalence</th>
+      <th>Concept MOS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Trace</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Source</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Evènement</td>
+      <td>X</td>
+      <td> </td>
+      <td> </td>
+      <td>Evenement</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Acteurs de l'évènement</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Objet de l'évènement</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 13 Mise en équivalence MOS</p>
+
+<h3 id="modélisation-des-flux-dinformations">Modélisation des flux d'informations</h3>
+
+<h4 id="flux-1---transmissiontrace">Flux 1 - TransmissionTrace</h4>
+<div style="text-align: center; display: block; clear: both;">
+<img src="sfe_image11.png" style="width:6.71871in;height:2.00233in" />
+
+</div>
+
+<p>Figure 8 Flux 1 - TransmissionTrace</p>
+
+<h5 id="classe-trace">Classe "Trace"</h5>
+
+<p>Ensemble d'informations qu'un système enregistre à chaque action qui lui
+est associé.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Nom</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">identifiant : [0..1] Identifiant</td>
+      <td>Identifiant de la trace.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 19 Attributs de la classe "Trace"</p>
+
+<h5 id="classe-sourcetrace">Classe "SourceTrace"</h5>
+
+<p>Système ayant émis la trace de l'évènement.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Nom</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">identifiant : [0..1] Identifiant</td>
+      <td>Identifiant de la source de la trace.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 20 Attributs de la classe "SourceTrace"</p>
+
+<p><span id="_Toc77062426" class="anchor"></span></p>
+
+<h5 id="classe-evenement">Classe "Evenement"</h5>
+
+<p>Fait marquant relatif à un objet, une personne, un processus, etc</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Nom</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">typeEvenement : [0..1] Code</td>
+      <td>Code spécifiant le type de l'évènement.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">sousTypeEvenement : [0..1] Code</td>
+      <td>Code spécifiant le sous type de l'évènement</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">occurence : [0..1] DateHeure</td>
+      <td>Date/heure à laquelle l'évènement est arrivé.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">declaration : [0..1] DateHeure</td>
+      <td>Date/heure à laquelle l'évènement est déclaré.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">description : [0..1] Texte</td>
+      <td>Description textuelle de l'évènement.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 21 Attributs de la classe "Evenement"</p>
+
+<h5 id="classe-acteurevenement">Classe "ActeurEvenement"</h5>
+
+<p>Représente un acteur de l'évènement. De manière générale, il y aura un
+acteur émetteur, à l'origine de l'évènement et un acteur destinataire de
+l'évènement.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Nom</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">identifiant : [1..1] Identifiant</td>
+      <td>Identifiant de l'acteur de l'évènement.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">role : [1..1] Code</td>
+      <td>Rôle de l'acteur de l'évènement</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 22 Attributs de la classe "ActeurEvenement"</p>
+
+<h5 id="classe-objetevenement">Classe "ObjetEvenement"</h5>
+
+<p>Détaille l'objet de l'évènement : tout objet impacté par un évènement
+qui doit être tracé.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Nom</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">identifiant : [0..1] Identifiant</td>
+      <td>Identifiant de l'objet de l'évènement.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">type : [0..1] Code</td>
+      <td>Type d'objet de l'évènement.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">contenu : [0..1] ObjetBinaire</td>
+      <td>Le contenu correspond aux informations associées à l’évènement envoyées au gestionnaire de traces et qui doivent être conservées. Par exemple, l’identifiant du document recherché.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 23 Attributs de la classe "ObjetEvenement"</p>
+
+<h4 id="flux-2---consultationtrace">Flux 2 - ConsultationTrace</h4>
+<div style="text-align: center; display: block; clear: both;"><img src="sfe_image12.png" style="width:4.33333in;height:0.69792in" />
+
+</div>
+
+<p>Figure 9 Flux 2 - ConsultationTrace</p>
+
+<h5 id="classe-trace-1">Classe "Trace"</h5>
+
+<p>Ensemble d'informations qu'un système enregistre à chaque action qui lui
+est associé.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Nom</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">identifiant : [0..1] Identifiant</td>
+      <td>Identifiant de la trace.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 24 Attributs de la classe "Trace"</p>
+
+<h4 id="flux-3---reponseconsultationtrace">Flux 3 - ReponseConsultationTrace</h4>
+
+<p>Le modèle du flux est identique au flux 1 à la différence que la
+consultation peut ne retourner aucune trace.</p>
+
+<h4 id="flux-5---reponserecherchetraces">Flux 5 - ReponseRechercheTraces</h4>
+
+<p>Le modèle du flux est identique au flux 1 à la différence que la
+consultation peut ne retourner aucune source, une seule ou plusieurs.</p>
+
+<h4 id="flux-de-recherche--flux-4---recherchetraces">Flux de recherche : Flux 4 - RechercheTraces</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Nom</th>
+      <th>Description</th>
+      <th style="text-align: left">Obligatoire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Evenement/typeEvenement</td>
+      <td>Code spécifiant le type de l'évènement.</td>
+      <td style="text-align: left">Non</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Evenement/declaration</td>
+      <td>Date/heure à laquelle l'évènement est déclaré.</td>
+      <td style="text-align: left">Non</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Evenement/sousTypeEvenement</td>
+      <td>Code spécifiant le sous type de l'évènement</td>
+      <td style="text-align: left">Non</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Evenement/occurence</td>
+      <td>Date/heure à laquelle l'évènement est arrivé.</td>
+      <td style="text-align: left">Non</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ActeurEvenement/identifiant</td>
+      <td>Identifiant de l'acteur de l'évènement.</td>
+      <td style="text-align: left">Non</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ActeurEvenement/role</td>
+      <td>Rôle de l'acteur de l'évènement</td>
+      <td style="text-align: left">Non</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 25 Flux de recherche</p>
 
 
 
@@ -236,7 +1153,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="sfe.html">next&gt;</a>
+                <a href="specifications_techniques.html">next&gt;</a>
 
               </td>
             </tr>
@@ -246,7 +1163,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 19, 2025 14:13+0000">2025-11-19</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 10, 2025 10:19+0000">2025-12-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG Example"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-11-19T14:13:21+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-12-10T10:19:35+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1643,28 +1643,8 @@
            fhir:v "specifications_fonctionnelles.html"^^xsd:anyURI ;
            fhir:l fhir:specifications_fonctionnelles.html
          ] ;
-         fhir:title [ fhir:v "Specifications Fonctionnelles" ] ;
-         fhir:generation [ fhir:v "markdown" ] ;
-         fhir:page ( [
-           fhir:extension ( [
-             fhir:url [
-               fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
-               fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
-             ] ;
-             fhir:value [
-               a fhir:Url ;
-               fhir:v "sfe.html"^^xsd:anyURI ;
-               fhir:l fhir:sfe.html
-             ]
-           ] ) ;
-           fhir:name [
-             a fhir:Url ;
-             fhir:v "sfe.html"^^xsd:anyURI ;
-             fhir:l fhir:sfe.html
-           ] ;
-           fhir:title [ fhir:v "Vue d'ensemble" ] ;
-           fhir:generation [ fhir:v "markdown" ]
-         ] )
+         fhir:title [ fhir:v "Vue d'ensemble" ] ;
+         fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [

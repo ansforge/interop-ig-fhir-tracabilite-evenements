@@ -1,4 +1,4 @@
-URL,Version,Status,OIDs,Name,Title,Descriptino,Uses,Used,Sources
+URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
 http://hl7.org/fhir/ValueSet/administrative-gender,4.0.1,active,"2.16.840.1.113883.4.642.3.1",AdministrativeGender,AdministrativeGender,"The gender of a person used for administrative purposes.","StructureDefinition/fr-patient","hl7.fhir.r4.core"
 http://hl7.org/fhir/ValueSet/identifier-type,4.0.1,active,"2.16.840.1.113883.4.642.3.45",Identifier Type Codes,IdentifierType,"A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.","StructureDefinition/fr-patient","THO (V2)"
 http://hl7.org/fhir/ValueSet/identifier-use,4.0.1,active,"2.16.840.1.113883.4.642.3.57",IdentifierUse,IdentifierUse,"Identifies the purpose for this identifier, if known .","StructureDefinition/fr-patient","hl7.fhir.r4.core"
