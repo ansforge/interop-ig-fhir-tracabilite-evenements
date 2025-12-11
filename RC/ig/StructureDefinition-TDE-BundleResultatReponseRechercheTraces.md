@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/TDE_BundleResultatReponseRechercheTraces | *Version*:0.1.0 |
-| Draft as of 2025-12-08 | *Computable Name*:TDE_BundleResultatReponseRechercheTraces |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDE_BundleResultatReponseRechercheTraces | *Version*:0.1.0 |
+| Draft as of 2025-12-11 | *Computable Name*:TDE_BundleResultatReponseRechercheTraces |
 
 **Utilisations:**
 
@@ -33,11 +33,11 @@ Other representations of profile: [CSV](StructureDefinition-TDE-BundleResultatRe
 {
   "resourceType" : "StructureDefinition",
   "id" : "TDE-BundleResultatReponseRechercheTraces",
-  "url" : "http://esante.gouv.fr/ci-sis/fhir/StructureDefinition/TDE_BundleResultatReponseRechercheTraces",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDE_BundleResultatReponseRechercheTraces",
   "version" : "0.1.0",
   "name" : "TDE_BundleResultatReponseRechercheTraces",
   "status" : "draft",
-  "date" : "2025-12-08T08:28:00+00:00",
+  "date" : "2025-12-11T14:42:43+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -128,7 +128,7 @@ Other representations of profile: [CSV](StructureDefinition-TDE-BundleResultatRe
           {
             "code" : "AuditEvent",
             "profile" : [
-              "https://esante.gouv.fr/ci-sis/FHIR/StructureDefinition/TDE_AuditEvent"
+              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDE_AuditEvent"
             ]
           }
         ]

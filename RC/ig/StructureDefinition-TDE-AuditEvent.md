@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://esante.gouv.fr/ci-sis/FHIR/StructureDefinition/TDE_AuditEvent | *Version*:0.1.0 |
-| Draft as of 2021-12-10 | *Computable Name*:TDE_AuditEvent |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDE_AuditEvent | *Version*:0.1.0 |
+| Draft as of 2025-12-11 | *Computable Name*:TDE_AuditEvent |
 
  
 Traçabilité des évènements d'objets métiers 
@@ -36,11 +36,11 @@ Other representations of profile: [CSV](StructureDefinition-TDE-AuditEvent.csv),
 {
   "resourceType" : "StructureDefinition",
   "id" : "TDE-AuditEvent",
-  "url" : "https://esante.gouv.fr/ci-sis/FHIR/StructureDefinition/TDE_AuditEvent",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDE_AuditEvent",
   "version" : "0.1.0",
   "name" : "TDE_AuditEvent",
   "status" : "draft",
-  "date" : "2021-12-10",
+  "date" : "2025-12-11T14:42:43+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
