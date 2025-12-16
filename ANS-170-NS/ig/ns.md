@@ -7,7 +7,7 @@
 
 ### Introduction
 
-Ce document regroupe l’analyse des standards identifiés comme potentiellement adaptés pour la mise en œuvre, d’un point de vue « générique » de la gestion des traces « Étude métier – Gestion de traces » [1] :
+Ce document regroupe l’analyse des standards identifiés comme potentiellement adaptés pour la mise en œuvre, d’un point de vue « générique » de la gestion des traces [Étude métier – Gestion de traces](LIEN SFE):
 
 * Le standard HL7 FHIR R4 (**Fast Healthcare Interoperability Resources**). Pour le besoin d’interopérabilité « Gestion des traces », les ressources FHIR suivantes sont notamment analysées :
 * Le profil IHE ATNA et son option RESTful ATNA ;
@@ -26,28 +26,28 @@ Après un rappel synthétique du contexte en section 2, pour chaque standard ana
 
 Un tableau de synthèse qui reprend ces éléments afin d’en faciliter la comparaison ainsi qu’une analyse métier et technique sont fournis en section 4 et 5.
 
-A noter que cette étude se base sur le document « Organismes et Standards » [3] qui présente une description des organismes producteurs de standards ainsi que la manière dont ces standards sont gérés.
+A noter que cette étude se base sur le document [« Organismes et Standards »](http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/annexes-transverses) qui présente une description des organismes producteurs de standards ainsi que la manière dont ces standards sont gérés.
 
 **_Note éditoriale :_**
 
 Afin de préserver la fluidité de lecture, les références sont gérées de la manière suivante dans le document :
 
-* Les références aux documents de référence listés en annexe 2 sont indiquées par le numéro du document entre crochets – [1] fait donc référence au premier document de la liste de l’annexe 2 ;
+* Les références aux documents de référence listés en annexe 2 sont indiquées par le numéro du document entre crochets –[l’étude métier](LienSFE) fait donc référence au premier document de la liste de l’annexe 2 ;
 * Les références aux sites web permettant d’approfondir les aspects techniques référencés sont directement intégrées sous forme de liens cliquables dans des notes de bas de page.
 
 ### Présentation synthétique
 
 Cette étude s’insère dans le cadre du besoin « générique » d’interopérabilité « Gestion des traces » pouvant être appliqué à différents contextes métier (gestion de la traçabilité de médicaments, de dispositifs médicaux, etc.). L’aspect « générique » est lié au fait que la fonctionnalité de « Gestion des traces » peut être instanciée dans différents contextes, prenant en compte différents besoins fonctionnels métier.
 
-Ce besoin d’interopérabilité concerne la mise en œuvre d’un mécanisme qui permet de gérer la traçabilité « d’objets métier » (médicaments, dispositifs médicaux, etc.) tout au long de leur cycle de vie. Par exemple, il s’agit de fournir un mécanisme de création et de consultation des traces associées à un dispositif médical implantable de sa dispensation à son implantation, en passant par sa commande, la réception dans la pharmacie d’un établissement de soin et son transfert dans l’unité de soin implantant ce dispositif. Les cas d’utilisation métier sont donc (cf. [1]) :
+Ce besoin d’interopérabilité concerne la mise en œuvre d’un mécanisme qui permet de gérer la traçabilité « d’objets métier » (médicaments, dispositifs médicaux, etc.) tout au long de leur cycle de vie. Par exemple, il s’agit de fournir un mécanisme de création et de consultation des traces associées à un dispositif médical implantable de sa dispensation à son implantation, en passant par sa commande, la réception dans la pharmacie d’un établissement de soin et son transfert dans l’unité de soin implantant ce dispositif. Les cas d’utilisation métier sont donc (cf. [l’étude métier](LienSFE)) :
 
 * Créer des traces
 * Consulter une trace
 * Rechercher des traces
 
-Une étude[1](#fn:1) « générique » « métier » [1] a été menée concernant la modélisation des flux entre acteurs/composants d’un système d’information ou entre systèmes d’information pour la mise en œuvre de la gestion de traces.
+[l’étude métier](LienSFE) a été menée concernant la modélisation des flux entre acteurs/composants d’un système d’information ou entre systèmes d’information pour la mise en œuvre de la gestion de traces.
 
-Les standards présentés dans ce document doivent gérer l’ensemble des flux métiers structurés et identifiés dans l’étude métier [1] aussi bien dans un contexte de client lourd que dans un contexte de mobilité.
+Les standards présentés dans ce document doivent gérer l’ensemble des flux métiers structurés et identifiés dans [l’étude métier](LienSFE) aussi bien dans un contexte de client lourd que dans un contexte de mobilité.
 
 ### Les standards
 
@@ -55,11 +55,11 @@ Les standards présentés dans ce document doivent gérer l’ensemble des flux 
 
 ##### Description
 
-FHIR[2](#fn:2) (**Fast Healthcare Interoperability Resources**) est un standard élaboré par HL7 qui décrit un ensemble de formats de données et d’éléments (appelés ressources) ainsi qu’une API (**Application Programming Interface**) pour l’échange des informations de santé. Pour plus d’information, se référer au document « Organismes et Standards » [3].
+[FHIR](https://www.hl7.org/fhir/) (**Fast Healthcare Interoperability Resources**) est un standard élaboré par HL7 qui décrit un ensemble de formats de données et d’éléments (appelés ressources) ainsi qu’une API (**Application Programming Interface**) pour l’échange des informations de santé. Pour plus d’information, se référer au document [« Organismes et Standards »](http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/annexes-transverses).
 
 ##### Maturité et adoption
 
-FHIR a défini et mis en œuvre un modèle[3](#fn:3) de maturité de ressources basé sur le CMM[4](#fn:4) (**Capability Maturity Model**) afin de fournir aux développeurs une idée de la maturité d’une ressource avant son utilisation et son implémentation [3]. D’une façon générale, le standard FHIR dans sa version R4 offre des ressources qui sont considérées comme stables (spécifiquement les ressources de niveau de maturité 4 et 5) et qui commencent actuellement à être utilisées dans des implémentations réelles. Les ressources suivantes ont atteint le niveau de maturité « normative », c’est-à-dire qu’elles sont stables :
+FHIR a défini et mis en œuvre un [modèle de maturité de ressources](http://wiki.hl7.org/index.php?title=FHIR_Maturity_Model) basé sur le [CMM (**Capability Maturity Model**)](http://www.selectbs.com/process-maturity/what-is-the-capability-maturity-model) afin de fournir aux développeurs une idée de la maturité d’une ressource avant son utilisation et son [implémentation](http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/annexes-transverses). D’une façon générale, le standard FHIR dans sa version R4 offre des ressources qui sont considérées comme stables (spécifiquement les ressources de niveau de maturité 4 et 5) et qui commencent actuellement à être utilisées dans des implémentations réelles. Les ressources suivantes ont atteint le niveau de maturité « normative », c’est-à-dire qu’elles sont stables :
 
 * Niveau 1
 * Niveau 2
@@ -71,28 +71,28 @@ Une analyse des ressources FHIR «métier» pouvant être appliquées au context
 
 Ci-dessous une description succincte des ressources FHIR pouvant être utilisées pour la mise en œuvre des flux d’échanges entre un système d’information (SI) initiateur (« source des traces », « consommateur des traces ») et un serveur de gestion de traces (« gestionnaire des traces »). Un mapping de ces ressources avec les besoins métier est fourni au chapitre 3.1.5.
 
-* **AdverseEvent (NM 0)** [5](#fn:5): (événement indésirable) cette ressource est utilisée pour décrire les données liées à un événement indésirable qui a ou pourrait avoir lieu lors d’un traitement d’un patient.
+* [**AdverseEvent (NM 0)** ](http://hl7.org/fhir/R4/adverseevent.html): (événement indésirable) cette ressource est utilisée pour décrire les données liées à un événement indésirable qui a ou pourrait avoir lieu lors d’un traitement d’un patient.
 
 > Cette ressource permet de véhiculer les données de description de l’événement indésirable ainsi que ses données de traçabilités : identifiant métier, catégorie (comme par exemple « product-problem » ou « product-use-error »), le type de l’événement, la date effective de l’événement, la date de détection de l’événement, la date d’enregistrement de l’événement, le lieu, l’acteur enregistreur de l’événement, le contributeur, la référence du document relatif, etc. Cette ressource, bien qu’intéressante à prendre en compte pour spécifier de façon générique une trace d’audit, semble trop spécialisée.
 
-* **AuditEvent (NM 3)**[6](#fn:6) : (rapport d’évènement) cette ressource est principalement utilisée pour décrire les données liées à un événement de sécurité, en vue de maintenir un référentiel de traces de sécurité. Ce rapport d’évènement est basé sur la définition des enregistrements de sécurité décrit dans le profil IHE ATNA.
+* [**AuditEvent (NM 3)**](https://www.hl7.org/fhir/R4/auditevent.html) : (rapport d’évènement) cette ressource est principalement utilisée pour décrire les données liées à un événement de sécurité, en vue de maintenir un référentiel de traces de sécurité. Ce rapport d’évènement est basé sur la définition des enregistrements de sécurité décrit dans le profil IHE ATNA.
 
 > Cette ressource permet de véhiculer les données de description d’un événement de sécurité ainsi que ses données de traçabilités : type et sous-type de l’événement, action réalisée pendant l’événement, date effective de l’événement, date d’enregistrement de l’événement, acteur impliqué dans l’événement, source de l’événement, etc. Cette ressource est intéressante à prendre en compte pour spécifier de façon générique une trace d’audit.
 
-* **Bundle (NM N)**[7](#fn:7) : Dans le cas d’une interaction SEARCH, l’API RESTful de FHIR impose de retourner les résultats dans une ressource bundle. Cette ressource est ainsi utilisée pour regrouper des informations provenant de différentes ressources. Cette ressource permet l’existence indépendante de ces ressources qui peuvent être consultées directement en utilisant l’API RESTful de FHIR.
-* **Communication (NM 2)**[8](#fn:8) : cette ressource est utilisée pour décrire les informations échangées entre un émetteur et des récepteurs. Ces acteurs peuvent être des « patients », des « practitioners », des « organizations », des « devices » et des « related persons ».
+* [**Bundle (NM N)**](https://www.hl7.org/fhir/R4/bundle.html) : Dans le cas d’une interaction SEARCH, l’API RESTful de FHIR impose de retourner les résultats dans une ressource bundle. Cette ressource est ainsi utilisée pour regrouper des informations provenant de différentes ressources. Cette ressource permet l’existence indépendante de ces ressources qui peuvent être consultées directement en utilisant l’API RESTful de FHIR.
+* [**Communication (NM 2)**](https://www.hl7.org/fhir/R4/communication.html) : cette ressource est utilisée pour décrire les informations échangées entre un émetteur et des récepteurs. Ces acteurs peuvent être des « patients », des « practitioners », des « organizations », des « devices » et des « related persons ».
 
 > La ressource « Communication » est utilisée comme une des ressources « event » dans un workflow FHIR. Cette ressource pourrait donc être utilisée pour gérer les traces générées dans un workflow métier. Elle est à comparer aux ressources « AdverseEvent » et « AuditEvent ».
 
-* **CommunicationRequest (NM 2)**[9](#fn:9) : cette ressource est utilisée pour demander une action de communication entre un émetteur et des récepteurs. Ces acteurs peuvent être des « patients », des « practitioners », des « organizations », des « devices » et des « related persons ». A la différence de la ressource « communication », cette ressource ne représente pas un flot de communication.
+* [**CommunicationRequest (NM 2)**](https://www.hl7.org/fhir/communicationrequest.html) : cette ressource est utilisée pour demander une action de communication entre un émetteur et des récepteurs. Ces acteurs peuvent être des « patients », des « practitioners », des « organizations », des « devices » et des « related persons ». A la différence de la ressource « communication », cette ressource ne représente pas un flot de communication.
 
 > Cette ressource pourrait être utilisée pour déclencher la génération d’une trace, qui sera ensuite concrétisée par l’utilisation de la ressource « communication ».
 
-* **EventDefinition (NM 0)**[10](#fn:10) : cette ressource est utilisée pour décrire la structure et les données « réutilisables » d’un événement. Cette ressource permet de décrire différents types d’événements. Elle permet de décrire aussi quand un événement particulier peut apparaître.
+* [**EventDefinition (NM 0)**](https://www.hl7.org/fhir/R4/eventdefinition.html) : cette ressource est utilisée pour décrire la structure et les données « réutilisables » d’un événement. Cette ressource permet de décrire différents types d’événements. Elle permet de décrire aussi quand un événement particulier peut apparaître.
 
 > Cette ressource permet de véhiculer les données de description d’un événement, ainsi que ses données de traçabilité : définition de l’événement (et le lien vers cette définition) et toutes les informations liées à la description de cet événement. Cette ressource pourrait être utilisée pour structurer la description d’un événement.
 
-* **SearchParameter (NM 3)** : Cette ressource est définie pour décrire les attributs d’un item de recherche qui peut ensuite être utilisé dans une recherche ou un filtre associé à une ressource.
+* [**SearchParameter (NM 3)**](http://hl7.org/fhir/R4/searchparameter.html) : Cette ressource est définie pour décrire les attributs d’un item de recherche qui peut ensuite être utilisé dans une recherche ou un filtre associé à une ressource.
 
 > Cette ressource permet de décrire les paramètres d’une recherche : description du paramètre de recherche, URL de description du paramètre, les attributs associés au paramètre de recherche, les attributs de description de la recherche (type, expression, xpath, opérande), etc.
 
@@ -118,9 +118,9 @@ Enfin, le corps des requêtes HTTP peut être formaté en XML, JSON ou RDF (seul
 
 ##### Synthèse
 
-Plusieurs ressources FHIR ont été identifiées comme pouvant être utilisées pour aider à représenter les classes de l’étude métier [1] : AdverseEvent, AuditEvent, Communication, CommunicationRequest, eventDefinition, SearchParameter.
+Plusieurs ressources FHIR ont été identifiées comme pouvant être utilisées pour aider à représenter les classes de [l’étude métier](LIENSSFE) : AdverseEvent, AuditEvent, Communication, CommunicationRequest, eventDefinition, SearchParameter.
 
-Le tableau ci-dessous reprend les classes identifiées dans l’étude métier [1] (en lignes) ainsi que chacune des ressources pertinentes étudiées dans ce document (en colonnes) de façon à vérifier l’adéquation des ressources FHIR avec le besoin métier. L’annexe 6.1 détaille la mise en correspondance entre les attributs de la classe « Evénement » et celles des ressources FHIR étudiées.
+Le tableau ci-dessous reprend les classes identifiées dans [l’étude métier](LienSFE)(en lignes) ainsi que chacune des ressources pertinentes étudiées dans ce document (en colonnes) de façon à vérifier l’adéquation des ressources FHIR avec le besoin métier. L’annexe 6.1 détaille la mise en correspondance entre les attributs de la classe « Evénement » et celles des ressources FHIR étudiées.
 
 | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -207,7 +207,7 @@ Cette section décrit succinctement les profils IHE ATNA et son option RESTful A
 
 ###### Description
 
-Le profil ATNA [5] « Audit Trail and Node Authentication » spécifie les caractéristiques d’un nœud sécurisé (« Secure Node ») déployé dans un système d’information de santé. Ce profil a été spécifié avec la possibilité de l’étendre avec des spécificités de domaines métier sous forme d’option. C’est par exemple le cas avec l’option « Radiology Audit Trail Option » et le profil IHE SOLE (« Standardized Operational Logs and Events », cf. chapitre 3.5). Le profil ATNA définit quatre acteurs « Audit Record Repository », « Audit Record Forwarder », « Secure Node », « Secure Application » et deux transactions « Authenticate Node [ITI-19] » et « Record Audit Event [ITI-20] ». ATNA spécifie des composants, briques de base d’un système de sécurité et de protection de la vie privée :
+Le profil [ATNA](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf) « Audit Trail and Node Authentication » spécifie les caractéristiques d’un nœud sécurisé (« Secure Node ») déployé dans un système d’information de santé. Ce profil a été spécifié avec la possibilité de l’étendre avec des spécificités de domaines métier sous forme d’option. C’est par exemple le cas avec l’option « Radiology Audit Trail Option » et le profil IHE SOLE (« Standardized Operational Logs and Events », cf. chapitre 3.5). Le profil ATNA définit quatre acteurs « Audit Record Repository », « Audit Record Forwarder », « Secure Node », « Secure Application » et deux transactions « Authenticate Node [ITI-19] » et « Record Audit Event [ITI-20] ». ATNA spécifie des composants, briques de base d’un système de sécurité et de protection de la vie privée :
 
 * « Node Authentication »
 * « Access Control »
@@ -222,7 +222,7 @@ Le standard « syslog » (RFC 5242) ne spécifie pas la structure du message (
 
 ###### Maturité et adoption
 
-Le profil IHE ATNA, dans la version 16.0 du framework ITI, datant du 12 juillet 2019, est en « Final Text ». A la date de la rédaction de ce document, ce profil est largement implémenté dans plus de 200 produits[11](#fn:11). Ce profil est testé dans tous les connectathons européens et américains depuis 2005[12](#fn:12).
+Le profil IHE ATNA, dans la version 16.0 du framework ITI, datant du 12 juillet 2019, est en « Final Text ». A la date de la rédaction de ce document, ce profil est largement implémenté dans plus de [200 produits](https://product-registry.ihe.net/). Ce profil est testé dans tous les connectathons européens et américains [depuis 2005](https://connectathon-results.ihe.net/).
 
 ###### Synthèse
 
@@ -232,7 +232,7 @@ Le profil ATNA se base sur les standards syslog et DICOM pour spécifier les mes
 
 ###### Description
 
-Resful ATNA [6]  (Query and Feed) est un supplément de « l’IT Infrastructure Framework ». Il étend les fonctionnalités du profil ATNA en ajoutant des opérations RESTful, basées sur FHIR, pour soumettre et retrouver des enregistrements d’audit. Le profil IHE RESTful ATNA ajoute au profil IHE ATNA l’acteur « Audit Consummer » et deux transactions « Retreive ATNA Audit Event [ITI-81] » et « Retrieve Syslog Event [ITI-82] ». Ce profil étend aussi la transaction « Record Audit Event [ITI-20] » de la façon suivante :
+Resful [ATNA](https://www.ihe.net/resources/technical_frameworks/#IT) (Query and Feed) est un supplément de « l’IT Infrastructure Framework ». Il étend les fonctionnalités du profil ATNA en ajoutant des opérations RESTful, basées sur FHIR, pour soumettre et retrouver des enregistrements d’audit. Le profil IHE RESTful ATNA ajoute au profil IHE ATNA l’acteur « Audit Consummer » et deux transactions « Retreive ATNA Audit Event [ITI-81] » et « Retrieve Syslog Event [ITI-82] ». Ce profil étend aussi la transaction « Record Audit Event [ITI-20] » de la façon suivante :
 
 * « Send Audit Event Message – Syslog Interaction » : audit utilisant le protocole syslog
 * « Send Audit Resource Request Message – FHIR Feed Interaction » : audit basé sur le protocole RESTful avec envoi d’une seule ressource FHIR « AuditEvent »
@@ -246,7 +246,7 @@ Un mapping est fourni pour montrer la relation entre les champs de la ressource 
 
 ###### Maturité et adoption
 
-L’option IHE RESTful ATNA, dans sa version 3.1, datant du 15 août 2019, est en « Trial Implementation ». A la date de la rédaction de ce document, aucun produit n’a été déclaré[13](#fn:13) comme implémentant l’option RESTful ATNA. Ce profil n’a pas été testé lors de connectathons[14](#fn:14). Néanmoins, le Ministère de la Santé Suisse a spécifié le profil ATC, basé sur RESTful ATNA (transaction ITI-81 uniquement). Ce profil est testé lors de projectathons en Suisse.
+L’option IHE RESTful ATNA, dans sa version 3.1, datant du 15 août 2019, est en « Trial Implementation ». A la date de la rédaction de ce document, aucun produit n’a été déclaré comme [implémentant l’option RESTful ATNA](https://product-registry.ihe.net/). Ce profil n’a pas été testé lors de [connectathons](https://connectathon-results.ihe.net/). Néanmoins, le Ministère de la Santé Suisse a spécifié le profil ATC, basé sur RESTful ATNA (transaction ITI-81 uniquement). Ce profil est testé lors de projectathons en Suisse.
 
 Quelques « open issues », comme l’alignement complet entre la ressource FHIR « AuditEvent » et tous les champs nécessaires dans les messages syslog ne sont pas encore traitées et seront prises en compte dans la « Release 5 » de FHIR. Néanmoins, il semble intéressant de s’inspirer de ce profil pour spécifier techniquement le volet « générique gestion des traces ».
 
@@ -262,7 +262,7 @@ Cette section décrit succinctement les profils IHE mACM / ACM.
 
 ###### Description
 
-Le profil mACM [7] – « mobile Alert Communication Management » définit des composants d’infrastructure pour envoyer des alertes, sous forme de texte non structuré et fournit un mécanisme de feedback pour connaitre le statut d’une alerte. mACM se base sur les deux ressources FHIR « Communication (NM 2) et CommunicationRequest (NM 2). Ce profil supporte les extensions permettant d’adresser différents workflows métier. mACM définit deux acteurs « Alert reporter » et « Alert Aggregator » et deux transactions « Mobile Report Alert [ITI-84]), « Query for Alert Status [ITI-85] ». mACM utilise la méthode CREATE de l’API RESTful FHIR pour créer une alerte et utilise la méthode SEARCH de l’API RESTful pour consulter le statut des alertes.
+Le [profil mACM](https://www.ihe.net/resources/technical_frameworks/#IT) – « mobile Alert Communication Management » définit des composants d’infrastructure pour envoyer des alertes, sous forme de texte non structuré et fournit un mécanisme de feedback pour connaitre le statut d’une alerte. mACM se base sur les deux ressources FHIR « Communication (NM 2) et CommunicationRequest (NM 2). Ce profil supporte les extensions permettant d’adresser différents workflows métier. mACM définit deux acteurs « Alert reporter » et « Alert Aggregator » et deux transactions « Mobile Report Alert [ITI-84]), « Query for Alert Status [ITI-85] ». mACM utilise la méthode CREATE de l’API RESTful FHIR pour créer une alerte et utilise la méthode SEARCH de l’API RESTful pour consulter le statut des alertes.
 
 L’acteur « Alert reporter » peut être à l’origine d’une alerte ou relayer des alertes provenant de différentes sources. Dans ce dernier cas, l’acteur assure l’interopérabilité avec l’acteur « Alert Aggregator ». L’alerte contient les informations concernant le destinataire de l’alerte.
 
@@ -276,7 +276,7 @@ La spécification du profil mACM montre aussi comment ce profil peut être utili
 
 ###### Maturité et adoption
 
-Le profil IHE mACM, dans sa version 3.1, datant du 5 décembre 2019, est en « Trial Implementation ». Il est basé sur FHIR R4, utilisant des ressources de maturité 2. A la date de la rédaction de ce document, un seul produit a été déclaré[15](#fn:15) comme implémentant le profil mACM. Ce profil a été testé lors de trois connectathons américains (2016, 2017 et 2018)[16](#fn:16).
+Le profil IHE mACM, dans sa version 3.1, datant du 5 décembre 2019, est en « Trial Implementation ». Il est basé sur FHIR R4, utilisant des ressources de maturité 2. A la date de la rédaction de ce document, un seul produit a été déclaré comme [implémentant le profil mACM](https://product-registry.ihe.net/). Ce profil a été testé lors de [trois connectathons américains (2016, 2017 et 2018)](https://connectathon-results.ihe.net/).
 
 ###### Synthèse
 
@@ -298,9 +298,9 @@ La transaction « Query for Alert Status » est spécifiée en FHIR par l’ut
 
 ##### Profil IHE ACM
 
-Le profil « Alert Communication Management » [8]  définit la communication d’alarmes entre sous-systèmes. ACM définit trois acteurs « Alarm Reporter », « Alarm Manager » et « Alarm Communicator ».et 4 transactions « Report Alarm (PCD-04) », « Report Alarm Status (PCD-05) », « Disseminate Alarm (PCD-06) », « Report Dissemination Alarm Status (PCD-07).
+Le [profil « Alert Communication Management »](https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol1.pdf)   définit la communication d’alarmes entre sous-systèmes. ACM définit trois acteurs « Alarm Reporter », « Alarm Manager » et « Alarm Communicator ».et 4 transactions « Report Alarm (PCD-04) », « Report Alarm Status (PCD-05) », « Disseminate Alarm (PCD-06) », « Report Dissemination Alarm Status (PCD-07).
 
-L’acteur « Alert Reporter » est à l’origine des alertes. Il envoie les alertes vers les acteurs « Alert Manager » et « Alert Consumer ». La façon de représenter les alertes est décrite dans le document ICE 60601-1-8[17](#fn:17). Il peut recevoir optionnellement une transaction « Report Alert Status » de la part de l’acteur « Alert Manager ».
+L’acteur « Alert Reporter » est à l’origine des alertes. Il envoie les alertes vers les acteurs « Alert Manager » et « Alert Consumer ». La façon de représenter les alertes est décrite dans le document ICE 60601-1-8[1](#fn:17). Il peut recevoir optionnellement une transaction « Report Alert Status » de la part de l’acteur « Alert Manager ».
 
 L’acteur « Alert Manager » reçoit les alertes, les gère et les transmet à l’acteur « Alert Communicator ». Il peut envoyer optionnellement une transaction « Report Alert Status » à l’acteur « Alert Reporter ».
 
@@ -312,7 +312,7 @@ Les transactions échangées sont au format HL7v2.
 
 ##### Maturité et adoption
 
-Le profil IHE ACM, dans sa version 1.3, datant du 16 août 2012, est en « Trial Implementation ». A la date de la rédaction de ce document, douze produits ont été déclaré[18](#fn:18) comme implémentant le profil ACM. Ce profil a été testé à 17 reprises lors d’un connectathon (Europe 2014, Japon 2014-2016, 2018, Nord-Amérique 2007-2020)[19](#fn:19).
+Le profil IHE ACM, dans sa version 1.3, datant du 16 août 2012, est en « Trial Implementation ». A la date de la rédaction de ce document, douze produits ont été déclaré comme [implémentant le profil ACM](https://product-registry.ihe.net/). Ce profil a été testé à 17 reprises lors d’un [connectathon (Europe 2014, Japon 2014-2016, 2018, Nord-Amérique 2007-2020)](https://connectathon-results.ihe.net/).
 
 ##### Synthèse
 
@@ -322,7 +322,7 @@ Le profil ACM spécifie comment gérer (transmettre, consulter l’état) des tr
 
 ##### Description
 
-Le profil PLT [9]  « Patient Location Tracking » définit les spécifications d’interopérabilité pour retrouver la localisation de patients. Ce profil définit trois acteurs : « Patient Location Tracking Manager », « Patient Location Tracking Supplier » et « Patient Location Tracking Consumer » et deux transactions « Patient Location Tracking Feed » et « Patient Location Tracking Query ».
+Le [profil PLT « Patient Location Tracking »](https://www.ihe.net/resources/technical_frameworks/#IT) définit les spécifications d’interopérabilité pour retrouver la localisation de patients. Ce profil définit trois acteurs : « Patient Location Tracking Manager », « Patient Location Tracking Supplier » et « Patient Location Tracking Consumer » et deux transactions « Patient Location Tracking Feed » et « Patient Location Tracking Query ».
 
 L’acteur « Patient Location Tracking Manager » stocke les traces de localisation de patients et offre un service de consultation.
 
@@ -349,7 +349,7 @@ Les informations suivantes sont véhiculées dans le message de trace :
 
 ##### Maturité et adoption
 
-Le profil IHE PLT, dans sa version 1.2, datant du 31 août 2015, est en « Trial Implementation ». A la date de la rédaction de ce document, aucun produit n’a été déclaré[20](#fn:20) comme implémentant le profil PLT. Ce profil n’a jamais été testé lors d’un connectathon[21](#fn:21).
+Le profil IHE PLT, dans sa version 1.2, datant du 31 août 2015, est en « Trial Implementation ». A la date de la rédaction de ce document, aucun produit n’a été déclaré comme [implémentant le profil PLT](https://product-registry.ihe.net/). Ce profil n’a jamais été testé lors [d’un connectathon](https://connectathon-results.ihe.net/).
 
 ##### Synthèse
 
@@ -359,7 +359,7 @@ Ce profil IHE montre comment gérer un type de trace (« localisation des patie
 
 ##### Description
 
-Le profil SOLE [10] « Standardized Operational Log of Events » définit les spécifications d’interopérabilité pour enregistrer et collecter des événements opérationnels. Il définit un moyen d’échanger de l’information concernant des workflows métier, qui peut être collectée, analysée et affichée en utilisant des méthodes standards. C’est un supplément du « Radiology  technical framework». Ce profil définit trois acteurs « Event Reporter », « Event Consumer » et « Event Repository » et quatre transactions « Record Audit Event [ITI-20] », « Transfer multiple events [RAD-124] », « Retrieve syslog event [ITI-82] » et « Retrieve ATNA audit event [ITI-81] ».
+Le [profil SOLE « Standardized Operational Log of Events »](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_SOLE.pdf) définit les spécifications d’interopérabilité pour enregistrer et collecter des événements opérationnels. Il définit un moyen d’échanger de l’information concernant des workflows métier, qui peut être collectée, analysée et affichée en utilisant des méthodes standards. C’est un supplément du « Radiology  technical framework». Ce profil définit trois acteurs « Event Reporter », « Event Consumer » et « Event Repository » et quatre transactions « Record Audit Event [ITI-20] », « Transfer multiple events [RAD-124] », « Retrieve syslog event [ITI-82] » et « Retrieve ATNA audit event [ITI-81] ».
 
 L’acteur « Event reporter » doit aussi implémenter les transactions de l’acteur « Consistent Time / Time Client ».
 
@@ -369,7 +369,7 @@ Les événements SOLE et les événements ATNA peuvent être gérés par le mêm
 
 ##### Maturité et adoption
 
-Le profil IHE SOLE, dans sa version 1.2, datant du 27 Juillet 2018, est en « Trial Implementation ». A la date de la rédaction de ce document, aucun produit n’a été déclaré[22](#fn:22) comme implémentant le profil SOLE. Ce profil n’a jamais été testé lors d’un connectathon[23](#fn:23).
+Le profil IHE SOLE, dans sa version 1.2, datant du 27 Juillet 2018, est en « Trial Implementation ». A la date de la rédaction de ce document, aucun produit n’a été déclaré comme [implémentant le profil SOLE](https://product-registry.ihe.net/). Ce profil n’a jamais été testé lors d’[un connectathon](https://connectathon-results.ihe.net/).
 
 ##### Synthèse
 
@@ -377,7 +377,7 @@ Le profil IHE SOLE n’a jamais été implémenté. Néanmoins, son approche est
 
 #### Le standard DICOM
 
-Le but de cette étude « Normes & Standards » n’est pas d’analyser en détail le standard DICOM, mais de se focaliser sur la partie « DICOM PS3.15 – Security and System Management Profiles », annexe « A.5 – Audit Trail Message Format Profile » [11]. En effet, cette annexe spécifie la structure d’un message d’audit qui est reprise dans les profils IHE ATNA, l’option RESTful ATNA et SOLE. Cette structure est aussi adéquate pour les besoins du volet « générique gestion des traces ». Il est ainsi possible de faire un mapping entre les concepts et les attributs des classes de l’étude métier « générique gestion des traces » et les attributs d’un message d’audit DICOM.
+Le but de cette étude « Normes & Standards » n’est pas d’analyser en détail le standard DICOM, mais de se focaliser sur la partie « DICOM PS3.15 – Security and System Management Profiles », [annexe « A.5 – Audit Trail Message Format Profile »](http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html). En effet, cette annexe spécifie la structure d’un message d’audit qui est reprise dans les profils IHE ATNA, l’option RESTful ATNA et SOLE. Cette structure est aussi adéquate pour les besoins du volet « générique gestion des traces ». Il est ainsi possible de faire un mapping entre les concepts et les attributs des classes de l’étude métier « générique gestion des traces » et les attributs d’un message d’audit DICOM.
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -403,7 +403,7 @@ Cela confirme l’idée de s’inspirer du profil IHE ATNA, de son option RESTfu
 
 ##### Description
 
-GS1 [12] : GS1 – Global Standards 1 est un organisme mondial qui normalise des méthodes de codage utilisées dans les chaines logistiques, indépendamment du domaine métier. Le but est d’assister les organisations et les industries dans la spécification, la conception et l’implémentation de systèmes de traçabilité basés le système et les standards GS1. GS1 se base sur la définition normative de la « traçabilité » : « **Traceability is the ability to trace the history, application use and location of an item or its characteristics through recorded identification data [ISO 9001 :2015]** ». GS1 a publié un certain nombre de standards pour spécifier les échanges en logistique, en mettant en avant l’importance de l’interopérabilité. Des spécifications sont dédiées au monde de la santé ([https://www.gs1.org/industries/healthcare](https://www.gs1.org/industries/healthcare)). Deux standards GS1 sont dédiés à la gestion des traces :
+[GS1](https://www.gs1.org/standards)  : GS1 – Global Standards 1 est un organisme mondial qui normalise des méthodes de codage utilisées dans les chaines logistiques, indépendamment du domaine métier. Le but est d’assister les organisations et les industries dans la spécification, la conception et l’implémentation de systèmes de traçabilité basés le système et les standards GS1. GS1 se base sur la définition normative de la « traçabilité » : « **Traceability is the ability to trace the history, application use and location of an item or its characteristics through recorded identification data [ISO 9001 :2015]** ». GS1 a publié un certain nombre de standards pour spécifier les échanges en logistique, en mettant en avant l’importance de l’interopérabilité. Des spécifications sont dédiées au monde de la santé ([https://www.gs1.org/industries/healthcare](https://www.gs1.org/industries/healthcare)). Deux standards GS1 sont dédiés à la gestion des traces :
 
 * GTS2 : GS1 Global Traceability Standard - GS1's framework for the design of interoperable traceability systems for supply chains, notamment avec l’introduction du concept « Critical Tracking Events (CTEs) »
 * EPCIS : Electronic Product Code Information Services
@@ -414,7 +414,7 @@ Le point important mis en avant par GS1 est que la fonctionnalité centrale d’
 
 Le standard EPCIS spécifie les fonctionnalités et les structures de données pour créer et partager la visibilité sur les événements intra et inter-entreprises. Le standard EPCIS repose sur deux types de données : « Event data » et « Master data », codées en XML. « Event Data » sont gérées au cours d’un processus métier ; « Master data » sont des données pour compléter le contexte et supporter l’interprétation des données « Event data ».
 
-Figure 1 « Event data » et « Master data » (source [2], § 6.1)
+Figure 1 « Event data » et « Master data » (source[La doctrine du CI-SIS](http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration), § 6.1)
 
 Les données « Event data » sont transmises via les interfaces « Capture and Query » d’EPCIS. Quatre mécanismes sont fournis pour transmettre les données « Master data » :
 
@@ -497,7 +497,7 @@ Ce standard peut être analysé lors de la spécification technique « gestion 
 
 ##### Description
 
-Syslog [13] est un standard (RFC 5424[24](#fn:24)) qui spécifie la structure et l’enregistrement de messages de traces. Les implémentations de syslog sont basées sur une architecture « client – serveur ».
+[Syslog](https://tools.ietf.org/html/rfc5424) est un standard ([RFC 5424](https://tools.ietf.org/html/rfc5424)) qui spécifie la structure et l’enregistrement de messages de traces. Les implémentations de syslog sont basées sur une architecture « client – serveur ».
 
 Syslog est basé sur une architecture en trois couches :
 
@@ -625,10 +625,10 @@ Le standard syslog est largement diffusé depuis des décennies dans les systèm
 
 Cette section présente une synthèse comparative des standards et profils analysés dans les sections précédentes. Les items de cette synthèse sont inspirés des documents suivants :
 
-* La doctrine du CI-SIS [2].
-* Le document « Organismes et Standards » [3] qui décrit les organismes producteurs de standards ainsi que la manière dont ces standards sont gérés.
-* « **Evaluating HIT Standards**[25](#fn:25) » document sur la comparaison des standards publiés par l’organisation HIMSS[26](#fn:26).
-* La méthode CAMSS[27](#fn:27), soutenue par le programme de la commission européenne concernant les solutions d’interopérabilité pour les administrations publiques. Cette initiative vise à promouvoir la collaboration entre les états membres de l’union européenne dans la définition d’une méthode d’évaluation commune de standards pour le développement des services administratifs en ligne.
+* [La doctrine du CI-SIS](http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration) .
+* Le document [« Organismes et Standards »](http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/annexes-transverses) qui décrit les organismes producteurs de standards ainsi que la manière dont ces standards sont gérés.
+* [« **Evaluating HIT Standards** »](http://www.himss.org/evaluating-hit-standards?ItemNumber=22775) document sur la comparaison des standards publiés par l’organisation [HIMSS](http://www.himss.org/).
+* La méthode [CAMSS](http://ec.europa.eu/isa/ready-to-use-solutions/camss_en.htm), soutenue par le programme de la commission européenne concernant les solutions d’interopérabilité pour les administrations publiques. Cette initiative vise à promouvoir la collaboration entre les états membres de l’union européenne dans la définition d’une méthode d’évaluation commune de standards pour le développement des services administratifs en ligne.
 
 | | | | | | | | | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -664,7 +664,7 @@ L’analyse métier reste « générique » avec le besoin principal de gestio
 
 ##### HL7 FHIR
 
-Les informations identifiées dans l’étude métier [1] sont couvertes par les attributs proposés par les ressources FHIR identifiées et détaillées dans ce document (AdverseEvent et AuditEvent). De plus, les critères de recherche proposés sont adaptés aux critères identifiés dans l’étude métier [1].
+Les informations identifiées dans [l’étude métier](LienSFE) sont couvertes par les attributs proposés par les ressources FHIR identifiées et détaillées dans ce document (AdverseEvent et AuditEvent). De plus, les critères de recherche proposés sont adaptés aux critères identifiés dans [l’étude métier](LienSFE).
 
 La ressource FHIR AuditEvent semble correspondre au besoin métier « générique gestion des traces » ; elle couvre la classe « événement » et ses paramètres de recherche couvrent les critères de recherche de l’étude métier. Enfin les opérations FHIR CREATE, READ et SEARCH permettent aussi de spécifier les différents flux de l’étude métier.
 
@@ -698,7 +698,7 @@ Comme argumenté dans l’analyse métier, FHIR peut répondre au besoin métier
 
 ##### HL7 FHIR
 
-Le standard FHIR permet la mise en œuvre native de l’ensemble des flux structurés et identifiés dans l’étude métier [1] « générique gestion des traces ».
+Le standard FHIR permet la mise en œuvre native de l’ensemble des flux structurés et identifiés dans [l’étude métier](LienSFE) « générique gestion des traces ».
 
 Les ressources FHIR permettent une implémentation en utilisant les standards XML ou JSON. Ces deux standards pourront être utilisés en fonction du contexte spécifique métier, sachant que JSON est bien adapté dans un contexte mobile.
 
@@ -740,7 +740,7 @@ Ce document présente une étude comparative des standards FHIR, DICOM, GS1 et s
 
 Les critères à prendre en compte dans le choix de la solution sont les suivants :
 
-* Le standard adopté doit offrir une couverture maximale des informations identifiées dans l’étude métier [1] ;
+* Le standard adopté doit offrir une couverture maximale des informations identifiées dans [l’étude métier](LIENSSFE);
 * Le standard adopté qui permet de spécifier techniquement le besoin spécifique « générique » doit pouvoir être instancié à partir d’un besoin spécifique, le plus « simplement possible »,
 * Les efforts en matière de développements nécessaires pour la mise en œuvre de la gestion des traces ne doivent pas constituer une charge importante aux développeurs ;
 * Le standard adopté doit être adapté aux environnements mobiles ;
@@ -806,31 +806,5 @@ Tableau 6 Mise en correspondance avec la ressource « AuditEvent » et la stru
 1. Mobile Health et le dossier électronique du patient – eHealthSuisse ([https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/2018/F/182214_Empfehlungen_Standards_mHealth_frz.pdf](https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/2018/F/182214_Empfehlungen_Standards_mHealth_frz.pdf))
  |
 
-1. Cette étude ne fait pas l’objet de ce document. Elle fait partie du document « Etude métier – Gestion des traces » [1] [↩](#fnref:1)
-1. [https://www.hl7.org/fhir/](https://www.hl7.org/fhir/) [↩](#fnref:2)
-1. [http://wiki.hl7.org/index.php?title=FHIR_Maturity_Model](http://wiki.hl7.org/index.php?title=FHIR_Maturity_Model) [↩](#fnref:3)
-1. [http://www.selectbs.com/process-maturity/what-is-the-capability-maturity-model](http://www.selectbs.com/process-maturity/what-is-the-capability-maturity-model) [↩](#fnref:4)
-1. https://www.hl7.org/fhir/adverseevent.html [↩](#fnref:5)
-1. https://www.hl7.org/fhir/auditevent.html [↩](#fnref:6)
-1. https://www.hl7.org/fhir/bundle.html [↩](#fnref:7)
-1. https://www.hl7.org/fhir/communication.html [↩](#fnref:8)
-1. https://www.hl7.org/fhir/communicationrequest.html [↩](#fnref:9)
-1. https://www.hl7.org/fhir/eventdefinition.html [↩](#fnref:10)
-1. IHE Product Registry :[https://product-registry.ihe.net](https://product-registry.ihe.net) [↩](#fnref:11)
-1. IHE Connectathon results :[https://connectathon-results.ihe.net](https://connectathon-results.ihe.net) [↩](#fnref:12)
-1. IHE Product Registry :[https://product-registry.ihe.net](https://product-registry.ihe.net) [↩](#fnref:13)
-1. IHE Connectathon results :[https://connectathon-results.ihe.net](https://connectathon-results.ihe.net) [↩](#fnref:14)
-1. IHE Product Registry :[https://product-registry.ihe.net](https://product-registry.ihe.net) [↩](#fnref:15)
-1. IHE Connectathon results :[https://connectathon-results.ihe.net](https://connectathon-results.ihe.net) [↩](#fnref:16)
 1. IEC 60601-1-8 Medical electrical equipment - Part 1-8: General requirements for basic safety and essential performance - Collateral Standard: General requirements, tests and guidance for alarm systems in medical electrical equipment and medical electrical systems [↩](#fnref:17)
-1. IHE Product Registry :[https://product-registry.ihe.net](https://product-registry.ihe.net) [↩](#fnref:18)
-1. IHE Connectathon results :[https://connectathon-results.ihe.net](https://connectathon-results.ihe.net) [↩](#fnref:19)
-1. IHE Product Registry :[https://product-registry.ihe.net](https://product-registry.ihe.net) [↩](#fnref:20)
-1. IHE Connectathon results :[https://connectathon-results.ihe.net](https://connectathon-results.ihe.net) [↩](#fnref:21)
-1. IHE Product Registry :[https://product-registry.ihe.net](https://product-registry.ihe.net) [↩](#fnref:22)
-1. IHE Connectathon results :[https://connectathon-results.ihe.net](https://connectathon-results.ihe.net) [↩](#fnref:23)
-1. Syslog : https://tools.ietf.org/html/rfc5424 [↩](#fnref:24)
-1. [http://www.himss.org/evaluating-hit-standards?ItemNumber=22775](http://www.himss.org/evaluating-hit-standards?ItemNumber=22775) [↩](#fnref:25)
-1. [http://www.himss.org/](http://www.himss.org/) [↩](#fnref:26)
-1. Common Assessment method for standards and specifications :[http://ec.europa.eu/isa/ready-to-use-solutions/camss_en.htm](http://ec.europa.eu/isa/ready-to-use-solutions/camss_en.htm) [↩](#fnref:27)
 

@@ -4,7 +4,7 @@ ExampleIG : Validation Results
 err = 3, warn = 15, info = 17
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.[code]#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/[code])
- Build Errors : 2 / 4 / 0
+ Build Errors : 13 / 4 / 0
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CodeSystem-competence-code-system : 0 / 2 / 3
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CodeSystem-type-carte-code-system : 0 / 2 / 3
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.[code] : 3 / 0 / 2
@@ -18,7 +18,18 @@ Generated $--. FHIR version $-- for ans.fhir.fr.[code]#$-- (canonical = https://
 </table>
 == n/a ==
 WARNING: /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/output/ns.html: Illegal HTML: Illegal HTML element: section
-ERROR: ns.html#/html/body/div/div/div/div/div/table/tbody/tr/td/ol/li/p/a at Line 2581, column 9: The link 'file:///E:/Transfert/00-KEREVAL-2020/Réalisation/Conseil/ASIP/Généricisation/Gestion%20des%20traces/mobile' for "mobile" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 224, column 41: The link 'LIEN SFE' for "Étude métier – Gestion de traces" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/ul/li/p/a at Line 309, column 54: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 337, column 24: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 351, column 5: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 357, column 45: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 598, column 52: The link 'LIENSSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 602, column 64: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2204, column 39: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2208, column 2: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2289, column 32: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/ul/li/p/a at Line 2382, column 32: The link 'LIENSSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/table/tbody/tr/td/ol/li/p/a at Line 2580, column 9: The link 'file:///E:/Transfert/00-KEREVAL-2020/Réalisation/Conseil/ASIP/Généricisation/Gestion%20des%20traces/mobile' for "mobile" cannot be resolved
 ERROR: searchform.html#/html/body/div/div/div/a/img/div/a/img/div/p/img at Line 57, column 3: The image source 'assets/images/fra.svg' cannot be resolved
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide

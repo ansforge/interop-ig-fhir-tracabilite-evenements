@@ -219,10 +219,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h3 id="introduction">Introduction</h3>
 
-<p>Ce document regroupe l’analyse des standards identifiés comme
+<p><a name="l390">​</a>Ce document regroupe l’analyse des standards identifiés comme
 potentiellement adaptés pour la mise en œuvre, d’un point de vue
-«&nbsp;générique&nbsp;» de la gestion des traces «&nbsp;Étude métier – Gestion de
-traces&nbsp;» [1]&nbsp;:</p>
+«&nbsp;générique&nbsp;» de la gestion des traces <a href="LIEN SFE">Étude métier – Gestion de
+traces</a>:</p>
 
 <ul>
   <li>
@@ -293,8 +293,8 @@ standard analysé sont présentés :</p>
 comparaison ainsi qu’une analyse métier et technique sont fournis en
 section 4 et 5.</p>
 
-<p>A noter que cette étude se base sur le document «&nbsp;Organismes et
-Standards&nbsp;» [3] qui présente une description des organismes
+<p>A noter que cette étude se base sur le document <a href="http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/annexes-transverses">«&nbsp;Organismes et
+Standards&nbsp;»</a> qui présente une description des organismes
 producteurs de standards ainsi que la manière dont ces standards sont
 gérés.</p>
 
@@ -305,8 +305,8 @@ la manière suivante dans le document&nbsp;:</p>
 
 <ul>
   <li>
-    <p>Les références aux documents de référence listés en annexe 2 sont
-indiquées par le numéro du document entre crochets – [1] fait donc
+    <p><a name="l534">​</a>Les références aux documents de référence listés en annexe 2 sont
+indiquées par le numéro du document entre crochets –<a href="LienSFE">l’étude métier</a> fait donc
 référence au premier document de la liste de l’annexe 2&nbsp;;</p>
   </li>
   <li>
@@ -326,7 +326,7 @@ que la fonctionnalité de «&nbsp;Gestion des traces&nbsp;» peut être instanci
 dans différents contextes, prenant en compte différents besoins
 fonctionnels métier.</p>
 
-<p>Ce besoin d’interopérabilité concerne la mise en œuvre d’un mécanisme
+<p><a name="l554">​</a>Ce besoin d’interopérabilité concerne la mise en œuvre d’un mécanisme
 qui permet de gérer la traçabilité «&nbsp;d’objets métier&nbsp;» (médicaments,
 dispositifs médicaux, etc.) tout au long de leur cycle de vie. Par
 exemple, il s’agit de fournir un mécanisme de création et de
@@ -334,7 +334,7 @@ consultation des traces associées à un dispositif médical implantable de
 sa dispensation à son implantation, en passant par sa commande, la
 réception dans la pharmacie d’un établissement de soin et son transfert
 dans l’unité de soin implantant ce dispositif. Les cas d’utilisation
-métier sont donc (cf. [1])&nbsp;:</p>
+métier sont donc (cf. <a href="LienSFE">l’étude métier</a>)&nbsp;:</p>
 
 <ul>
   <li>
@@ -348,13 +348,13 @@ métier sont donc (cf. [1])&nbsp;:</p>
   </li>
 </ul>
 
-<p>Une étude<sup id="fnref:1"><a role="doc-noteref" rel="footnote" href="#fn:1" class="footnote">1</a></sup> «&nbsp;générique&nbsp;» «&nbsp;métier&nbsp;» [1] a été menée concernant la
+<p><a name="l581">​</a><a href="LienSFE">l’étude métier</a> a été menée concernant la
 modélisation des flux entre acteurs/composants d’un système
 d’information ou entre systèmes d’information pour la mise en œuvre de
 la gestion de traces.</p>
 
-<p>Les standards présentés dans ce document doivent gérer l’ensemble des
-flux métiers structurés et identifiés dans l’étude métier [1] aussi
+<p><a name="l586">​</a>Les standards présentés dans ce document doivent gérer l’ensemble des
+flux métiers structurés et identifiés dans <a href="LienSFE">l’étude métier</a> aussi
 bien dans un contexte de client lourd que dans un contexte de mobilité.</p>
 
 <h3 id="les-standards">Les standards</h3>
@@ -363,19 +363,19 @@ bien dans un contexte de client lourd que dans un contexte de mobilité.</p>
 
 <h5 id="description">Description</h5>
 
-<p>FHIR<sup id="fnref:2"><a role="doc-noteref" rel="footnote" href="#fn:2" class="footnote">2</a></sup> (<em>Fast Healthcare Interoperability Resources</em>) est un standard
+<p><a href="https://www.hl7.org/fhir/">FHIR</a> (<em>Fast Healthcare Interoperability Resources</em>) est un standard
 élaboré par HL7 qui décrit un ensemble de formats de données et
 d’éléments (appelés ressources) ainsi qu’une API (<em>Application
 Programming Interface</em>) pour l’échange des informations de santé. Pour
-plus d’information, se référer au document «&nbsp;Organismes et Standards&nbsp;»
-[3].</p>
+plus d’information, se référer au document <a href="http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/annexes-transverses">«&nbsp;Organismes et Standards&nbsp;»</a>.</p>
 
 <h5 id="maturité-et-adoption">Maturité et adoption</h5>
 
-<p>FHIR a défini et mis en œuvre un modèle<sup id="fnref:3"><a role="doc-noteref" rel="footnote" href="#fn:3" class="footnote">3</a></sup> de maturité de ressources
-basé sur le CMM<sup id="fnref:4"><a role="doc-noteref" rel="footnote" href="#fn:4" class="footnote">4</a></sup> (<em>Capability Maturity Model</em>) afin de fournir aux
+<p>FHIR a défini et mis en œuvre un <a href="http://wiki.hl7.org/index.php?title=FHIR_Maturity_Model">modèle de maturité de ressources</a>
+basé sur le <a href="http://www.selectbs.com/process-maturity/what-is-the-capability-maturity-model">CMM (<em>Capability Maturity Model</em>)</a> afin de fournir aux
 développeurs une idée de la maturité d’une ressource avant son
-utilisation et son implémentation [3]. D’une façon générale, le
+utilisation et son <a href="http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/annexes-transverses">implémentation</a>.
+ D’une façon générale, le
 standard FHIR dans sa version R4 offre des ressources qui sont
 considérées comme stables (spécifiquement les ressources de niveau de
 maturité 4 et 5) et qui commencent actuellement à être utilisées dans
@@ -441,7 +441,7 @@ traces&nbsp;»). Un mapping de ces ressources avec les besoins métier est
 fourni au chapitre 3.1.5.</p>
 
 <ul>
-  <li><strong>AdverseEvent (NM 0)</strong>&nbsp;<sup id="fnref:5"><a role="doc-noteref" rel="footnote" href="#fn:5" class="footnote">5</a></sup>: (événement indésirable) cette ressource
+  <li><a href="http://hl7.org/fhir/R4/adverseevent.html"><strong>AdverseEvent (NM 0)</strong>&nbsp;</a>: (événement indésirable) cette ressource
 est utilisée pour décrire les données liées à un événement indésirable
 qui a ou pourrait avoir lieu lors d’un traitement d’un patient.</li>
 </ul>
@@ -460,7 +460,7 @@ spécialisée.</p>
 </blockquote>
 
 <ul>
-  <li><strong>AuditEvent (NM 3)</strong><sup id="fnref:6"><a role="doc-noteref" rel="footnote" href="#fn:6" class="footnote">6</a></sup>&nbsp;: (rapport d’évènement) cette ressource est
+  <li><a href="https://www.hl7.org/fhir/R4/auditevent.html"><strong>AuditEvent (NM 3)</strong></a>&nbsp;: (rapport d’évènement) cette ressource est
 principalement utilisée pour décrire les données liées à un événement
 de sécurité, en vue de maintenir un référentiel de traces de sécurité.
 Ce rapport d’évènement est basé sur la définition des enregistrements
@@ -479,7 +479,7 @@ une trace d’audit.</p>
 
 <ul>
   <li>
-    <p><strong>Bundle (NM N)</strong><sup id="fnref:7"><a role="doc-noteref" rel="footnote" href="#fn:7" class="footnote">7</a></sup>&nbsp;: Dans le cas d’une interaction SEARCH, l’API
+    <p><a href="https://www.hl7.org/fhir/R4/bundle.html"><strong>Bundle (NM N)</strong></a>&nbsp;: Dans le cas d’une interaction SEARCH, l’API
 RESTful de FHIR impose de retourner les résultats dans une ressource
 bundle. Cette ressource est ainsi utilisée pour regrouper des
 informations provenant de différentes ressources. Cette ressource
@@ -487,7 +487,7 @@ permet l’existence indépendante de ces ressources qui peuvent être
 consultées directement en utilisant l’API RESTful de FHIR.</p>
   </li>
   <li>
-    <p><strong>Communication (NM 2)</strong><sup id="fnref:8"><a role="doc-noteref" rel="footnote" href="#fn:8" class="footnote">8</a></sup>&nbsp;: cette ressource est utilisée pour
+    <p><a href="https://www.hl7.org/fhir/R4/communication.html"><strong>Communication (NM 2)</strong></a>&nbsp;: cette ressource est utilisée pour
 décrire les informations échangées entre un émetteur et des
 récepteurs. Ces acteurs peuvent être des «&nbsp;patients&nbsp;», des
 «&nbsp;practitioners&nbsp;», des «&nbsp;organizations&nbsp;», des «&nbsp;devices&nbsp;» et des
@@ -503,7 +503,7 @@ est à comparer aux ressources «&nbsp;AdverseEvent&nbsp;» et «&nbsp;AuditEven
 </blockquote>
 
 <ul>
-  <li><strong>CommunicationRequest (NM 2)</strong><sup id="fnref:9"><a role="doc-noteref" rel="footnote" href="#fn:9" class="footnote">9</a></sup>&nbsp;: cette ressource est utilisée
+  <li><a href="https://www.hl7.org/fhir/communicationrequest.html"><strong>CommunicationRequest (NM 2)</strong></a>&nbsp;: cette ressource est utilisée
 pour demander une action de communication entre un émetteur et des
 récepteurs. Ces acteurs peuvent être des «&nbsp;patients&nbsp;», des
 «&nbsp;practitioners&nbsp;», des «&nbsp;organizations&nbsp;», des «&nbsp;devices&nbsp;» et des
@@ -519,7 +519,7 @@ ressource «&nbsp;communication&nbsp;».</p>
 </blockquote>
 
 <ul>
-  <li><strong>EventDefinition (NM 0)</strong><sup id="fnref:10"><a role="doc-noteref" rel="footnote" href="#fn:10" class="footnote">10</a></sup>&nbsp;: cette ressource est utilisée pour
+  <li><a href="https://www.hl7.org/fhir/R4/eventdefinition.html"><strong>EventDefinition (NM 0)</strong></a>&nbsp;:   cette ressource est utilisée pour
 décrire la structure et les données «&nbsp;réutilisables&nbsp;» d’un événement.
 Cette ressource permet de décrire différents types d’événements. Elle
 permet de décrire aussi quand un événement particulier peut
@@ -535,7 +535,7 @@ pourrait être utilisée pour structurer la description d’un événement.</p>
 </blockquote>
 
 <ul>
-  <li><strong>SearchParameter (NM 3)</strong>&nbsp;: Cette ressource est définie pour décrire
+  <li><a href="http://hl7.org/fhir/R4/searchparameter.html"><strong>SearchParameter (NM 3)</strong></a>&nbsp;: Cette ressource est définie pour décrire
 les attributs d’un item de recherche qui peut ensuite être utilisé
 dans une recherche ou un filtre associé à une ressource.</li>
 </ul>
@@ -594,13 +594,12 @@ GET.</p>
 
 <h5 id="synthèse">Synthèse</h5>
 
-<p>Plusieurs ressources FHIR ont été identifiées comme pouvant être
-utilisées pour aider à représenter les classes de l’étude métier [1]&nbsp;:
+<p><a name="l880">​</a>Plusieurs ressources FHIR ont été identifiées comme pouvant être
+utilisées pour aider à représenter les classes de <a href="LIENSSFE">l’étude métier</a> :
 AdverseEvent, AuditEvent, Communication, CommunicationRequest,
 eventDefinition, SearchParameter.</p>
 
-<p>Le tableau ci-dessous reprend&nbsp;les classes identifiées dans l’étude
-métier [1] (en lignes) ainsi que chacune des ressources pertinentes
+<p><a name="l886">​</a>Le tableau ci-dessous reprend&nbsp;les classes identifiées dans <a href="LienSFE">l’étude métier</a>(en lignes) ainsi que chacune des ressources pertinentes
 étudiées dans ce document (en colonnes) de façon à vérifier l’adéquation
 des ressources FHIR avec le besoin métier. L’annexe 6.1 détaille la mise
 en correspondance entre les attributs de la classe «&nbsp;Evénement&nbsp;» et
@@ -917,7 +916,7 @@ RESTful ATNA.</p>
 
 <h6 id="description-1">Description</h6>
 
-<p>Le profil ATNA [5] «&nbsp;Audit Trail and Node Authentication&nbsp;» spécifie
+<p>Le profil <a href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf">ATNA</a> «&nbsp;Audit Trail and Node Authentication&nbsp;» spécifie
 les caractéristiques d’un nœud sécurisé («&nbsp;Secure Node&nbsp;») déployé dans
 un système d’information de santé. Ce profil a été spécifié avec la
 possibilité de l’étendre avec des spécificités de domaines métier sous
@@ -969,9 +968,9 @@ la sécurité et la protection de la vie privée.</p>
 
 <p>Le profil IHE ATNA, dans la version 16.0 du framework ITI, datant du 12
 juillet 2019, est en «&nbsp;Final Text&nbsp;». A la date de la rédaction de ce
-document, ce profil est largement implémenté dans plus de 200
-produits<sup id="fnref:11"><a role="doc-noteref" rel="footnote" href="#fn:11" class="footnote">11</a></sup>. Ce profil est testé dans tous les connectathons européens
-et américains depuis 2005<sup id="fnref:12"><a role="doc-noteref" rel="footnote" href="#fn:12" class="footnote">12</a></sup>.</p>
+document, ce profil est largement implémenté dans plus de <a href="https://product-registry.ihe.net/">200
+produits</a>. Ce profil est testé dans tous les connectathons européens
+et américains <a href="https://connectathon-results.ihe.net/">depuis 2005</a>.</p>
 
 <h6 id="synthèse-1">Synthèse</h6>
 
@@ -987,7 +986,7 @@ Repository&nbsp;».</p>
 
 <h6 id="description-2">Description</h6>
 
-<p>Resful ATNA [6]&nbsp; (Query and Feed) est un supplément de «&nbsp;l’IT
+<p>Resful <a href="https://www.ihe.net/resources/technical_frameworks/#IT">ATNA</a> (Query and Feed) est un supplément de «&nbsp;l’IT
 Infrastructure Framework&nbsp;». Il étend les fonctionnalités du profil ATNA
 en ajoutant des opérations RESTful, basées sur FHIR, pour soumettre et
 retrouver des enregistrements d’audit. Le profil IHE RESTful ATNA ajoute
@@ -1035,8 +1034,8 @@ ressource FHIR «&nbsp;AuditEvent&nbsp;» et la structure DICOM «&nbsp;AuditMes
 
 <p>L’option IHE RESTful ATNA, dans sa version 3.1, datant du 15 août 2019,
 est en «&nbsp;Trial Implementation&nbsp;». A la date de la rédaction de ce
-document, aucun produit n’a été déclaré<sup id="fnref:13"><a role="doc-noteref" rel="footnote" href="#fn:13" class="footnote">13</a></sup> comme implémentant l’option
-RESTful ATNA. Ce profil n’a pas été testé lors de connectathons<sup id="fnref:14"><a role="doc-noteref" rel="footnote" href="#fn:14" class="footnote">14</a></sup>.
+document, aucun produit n’a été déclaré comme <a href="https://product-registry.ihe.net/">implémentant l’option
+RESTful ATNA</a>. Ce profil n’a pas été testé lors de <a href="https://connectathon-results.ihe.net/">connectathons</a>.
 Néanmoins, le Ministère de la Santé Suisse a spécifié le profil ATC,
 basé sur RESTful ATNA (transaction ITI-81 uniquement). Ce profil est
 testé lors de projectathons en Suisse.</p>
@@ -1064,7 +1063,7 @@ des traces&nbsp;».</p>
 
 <h6 id="description-3">Description</h6>
 
-<p>Le profil mACM [7]&nbsp;– «&nbsp;mobile Alert Communication Management&nbsp;» définit
+<p>Le <a href="https://www.ihe.net/resources/technical_frameworks/#IT">profil mACM</a> – «&nbsp;mobile Alert Communication Management&nbsp;» définit
 des composants d’infrastructure pour envoyer des alertes, sous forme de
 texte non structuré et fournit un mécanisme de feedback pour connaitre
 le statut d’une alerte. mACM se base sur les deux ressources FHIR
@@ -1114,9 +1113,9 @@ coordonnées postales, téléphoniques, etc.).</p>
 <p>Le profil IHE mACM, dans sa version 3.1, datant du 5 décembre 2019, est
 en «&nbsp;Trial Implementation&nbsp;». Il est basé sur FHIR R4, utilisant des
 ressources de maturité 2. A la date de la rédaction de ce document, un
-seul produit a été déclaré<sup id="fnref:15"><a role="doc-noteref" rel="footnote" href="#fn:15" class="footnote">15</a></sup> comme implémentant le profil mACM. Ce
-profil a été testé lors de trois connectathons américains (2016, 2017 et
-2018)<sup id="fnref:16"><a role="doc-noteref" rel="footnote" href="#fn:16" class="footnote">16</a></sup>.</p>
+seul produit a été déclaré comme <a href="https://product-registry.ihe.net/">implémentant le profil mACM</a>. Ce
+profil a été testé lors de <a href="https://connectathon-results.ihe.net/">trois connectathons américains (2016, 2017 et
+2018)</a>.</p>
 
 <h6 id="synthèse-3">Synthèse</h6>
 
@@ -1151,7 +1150,7 @@ CommunicationRequest.</p>
 
 <h5 id="profil-ihe-acm">Profil IHE ACM</h5>
 
-<p>Le profil «&nbsp;Alert Communication Management&nbsp;» [8]&nbsp; définit la
+<p>Le <a href="https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol1.pdf">profil «&nbsp;Alert Communication Management&nbsp;»</a> &nbsp; définit la
 communication d’alarmes entre sous-systèmes. ACM définit trois acteurs
 «&nbsp;Alarm Reporter&nbsp;», «&nbsp;Alarm Manager&nbsp;» et «&nbsp;Alarm Communicator&nbsp;».et 4
 transactions «&nbsp;Report Alarm (PCD-04)&nbsp;», «&nbsp;Report Alarm Status
@@ -1161,7 +1160,7 @@ Status (PCD-07).</p>
 <p>L’acteur «&nbsp;Alert Reporter&nbsp;» est à l’origine des alertes. Il envoie les
 alertes vers les acteurs «&nbsp;Alert Manager&nbsp;» et «&nbsp;Alert Consumer&nbsp;». La
 façon de représenter les alertes est décrite dans le document ICE
-60601-1-8<sup id="fnref:17"><a role="doc-noteref" rel="footnote" href="#fn:17" class="footnote">17</a></sup>. Il peut recevoir optionnellement une transaction
+60601-1-8<sup id="fnref:17"><a role="doc-noteref" rel="footnote" href="#fn:17" class="footnote">1</a></sup>. Il peut recevoir optionnellement une transaction
 «&nbsp;Report Alert Status&nbsp;» de la part de l’acteur «&nbsp;Alert Manager&nbsp;».</p>
 
 <p>L’acteur «&nbsp;Alert Manager&nbsp;» reçoit les alertes, les gère et les transmet
@@ -1180,9 +1179,9 @@ Reporter&nbsp;».</p>
 
 <p>Le profil IHE ACM, dans sa version 1.3, datant du 16 août 2012, est en
 «&nbsp;Trial Implementation&nbsp;». A la date de la rédaction de ce document,
-douze produits ont été déclaré<sup id="fnref:18"><a role="doc-noteref" rel="footnote" href="#fn:18" class="footnote">18</a></sup> comme implémentant le profil ACM. Ce
-profil a été testé à 17 reprises lors d’un connectathon (Europe 2014,
-Japon 2014-2016, 2018, Nord-Amérique 2007-2020)<sup id="fnref:19"><a role="doc-noteref" rel="footnote" href="#fn:19" class="footnote">19</a></sup>.</p>
+douze produits ont été déclaré comme <a href="https://product-registry.ihe.net/">implémentant le profil ACM</a>. Ce
+profil a été testé à 17 reprises lors d’un <a href="https://connectathon-results.ihe.net/">connectathon (Europe 2014,
+Japon 2014-2016, 2018, Nord-Amérique 2007-2020)</a>.</p>
 
 <h5 id="synthèse-4">Synthèse</h5>
 
@@ -1198,7 +1197,7 @@ des alertes.</p>
 
 <h5 id="description-4">Description</h5>
 
-<p>Le profil PLT [9]&nbsp; «&nbsp;Patient Location Tracking&nbsp;» définit les
+<p>Le <a href="https://www.ihe.net/resources/technical_frameworks/#IT">profil PLT  «&nbsp;Patient Location Tracking&nbsp;»</a> définit les
 spécifications d’interopérabilité pour retrouver la localisation de
 patients. Ce profil définit trois acteurs&nbsp;: «&nbsp;Patient Location Tracking
 Manager&nbsp;», «&nbsp;Patient Location Tracking Supplier&nbsp;» et «&nbsp;Patient Location
@@ -1276,8 +1275,8 @@ spécifiée en HL7v2 avec le trigger d’événement&nbsp;:</p>
 
 <p>Le profil IHE PLT, dans sa version 1.2, datant du 31 août 2015, est en
 «&nbsp;Trial Implementation&nbsp;». A la date de la rédaction de ce document,
-aucun produit n’a été déclaré<sup id="fnref:20"><a role="doc-noteref" rel="footnote" href="#fn:20" class="footnote">20</a></sup> comme implémentant le profil PLT. Ce
-profil n’a jamais été testé lors d’un connectathon<sup id="fnref:21"><a role="doc-noteref" rel="footnote" href="#fn:21" class="footnote">21</a></sup>.</p>
+aucun produit n’a été déclaré comme <a href="https://product-registry.ihe.net/">implémentant le profil PLT</a>. Ce
+profil n’a jamais été testé lors <a href="https://connectathon-results.ihe.net/">d’un connectathon</a>.</p>
 
 <h5 id="synthèse-5">Synthèse</h5>
 
@@ -1289,7 +1288,7 @@ patients&nbsp;») via des transactions HL7. Néanmoins, ce profil n’a jamais
 
 <h5 id="description-5">Description</h5>
 
-<p>Le profil SOLE [10]&nbsp;«&nbsp;Standardized Operational Log of Events&nbsp;» définit
+<p>Le <a href="https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_SOLE.pdf">profil SOLE «&nbsp;Standardized Operational Log of Events&nbsp;»</a> définit
 les spécifications d’interopérabilité pour enregistrer et collecter des
 événements opérationnels. Il définit un moyen d’échanger de
 l’information concernant des workflows métier, qui peut être collectée,
@@ -1321,8 +1320,8 @@ avec des codes d’événements SOLE.</p>
 
 <p>Le profil IHE SOLE, dans sa version 1.2, datant du 27 Juillet 2018, est
 en «&nbsp;Trial Implementation&nbsp;». A la date de la rédaction de ce document,
-aucun produit n’a été déclaré<sup id="fnref:22"><a role="doc-noteref" rel="footnote" href="#fn:22" class="footnote">22</a></sup> comme implémentant le profil SOLE. Ce
-profil n’a jamais été testé lors d’un connectathon<sup id="fnref:23"><a role="doc-noteref" rel="footnote" href="#fn:23" class="footnote">23</a></sup>.</p>
+aucun produit n’a été déclaré comme <a href="https://product-registry.ihe.net/">implémentant le profil SOLE</a>. Ce
+profil n’a jamais été testé lors d’<a href="https://connectathon-results.ihe.net/">un connectathon</a>.</p>
 
 <h5 id="synthèse-6">Synthèse</h5>
 
@@ -1338,8 +1337,8 @@ lors de la prise en compte des besoins d’interopérabilité métier.</p>
 
 <p>Le but de cette étude «&nbsp;Normes &amp; Standards&nbsp;» n’est pas d’analyser en
 détail le standard DICOM, mais de se focaliser sur la partie «&nbsp;DICOM
-PS3.15 – Security and System Management Profiles&nbsp;», annexe «&nbsp;A.5 – Audit
-Trail Message Format Profile&nbsp;» [11]. En effet, cette annexe spécifie
+PS3.15 – Security and System Management Profiles&nbsp;», <a href="http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html">annexe «&nbsp;A.5 – Audit
+Trail Message Format Profile&nbsp;»</a>. En effet, cette annexe spécifie
 la structure d’un message d’audit qui est reprise dans les profils IHE
 ATNA, l’option RESTful ATNA et SOLE. Cette structure est aussi adéquate
 pour les besoins du volet «&nbsp;générique gestion des traces&nbsp;». Il est ainsi
@@ -1441,7 +1440,7 @@ RESTful ATNA et du profil SOLE pour spécifier techniquement la volet
 
 <h5 id="description-6">Description</h5>
 
-<p>GS1 [12]&nbsp;: GS1 – Global Standards 1 est un organisme mondial qui
+<p><a href="https://www.gs1.org/standards">GS1</a> &nbsp;: GS1 – Global Standards 1 est un organisme mondial qui
 normalise des méthodes de codage utilisées dans les chaines logistiques,
 indépendamment du domaine métier. Le but est d’assister les
 organisations et les industries dans la spécification, la conception et
@@ -1494,7 +1493,7 @@ pour compléter le contexte et supporter l’interprétation des données
   <img src="ns_image8.png" alt="Gestion des traces" style="display:block; margin:auto;"/>
 </div>
 
-<p>Figure 1 «&nbsp;Event data&nbsp;» et «&nbsp;Master data&nbsp;» (source [2], &sect; 6.1)</p>
+<p>Figure 1 «&nbsp;Event data&nbsp;» et «&nbsp;Master data&nbsp;» (source<a href="http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration">La doctrine du CI-SIS</a>, &sect; 6.1)</p>
 
 <p>Les données «&nbsp;Event data&nbsp;» sont transmises via les interfaces «&nbsp;Capture
 and Query&nbsp;» d’EPCIS. Quatre mécanismes sont fournis pour transmettre les
@@ -1700,7 +1699,7 @@ techniques.</p>
 
 <h5 id="description-7">Description</h5>
 
-<p>Syslog [13] est un standard (RFC 5424<sup id="fnref:24"><a role="doc-noteref" rel="footnote" href="#fn:24" class="footnote">24</a></sup>) qui spécifie la structure
+<p><a href="https://tools.ietf.org/html/rfc5424">Syslog</a>  est un standard (<a href="https://tools.ietf.org/html/rfc5424">RFC 5424</a>) qui spécifie la structure
 et l’enregistrement de messages de traces. Les implémentations de syslog
 sont basées sur une architecture «&nbsp;client – serveur&nbsp;».</p>
 
@@ -1886,19 +1885,19 @@ inspirés des documents suivants :</p>
 
 <ul>
   <li>
-    <p>La doctrine du CI-SIS [2].</p>
+    <p><a href="http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration">La doctrine du CI-SIS</a> .</p>
   </li>
   <li>
-    <p>Le document «&nbsp;Organismes et Standards&nbsp;» [3] qui décrit les
+    <p>Le document <a href="http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/annexes-transverses">«&nbsp;Organismes et Standards&nbsp;» </a> qui décrit les
 organismes producteurs de standards ainsi que la manière dont ces
 standards sont gérés.</p>
   </li>
   <li>
-    <p>«&nbsp;<em>Evaluating HIT Standards</em><sup id="fnref:25"><a role="doc-noteref" rel="footnote" href="#fn:25" class="footnote">25</a></sup>&nbsp;» document sur la comparaison des
-standards publiés par l’organisation HIMSS<sup id="fnref:26"><a role="doc-noteref" rel="footnote" href="#fn:26" class="footnote">26</a></sup>.</p>
+    <p><a href="http://www.himss.org/evaluating-hit-standards?ItemNumber=22775">«&nbsp;<em>Evaluating HIT Standards</em>&nbsp;»</a> document sur la comparaison des
+standards publiés par l’organisation <a href="http://www.himss.org/">HIMSS</a>.</p>
   </li>
   <li>
-    <p>La méthode CAMSS<sup id="fnref:27"><a role="doc-noteref" rel="footnote" href="#fn:27" class="footnote">27</a></sup>, soutenue par le programme de la commission
+    <p>La méthode <a href="http://ec.europa.eu/isa/ready-to-use-solutions/camss_en.htm">CAMSS</a>, soutenue par le programme de la commission
 européenne concernant les solutions d’interopérabilité pour les
 administrations publiques. Cette initiative vise à promouvoir la
 collaboration entre les états membres de l’union européenne dans la
@@ -2202,11 +2201,11 @@ de gestion de traces.</p>
 
 <h5 id="hl7-fhir">HL7 FHIR</h5>
 
-<p>Les informations identifiées dans l’étude métier [1] sont couvertes
+<p><a name="l3461">​</a>Les informations identifiées dans <a href="LienSFE">l’étude métier</a>  sont couvertes
 par les attributs proposés par les ressources FHIR identifiées et
 détaillées dans ce document (AdverseEvent et AuditEvent). De plus, les
 critères de recherche proposés sont adaptés aux critères identifiés dans
-l’étude métier [1].</p>
+<a href="LienSFE">l’étude métier</a>.</p>
 
 <p>La ressource FHIR AuditEvent semble correspondre au besoin métier
 «&nbsp;générique gestion des traces&nbsp;»&nbsp;; elle couvre la classe «&nbsp;événement&nbsp;»
@@ -2286,8 +2285,8 @@ gestion des traces.</p>
 
 <h5 id="hl7-fhir-1">HL7 FHIR</h5>
 
-<p>Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
-structurés et identifiés dans l’étude métier [1] «&nbsp;générique gestion
+<p><a name="l3518">​</a>Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
+structurés et identifiés dans <a href="LienSFE">l’étude métier</a> «&nbsp;générique gestion
 des traces&nbsp;».</p>
 
 <p>Les ressources FHIR permettent une implémentation en utilisant les
@@ -2379,8 +2378,8 @@ suivants&nbsp;:</p>
 
 <ul>
   <li>
-    <p>Le standard adopté doit offrir une couverture maximale des
-informations identifiées dans l’étude métier [1]&nbsp;;</p>
+    <p><a name="l3593">​</a>Le standard adopté doit offrir une couverture maximale des
+informations identifiées dans <a href="LIENSSFE">l’étude métier</a>;</p>
   </li>
   <li>
     <p>Le standard adopté qui permet de spécifier techniquement le besoin
@@ -2578,7 +2577,7 @@ structure AuditMessage</p>
 <li><p>Audit Trail and Node Authentication – IHE ITI TF Volume 1 –
 Section 9 (<a href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf">https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf</a>)</p></li>
 <li><p>RESTful ATNA – IHE ITI TF Supplement (<a href="https://www.ihe.net/resources/technical_frameworks/#IT">https://www.ihe.net/resources/technical_frameworks/#IT</a>)</p></li>
-<li><p><a name="l3972">​</a><a href="file:///E:/Transfert/00-KEREVAL-2020/Réalisation/Conseil/ASIP/Généricisation/Gestion%20des%20traces/mobile">mobile</a>
+<li><p><a name="l4011">​</a><a href="file:///E:/Transfert/00-KEREVAL-2020/Réalisation/Conseil/ASIP/Généricisation/Gestion%20des%20traces/mobile">mobile</a>
 Alert Communication Management – IHE ITI TF Supplement (<a href="https://www.ihe.net/resources/technical_frameworks/#IT">https://www.ihe.net/resources/technical_frameworks/#IT</a>)</p></li>
 <li><p>Alert Communication Management – IHE PCD TF Volume 1 – Section 6
 (<a href="https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol1.pdf">https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol1.pdf</a>)</p></li>
@@ -2602,91 +2601,11 @@ eHealthSuisse (<a href="https://www.e-health-suisse.ch/fileadmin/user_upload/Dok
 
 <div role="doc-endnotes" class="footnotes">
   <ol>
-    <li id="fn:1">
-      <p>Cette étude ne fait pas l’objet de ce document. Elle fait partie
-du document «&nbsp;Etude métier – Gestion des traces » [1]&nbsp;<a role="doc-backlink" href="#fnref:1" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:2">
-      <p><a href="https://www.hl7.org/fhir/">https://www.hl7.org/fhir/</a>&nbsp;<a role="doc-backlink" href="#fnref:2" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:3">
-      <p><a href="http://wiki.hl7.org/index.php?title=FHIR_Maturity_Model">http://wiki.hl7.org/index.php?title=FHIR_Maturity_Model</a>&nbsp;<a role="doc-backlink" href="#fnref:3" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:4">
-      <p><a href="http://www.selectbs.com/process-maturity/what-is-the-capability-maturity-model">http://www.selectbs.com/process-maturity/what-is-the-capability-maturity-model</a>&nbsp;<a role="doc-backlink" href="#fnref:4" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:5">
-      <p>https://www.hl7.org/fhir/adverseevent.html&nbsp;<a role="doc-backlink" href="#fnref:5" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:6">
-      <p>https://www.hl7.org/fhir/auditevent.html&nbsp;<a role="doc-backlink" href="#fnref:6" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:7">
-      <p>https://www.hl7.org/fhir/bundle.html&nbsp;<a role="doc-backlink" href="#fnref:7" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:8">
-      <p>https://www.hl7.org/fhir/communication.html&nbsp;<a role="doc-backlink" href="#fnref:8" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:9">
-      <p>https://www.hl7.org/fhir/communicationrequest.html&nbsp;<a role="doc-backlink" href="#fnref:9" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:10">
-      <p>https://www.hl7.org/fhir/eventdefinition.html&nbsp;<a role="doc-backlink" href="#fnref:10" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:11">
-      <p>IHE Product Registry&nbsp;: <a href="https://product-registry.ihe.net">https://product-registry.ihe.net</a>&nbsp;<a role="doc-backlink" href="#fnref:11" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:12">
-      <p>IHE Connectathon results&nbsp;: <a href="https://connectathon-results.ihe.net">https://connectathon-results.ihe.net</a>&nbsp;<a role="doc-backlink" href="#fnref:12" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:13">
-      <p>IHE Product Registry&nbsp;: <a href="https://product-registry.ihe.net">https://product-registry.ihe.net</a>&nbsp;<a role="doc-backlink" href="#fnref:13" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:14">
-      <p>IHE Connectathon results&nbsp;: <a href="https://connectathon-results.ihe.net">https://connectathon-results.ihe.net</a>&nbsp;<a role="doc-backlink" href="#fnref:14" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:15">
-      <p>IHE Product Registry&nbsp;: <a href="https://product-registry.ihe.net">https://product-registry.ihe.net</a>&nbsp;<a role="doc-backlink" href="#fnref:15" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:16">
-      <p>IHE Connectathon results&nbsp;: <a href="https://connectathon-results.ihe.net">https://connectathon-results.ihe.net</a>&nbsp;<a role="doc-backlink" href="#fnref:16" class="reversefootnote">↩</a></p>
-    </li>
     <li id="fn:17">
       <p>IEC 60601-1-8 Medical electrical equipment - Part 1-8: General
 requirements for basic safety and essential performance - Collateral
 Standard: General requirements, tests and guidance for alarm systems
 in medical electrical equipment and medical electrical systems&nbsp;<a role="doc-backlink" href="#fnref:17" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:18">
-      <p>IHE Product Registry&nbsp;: <a href="https://product-registry.ihe.net">https://product-registry.ihe.net</a>&nbsp;<a role="doc-backlink" href="#fnref:18" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:19">
-      <p>IHE Connectathon results&nbsp;: <a href="https://connectathon-results.ihe.net">https://connectathon-results.ihe.net</a>&nbsp;<a role="doc-backlink" href="#fnref:19" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:20">
-      <p>IHE Product Registry&nbsp;: <a href="https://product-registry.ihe.net">https://product-registry.ihe.net</a>&nbsp;<a role="doc-backlink" href="#fnref:20" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:21">
-      <p>IHE Connectathon results&nbsp;: <a href="https://connectathon-results.ihe.net">https://connectathon-results.ihe.net</a>&nbsp;<a role="doc-backlink" href="#fnref:21" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:22">
-      <p>IHE Product Registry&nbsp;: <a href="https://product-registry.ihe.net">https://product-registry.ihe.net</a>&nbsp;<a role="doc-backlink" href="#fnref:22" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:23">
-      <p>IHE Connectathon results&nbsp;: <a href="https://connectathon-results.ihe.net">https://connectathon-results.ihe.net</a>&nbsp;<a role="doc-backlink" href="#fnref:23" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:24">
-      <p>Syslog : https://tools.ietf.org/html/rfc5424&nbsp;<a role="doc-backlink" href="#fnref:24" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:25">
-      <p><a href="http://www.himss.org/evaluating-hit-standards?ItemNumber=22775">http://www.himss.org/evaluating-hit-standards?ItemNumber=22775</a>&nbsp;<a role="doc-backlink" href="#fnref:25" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:26">
-      <p><a href="http://www.himss.org/">http://www.himss.org/</a>&nbsp;<a role="doc-backlink" href="#fnref:26" class="reversefootnote">↩</a></p>
-    </li>
-    <li id="fn:27">
-      <p>Common Assessment method for standards and specifications&nbsp;:
-<a href="http://ec.europa.eu/isa/ready-to-use-solutions/camss_en.htm">http://ec.europa.eu/isa/ready-to-use-solutions/camss_en.htm</a>&nbsp;<a role="doc-backlink" href="#fnref:27" class="reversefootnote">↩</a></p>
     </li>
   </ol>
 </div>
@@ -2731,7 +2650,7 @@ in medical electrical equipment and medical electrical systems&nbsp;<a role="doc
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 10, 2025 10:48+0000">2025-12-10</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 16, 2025 16:03+0000">2025-12-16</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
