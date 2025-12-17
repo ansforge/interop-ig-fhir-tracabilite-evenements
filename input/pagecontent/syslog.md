@@ -4,7 +4,7 @@ La construction des flux consiste en la construction des requêtes ou des
 réponses syslog (pour la transmission de trace) et HTTP (pour la
 consultation et la recherche de trace).
 <div style="text-align: center; display: block; clear: both;">
-  <img src="st_image6.png" alt="Gestion des traces" style="display:block; margin:auto;">
+  <img src="st_image6.png" alt="tracabilité des événements" style="display:block; margin:auto;">
 </div>
 
 
