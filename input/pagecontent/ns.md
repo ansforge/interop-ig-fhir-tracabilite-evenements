@@ -53,19 +53,6 @@ Standards »](http://esante.gouv.fr/services/referentiels/ci-sis/espace-publica
 producteurs de standards ainsi que la manière dont ces standards sont
 gérés.
 
-**<u>Note éditoriale :</u>**
-
-Afin de préserver la fluidité de lecture, les références sont gérées de
-la manière suivante dans le document :
-
-- Les références aux documents de référence listés en annexe 2 sont
-  indiquées par le numéro du document entre crochets –[l’étude métier](LienSFE) fait donc
-  référence au premier document de la liste de l’annexe 2 ;
-
-- Les références aux sites web permettant d’approfondir les aspects
-  techniques référencés sont directement intégrées sous forme de liens
-  cliquables dans des notes de bas de page.
-
 ### Présentation synthétique
 
 Cette étude s’insère dans le cadre du besoin « générique »
@@ -847,7 +834,7 @@ Les informations suivantes sont véhiculées dans le message de trace :
 
 - Source (Patient Location Tracking Supplier)
 
-- Destination (Patient Location Tracking Manager
+- Destination (Patient Location Tracking Manager)
 
 - Audit Source (Patient Location Tracking Supplier)
 
