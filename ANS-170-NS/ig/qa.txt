@@ -3,8 +3,8 @@ ExampleIG : Validation Results
 
 err = 3, warn = 15, info = 17
 IG Publisher Version: 2.0.29
-Generated Wed Dec 17 08:37:42 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.[code]#0.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/[code])
- Build Errors : 12 / 4 / 0
+Generated Wed Dec 17 09:55:15 UTC 2025. FHIR version 4.0.1 for ans.fhir.fr.[code]#0.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/[code])
+ Build Errors : 11 / 4 / 0
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CodeSystem-competence-code-system : 0 / 2 / 3
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CodeSystem-type-carte-code-system : 0 / 2 / 3
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.[code] : 3 / 0 / 2
@@ -28,7 +28,6 @@ ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2186, column 39: The l
 ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2190, column 2: The link 'LienSFE' for "l’étude métier" cannot be resolved
 ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2271, column 32: The link 'LienSFE' for "l’étude métier" cannot be resolved
 ERROR: ns.html#/html/body/div/div/div/div/div/ul/li/p/a at Line 2364, column 32: The link 'LIENSSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/table/tbody/tr/td/ol/li/p/a at Line 2562, column 9: The link 'file:///E:/Transfert/00-KEREVAL-2020/Réalisation/Conseil/ASIP/Généricisation/Gestion%20des%20traces/mobile' for "mobile" cannot be resolved
 ERROR: searchform.html#/html/body/div/div/div/a/img/div/a/img/div/p/img at Line 57, column 3: The image source 'assets/images/fra.svg' cannot be resolved
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide

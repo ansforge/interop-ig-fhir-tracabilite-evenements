@@ -1142,7 +1142,7 @@ Status (PCD-07).</p>
 <p>L’acteur «&nbsp;Alert Reporter&nbsp;» est à l’origine des alertes. Il envoie les
 alertes vers les acteurs «&nbsp;Alert Manager&nbsp;» et «&nbsp;Alert Consumer&nbsp;». La
 façon de représenter les alertes est décrite dans le document ICE
-60601-1-8<sup id="fnref:17"><a role="doc-noteref" rel="footnote" href="#fn:17" class="footnote">1</a></sup>. Il peut recevoir optionnellement une transaction
+60601-1-8[^17]. Il peut recevoir optionnellement une transaction
 «&nbsp;Report Alert Status&nbsp;» de la part de l’acteur «&nbsp;Alert Manager&nbsp;».</p>
 
 <p>L’acteur «&nbsp;Alert Manager&nbsp;» reçoit les alertes, les gère et les transmet
@@ -2183,7 +2183,7 @@ de gestion de traces.</p>
 
 <h5 id="hl7-fhir">HL7 FHIR</h5>
 
-<p><a name="l3435">​</a>Les informations identifiées dans <a href="LienSFE">l’étude métier</a>  sont couvertes
+<p><a name="l3431">​</a>Les informations identifiées dans <a href="LienSFE">l’étude métier</a>  sont couvertes
 par les attributs proposés par les ressources FHIR identifiées et
 détaillées dans ce document (AdverseEvent et AuditEvent). De plus, les
 critères de recherche proposés sont adaptés aux critères identifiés dans
@@ -2267,7 +2267,7 @@ gestion des traces.</p>
 
 <h5 id="hl7-fhir-1">HL7 FHIR</h5>
 
-<p><a name="l3492">​</a>Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
+<p><a name="l3488">​</a>Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
 structurés et identifiés dans <a href="LienSFE">l’étude métier</a> «&nbsp;générique gestion
 des traces&nbsp;».</p>
 
@@ -2360,7 +2360,7 @@ suivants&nbsp;:</p>
 
 <ul>
   <li>
-    <p><a name="l3567">​</a>Le standard adopté doit offrir une couverture maximale des
+    <p><a name="l3563">​</a>Le standard adopté doit offrir une couverture maximale des
 informations identifiées dans <a href="LIENSSFE">l’étude métier</a>;</p>
   </li>
   <li>
@@ -2536,62 +2536,6 @@ structure AuditMessage</p>
   </tbody>
 </table>
 
-<h4 id="annexe-2-documents-de-référence">Annexe 2&nbsp;: Documents de référence</h4>
-
-<table style="width:99%;">
-<colgroup>
-<col style="width: 99%"/>
-</colgroup>
-<thead>
-<tr>
-<th>Documents de référence</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><ol type="1">
-<li><p>Étude métier – Gestion des traces</p></li>
-<li><p>Doctrine du CI-SIS mise en concertation publique en octobre 2016
-(<a href="http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration">http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration</a>)</p></li>
-<li><p>Organismes et Standards – (<a href="http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/annexes-transverses">http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/annexes-transverses</a>
-)</p></li>
-<li><p>Modèle des Objets de Santé – MOS (<a href="http://esante.gouv.fr/services/referentiels/mos">http://esante.gouv.fr/services/referentiels/mos</a>)</p></li>
-<li><p>Audit Trail and Node Authentication – IHE ITI TF Volume 1 –
-Section 9 (<a href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf">https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf</a>)</p></li>
-<li><p>RESTful ATNA – IHE ITI TF Supplement (<a href="https://www.ihe.net/resources/technical_frameworks/#IT">https://www.ihe.net/resources/technical_frameworks/#IT</a>)</p></li>
-<li><p><a name="l3985">​</a><a href="file:///E:/Transfert/00-KEREVAL-2020/Réalisation/Conseil/ASIP/Généricisation/Gestion%20des%20traces/mobile">mobile</a>
-Alert Communication Management – IHE ITI TF Supplement (<a href="https://www.ihe.net/resources/technical_frameworks/#IT">https://www.ihe.net/resources/technical_frameworks/#IT</a>)</p></li>
-<li><p>Alert Communication Management – IHE PCD TF Volume 1 – Section 6
-(<a href="https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol1.pdf">https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol1.pdf</a>)</p></li>
-<li><p>Patient Location Tracking – IHE ITI TF Supplement (<a href="https://www.ihe.net/resources/technical_frameworks/#IT">https://www.ihe.net/resources/technical_frameworks/#IT</a>)</p></li>
-<li><p>Standardized Operational Log of Events – IHE Radiology TF
-Supplement (<a href="https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_SOLE.pdf">https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_SOLE.pdf</a>)</p></li>
-<li><p>DICOM PS3.15 – Security and System Management Profiles, Annexe
-A.5 – Audit Trail Message Format Profiles (<a href="http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html">http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html</a>)</p></li>
-<li><p>GS1 – Global Standards 1 (<a href="https://www.gs1.org/standards">https://www.gs1.org/standards</a>)</p></li>
-<li><p>The Syslog Protocol (<a href="https://tools.ietf.org/html/rfc5424">https://tools.ietf.org/html/rfc5424</a>)</p></li>
-<li><p>Décision (UE) 2015/1302 de la Commission du 28 juillet 2015
-relative à l'identification des profils «Integrating the Healthcare
-Enterprise» pouvant servir de référence dans la passation des marchés
-publics (<a href="https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32015D1302&amp;from=FR">https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32015D1302&amp;from=FR</a>)</p></li>
-<li><p>Mobile Health et le dossier électronique du patient –
-eHealthSuisse (<a href="https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/2018/F/182214_Empfehlungen_Standards_mHealth_frz.pdf">https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/2018/F/182214_Empfehlungen_Standards_mHealth_frz.pdf</a>)</p></li>
-</ol></td>
-</tr>
-</tbody>
-</table>
-
-<div role="doc-endnotes" class="footnotes">
-  <ol>
-    <li id="fn:17">
-      <p>IEC 60601-1-8 Medical electrical equipment - Part 1-8: General
-requirements for basic safety and essential performance - Collateral
-Standard: General requirements, tests and guidance for alarm systems
-in medical electrical equipment and medical electrical systems&nbsp;<a role="doc-backlink" href="#fnref:17" class="reversefootnote">↩</a></p>
-    </li>
-  </ol>
-</div>
-
 
 
 </div>
@@ -2632,7 +2576,7 @@ in medical electrical equipment and medical electrical systems&nbsp;<a role="doc
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 17, 2025 08:36+0000">2025-12-17</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 17, 2025 09:53+0000">2025-12-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-EyeColor.csv), [Exce
   "version" : "0.1.0",
   "name" : "EyeColor",
   "status" : "draft",
-  "date" : "2025-12-17T08:36:43+00:00",
+  "date" : "2025-12-17T09:53:59+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

@@ -293,7 +293,7 @@ La transaction « Query for Alert Status » est spécifiée en FHIR par l’ut
 
 Le [profil « Alert Communication Management »](https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol1.pdf)   définit la communication d’alarmes entre sous-systèmes. ACM définit trois acteurs « Alarm Reporter », « Alarm Manager » et « Alarm Communicator ».et 4 transactions « Report Alarm (PCD-04) », « Report Alarm Status (PCD-05) », « Disseminate Alarm (PCD-06) », « Report Dissemination Alarm Status (PCD-07).
 
-L’acteur « Alert Reporter » est à l’origine des alertes. Il envoie les alertes vers les acteurs « Alert Manager » et « Alert Consumer ». La façon de représenter les alertes est décrite dans le document ICE 60601-1-8[1](#fn:17). Il peut recevoir optionnellement une transaction « Report Alert Status » de la part de l’acteur « Alert Manager ».
+L’acteur « Alert Reporter » est à l’origine des alertes. Il envoie les alertes vers les acteurs « Alert Manager » et « Alert Consumer ». La façon de représenter les alertes est décrite dans le document ICE 60601-1-8[^17]. Il peut recevoir optionnellement une transaction « Report Alert Status » de la part de l’acteur « Alert Manager ».
 
 L’acteur « Alert Manager » reçoit les alertes, les gère et les transmet à l’acteur « Alert Communicator ». Il peut envoyer optionnellement une transaction « Report Alert Status » à l’acteur « Alert Reporter ».
 
@@ -777,27 +777,4 @@ Tableau 6 Mise en correspondance avec la ressource « AuditEvent » et la stru
 | CI-SIS | Cadre d’interopérabilité des systèmes d’information de santé |
 | DICOM | Digital Imaging and COmmunication in Medecine |
 | GS1 | Global Standards 1 |
-
-#### Annexe 2 : Documents de référence
-
-| |
-| :--- |
-| 1. Étude métier – Gestion des traces
-1. Doctrine du CI-SIS mise en concertation publique en octobre 2016 ([http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration](http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration))
-1. Organismes et Standards – ([http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/annexes-transverses](http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/annexes-transverses))
-1. Modèle des Objets de Santé – MOS ([http://esante.gouv.fr/services/referentiels/mos](http://esante.gouv.fr/services/referentiels/mos))
-1. Audit Trail and Node Authentication – IHE ITI TF Volume 1 – Section 9 ([https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf))
-1. RESTful ATNA – IHE ITI TF Supplement ([https://www.ihe.net/resources/technical_frameworks/#IT](https://www.ihe.net/resources/technical_frameworks/#IT))
-1. [mobile](file:///E:/Transfert/00-KEREVAL-2020/Réalisation/Conseil/ASIP/Généricisation/Gestion%20des%20traces/mobile)Alert Communication Management – IHE ITI TF Supplement ([https://www.ihe.net/resources/technical_frameworks/#IT](https://www.ihe.net/resources/technical_frameworks/#IT))
-1. Alert Communication Management – IHE PCD TF Volume 1 – Section 6 ([https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol1.pdf](https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol1.pdf))
-1. Patient Location Tracking – IHE ITI TF Supplement ([https://www.ihe.net/resources/technical_frameworks/#IT](https://www.ihe.net/resources/technical_frameworks/#IT))
-1. Standardized Operational Log of Events – IHE Radiology TF Supplement ([https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_SOLE.pdf](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_SOLE.pdf))
-1. DICOM PS3.15 – Security and System Management Profiles, Annexe A.5 – Audit Trail Message Format Profiles ([http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html](http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html))
-1. GS1 – Global Standards 1 ([https://www.gs1.org/standards](https://www.gs1.org/standards))
-1. The Syslog Protocol ([https://tools.ietf.org/html/rfc5424](https://tools.ietf.org/html/rfc5424))
-1. Décision (UE) 2015/1302 de la Commission du 28 juillet 2015 relative à l'identification des profils «Integrating the Healthcare Enterprise» pouvant servir de référence dans la passation des marchés publics ([https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32015D1302&from=FR](https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=CELEX:32015D1302&from=FR))
-1. Mobile Health et le dossier électronique du patient – eHealthSuisse ([https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/2018/F/182214_Empfehlungen_Standards_mHealth_frz.pdf](https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/2018/F/182214_Empfehlungen_Standards_mHealth_frz.pdf))
- |
-
-1. IEC 60601-1-8 Medical electrical equipment - Part 1-8: General requirements for basic safety and essential performance - Collateral Standard: General requirements, tests and guidance for alarm systems in medical electrical equipment and medical electrical systems [↩](#fnref:17)
 

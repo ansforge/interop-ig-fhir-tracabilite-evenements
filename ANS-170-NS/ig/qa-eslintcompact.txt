@@ -12,7 +12,6 @@ Generic: line 0, col 0, Error - The link 'LienSFE' for "l’étude métier" cann
 Generic: line 0, col 0, Error - The link 'LienSFE' for "l’étude métier" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link 'LienSFE' for "l’étude métier" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link 'LIENSSFE' for "l’étude métier" cannot be resolved (NOTFOUND)
-Generic: line 0, col 0, Error - The link 'file:///E:/Transfert/00-KEREVAL-2020/Réalisation/Conseil/ASIP/Généricisation/Gestion%20des%20traces/mobile' for "mobile" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The image source 'assets/images/fra.svg' cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Warning - An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
