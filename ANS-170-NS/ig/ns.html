@@ -298,24 +298,6 @@ Standards&nbsp;»</a> qui présente une description des organismes
 producteurs de standards ainsi que la manière dont ces standards sont
 gérés.</p>
 
-<p><strong><u>Note éditoriale&nbsp;:</u></strong></p>
-
-<p>Afin de préserver la fluidité de lecture, les références sont gérées de
-la manière suivante dans le document&nbsp;:</p>
-
-<ul>
-  <li>
-    <p><a name="l534">​</a>Les références aux documents de référence listés en annexe 2 sont
-indiquées par le numéro du document entre crochets –<a href="LienSFE">l’étude métier</a> fait donc
-référence au premier document de la liste de l’annexe 2&nbsp;;</p>
-  </li>
-  <li>
-    <p>Les références aux sites web permettant d’approfondir les aspects
-techniques référencés sont directement intégrées sous forme de liens
-cliquables dans des notes de bas de page.</p>
-  </li>
-</ul>
-
 <h3 id="présentation-synthétique">Présentation synthétique</h3>
 
 <p>Cette étude s’insère dans le cadre du besoin «&nbsp;générique&nbsp;»
@@ -326,7 +308,7 @@ que la fonctionnalité de «&nbsp;Gestion des traces&nbsp;» peut être instanci
 dans différents contextes, prenant en compte différents besoins
 fonctionnels métier.</p>
 
-<p><a name="l554">​</a>Ce besoin d’interopérabilité concerne la mise en œuvre d’un mécanisme
+<p><a name="l528">​</a>Ce besoin d’interopérabilité concerne la mise en œuvre d’un mécanisme
 qui permet de gérer la traçabilité «&nbsp;d’objets métier&nbsp;» (médicaments,
 dispositifs médicaux, etc.) tout au long de leur cycle de vie. Par
 exemple, il s’agit de fournir un mécanisme de création et de
@@ -348,12 +330,12 @@ métier sont donc (cf. <a href="LienSFE">l’étude métier</a>)&nbsp;:</p>
   </li>
 </ul>
 
-<p><a name="l581">​</a><a href="LienSFE">l’étude métier</a> a été menée concernant la
+<p><a name="l555">​</a><a href="LienSFE">l’étude métier</a> a été menée concernant la
 modélisation des flux entre acteurs/composants d’un système
 d’information ou entre systèmes d’information pour la mise en œuvre de
 la gestion de traces.</p>
 
-<p><a name="l586">​</a>Les standards présentés dans ce document doivent gérer l’ensemble des
+<p><a name="l560">​</a>Les standards présentés dans ce document doivent gérer l’ensemble des
 flux métiers structurés et identifiés dans <a href="LienSFE">l’étude métier</a> aussi
 bien dans un contexte de client lourd que dans un contexte de mobilité.</p>
 
@@ -594,12 +576,12 @@ GET.</p>
 
 <h5 id="synthèse">Synthèse</h5>
 
-<p><a name="l880">​</a>Plusieurs ressources FHIR ont été identifiées comme pouvant être
+<p><a name="l854">​</a>Plusieurs ressources FHIR ont été identifiées comme pouvant être
 utilisées pour aider à représenter les classes de <a href="LIENSSFE">l’étude métier</a> :
 AdverseEvent, AuditEvent, Communication, CommunicationRequest,
 eventDefinition, SearchParameter.</p>
 
-<p><a name="l886">​</a>Le tableau ci-dessous reprend&nbsp;les classes identifiées dans <a href="LienSFE">l’étude métier</a>(en lignes) ainsi que chacune des ressources pertinentes
+<p><a name="l860">​</a>Le tableau ci-dessous reprend&nbsp;les classes identifiées dans <a href="LienSFE">l’étude métier</a>(en lignes) ainsi que chacune des ressources pertinentes
 étudiées dans ce document (en colonnes) de façon à vérifier l’adéquation
 des ressources FHIR avec le besoin métier. L’annexe 6.1 détaille la mise
 en correspondance entre les attributs de la classe «&nbsp;Evénement&nbsp;» et
@@ -1261,7 +1243,7 @@ spécifiée en HL7v2 avec le trigger d’événement&nbsp;:</p>
     <p>Source (Patient Location Tracking Supplier)</p>
   </li>
   <li>
-    <p>Destination (Patient Location Tracking Manager</p>
+    <p>Destination (Patient Location Tracking Manager)</p>
   </li>
   <li>
     <p>Audit Source (Patient Location Tracking Supplier)</p>
@@ -2201,7 +2183,7 @@ de gestion de traces.</p>
 
 <h5 id="hl7-fhir">HL7 FHIR</h5>
 
-<p><a name="l3461">​</a>Les informations identifiées dans <a href="LienSFE">l’étude métier</a>  sont couvertes
+<p><a name="l3435">​</a>Les informations identifiées dans <a href="LienSFE">l’étude métier</a>  sont couvertes
 par les attributs proposés par les ressources FHIR identifiées et
 détaillées dans ce document (AdverseEvent et AuditEvent). De plus, les
 critères de recherche proposés sont adaptés aux critères identifiés dans
@@ -2285,7 +2267,7 @@ gestion des traces.</p>
 
 <h5 id="hl7-fhir-1">HL7 FHIR</h5>
 
-<p><a name="l3518">​</a>Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
+<p><a name="l3492">​</a>Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
 structurés et identifiés dans <a href="LienSFE">l’étude métier</a> «&nbsp;générique gestion
 des traces&nbsp;».</p>
 
@@ -2378,7 +2360,7 @@ suivants&nbsp;:</p>
 
 <ul>
   <li>
-    <p><a name="l3593">​</a>Le standard adopté doit offrir une couverture maximale des
+    <p><a name="l3567">​</a>Le standard adopté doit offrir une couverture maximale des
 informations identifiées dans <a href="LIENSSFE">l’étude métier</a>;</p>
   </li>
   <li>
@@ -2577,7 +2559,7 @@ structure AuditMessage</p>
 <li><p>Audit Trail and Node Authentication – IHE ITI TF Volume 1 –
 Section 9 (<a href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf">https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf</a>)</p></li>
 <li><p>RESTful ATNA – IHE ITI TF Supplement (<a href="https://www.ihe.net/resources/technical_frameworks/#IT">https://www.ihe.net/resources/technical_frameworks/#IT</a>)</p></li>
-<li><p><a name="l4011">​</a><a href="file:///E:/Transfert/00-KEREVAL-2020/Réalisation/Conseil/ASIP/Généricisation/Gestion%20des%20traces/mobile">mobile</a>
+<li><p><a name="l3985">​</a><a href="file:///E:/Transfert/00-KEREVAL-2020/Réalisation/Conseil/ASIP/Généricisation/Gestion%20des%20traces/mobile">mobile</a>
 Alert Communication Management – IHE ITI TF Supplement (<a href="https://www.ihe.net/resources/technical_frameworks/#IT">https://www.ihe.net/resources/technical_frameworks/#IT</a>)</p></li>
 <li><p>Alert Communication Management – IHE PCD TF Volume 1 – Section 6
 (<a href="https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol1.pdf">https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol1.pdf</a>)</p></li>
@@ -2650,7 +2632,7 @@ in medical electrical equipment and medical electrical systems&nbsp;<a role="doc
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 16, 2025 16:03+0000">2025-12-16</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 17, 2025 08:36+0000">2025-12-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

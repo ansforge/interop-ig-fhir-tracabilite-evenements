@@ -6,7 +6,6 @@ Generic: line 0, col 0, Error - The link 'LIEN SFE' for "Étude métier – Gest
 Generic: line 0, col 0, Error - The link 'LienSFE' for "l’étude métier" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link 'LienSFE' for "l’étude métier" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link 'LienSFE' for "l’étude métier" cannot be resolved (NOTFOUND)
-Generic: line 0, col 0, Error - The link 'LienSFE' for "l’étude métier" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link 'LIENSSFE' for "l’étude métier" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link 'LienSFE' for "l’étude métier" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link 'LienSFE' for "l’étude métier" cannot be resolved (NOTFOUND)
@@ -51,4 +50,4 @@ Generic: line 0, col 0, Warning - The HTML fragment 'expansion-params.xhtml' is 
 /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-TypeCarteVS.json: line 1, col 1353, Warning - Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present (REQUIRED)
 
 err = 3, warn = 15, info = 17
-IG Publisher Version: 2.0.28
+IG Publisher Version: 2.0.29
