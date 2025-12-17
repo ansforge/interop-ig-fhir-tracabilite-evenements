@@ -2,11 +2,11 @@
 
 Ce document regroupe l’analyse des standards identifiés comme
 potentiellement adaptés pour la mise en œuvre, d’un point de vue
-« générique » de la gestion des traces [Étude métier – Gestion de
+« générique » de la tracabilité des événements [Étude métier – Gestion de
 traces](LIEN SFE):
 
 - Le standard HL7 FHIR R4 (*Fast Healthcare Interoperability
-  Resources*). Pour le besoin d’interopérabilité « Gestion des traces »,
+  Resources*). Pour le besoin d’interopérabilité « tracabilité des événements »,
   les ressources FHIR suivantes sont notamment analysées :
 
   - AdverseEvent
@@ -56,10 +56,10 @@ gérés.
 ### Présentation synthétique
 
 Cette étude s’insère dans le cadre du besoin « générique »
-d’interopérabilité « Gestion des traces » pouvant être appliqué à
+d’interopérabilité « tracabilité des événements » pouvant être appliqué à
 différents contextes métier (gestion de la traçabilité de médicaments,
 de dispositifs médicaux, etc.). L’aspect « générique » est lié au fait
-que la fonctionnalité de « Gestion des traces » peut être instanciée
+que la fonctionnalité de « tracabilité des événements » peut être instanciée
 dans différents contextes, prenant en compte différents besoins
 fonctionnels métier.
 
@@ -255,7 +255,7 @@ Différents niveaux d’interactions sont possibles :
 - **Système** (s’applique à l’ensemble du système)
 
 Les interactions qui pourront s’appliquer dans le cas « générique » de
-la « gestion des traces » sont les suivantes :
+la « tracabilité des événements » sont les suivantes :
 
 - **Read** pour « consulter une trace ». Utilise la méthode HTTP GET.
 
@@ -422,7 +422,7 @@ Tableau 2 Mapping des critères de recherche
 FHIR décrit également une API REST réutilisant les méthodes HTTP,
 celle-ci sera utilisée dans les scénarios ci-après pour permettre
 l’interaction entre les différents acteurs impliqués dans le cas d’usage
-« générique » de la « gestion des traces ».
+« générique » de la « tracabilité des événements ».
 
 ##### Exemple de spécification du workflow générique
 
@@ -437,7 +437,7 @@ La figure ci-dessous illustre le scénario.
 
 
 <div style="text-align: center; display: block; clear: both;">
-  <img src="ns_image5.png" alt="Gestion des traces" style="display:block; margin:auto;">
+  <img src="ns_image5.png" alt="tracabilité des événements" style="display:block; margin:auto;">
 </div>
 
 
@@ -467,7 +467,7 @@ cette étape d’analyse).
 La figure ci-dessous illustre le scénario.
 
 <div style="text-align: center; display: block; clear: both;">
-  <img src="ns_image6.png" alt="Gestion des traces" style="display:block; margin:auto;">
+  <img src="ns_image6.png" alt="tracabilité des événements" style="display:block; margin:auto;">
 </div>
 Ce scénario se décompose en deux flux :
 
@@ -492,7 +492,7 @@ cette étape d’analyse).
 La figure ci-dessous illustre le scénario.
 
 <div style="text-align: center; display: block; clear: both;">
-  <img src="ns_image7.png" alt="Gestion des traces" style="display:block; margin:auto;">
+  <img src="ns_image7.png" alt="tracabilité des événements" style="display:block; margin:auto;">
 </div>
 Le scénario de recherche de traces est décomposé en deux flux :
 
@@ -687,7 +687,7 @@ Les composants d’infrastructure décrits dans le profil mACM peuvent être
 utilisés dans différents cas d’utilisation métier comme par exemple la
 gestion des alertes dans un réseau contrôlé de prestations de soins. Des
 idées peuvent être repris de ce profil pour spécifier techniquement le
-volet générique « Gestion des traces », notamment l’utilisation des
+volet générique « tracabilité des événements », notamment l’utilisation des
 ressources « Communication » et « CommunicationRequest » et les méthodes
 « CREATE » et « SEARCH » de l’API FHIR.
 
@@ -714,7 +714,7 @@ profil a été testé lors de [trois connectathons américains (2016, 2017 et
 Le profil mACM spécifie comment gérer (transmettre, consulter l’état)
 des traces qui peuvent être générées lors d’un workflow métier. Ce
 profil peut donc apporter des idées pour spécifier le volet générique
-« Gestion des traces ». Le point intéressant aussi de ce profil est
+« tracabilité des événements ». Le point intéressant aussi de ce profil est
 qu’il peut être utilisé dans un environnement dans lequel le profil IHE
 ACM est aussi implémenté, assurant ainsi une interopérabilité globale de
 gestion des alertes.
@@ -722,7 +722,7 @@ gestion des alertes.
 ###### Description détaillée
 
 Ces informations détaillées, présentes dans le profil mACM, peuvent
-aider à spécifier le profil générique « Gestion des traces ».
+aider à spécifier le profil générique « tracabilité des événements ».
 
 La transaction « Mobile Report Alert » envoyée par l’acteur « Alert
 Report » est spécifiée en FHIR par l’utilisation de la commande CREATE
@@ -899,7 +899,7 @@ est intéressante car c’est une extension des profils ATNA / RESTful ATNA
 (ajout de la transaction RAD-124 et profilage des attributs des
 événements d’audit pour les adapter au contexte métier de la
 radiologie). Cette démarche peut donc être utilisée pour rendre
-« générique » le volet « gestion des traces » et le profilage se fera
+« générique » le volet « tracabilité des événements » et le profilage se fera
 lors de la prise en compte des besoins d’interopérabilité métier.
 
 #### Le standard DICOM
@@ -910,9 +910,9 @@ PS3.15 – Security and System Management Profiles », [annexe « A.5 – Audi
 Trail Message Format Profile »](http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html). En effet, cette annexe spécifie
 la structure d’un message d’audit qui est reprise dans les profils IHE
 ATNA, l’option RESTful ATNA et SOLE. Cette structure est aussi adéquate
-pour les besoins du volet « générique gestion des traces ». Il est ainsi
+pour les besoins du volet « générique tracabilité des événements ». Il est ainsi
 possible de faire un mapping entre les concepts et les attributs des
-classes de l’étude métier « générique gestion des traces » et les
+classes de l’étude métier « générique tracabilité des événements » et les
 attributs d’un message d’audit DICOM.
 
 <table style="width:77%;">
@@ -1004,7 +1004,7 @@ Tableau 3 Mapping DICOM avec les concepts de l’étude métier
 
 Cela confirme l’idée de s’inspirer du profil IHE ATNA, de son option
 RESTful ATNA et du profil SOLE pour spécifier techniquement la volet
-« générique gestion des traces ».
+« générique tracabilité des événements ».
 
 #### Le standard GS1
 
@@ -1023,7 +1023,7 @@ certain nombre de standards pour spécifier les échanges en logistique,
 en mettant en avant l’importance de l’interopérabilité. Des
 spécifications sont dédiées au monde de la santé
 (<https://www.gs1.org/industries/healthcare>). Deux standards GS1 sont
-dédiés à la gestion des traces :
+dédiés à la tracabilité des événements :
 
 - GTS2 : GS1 Global Traceability Standard - GS1's framework for the
   design of interoperable traceability systems for supply chains,
@@ -1055,7 +1055,7 @@ pour compléter le contexte et supporter l’interprétation des données
 « Event data ».
 
 <div style="text-align: center; display: block; clear: both;">
-  <img src="ns_image8.png" alt="Gestion des traces" style="display:block; margin:auto;">
+  <img src="ns_image8.png" alt="tracabilité des événements" style="display:block; margin:auto;">
 </div>
 
 Figure 1 « Event data » et « Master data » (source[La doctrine du CI-SIS](http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration), § 6.1)
@@ -1097,7 +1097,7 @@ EPCIS définit 6 types d’événements :
   sont transformés en objets « sortants »
 
 Le « TransactionEvent » semble le plus se rapprocher du besoin métier
-« générique gestion des traces ».
+« générique tracabilité des événements ».
 
 <table style="width:100%;">
 <colgroup>
@@ -1171,7 +1171,7 @@ TransactionEvent.Desitnation.dest</td>
 
 Tableau 4 Mise en correspondance avec l’événement « TransactionEvent »
 
-EPCIS définit trois interfaces pour la gestion des traces :
+EPCIS définit trois interfaces pour la tracabilité des événements :
 
 - EPCIS Capture Interface : collecte des événements
 
@@ -1196,7 +1196,7 @@ over http, soit en XML over HTTPS, soit en XML over AS2.
 Il existe différents standards GS1 dans le domaine de la santé dont
 « Automatic Identification and Data Capture Healthcare Implementation
 Guideline » et « GS1 Global Traceability Standard for Healthcare ». Ce
-dernier standard spécifie la gestion des traces dans le domaine de la
+dernier standard spécifie la tracabilité des événements dans le domaine de la
 santé, à partir de processus et exigences métier puis sous forme de cas
 d’utilisation, reprenant l’enregistrement et la consultation de traces.
 
@@ -1235,7 +1235,7 @@ GS1 est largement utilisé au niveau international, notamment via son
 service de gestion des codes d’identification.
 
 Ce standard peut être analysé lors de la spécification technique
-« gestion des traces » pour s’assurer que certaines informations
+« tracabilité des événements » pour s’assurer que certaines informations
 véhiculées par ce standard le seront bien aussi dans les spécifications
 techniques.
 
@@ -1382,13 +1382,13 @@ L’option RESTful-ATNA et le profil SOLE utilisent les champs :
   événements
 
 Cette approche semble appropriée pour spécifier techniquement le volet
-« générique gestion des traces ».
+« générique tracabilité des événements ».
 
 ##### Maturité et adoption
 
 Le standard syslog (RFC 5424) a été spécifié en 2009 avec une première
 version en 2001. Ces standards ont été largement implémentés et sont
-devenus des références pour la gestion des traces, notamment dans le
+devenus des références pour la tracabilité des événements, notamment dans le
 monde Unix/Linux.
 
 ##### Synthèse
@@ -1658,7 +1658,7 @@ gratuitement).</em></p></td>
 <td style="text-align: center;">✔</td>
 </tr>
 <tr>
-<td>Couverture métier (gestion des traces)</td>
+<td>Couverture métier (tracabilité des événements)</td>
 <td style="text-align: center;">Partiel</td>
 <td style="text-align: center;">Partiel</td>
 <td style="text-align: center;"></td>
@@ -1674,7 +1674,7 @@ gratuitement).</em></p></td>
 <td style="text-align: center;">Partiel</td>
 </tr>
 <tr>
-<td>Mises en œuvre existantes du cas d’usage (gestion des traces)</td>
+<td>Mises en œuvre existantes du cas d’usage (tracabilité des événements)</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -1737,7 +1737,7 @@ critères de recherche proposés sont adaptés aux critères identifiés dans
 [l’étude métier](LienSFE).
 
 La ressource FHIR AuditEvent semble correspondre au besoin métier
-« générique gestion des traces » ; elle couvre la classe « événement »
+« générique tracabilité des événements » ; elle couvre la classe « événement »
 et ses paramètres de recherche couvrent les critères de recherche de
 l’étude métier. Enfin les opérations FHIR CREATE, READ et SEARCH
 permettent aussi de spécifier les différents flux de l’étude métier.
@@ -1745,8 +1745,8 @@ permettent aussi de spécifier les différents flux de l’étude métier.
 ##### Les profils mACM/ACM
 
 Les profils mACM et ACM pourraient être utilisés pour répondre aux
-besoins métier « générique gestion des traces » mais ces deux profils
-sont plus orientés « gestion des alertes » que « gestion des traces ».
+besoins métier « générique tracabilité des événements » mais ces deux profils
+sont plus orientés « gestion des alertes » que « tracabilité des événements ».
 Par contre, ces deux profils couvrent aussi bien les besoins IHE HL7 que
 IHE FHIR ; ce point est intéressant d’un point de vue générique pour
 adresser le maximum de besoins métier de gestion de traces.
@@ -1768,11 +1768,11 @@ cette dernière transaction couvre finalement les transactions
 
 ##### Le profil PLT
 
-Le profil PLT est un cas spécifique de gestion des traces concernant la
-traçabilité des mouvements d’un patient. La gestion des traces est
+Le profil PLT est un cas spécifique de tracabilité des événements concernant la
+traçabilité des mouvements d’un patient. La tracabilité des événements est
 spécifiée en HL7. Ce profil peut être utilisé pour réfléchir à sa
 généricité et comment il pourrait être adressé par le volet « générique
-gestion des traces ».
+tracabilité des événements ».
 
 ##### DICOM
 
@@ -1791,7 +1791,7 @@ classe « Evénement ».
 GS1 est un standard international, qui spécifie la gestion de la
 traçabilité d’objets produits et échangés entre différents acteurs, et
 ceci dans différents contextes métier comme la santé. GS1 couvre le
-besoin métier « générique gestion des traces » en spécifiant trois
+besoin métier « générique tracabilité des événements » en spécifiant trois
 interfaces « EPCIS Capture Interface », « EPCIS Query Control
 Interface » et « EPCIS Query Callback Interface ».
 
@@ -1810,7 +1810,7 @@ Comme argumenté dans l’analyse métier, FHIR peut répondre au besoin
 métier « générique ». Néanmoins, pour adresser le plus grand nombre de
 besoins métier spécifiques, il est intéressant de considérer aussi
 syslog, qui est très répandu dans les systèmes d’information pour la
-gestion des traces.
+tracabilité des événements.
 
 ##### HL7 FHIR
 
@@ -1834,7 +1834,7 @@ Le profil ACM spécifie la gestion des alertes en HL7v2 (spécification et
 gestion des événements).
 
 Il est intéressant de s’inspirer de ces deux profils pour la
-spécification technique « générique gestion des traces », notamment
+spécification technique « générique tracabilité des événements », notamment
 comment ces deux profils collaborent pour adresser aussi bien le monde
 du système d’information de santé que le monde du mobile.
 
@@ -1844,14 +1844,14 @@ Les profils ATNA et son option RESTful ATNA et SOLE se positionnement de
 la façon suivante :
 
 <div style="text-align: center; display: block; clear: both;">
-  <img src="ns_image10.png" alt="Gestion des traces" style="display:block; margin:auto;">
+  <img src="ns_image10.png" alt="tracabilité des événements" style="display:block; margin:auto;">
 </div>
 Figure 2 Positionnement des profils ATNA et son option RESTful ATNA /
 SOLE
 
 L’option RESTful ATNA, avec la possibilité de l’étendre si nécessaire en
 fonction du besoin métier spécifique semble donc approprié pour la
-spécification technique « générique gestion des traces ». Il faut juste
+spécification technique « générique tracabilité des événements ». Il faut juste
 identifier les attributs de la spécification technique qui seront
 génériques à concrétiser lors de la prise en compte d’un besoin métier
 spécifique.
@@ -1863,7 +1863,7 @@ pour la gestion et la description des événements (événements A09, A10 et
 ZV3). Ce profil est en trial implementation et n’a jamais été testé. Les
 informations véhiculés dans les messages d’événements couvrent le besoin
 métier mais ils sont très orientés « patient ». A voir comment s’en
-inspirer pour les aspects génériques de gestion des traces.
+inspirer pour les aspects génériques de tracabilité des événements.
 
 ##### DICOM
 
@@ -1875,7 +1875,7 @@ option RESTful ATNA / SOLE se basent sur ce standard pour spécifier la
 structure des événements qui sont échangés (événements de sécurité et
 événements spécifiques de radiologie). La même structure de messages
 pourra être utilisée pour tous les futurs événements pour faciliter la
-mutualisation des fonctionnalités de gestion des traces.
+mutualisation des fonctionnalités de tracabilité des événements.
 
 ##### GS1
 
@@ -1900,7 +1900,7 @@ Ce document présente une étude comparative des standards FHIR, DICOM,
 GS1 et syslog ainsi que des profils IHE mACM / ACM / ATNA et son option
 RESTful ATNA / SOLE / PLT en vue de l’élaboration des spécifications
 techniques pour supporter le besoin d’interopérabilité « générique
-gestion des traces ».
+tracabilité des événements ».
 
 Les critères à prendre en compte dans le choix de la solution sont les
 suivants :
@@ -1913,7 +1913,7 @@ suivants :
   besoin spécifique, le plus « simplement possible »,
 
 - Les efforts en matière de développements nécessaires pour la mise en
-  œuvre de la gestion des traces ne doivent pas constituer une charge
+  œuvre de la tracabilité des événements ne doivent pas constituer une charge
   importante aux développeurs ;
 
 - Le standard adopté doit être adapté aux environnements mobiles ;
@@ -1923,7 +1923,7 @@ suivants :
 
 En se basant sur la synthèse des standards et profils IHE présentée dans
 les sections 5.1 et 5.1.5, l’option RESTful ATNA semble le plus adapté
-au besoin « générique gestion des traces », en s’inspirant aussi des
+au besoin « générique tracabilité des événements », en s’inspirant aussi des
 spécifications GS1.
 
 ### Annexes A
