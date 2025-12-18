@@ -1727,100 +1727,99 @@ grammaire (cf. ci-dessous). Par contre, la structure du message de trace
 («&nbsp;paylog&nbsp;») n’est pas spécifiée. C’est pourquoi les profils IHE ATNA et
 son option RESTful ATNA (feed &amp; query syslog) et SOLE se basent sur
 DICOM pour spécifier la structure de la trace à enregistrer.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SYSLOG-MSG = HEADER SP STRUCTURED-DATA \[SP MSG\]
 
-<p>SYSLOG-MSG = HEADER SP STRUCTURED-DATA [SP MSG]</p>
+HEADER = PRI VERSION SP TIMESTAMP SP HOSTNAME
 
-<p>HEADER = PRI VERSION SP TIMESTAMP SP HOSTNAME</p>
+SP APP-NAME SP PROCID SP MSGID
 
-<p>SP APP-NAME SP PROCID SP MSGID</p>
+PRI = "\&lt;" PRIVAL "\&gt;"
 
-<p>PRI = "&lt;" PRIVAL "&gt;"</p>
+PRIVAL = 1\*3DIGIT ; range 0 ..
+[191](https://tools.ietf.org/html/rfc5424#page-191)
 
-<p>PRIVAL = 1*3DIGIT ; range 0 ..
-<a href="https://tools.ietf.org/html/rfc5424#page-191">191</a></p>
+VERSION = NONZERO-DIGIT 0\*2DIGIT
 
-<p>VERSION = NONZERO-DIGIT 0*2DIGIT</p>
+HOSTNAME = NILVALUE / 1\*255PRINTUSASCII
 
-<p>HOSTNAME = NILVALUE / 1*255PRINTUSASCII</p>
+APP-NAME = NILVALUE / 1\*48PRINTUSASCII
 
-<p>APP-NAME = NILVALUE / 1*48PRINTUSASCII</p>
+PROCID = NILVALUE / 1\*128PRINTUSASCII
 
-<p>PROCID = NILVALUE / 1*128PRINTUSASCII</p>
+MSGID = NILVALUE / 1\*32PRINTUSASCII
 
-<p>MSGID = NILVALUE / 1*32PRINTUSASCII</p>
+TIMESTAMP = NILVALUE / FULL-DATE "T" FULL-TIME
 
-<p>TIMESTAMP = NILVALUE / FULL-DATE "T" FULL-TIME</p>
+FULL-DATE = DATE-FULLYEAR "-" DATE-MONTH "-" DATE-MDAY
 
-<p>FULL-DATE = DATE-FULLYEAR "-" DATE-MONTH "-" DATE-MDAY</p>
+DATE-FULLYEAR = 4DIGIT
 
-<p>DATE-FULLYEAR = 4DIGIT</p>
+DATE-MONTH = 2DIGIT ; 01-12
 
-<p>DATE-MONTH = 2DIGIT ; 01-12</p>
+DATE-MDAY = 2DIGIT ; 01-28, 01-29, 01-30, 01-31 based on
 
-<p>DATE-MDAY = 2DIGIT ; 01-28, 01-29, 01-30, 01-31 based on</p>
+; month/year
 
-<p>; month/year</p>
+FULL-TIME = PARTIAL-TIME TIME-OFFSET
 
-<p>FULL-TIME = PARTIAL-TIME TIME-OFFSET</p>
+PARTIAL-TIME = TIME-HOUR ":" TIME-MINUTE ":" TIME-SECOND
 
-<p>PARTIAL-TIME = TIME-HOUR ":" TIME-MINUTE ":" TIME-SECOND</p>
+\[TIME-SECFRAC\]
 
-<p>[TIME-SECFRAC]</p>
+TIME-HOUR = 2DIGIT ; 00-23
 
-<p>TIME-HOUR = 2DIGIT ; 00-23</p>
+TIME-MINUTE = 2DIGIT ; 00-59
 
-<p>TIME-MINUTE = 2DIGIT ; 00-59</p>
+TIME-SECOND = 2DIGIT ; 00-59
 
-<p>TIME-SECOND = 2DIGIT ; 00-59</p>
+TIME-SECFRAC = "." 1\*6DIGIT
 
-<p>TIME-SECFRAC = "." 1*6DIGIT</p>
+TIME-OFFSET = "Z" / TIME-NUMOFFSET
 
-<p>TIME-OFFSET = "Z" / TIME-NUMOFFSET</p>
+TIME-NUMOFFSET = ("+" / "-") TIME-HOUR ":" TIME-MINUTE
 
-<p>TIME-NUMOFFSET = ("+" / "-") TIME-HOUR ":" TIME-MINUTE</p>
+STRUCTURED-DATA = NILVALUE / 1\*SD-ELEMENT
 
-<p>STRUCTURED-DATA = NILVALUE / 1*SD-ELEMENT</p>
+SD-ELEMENT = "\[" SD-ID \*(SP SD-PARAM) "\]"
 
-<p>SD-ELEMENT = "[" SD-ID *(SP SD-PARAM) "]"</p>
+SD-PARAM = PARAM-NAME "=" %d34 PARAM-VALUE %d34
 
-<p>SD-PARAM = PARAM-NAME "=" %d34 PARAM-VALUE %d34</p>
+SD-ID = SD-NAME
 
-<p>SD-ID = SD-NAME</p>
+PARAM-NAME = SD-NAME
 
-<p>PARAM-NAME = SD-NAME</p>
+PARAM-VALUE = UTF-8-STRING ; characters '"', '\\ and
 
-<p>PARAM-VALUE = UTF-8-STRING ; characters '"', '\ and</p>
+; '\]' MUST be escaped.
 
-<p>; ']' MUST be escaped.</p>
+SD-NAME = 1\*32PRINTUSASCII
 
-<p>SD-NAME = 1*32PRINTUSASCII</p>
+; except '=', SP, '\]', %d34 (")
 
-<p>; except '=', SP, ']', %d34 (")</p>
+MSG = MSG-ANY / MSG-UTF8
 
-<p>MSG = MSG-ANY / MSG-UTF8</p>
+MSG-ANY = \*OCTET ; not starting with BOM
 
-<p>MSG-ANY = *OCTET ; not starting with BOM</p>
+MSG-UTF8 = BOM UTF-8-STRING
 
-<p>MSG-UTF8 = BOM UTF-8-STRING</p>
+BOM = %xEF.BB.BF
 
-<p>BOM = %xEF.BB.BF</p>
+UTF-8-STRING = \*OCTET ; UTF-8 string as specified
 
-<p>UTF-8-STRING = *OCTET ; UTF-8 string as specified</p>
+; in [RFC 3629](https://tools.ietf.org/html/rfc3629)
 
-<p>; in <a href="https://tools.ietf.org/html/rfc3629">RFC 3629</a></p>
+OCTET = %d00-255
 
-<p>OCTET = %d00-255</p>
+SP = %d32
 
-<p>SP = %d32</p>
+PRINTUSASCII = %d33-126
 
-<p>PRINTUSASCII = %d33-126</p>
+NONZERO-DIGIT = %d49-57
 
-<p>NONZERO-DIGIT = %d49-57</p>
+DIGIT = %d48 / NONZERO-DIGIT
 
-<p>DIGIT = %d48 / NONZERO-DIGIT</p>
-
-<p>NILVALUE = "-"</p>
-
+NILVALUE = "-"
+</code></pre></div></div>
 <p>L’option RESTful-ATNA et le profil SOLE utilisent les champs&nbsp;:</p>
 
 <ul>
@@ -2183,7 +2182,7 @@ de gestion de traces.</p>
 
 <h5 id="hl7-fhir">HL7 FHIR</h5>
 
-<p><a name="l3431">​</a>Les informations identifiées dans <a href="LienSFE">l’étude métier</a>  sont couvertes
+<p><a name="l3295">​</a>Les informations identifiées dans <a href="LienSFE">l’étude métier</a>  sont couvertes
 par les attributs proposés par les ressources FHIR identifiées et
 détaillées dans ce document (AdverseEvent et AuditEvent). De plus, les
 critères de recherche proposés sont adaptés aux critères identifiés dans
@@ -2267,7 +2266,7 @@ tracabilité des événements.</p>
 
 <h5 id="hl7-fhir-1">HL7 FHIR</h5>
 
-<p><a name="l3488">​</a>Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
+<p><a name="l3352">​</a>Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
 structurés et identifiés dans <a href="LienSFE">l’étude métier</a> «&nbsp;générique gestion
 des traces&nbsp;».</p>
 
@@ -2360,7 +2359,7 @@ suivants&nbsp;:</p>
 
 <ul>
   <li>
-    <p><a name="l3563">​</a>Le standard adopté doit offrir une couverture maximale des
+    <p><a name="l3427">​</a>Le standard adopté doit offrir une couverture maximale des
 informations identifiées dans <a href="LIENSSFE">l’étude métier</a>;</p>
   </li>
   <li>
@@ -2576,7 +2575,7 @@ structure AuditMessage</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 17, 2025 13:30+0000">2025-12-17</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 18, 2025 10:47+0000">2025-12-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

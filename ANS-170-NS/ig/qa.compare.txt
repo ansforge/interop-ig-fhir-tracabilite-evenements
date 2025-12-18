@@ -24,10 +24,10 @@ ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 333, column 5: The lin
 ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 339, column 45: The link 'LienSFE' for "l’étude métier" cannot be resolved
 ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 580, column 52: The link 'LIENSSFE' for "l’étude métier" cannot be resolved
 ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 584, column 64: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2186, column 39: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2190, column 2: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2271, column 32: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/ul/li/p/a at Line 2364, column 32: The link 'LIENSSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2185, column 39: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2189, column 2: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2270, column 32: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/ul/li/p/a at Line 2363, column 32: The link 'LIENSSFE' for "l’étude métier" cannot be resolved
 ERROR: searchform.html#/html/body/div/div/div/a/img/div/a/img/div/p/img at Line 57, column 3: The image source 'assets/images/fra.svg' cannot be resolved
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide

@@ -507,25 +507,27 @@ Le standard syslog (RFC 5424) ne spécifie aucune couche pour le protocole de tr
 
 Le standard syslog (RFC 5424) spécifie la structure de l’entête d’un message qui est échangé entre le client et le serveur, sous forme de grammaire (cf. ci-dessous). Par contre, la structure du message de trace (« paylog ») n’est pas spécifiée. C’est pourquoi les profils IHE ATNA et son option RESTful ATNA (feed & query syslog) et SOLE se basent sur DICOM pour spécifier la structure de la trace à enregistrer.
 
-SYSLOG-MSG = HEADER SP STRUCTURED-DATA [SP MSG]
+```
+SYSLOG-MSG = HEADER SP STRUCTURED-DATA \[SP MSG\]
 
 HEADER = PRI VERSION SP TIMESTAMP SP HOSTNAME
 
 SP APP-NAME SP PROCID SP MSGID
 
-PRI = "<" PRIVAL ">"
+PRI = "\<" PRIVAL "\>"
 
-PRIVAL = 1*3DIGIT ; range 0 .. [191](https://tools.ietf.org/html/rfc5424#page-191)
+PRIVAL = 1\*3DIGIT ; range 0 ..
+[191](https://tools.ietf.org/html/rfc5424#page-191)
 
-VERSION = NONZERO-DIGIT 0*2DIGIT
+VERSION = NONZERO-DIGIT 0\*2DIGIT
 
-HOSTNAME = NILVALUE / 1*255PRINTUSASCII
+HOSTNAME = NILVALUE / 1\*255PRINTUSASCII
 
-APP-NAME = NILVALUE / 1*48PRINTUSASCII
+APP-NAME = NILVALUE / 1\*48PRINTUSASCII
 
-PROCID = NILVALUE / 1*128PRINTUSASCII
+PROCID = NILVALUE / 1\*128PRINTUSASCII
 
-MSGID = NILVALUE / 1*32PRINTUSASCII
+MSGID = NILVALUE / 1\*32PRINTUSASCII
 
 TIMESTAMP = NILVALUE / FULL-DATE "T" FULL-TIME
 
@@ -543,7 +545,7 @@ FULL-TIME = PARTIAL-TIME TIME-OFFSET
 
 PARTIAL-TIME = TIME-HOUR ":" TIME-MINUTE ":" TIME-SECOND
 
-[TIME-SECFRAC]
+\[TIME-SECFRAC\]
 
 TIME-HOUR = 2DIGIT ; 00-23
 
@@ -551,15 +553,15 @@ TIME-MINUTE = 2DIGIT ; 00-59
 
 TIME-SECOND = 2DIGIT ; 00-59
 
-TIME-SECFRAC = "." 1*6DIGIT
+TIME-SECFRAC = "." 1\*6DIGIT
 
 TIME-OFFSET = "Z" / TIME-NUMOFFSET
 
 TIME-NUMOFFSET = ("+" / "-") TIME-HOUR ":" TIME-MINUTE
 
-STRUCTURED-DATA = NILVALUE / 1*SD-ELEMENT
+STRUCTURED-DATA = NILVALUE / 1\*SD-ELEMENT
 
-SD-ELEMENT = "[" SD-ID *(SP SD-PARAM) "]"
+SD-ELEMENT = "\[" SD-ID \*(SP SD-PARAM) "\]"
 
 SD-PARAM = PARAM-NAME "=" %d34 PARAM-VALUE %d34
 
@@ -567,23 +569,23 @@ SD-ID = SD-NAME
 
 PARAM-NAME = SD-NAME
 
-PARAM-VALUE = UTF-8-STRING ; characters '"', '\ and
+PARAM-VALUE = UTF-8-STRING ; characters '"', '\\ and
 
-; ']' MUST be escaped.
+; '\]' MUST be escaped.
 
-SD-NAME = 1*32PRINTUSASCII
+SD-NAME = 1\*32PRINTUSASCII
 
-; except '=', SP, ']', %d34 (")
+; except '=', SP, '\]', %d34 (")
 
 MSG = MSG-ANY / MSG-UTF8
 
-MSG-ANY = *OCTET ; not starting with BOM
+MSG-ANY = \*OCTET ; not starting with BOM
 
 MSG-UTF8 = BOM UTF-8-STRING
 
 BOM = %xEF.BB.BF
 
-UTF-8-STRING = *OCTET ; UTF-8 string as specified
+UTF-8-STRING = \*OCTET ; UTF-8 string as specified
 
 ; in [RFC 3629](https://tools.ietf.org/html/rfc3629)
 
@@ -598,6 +600,8 @@ NONZERO-DIGIT = %d49-57
 DIGIT = %d48 / NONZERO-DIGIT
 
 NILVALUE = "-"
+
+```
 
 L’option RESTful-ATNA et le profil SOLE utilisent les champs :
 
