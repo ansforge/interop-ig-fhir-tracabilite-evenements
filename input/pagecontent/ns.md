@@ -1278,7 +1278,7 @@ grammaire (cf. ci-dessous). Par contre, la structure du message de trace
 (« paylog ») n’est pas spécifiée. C’est pourquoi les profils IHE ATNA et
 son option RESTful ATNA (feed & query syslog) et SOLE se basent sur
 DICOM pour spécifier la structure de la trace à enregistrer.
-
+```
 SYSLOG-MSG = HEADER SP STRUCTURED-DATA \[SP MSG\]
 
 HEADER = PRI VERSION SP TIMESTAMP SP HOSTNAME
@@ -1371,7 +1371,7 @@ NONZERO-DIGIT = %d49-57
 DIGIT = %d48 / NONZERO-DIGIT
 
 NILVALUE = "-"
-
+```
 L’option RESTful-ATNA et le profil SOLE utilisent les champs :
 
 - APP-NAME : pour différencier les profils (par exemple : « IHE+SOLE »
