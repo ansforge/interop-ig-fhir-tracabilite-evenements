@@ -7,14 +7,14 @@
   "profiles": {
     "AuditEvent": [
       {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDE_AuditEvent",
-        "title": "TDE_AuditEvent"
+        "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent",
+        "title": "TDEAuditEvent"
       }
     ],
     "Bundle": [
       {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDE_BundleResultatReponseRechercheTraces",
-        "title": "TDE_BundleResultatReponseRechercheTraces"
+        "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces",
+        "title": "TDEBundleResultatReponseRechercheTraces"
       }
     ]
   },

@@ -21,6 +21,17 @@ These define constraints on FHIR resources for systems conforming to this implem
 
 | | |
 | :--- | :--- |
-| [TDE_AuditEvent](StructureDefinition-TDE-AuditEvent.md) | Traçabilité des évènements d'objets métiers |
-| [TDE_BundleResultatReponseRechercheTraces](StructureDefinition-TDE-BundleResultatReponseRechercheTraces.md) |  |
+| [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md) | Traçabilité des évènements d'objets métiers |
+| [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md) |  |
+
+### Example: Example Instances 
+
+These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.
+
+| |
+| :--- |
+| [DeviceExample](Device-DeviceExample.md) |
+| [PractitionerExample](Practitioner-PractitionerExample.md) |
+| [TDEAuditEventExample](AuditEvent-TDEAuditEventExample.md) |
+| [TDEBundleResultatReponseRechercheTracesExample](Bundle-TDEBundleResultatReponseRechercheTracesExample.md) |
 

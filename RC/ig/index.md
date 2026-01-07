@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code] | *Version*:0.1.0 |
-| Draft as of 2025-12-11 | *Computable Name*:ExampleIG |
+| Draft as of 2026-01-07 | *Computable Name*:ExampleIG |
 
  **Brief description of this Implementation Guide**
  [Add a brief description of this IG in English] 
@@ -41,9 +41,21 @@ Toujours laisser l'onglet "Ressources de conformité" pour s'assurer d'une cohé
 
 
 
+
+
 ### Propriété intellectuelle
 
-Pas dusage de PI externe (autre que celles de la spécification FHIR)
+Certaines ressources sémantiques de ce guide sont protégées par des droits de propriété intellectuelle couverte par les déclarations ci-dessous. L’utilisation de ces ressources est soumise à l’acceptation et au respect des conditions précisées dans la licence d’utilisation de chacune d’entre elle.
+
+* ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
+
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html): [ExampleIG](index.md), [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md), [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md) and [TDE_AuditEvent_period-start](SearchParameter-TDE-AuditEvent-period-start.md)
+
+
+* These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright © 2011 by the National Electrical Manufacturers Association.
+
+* [Audit Event ID](http://terminology.hl7.org/7.0.1/CodeSystem-audit-event-type.html): [AuditEvent/TDEAuditEventExample](AuditEvent-TDEAuditEventExample.md) and [Bundle/TDEBundleResultatReponseRechercheTracesExample](Bundle-TDEBundleResultatReponseRechercheTracesExample.md)
+
 
 
 
@@ -58,7 +70,7 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
   "name" : "ExampleIG",
   "title" : "ANS IG Example",
   "status" : "draft",
-  "date" : "2025-12-11T14:42:43+00:00",
+  "date" : "2026-01-07T15:46:12+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -96,7 +108,7 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
       ],
       "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId" : "hl7.terminology.r4",
-      "version" : "7.0.0"
+      "version" : "7.0.1"
     },
     {
       "id" : "hl7ext",
@@ -109,6 +121,12 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
       "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
       "packageId" : "hl7.fhir.uv.extensions.r4",
       "version" : "5.2.0"
+    },
+    {
+      "id" : "hl7_fhir_fr_core",
+      "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
+      "packageId" : "hl7.fhir.fr.core",
+      "version" : "2.1.0"
     }
   ],
   "definition" : {
@@ -472,7 +490,7 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
       },
       {
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-        "valueCode" : "hl7.fhir.uv.tools.r4#0.8.0"
+        "valueCode" : "hl7.fhir.uv.tools.r4#0.9.0"
       },
       {
         "extension" : [
@@ -831,6 +849,32 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Device"
+          }
+        ],
+        "reference" : {
+          "reference" : "Device/DeviceExample"
+        },
+        "name" : "DeviceExample",
+        "exampleBoolean" : true
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Practitioner"
+          }
+        ],
+        "reference" : {
+          "reference" : "Practitioner/PractitionerExample"
+        },
+        "name" : "PractitionerExample",
+        "exampleBoolean" : true
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "SearchParameter"
           }
         ],
@@ -849,11 +893,24 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
           }
         ],
         "reference" : {
-          "reference" : "StructureDefinition/TDE-AuditEvent"
+          "reference" : "StructureDefinition/TDEAuditEvent"
         },
-        "name" : "TDE_AuditEvent",
+        "name" : "TDEAuditEvent",
         "description" : "Traçabilité des évènements d'objets métiers",
         "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "AuditEvent"
+          }
+        ],
+        "reference" : {
+          "reference" : "AuditEvent/TDEAuditEventExample"
+        },
+        "name" : "TDEAuditEventExample",
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent"
       },
       {
         "extension" : [
@@ -863,10 +920,23 @@ Pas dusage de PI externe (autre que celles de la spécification FHIR)
           }
         ],
         "reference" : {
-          "reference" : "StructureDefinition/TDE-BundleResultatReponseRechercheTraces"
+          "reference" : "StructureDefinition/TDEBundleResultatReponseRechercheTraces"
         },
-        "name" : "TDE_BundleResultatReponseRechercheTraces",
+        "name" : "TDEBundleResultatReponseRechercheTraces",
         "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Bundle"
+          }
+        ],
+        "reference" : {
+          "reference" : "Bundle/TDEBundleResultatReponseRechercheTracesExample"
+        },
+        "name" : "TDEBundleResultatReponseRechercheTracesExample",
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces"
       }
     ],
     "page" : {

@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG Example"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-12-11T14:42:43+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-01-07T15:46:12+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -60,7 +60,7 @@
        fhir:l <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "7.0.0" ]
+     fhir:version [ fhir:v "7.0.1" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -79,6 +79,14 @@
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
      fhir:version [ fhir:v "5.2.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7_fhir_fr_core" ] ;
+     fhir:uri [
+       fhir:v "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"^^xsd:anyURI ;
+       fhir:l <https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.fr.core" ] ;
+     fhir:version [ fhir:v "2.1.0" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -746,7 +754,7 @@
        ] ;
        fhir:value [
          a fhir:Code ;
-         fhir:v "hl7.fhir.uv.tools.r4#0.8.0"
+         fhir:v "hl7.fhir.uv.tools.r4#0.9.0"
        ]
      ] [
        fhir:extension ( [
@@ -1405,6 +1413,46 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Device"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/Device/DeviceExample> ;
+         fhir:reference [ fhir:v "Device/DeviceExample" ]
+       ] ;
+       fhir:name [ fhir:v "DeviceExample" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/Practitioner/PractitionerExample> ;
+         fhir:reference [ fhir:v "Practitioner/PractitionerExample" ]
+       ] ;
+       fhir:name [ fhir:v "PractitionerExample" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "SearchParameter"
          ]
        ] ) ;
@@ -1430,10 +1478,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDE-AuditEvent> ;
-         fhir:reference [ fhir:v "StructureDefinition/TDE-AuditEvent" ]
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent> ;
+         fhir:reference [ fhir:v "StructureDefinition/TDEAuditEvent" ]
        ] ;
-       fhir:name [ fhir:v "TDE_AuditEvent" ] ;
+       fhir:name [ fhir:v "TDEAuditEvent" ] ;
        fhir:description [ fhir:v "Traçabilité des évènements d'objets métiers" ] ;
        fhir:example [
          a fhir:Boolean ;
@@ -1447,17 +1495,59 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "AuditEvent"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/AuditEvent/TDEAuditEventExample> ;
+         fhir:reference [ fhir:v "AuditEvent/TDEAuditEventExample" ]
+       ] ;
+       fhir:name [ fhir:v "TDEAuditEventExample" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDE-BundleResultatReponseRechercheTraces> ;
-         fhir:reference [ fhir:v "StructureDefinition/TDE-BundleResultatReponseRechercheTraces" ]
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces> ;
+         fhir:reference [ fhir:v "StructureDefinition/TDEBundleResultatReponseRechercheTraces" ]
        ] ;
-       fhir:name [ fhir:v "TDE_BundleResultatReponseRechercheTraces" ] ;
+       fhir:name [ fhir:v "TDEBundleResultatReponseRechercheTraces" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/Bundle/TDEBundleResultatReponseRechercheTracesExample> ;
+         fhir:reference [ fhir:v "Bundle/TDEBundleResultatReponseRechercheTracesExample" ]
+       ] ;
+       fhir:name [ fhir:v "TDEBundleResultatReponseRechercheTracesExample" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces>
        ]
      ] ) ;
      fhir:page [

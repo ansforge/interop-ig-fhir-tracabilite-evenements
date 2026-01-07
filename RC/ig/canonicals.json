@@ -1,12 +1,5 @@
 [
   {
-    "id" : "TDE-AuditEvent-period-start",
-    "type" : "SearchParameter",
-    "url" : "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/TDE_AuditEvent_period-start",
-    "version" : "0.1.0",
-    "name" : "TDE_AuditEvent_period-start"
-  },
-  {
     "id" : "ans.fhir.fr.[code]",
     "type" : "ImplementationGuide",
     "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]",
@@ -14,17 +7,24 @@
     "name" : "ExampleIG"
   },
   {
-    "id" : "TDE-AuditEvent",
-    "type" : "StructureDefinition",
-    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDE_AuditEvent",
+    "id" : "TDE-AuditEvent-period-start",
+    "type" : "SearchParameter",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/TDE-AuditEvent-period-start",
     "version" : "0.1.0",
-    "name" : "TDE_AuditEvent"
+    "name" : "TDE_AuditEvent_period-start"
   },
   {
-    "id" : "TDE-BundleResultatReponseRechercheTraces",
+    "id" : "TDEAuditEvent",
     "type" : "StructureDefinition",
-    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDE_BundleResultatReponseRechercheTraces",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent",
     "version" : "0.1.0",
-    "name" : "TDE_BundleResultatReponseRechercheTraces"
+    "name" : "TDEAuditEvent"
+  },
+  {
+    "id" : "TDEBundleResultatReponseRechercheTraces",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces",
+    "version" : "0.1.0",
+    "name" : "TDEBundleResultatReponseRechercheTraces"
   }
 ]

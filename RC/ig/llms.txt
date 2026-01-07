@@ -19,8 +19,8 @@
 
 ### Resource Profiles
 
-* [TDE_AuditEvent](StructureDefinition-TDE-AuditEvent.md)
-* [TDE_BundleResultatReponseRechercheTraces](StructureDefinition-TDE-BundleResultatReponseRechercheTraces.md)
+* [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md)
+* [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md)
 
 ### ImplementationGuides
 
@@ -29,3 +29,10 @@
 ### SearchParameters
 
 * [TDE_AuditEvent_period-start](SearchParameter-TDE-AuditEvent-period-start.md)
+
+### Examples
+
+* [TDEAuditEventExample (AuditEvent)](AuditEvent-TDEAuditEventExample.md)
+* [TDEBundleResultatReponseRechercheTracesExample (Bundle)](Bundle-TDEBundleResultatReponseRechercheTracesExample.md)
+* [DeviceExample (Device)](Device-DeviceExample.md)
+* [PractitionerExample (Practitioner)](Practitioner-PractitionerExample.md)

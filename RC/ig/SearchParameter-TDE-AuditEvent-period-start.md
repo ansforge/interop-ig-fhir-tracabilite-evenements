@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://esante.gouv.fr/ci-sis/fhir/SearchParameter/TDE_AuditEvent_period-start | *Version*:0.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/TDE-AuditEvent-period-start | *Version*:0.1.0 |
 | Active as of 2021-12-01 | *Computable Name*:TDE_AuditEvent_period-start |
 
  
@@ -25,7 +25,7 @@ Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utilise
   "meta" : {
     "lastUpdated" : "2021-10-21T14:10:19.925+00:00"
   },
-  "url" : "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/TDE_AuditEvent_period-start",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/TDE-AuditEvent-period-start",
   "version" : "0.1.0",
   "name" : "TDE_AuditEvent_period-start",
   "status" : "active",
