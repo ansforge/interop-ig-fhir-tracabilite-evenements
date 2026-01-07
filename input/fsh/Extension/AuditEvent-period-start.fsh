@@ -2,7 +2,6 @@ Instance: TDE-AuditEvent-period-start
 InstanceOf: SearchParameter
 Usage: #definition
 * meta.lastUpdated = "2021-10-21T14:10:19.925+00:00"
-* url = "http://esante.gouv.fr/ci-sis/fhir/SearchParameter/TDE_AuditEvent_period-start"
 * version = "1.0"
 * name = "TDE_AuditEvent_period-start"
 * status = #active
