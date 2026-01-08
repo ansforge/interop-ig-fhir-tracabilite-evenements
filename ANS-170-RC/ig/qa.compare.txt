@@ -1,0 +1,42 @@
+ExampleIG : Validation Results
+=========================================
+
+err = 4, warn = 12, info = 1
+$--
+Generated $--. FHIR version $-- for ans.fhir.fr.[code]#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/[code])
+ Build Errors : 0 / 8 / 0
+ /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/AuditEvent-TDEAuditEventExample : 0 / 0 / 1
+ /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/Bundle-TDEBundleResultatReponseRechercheTracesExample : 0 / 2 / 4
+ /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/Device-DeviceExample : 0 / 0 / 1
+ /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.[code] : 3 / 0 / 1
+ /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/Practitioner-PractitionerExample : 0 / 1 / 1
+ /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/SearchParameter-TDE-AuditEvent-period-start : 1 / 1 / 1
+ /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/StructureDefinition-TDEAuditEvent : 0 / 0 / 2
+ /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/StructureDefinition-TDEBundleResultatReponseRechercheTraces : 0 / 0 / 1
+</table>
+== n/a ==
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/TDEBundleResultatReponseRechercheTraces.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Device/DeviceExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/PractitionerExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource AuditEvent/TDEAuditEventExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/TDEBundleResultatReponseRechercheTracesExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 5: The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/AuditEvent-TDEAuditEventExample.json ==
+== fsh-generated/resources/Bundle-TDEBundleResultatReponseRechercheTracesExample.json ==
+WARNING: Bundle/TDEBundleResultatReponseRechercheTracesExample: Bundle: SearchSet Bundles should have a self link that specifies what the search was
+WARNING: Bundle/TDEBundleResultatReponseRechercheTracesExample: Bundle: SearchSet bundles should have search modes on the entries
+== fsh-generated/resources/Device-DeviceExample.json ==
+== fsh-generated/resources/ImplementationGuide-ans.fhir.fr.[code].json ==
+ERROR: ImplementationGuide/ans.fhir.fr.[code]: ImplementationGuide.id: Invalid Resource id: Invalid Characters ('ans.fhir.fr.[code]')
+ERROR: ImplementationGuide/ans.fhir.fr.[code]: ImplementationGuide.packageId: id value 'ans.fhir.fr.[code]' is not valid
+ERROR: ImplementationGuide/ans.fhir.fr.[code]: ImplementationGuide.definition.extension[27].url: No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+== fsh-generated/resources/Practitioner-PractitionerExample.json ==
+WARNING: Practitioner/PractitionerExample: Practitioner.identifier[0].system: No definition could be found for URL value 'https://rpps.esante.gouv.fr'
+== fsh-generated/resources/SearchParameter-TDE-AuditEvent-period-start.json ==
+WARNING: SearchParameter/TDE-AuditEvent-period-start: SearchParameter: Constraint failed: spd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))'
+ERROR: SearchParameter/TDE-AuditEvent-period-start: SearchParameter.expression: Error in search expression 'DocumentReference.context.period.start': Error evaluating FHIRPath expression: The name 'DocumentReference' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/AuditEvent] (@char 1)
+== fsh-generated/resources/StructureDefinition-TDEAuditEvent.json ==
+INFORMATION: StructureDefinition/TDEAuditEvent: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+== fsh-generated/resources/StructureDefinition-TDEBundleResultatReponseRechercheTraces.json ==
