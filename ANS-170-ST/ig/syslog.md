@@ -15,7 +15,7 @@ Contrairement à la solution basée sur HL7 FHIR, il n’est pas prévu de pouvo
 
 ##### Construction du flux Syslog
 
-Ce flux est construit selon les exigences de la transaction IHE ITI-20[^6] « Record Audit Event » dans sa version Syslog : « Send Audit Event Message - Syslog Interaction ». Certaines contraintes de cette transaction doivent être adaptées à chaque contexte métier, en particulier les éléments suivants de l’en-tête Syslog :
+Ce flux est construit selon les exigences de la transaction [IHE ITI-20 « Record Audit Event »](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol2a.pdf) dans sa version Syslog : « Send Audit Event Message - Syslog Interaction ». Certaines contraintes de cette transaction doivent être adaptées à chaque contexte métier, en particulier les éléments suivants de l’en-tête Syslog :
 
 * PRI : défini la priorité. Le profil ATNA est destiné à tracer tous les évènements liées à la sécurité des données de santé ; les codes choisis par IHE peuvent ne pas être pertinent pour certains cas d’usage concrétisant cette spécification.
 * MSGID : identifie le type de message. Devrait être propre à chaque cas d’usage pour permettre une identification rapide du contexte d’émission de la trace.

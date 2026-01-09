@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/competence-code-system | *Version*:0.1.0 |
-| Draft as of 2026-01-07 | *Computable Name*:CompetenceCS |
+| Draft as of 2026-01-09 | *Computable Name*:CompetenceCS |
 
  
 Compétences des professionnels de santé. 
@@ -31,7 +31,7 @@ Compétences des professionnels de santé.
   "name" : "CompetenceCS",
   "title" : "Compétences CodeSystem",
   "status" : "draft",
-  "date" : "2026-01-07T10:12:30+00:00",
+  "date" : "2026-01-09T09:05:42+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

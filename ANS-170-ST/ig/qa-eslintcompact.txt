@@ -1,9 +1,9 @@
 ExampleIG
 =========================================
 
-Generic: line 0, col 0, Warning - Illegal HTML: Illegal HTML element: section (INVALID)
-Generic: line 0, col 0, Error - The link '#annexe-3-exemples-de-flux' for "annexe 3 " cannot be resolved (valid targets: 52 targets) (NOTFOUND)
-Generic: line 0, col 0, Error - The link '#annexe-3-exemples-de-flux' for "annexe 3 " cannot be resolved (valid targets: 52 targets) (NOTFOUND)
+Generic: line 0, col 0, Warning - Illegal HTML: illegal html element: query ( représente les autres
+paramètres, sous la forme param=valeur, permettant d’affiner la
+recherche.) (INVALID)
 Generic: line 0, col 0, Error - The link './st_flux1.html' for "flux 01" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link './st_flux2.html' for "flux 02" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The image source 'assets/images/fra.svg' cannot be resolved (NOTFOUND)

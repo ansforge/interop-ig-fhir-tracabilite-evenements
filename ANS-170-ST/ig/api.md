@@ -15,19 +15,25 @@ Ce flux permet de transmettre une trace « générique » de la « source des
 
 ### Construction du flux HL7 FHIR
 
-Ce flux est construit selon les exigences de la transaction IHE ITI-20[^5] « Record Audit Event » dans sa version HL7 FHIR où une seule trace est transmise à la fois : « Send Audit Resource Request Message - FHIR Feed Interaction » .
+Ce flux est construit selon les exigences de la transaction [IHE ITI-20 « Record Audit Event »](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_RESTful-ATNA.pdf) dans sa version HL7 FHIR où une seule trace est transmise à la fois : « Send Audit Resource Request Message - FHIR Feed Interaction » .
 
 La première étape de construction de ce flux consiste à créer la ressource AuditEvent conformément aux exigences du contexte métier.
 
 La ressource AuditEvent ainsi constituée sera envoyée dans le corps de la requête HTTP POST suivante :
 
+```
 POST [base]/AuditEvent
+
+```
 
 Où [base] est le point de contact FHIR défini par le Gestionnaire de trace.
 
-# Un exemple de flux est joint (cf annexe 3 :
+Exemple de flux :
 
-).
+```
+POST http://base_url_server_gestionnaire_trace/AuditEvent
+
+```
 
 ## Flux 2 : ConsultationTrace
 
@@ -39,7 +45,10 @@ La première étape de construction de ce flux consiste à récupérer l’ident
 
 Cet identifiant est utilisé dans la requête GET suivante :
 
+```
 GET [base]/AuditEvent/[id]
+
+```
 
 Où [base] est le point de contact défini par le gestionnaire de trace et [id] l’identifiant système de la ressource AuditEvent à consulter.
 
@@ -59,65 +68,37 @@ Ce flux est utilisé par le consommateur de traces pour faire une recherche de t
 
 ### Construction du flux HL7 FHIR
 
-Dans le contexte d’une implémentation en HL7 FHIR, le flux 4 est construit selon les exigences de l’interaction « search » de l’API REST de FHIR et, plus particulièrement, les exigences de la transaction IHE ITI-81[^7] « Retrieve ATNA Audit Event ».
+Dans le contexte d’une implémentation en HL7 FHIR, le flux 4 est construit selon les exigences de l’interaction « search » de l’API REST de FHIR et, plus particulièrement, les exigences de la transaction [IHE ITI-81 « Retrieve ATNA Audit Event »](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_RESTful-ATNA.pdf).
 
 Les paramètres de recherche possibles sont ceux définis par HL7 FHIR pour la ressource AuditEvent.
 
 L’URL suivante est utilisée :
 
-GET [base]/AuditEvent?date=ge[start-time]&date=le[stop-time]&<query>
+```
+GET
+[base]/AuditEvent?date=ge[start-time]&date=le[stop-time]&<query>
 
-Où [base] est le point de contact FHIR du gestionnaire de traces, [start-time] et [stop-time] indique l’intervalle de temps dans lequel les traces sont recherchées (date se réfère à la date d’enregistrement de l’évènement). <query> représente les autres paramètres, sous la forme param=valeur, permettant d’affiner la recherche.
+```
+
+Où [base] est le point de contact FHIR du gestionnaire de traces, [start-time] et [stop-time] indique l’intervalle de temps dans lequel les traces sont recherchées (date se réfère à la date d’enregistrement de l’évènement). représente les autres paramètres, sous la forme param=valeur, permettant d’affiner la recherche.
 
 #### Paramètres de recherche
 
 La transaction [ITI-81] Retrieve ATNA Audit Event exige que la recherche de traces soit bornée dans le temps. C’est-à-dire que le paramètre de recherche « date » qui correspond à la date d’enregistrement de l’évènement doit être présent pour préciser une limite de temps (avant, après ou un intervalle). Le tableau ci-dessous précise la mise en correspondance des paramètres de recherche identifiés dans l’étude métier avec les paramètres de recherche HL7 FHIR de la ressource AuditEvent.
 
-L’élément apparaissant **en italique et en rouge** correspond à un critère de recherche défini dans le cadre de cette spécification technique.
+L’élément apparaissant **en italique** correspond à un critère de recherche défini dans le cadre de cette spécification technique.
 
 | | | | |
 | :--- | :--- | :--- | :--- |
 | typeEvenement | type | token | Type de l’évènement qui a été tracé |
 | sousTypeEvement | subtype | token | Sous-type de l’évènement qui a été tracé |
 | dateOccurence | **TDE_AuditEvent_period-start** | dateTime | Date d’occurrence de l’évènement |
-| dateDeclaration | recorded | dateTime | Date à laquelle l’évènement a été enregistré |
+| dateDeclaration | date | dateTime | Date à laquelle l’évènement a été enregistré |
 | origine | agentagent-namealtId | referencestringtoken | Les paramètres agent, agent-name et/ou altId peuvent être utilisés pour identifier l’origine de la trace |
 | agent-role | token | agent-role aura pour valeur le code utilisé pour indiquer que l’agent est l’origine de la trace | |
 | destinataire | agentagent-namealtId | referencestringtoken | Les paramètres agent, agent-name et/ou altId peuvent être utilisés pour identifier l’origine de la l’évènement |
 | agent-role | token | agent-role aura pour valeur le code utilisé pour indiquer que l’agent est le destinataire de l’évènement | |
-| autreParametre | Chaque concrétisation de ses spécifications génériques peut ajouter des paramètres de recherche. HL7 FHIR en définit[1](#fn1), d’autres paramètres peuvent être définis par profilage. | | |
-
--------
-
-1. [https://www.hl7.org/fhir/auditevent.html#search](https://www.hl7.org/fhir/auditevent.html#search)[↩︎](#fnref1)
-
-### Construction du flux HTTP
-
-Dans le contexte d’une implémentation reposant sur le protocole Syslog pour le flux de transmission des traces, le flux 4 « RechercheTraces » est construit selon les exigences de la transaction IHE ITI-82 « Retrieve Syslog Event ». Cette transaction est une requête HTTP GET.
-
-Les paramètres de recherche possibles sont ceux définis dans le cadre technique IHE ; ils font référence aux champs de l’en-tête syslog.
-
-L’URL suivante est utilisée :
-
-GET [base]/syslogsearch?date=le[start-time]&date=ge[stoptime]&<query>
-
-Où [base] est le point de contact FHIR du gestionnaire de traces, [start-time] et [stop-time] indique l’intervalle de temps dans lequel les traces sont recherchées (date se réfère à la date d’enregistrement de l’évènement). <query> représente les autres paramètres, sous la forme param=valeur, permettant d’affiner la recherche.
-
-#### Paramètres de recherche
-
-La transaction [ITI-82] Retrieve Syslog Event exige que la recherche de traces soit bornée dans le temps. C’est-à-dire que le paramètre de recherche « date » qui correspond à la date d’enregistrement de l’évènement doit être présent pour préciser une limite de temps (avant, après ou un intervalle). Le tableau ci-dessous précise la mise en correspondance des paramètres de recherche identifiés dans l’étude métier avec les paramètres de recherche défini par IHE.
-
-Le tableau ci-dessous propose des critères de recherche supplémentaires dans le cas où la trace est véhiculé au format DICOM AuditMessage. Dans le cas où la concrétisation de ce volet utilise un autre format de trace, ce tableau devra être revu.
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| typeEvenement | eventID | texte | Type de l’évènement. Permet de filtrer sur le champ EventID |
-| sousTypeEvement | EventTypeCode | texte | Sous-type de l’évènement. Permet de filtrer sur le champ EventTypeCode |
-| dateOccurence |  |  |  |
-| dateDeclaration | recorded | dateTime | Date à laquelle l’évènement a été enregistré |
-| origine | Requestor | texte | Requestor identifie l’élément ActiveParticipant dont UserIsRequestor=true et userID correspond à la valeur du paramètre. |
-| destinataire | Receiver | texte | Requestor identifie l’élément ActiveParticipant dont UserIsRequestor=false et userID correspond à la valeur du paramètre. |
-| autreParametre | Chaque concrétisation de ses spécifications génériques peut ajouter des paramètres de recherche. | | |
+| autreParametre | Chaque concrétisation de ses spécifications génériques peut ajouter des paramètres de recherche.[HL7 FHIR](https://www.hl7.org/fhir/auditevent.html#search)en définit d’autres paramètres peuvent être définis par profilage | | |
 
 ## Flux 5 : ReponseRechercheTraces
 
@@ -131,7 +112,10 @@ Conformément au supplément RESTful ATNA du profil IHE ATNA, la réponse retour
 
 La ressource Bundle constituera alors le corps de la réponse HTTP 200 ok.
 
-Un exemple de flux est joint (cf [annexe 3 ](#annexe-3-exemples-de-flux): **Erreur ! Source du renvoi introuvable.**).
+```
+GET http://hapi.fhir.org/baseR4/AuditEvent?type=rest&subtype=operation
+
+```
 
 Pour des informations sur les autres codes HTTP (HTTP status code) retournés en cas d’échec, consultez la documentation relative à l’interaction « read » de l’API REST FHIR.
 
