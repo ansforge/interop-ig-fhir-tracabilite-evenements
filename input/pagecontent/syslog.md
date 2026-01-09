@@ -18,8 +18,8 @@ Consommateur de traces.
 #### Flux 1 : TransmissionTrace
 ##### Construction du flux Syslog
 
-Ce flux est construit selon les exigences de la transaction IHE
-ITI-20[^6] « Record Audit Event » dans sa version Syslog : « Send Audit
+Ce flux est construit selon les exigences de la transaction [IHE
+ITI-20 « Record Audit Event »](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol2a.pdf) dans sa version Syslog : « Send Audit
 Event Message - Syslog Interaction ». Certaines contraintes de cette
 transaction doivent être adaptées à chaque contexte métier, en
 particulier les éléments suivants de l’en-tête Syslog :
