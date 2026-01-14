@@ -1,5 +1,26 @@
 [
   {
+    "id" : "TdEConsommateur",
+    "type" : "CapabilityStatement",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/TdEConsommateur",
+    "version" : "0.1.0",
+    "name" : "TdEConsommateur"
+  },
+  {
+    "id" : "TdEGestionnaire",
+    "type" : "CapabilityStatement",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/TdEGestionnaire",
+    "version" : "0.1.0",
+    "name" : "TdEGestionnaire"
+  },
+  {
+    "id" : "TdESource",
+    "type" : "CapabilityStatement",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/TdESource",
+    "version" : "0.1.0",
+    "name" : "TdESource"
+  },
+  {
     "id" : "ans.fhir.fr.[code]",
     "type" : "ImplementationGuide",
     "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]",

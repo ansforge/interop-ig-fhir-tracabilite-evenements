@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent | *Version*:0.1.0 |
-| Draft as of 2026-01-08 | *Computable Name*:TDEAuditEvent |
+| Draft as of 2026-01-14 | *Computable Name*:TDEAuditEvent |
 
  
 Traçabilité des évènements d'objets métiers 
@@ -18,6 +18,7 @@ Traçabilité des évènements d'objets métiers
 
 * Utiliser ce Profil: [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md)
 * Exemples pour ce Profil: [AuditEvent/TDEAuditEventExample](AuditEvent-TDEAuditEventExample.md)
+* CapabilityStatements utilisant ce Profil: [TdE-Consommateur](CapabilityStatement-TdEConsommateur.md), [TdE-Gestionnaire](CapabilityStatement-TdEGestionnaire.md) and [TdE-Source](CapabilityStatement-TdESource.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/TDEAuditEvent)
 
@@ -41,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-TDEAuditEvent.csv), 
   "version" : "0.1.0",
   "name" : "TDEAuditEvent",
   "status" : "draft",
-  "date" : "2026-01-08T10:11:20+00:00",
+  "date" : "2026-01-14T13:25:32+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -138,10 +139,15 @@ Other representations of profile: [CSV](StructureDefinition-TDEAuditEvent.csv), 
             "code" : "Reference",
             "targetProfile" : [
               "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
               "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner",
               "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner-role",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
               "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-related-person",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
               "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization",
+              "http://hl7.org/fhir/StructureDefinition/Patient",
               "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins",
               "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"
             ]

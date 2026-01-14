@@ -22,6 +22,12 @@
 * [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md)
 * [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md)
 
+### CapabilityStatements
+
+* [TdE-Consommateur](CapabilityStatement-TdEConsommateur.md)
+* [TdE-Gestionnaire](CapabilityStatement-TdEGestionnaire.md)
+* [TdE-Source](CapabilityStatement-TdESource.md)
+
 ### ImplementationGuides
 
 * [ANS IG Example](index.md)

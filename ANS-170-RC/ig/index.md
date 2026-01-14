@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code] | *Version*:0.1.0 |
-| Draft as of 2026-01-08 | *Computable Name*:ExampleIG |
+| Draft as of 2026-01-14 | *Computable Name*:ExampleIG |
 
  **Brief description of this Implementation Guide**
  [Add a brief description of this IG in English] 
@@ -49,7 +49,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
-* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html): [ExampleIG](index.md), [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md), [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md) and [TDE_AuditEvent_period-start](SearchParameter-TDE-AuditEvent-period-start.md)
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html): [ExampleIG](index.md), [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md)...Show 5 more,[TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md),[TDE_AuditEvent_period-start](SearchParameter-TDE-AuditEvent-period-start.md),[TdEConsommateur](CapabilityStatement-TdEConsommateur.md),[TdEGestionnaire](CapabilityStatement-TdEGestionnaire.md)and[TdESource](CapabilityStatement-TdESource.md)
 
 
 * These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright © 2011 by the National Electrical Manufacturers Association.
@@ -70,7 +70,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "ExampleIG",
   "title" : "ANS IG Example",
   "status" : "draft",
-  "date" : "2026-01-08T10:11:20+00:00",
+  "date" : "2026-01-14T13:25:32+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -882,7 +882,49 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           "reference" : "SearchParameter/TDE-AuditEvent-period-start"
         },
         "name" : "TDE-AuditEvent-period-start",
-        "description" : "Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément context.period.start correspondant à lobjet dateDebutActe",
+        "description" : "Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "CapabilityStatement"
+          }
+        ],
+        "reference" : {
+          "reference" : "CapabilityStatement/TdEConsommateur"
+        },
+        "name" : "TdE-Consommateur",
+        "description" : "Le rôle du Consommateur est d'accéder aux traces. Les personnes utilisant ce système peuvent être rattachées par exemple à la pharmacie hospitalière (traçabilité des médicaments), au bloc opératoire (traçabilité des actes chirurgicaux), à la sécurité (traçabilité de sécurité).",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "CapabilityStatement"
+          }
+        ],
+        "reference" : {
+          "reference" : "CapabilityStatement/TdEGestionnaire"
+        },
+        "name" : "TdE-Gestionnaire",
+        "description" : "Le rôle du Gestionnaire est d'enregistrer les informations de traçabilité et fournir les traces en cas de consultation ou de recherches.\nLe gestionnaire des traces peut être, par exemple, un logiciel de traçabilité ou le module de traçabilité d'un logiciel métier.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "CapabilityStatement"
+          }
+        ],
+        "reference" : {
+          "reference" : "CapabilityStatement/TdESource"
+        },
+        "name" : "TdE-Source",
+        "description" : "Le rôle de la Source est de transmettre les informations de traçabilité relatives à une étape significative d'un processus métier suite à un événement au gestionnaire.",
         "exampleBoolean" : false
       },
       {

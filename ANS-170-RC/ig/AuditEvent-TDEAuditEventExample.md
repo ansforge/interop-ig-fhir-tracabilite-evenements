@@ -12,6 +12,8 @@ Profil: [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md)
 
 **subtype**: [FHIR Restful Interactions: read](http://hl7.org/fhir/R4/codesystem-restful-interaction.html#restful-interaction-read) (read)
 
+**period**: 2026-01-07 09:30:00+0000 --> 2026-01-07 09:32:00+0000
+
 **recorded**: 2026-01-07 09:32:15+0000
 
 ### Agents
@@ -53,6 +55,10 @@ Profil: [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md)
       "display" : "read"
     }
   ],
+  "period" : {
+    "start" : "2026-01-07T09:30:00Z",
+    "end" : "2026-01-07T09:32:00Z"
+  },
   "recorded" : "2026-01-07T09:32:15Z",
   "agent" : [
     {

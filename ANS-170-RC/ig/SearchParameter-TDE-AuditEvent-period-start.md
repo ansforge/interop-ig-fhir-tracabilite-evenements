@@ -12,7 +12,7 @@
 | Active as of 2021-12-01 | *Computable Name*:TDE_AuditEvent_period-start |
 
  
-Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément context.period.start correspondant à lobjet dateDebutActe 
+Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence 
 
 
 
@@ -42,7 +42,7 @@ Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utilise
       ]
     }
   ],
-  "description" : "Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément context.period.start correspondant à lobjet dateDebutActe",
+  "description" : "Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence",
   "jurisdiction" : [
     {
       "coding" : [
@@ -57,7 +57,7 @@ Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utilise
   "code" : "period-start",
   "base" : ["AuditEvent"],
   "type" : "date",
-  "expression" : "DocumentReference.context.period.start",
+  "expression" : "AuditEvent.period.start",
   "multipleOr" : true,
   "multipleAnd" : true,
   "comparator" : [

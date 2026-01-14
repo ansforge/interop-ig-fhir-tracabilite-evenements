@@ -10,7 +10,7 @@
   "name" : "ExampleIG",
   "title" : "ANS IG Example",
   "status" : "draft",
-  "date" : "2026-01-08T10:11:20+00:00",
+  "date" : "2026-01-14T13:25:32+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -691,7 +691,43 @@
         "reference" : "SearchParameter/TDE-AuditEvent-period-start"
       },
       "name" : "TDE-AuditEvent-period-start",
-      "description" : "Paramètre de recherche créé pour le volet PDSm de manière à pouvoir utiliser comme critère de recherche l'élément context.period.start correspondant à lobjet dateDebutActe",
+      "description" : "Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CapabilityStatement"
+      }],
+      "reference" : {
+        "reference" : "CapabilityStatement/TdEConsommateur"
+      },
+      "name" : "TdE-Consommateur",
+      "description" : "Le rôle du Consommateur est d'accéder aux traces. Les personnes utilisant ce système peuvent être rattachées par exemple à la pharmacie hospitalière (traçabilité des médicaments), au bloc opératoire (traçabilité des actes chirurgicaux), à la sécurité (traçabilité de sécurité).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CapabilityStatement"
+      }],
+      "reference" : {
+        "reference" : "CapabilityStatement/TdEGestionnaire"
+      },
+      "name" : "TdE-Gestionnaire",
+      "description" : "Le rôle du Gestionnaire est d'enregistrer les informations de traçabilité et fournir les traces en cas de consultation ou de recherches.\nLe gestionnaire des traces peut être, par exemple, un logiciel de traçabilité ou le module de traçabilité d'un logiciel métier.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CapabilityStatement"
+      }],
+      "reference" : {
+        "reference" : "CapabilityStatement/TdESource"
+      },
+      "name" : "TdE-Source",
+      "description" : "Le rôle de la Source est de transmettre les informations de traçabilité relatives à une étape significative d'un processus métier suite à un événement au gestionnaire.",
       "exampleBoolean" : false
     },
     {

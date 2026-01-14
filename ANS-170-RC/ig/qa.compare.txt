@@ -1,16 +1,19 @@
 ExampleIG : Validation Results
 =========================================
 
-err = 4, warn = 12, info = 1
+err = 3, warn = 15, info = 1
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.[code]#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/[code])
  Build Errors : 0 / 8 / 0
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/AuditEvent-TDEAuditEventExample : 0 / 0 / 1
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/Bundle-TDEBundleResultatReponseRechercheTracesExample : 0 / 2 / 4
+ /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CapabilityStatement-TdEConsommateur : 0 / 1 / 1
+ /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CapabilityStatement-TdEGestionnaire : 0 / 1 / 1
+ /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CapabilityStatement-TdESource : 0 / 1 / 1
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/Device-DeviceExample : 0 / 0 / 1
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.[code] : 3 / 0 / 1
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/Practitioner-PractitionerExample : 0 / 1 / 1
- /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/SearchParameter-TDE-AuditEvent-period-start : 1 / 1 / 1
+ /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/SearchParameter-TDE-AuditEvent-period-start : 0 / 1 / 1
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/StructureDefinition-TDEAuditEvent : 0 / 0 / 2
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/StructureDefinition-TDEBundleResultatReponseRechercheTraces : 0 / 0 / 1
 </table>
@@ -27,6 +30,12 @@ WARNING: 5: The HTML fragment 'expansion-params.xhtml' is not included anywhere 
 == fsh-generated/resources/Bundle-TDEBundleResultatReponseRechercheTracesExample.json ==
 WARNING: Bundle/TDEBundleResultatReponseRechercheTracesExample: Bundle: SearchSet Bundles should have a self link that specifies what the search was
 WARNING: Bundle/TDEBundleResultatReponseRechercheTracesExample: Bundle: SearchSet bundles should have search modes on the entries
+== fsh-generated/resources/CapabilityStatement-TdEConsommateur.json ==
+WARNING: CapabilityStatement/TdEConsommateur: CapabilityStatement.implementationGuide[0]: A definition could not be found for Canonical URL 'https://interop.esante.gouv.fr/ig/fhir/tde'
+== fsh-generated/resources/CapabilityStatement-TdEGestionnaire.json ==
+WARNING: CapabilityStatement/TdEGestionnaire: CapabilityStatement.implementationGuide[0]: A definition could not be found for Canonical URL 'https://interop.esante.gouv.fr/ig/fhir/tde'
+== fsh-generated/resources/CapabilityStatement-TdESource.json ==
+WARNING: CapabilityStatement/TdESource: CapabilityStatement.implementationGuide[0]: A definition could not be found for Canonical URL 'https://interop.esante.gouv.fr/ig/fhir/tde'
 == fsh-generated/resources/Device-DeviceExample.json ==
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.[code].json ==
 ERROR: ImplementationGuide/ans.fhir.fr.[code]: ImplementationGuide.id: Invalid Resource id: Invalid Characters ('ans.fhir.fr.[code]')
@@ -36,7 +45,6 @@ ERROR: ImplementationGuide/ans.fhir.fr.[code]: ImplementationGuide.definition.ex
 WARNING: Practitioner/PractitionerExample: Practitioner.identifier[0].system: No definition could be found for URL value 'https://rpps.esante.gouv.fr'
 == fsh-generated/resources/SearchParameter-TDE-AuditEvent-period-start.json ==
 WARNING: SearchParameter/TDE-AuditEvent-period-start: SearchParameter: Constraint failed: spd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))'
-ERROR: SearchParameter/TDE-AuditEvent-period-start: SearchParameter.expression: Error in search expression 'DocumentReference.context.period.start': Error evaluating FHIRPath expression: The name 'DocumentReference' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/AuditEvent] (@char 1)
 == fsh-generated/resources/StructureDefinition-TDEAuditEvent.json ==
 INFORMATION: StructureDefinition/TDEAuditEvent: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 == fsh-generated/resources/StructureDefinition-TDEBundleResultatReponseRechercheTraces.json ==
