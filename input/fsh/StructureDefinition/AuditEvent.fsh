@@ -6,4 +6,4 @@ Description: "Traçabilité des évènements d'objets métiers"
 * agent ..2
 * agent.who 1..
 
-* source.observer only Reference(Device or FRCorePractitionerProfile or FRCorePractitionerRole or FRCoreRelatedPersonProfile or FRCoreOrganizationProfile or FRCorePatientINSProfile or FRCorePatientProfile)
+* source.observer only Reference(Device or PractitionerRole or Practitioner or FRCorePractitionerProfile or FRCorePractitionerRole or RelatedPerson or FRCoreRelatedPersonProfile or Organization or FRCoreOrganizationProfile or Patient or FRCorePatientINSProfile or FRCorePatientProfile)

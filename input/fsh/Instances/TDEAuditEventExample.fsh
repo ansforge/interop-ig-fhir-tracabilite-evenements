@@ -9,6 +9,9 @@ Usage: #example
 * agent[0].who = Reference(PractitionerExample)
 * agent[0].requestor = true
 
+* period.start = 2026-01-07T09:30:00Z
+* period.end = 2026-01-07T09:32:00Z
+
 * source.observer = Reference(DeviceExample)
 
 Instance: PractitionerExample
