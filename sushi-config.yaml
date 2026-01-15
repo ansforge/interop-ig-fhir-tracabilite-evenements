@@ -24,8 +24,6 @@ pages:
     specifications_fonctionnelles.md:
         sf1.md:
             title: Vue d'ensemble
-    st.md:
-        title: Spécifications techniques
     construction_des_flux.md:
         title: Vue d'ensemble
     api.md:

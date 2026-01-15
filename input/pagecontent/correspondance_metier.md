@@ -4,7 +4,7 @@ Le tableau ci-dessous représente la mise en correspondance de l’objet
 « Trace » avec la structure AuditMessage définie par DICOM.
 
 <table style="width:100%;">
-<caption><p>Tableau 3 Mise en correspondance entre l'objet Trace et le
+<caption><p> Mise en correspondance entre l'objet Trace et le
 schema AuditMessage de DICOM</p></caption>
 <colgroup>
 <col style="width: 21%" />

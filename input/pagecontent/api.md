@@ -34,12 +34,6 @@ POST [base]/AuditEvent
 Où [base] est le point de contact FHIR défini par le Gestionnaire de
 trace.
 
-Exemple de flux : 
-
-```HTTP
-POST http://base_url_server_gestionnaire_trace/AuditEvent
-```
-
 ## Flux 2 : ConsultationTrace
 
 Ce flux n’est pas défini dans le contexte du protocole Syslog.
@@ -107,6 +101,12 @@ lequel les traces sont recherchées (date se réfère à la date
 d’enregistrement de l’évènement). <query> représente les autres
 paramètres, sous la forme param=valeur, permettant d’affiner la
 recherche.
+
+Un exemple d’appel de recherche de traces est le suivant :
+
+```HTTP
+GET [base]/AuditEvent?date=ge2026-01-14&date=le2026-01-16&type=rest&subtype=operation
+```
 
 #### Paramètres de recherche
 
@@ -224,11 +224,6 @@ de type « searchset » encapsulant 0, 1 à plusieurs ressources AuditEvent
 
 La ressource Bundle constituera alors le corps de la réponse HTTP 200
 ok.
-
-```HTTP
-GET http://hapi.fhir.org/baseR4/AuditEvent?type=rest&subtype=operation
-```
-
 Pour des informations sur les autres codes HTTP (HTTP status code)
 retournés en cas d’échec, consultez la documentation relative à
-l’interaction « read » de l’API REST FHIR.
+l’interaction [« read »](https://hl7.org/fhir/R4/http.html#read) de l’API REST FHIR.

@@ -41,16 +41,14 @@ le contenu de la trace.
 Ce contenu est ensuite encapsulé dans un message syslog qui sera
 transmis via UDP ou TLS au gestionnaire de traces.
 
-Un exemple de flux est joint (cf [annexe
-3 ](#annexe-3-exemples-de-flux): **Erreur ! Source du renvoi
-introuvable.**).
+Un exemple de flux est joint (cf [annexe 3](TDE_Flux01-versionSyslog.xml)).
+
 #### Flux 4 : RechercheTraces
 
 Ce flux est utilisé par le consommateur de traces pour faire une
 recherche de traces auprès du gestionnaire de traces.
 
-
-##### Construction du flux HTTP
+  ##### Construction du flux HTTP
 
 Dans le contexte d’une implémentation reposant sur le protocole Syslog
 pour le flux de transmission des traces, le flux 4 « RechercheTraces »
