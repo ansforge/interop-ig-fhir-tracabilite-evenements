@@ -276,9 +276,8 @@ eventDefinition, SearchParameter.
 
 Le tableau ci-dessous reprend les classes identifiées dans [l’étude métier](LienSFE)(en lignes) ainsi que chacune des ressources pertinentes
 étudiées dans ce document (en colonnes) de façon à vérifier l’adéquation
-des ressources FHIR avec le besoin métier. L’annexe 6.1 détaille la mise
-en correspondance entre les attributs de la classe « Evénement » et
-celles des ressources FHIR étudiées.
+des ressources FHIR avec le besoin métier. [L’annexe](annexe_audit_dicom.html) détaille la mise
+en correspondance entre les attributs de la classe « Evénement » et celles des ressources FHIR étudiées.
 
 <table style="width:100%;">
 <colgroup>
@@ -390,7 +389,7 @@ entity.detail</td>
 </tbody>
 </table>
 
-Tableau 1 Résumé des ressources FHIR
+Résumé des ressources FHIR
 
 D’après ce tableau, nous pouvons voir :
 
@@ -417,7 +416,7 @@ de recherche relatifs à une ressource.
 | acteurEvenement | Contributor / recorder | agent | Sender / Recipient | Sender / Recipient |
 | Autres paramètres | *A prendre en compte en fonction du besoin métier* | *A prendre en compte en fonction du besoin métier* | *A prendre en compte en fonction du besoin métier* | *A prendre en compte en fonction du besoin métier* |
 
-Tableau 2 Mapping des critères de recherche
+Mapping des critères de recherche
 
 FHIR décrit également une API REST réutilisant les méthodes HTTP,
 celle-ci sera utilisée dans les scénarios ci-après pour permettre
@@ -1000,7 +999,7 @@ style="text-align: center;">ParticipantObjectIdentification</td>
 </tbody>
 </table>
 
-Tableau 3 Mapping DICOM avec les concepts de l’étude métier
+Mapping DICOM avec les concepts de l’étude métier
 
 Cela confirme l’idée de s’inspirer du profil IHE ATNA, de son option
 RESTful ATNA et du profil SOLE pour spécifier techniquement la volet
@@ -1058,7 +1057,7 @@ pour compléter le contexte et supporter l’interprétation des données
   <img src="ns_image8.png" alt="tracabilité des événements" style="display:block; margin:auto;">
 </div>
 
-Figure 1 « Event data » et « Master data » (source[La doctrine du CI-SIS](http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration), § 6.1)
+« Event data » et « Master data » (source[La doctrine du CI-SIS](http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration), § 6.1)
 
 Les données « Event data » sont transmises via les interfaces « Capture
 and Query » d’EPCIS. Quatre mécanismes sont fournis pour transmettre les
@@ -1168,8 +1167,7 @@ TransactionEvent.Desitnation.dest</td>
 </tr>
 </tbody>
 </table>
-
-Tableau 4 Mise en correspondance avec l’événement « TransactionEvent »
+Mise en correspondance avec l’événement « TransactionEvent »
 
 EPCIS définit trois interfaces pour la tracabilité des événements :
 
@@ -1708,8 +1706,7 @@ différents fournisseurs<a href="#fnref3" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
-
-Tableau 5 Tableau récapitulatif de l’évaluation des standards
+Tableau récapitulatif de l’évaluation des standards
 
 ### Analyse et Conclusion
 
@@ -1846,7 +1843,7 @@ la façon suivante :
 <div style="text-align: center; display: block; clear: both;">
   <img src="ns_image10.png" alt="tracabilité des événements" style="display:block; margin:auto;">
 </div>
-Figure 2 Positionnement des profils ATNA et son option RESTful ATNA /
+Positionnement des profils ATNA et son option RESTful ATNA /
 SOLE
 
 L’option RESTful ATNA, avec la possibilité de l’étendre si nécessaire en
@@ -1926,126 +1923,3 @@ les sections 5.1 et 5.1.5, l’option RESTful ATNA semble le plus adapté
 au besoin « générique tracabilité des événements », en s’inspirant aussi des
 spécifications GS1.
 
-### Annexes A
-
-#### Annexe 1 : Mise en correspondance
-
-Cette section reprend, la mise en correspondance des objets de la SFE
-avec la ressource FHIR « AuditEvent » et la structure AuditMessage de
-DICOM :
-
-<table style="width:98%;">
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 19%" />
-<col style="width: 21%" />
-<col style="width: 21%" />
-<col style="width: 19%" />
-</colgroup>
-<thead>
-<tr>
-<th rowspan="2" style="text-align: center;">Nom Classe</th>
-<th rowspan="2" style="text-align: center;">Nom attribut</th>
-<th rowspan="2" style="text-align: center;">AuditEvent</th>
-<th colspan="2" style="text-align: center;">DICOM</th>
-</tr>
-<tr>
-<th style="text-align: center;"><strong>Elément du schéma
-AuditMessage</strong></th>
-<th style="text-align: center;"><strong>Sous-Elément</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">Trace</td>
-<td style="text-align: center;">identifiant</td>
-<td style="text-align: center;">id</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;">SourceTrace</td>
-<td style="text-align: center;">identifiant</td>
-<td style="text-align: center;">source</td>
-<td style="text-align: center;">SourceAuditIdentification</td>
-<td style="text-align: center;">AuditEnterpriseSiteId</td>
-</tr>
-<tr>
-<td rowspan="5" style="text-align: center;">Evénement</td>
-<td style="text-align: center;">typeEvenement</td>
-<td style="text-align: center;">type</td>
-<td rowspan="5" style="text-align: center;">EventIdentification</td>
-<td style="text-align: center;">EventID</td>
-</tr>
-<tr>
-<td style="text-align: center;">sousTypeEvement</td>
-<td style="text-align: center;">Subtype</td>
-<td style="text-align: center;">EventTypeCode</td>
-</tr>
-<tr>
-<td style="text-align: center;">occurence</td>
-<td style="text-align: center;">period.start</td>
-<td style="text-align: center;">EventDateTime</td>
-</tr>
-<tr>
-<td style="text-align: center;">declaration</td>
-<td style="text-align: center;">recorded</td>
-<td style="text-align: center;">Possibilité utiliser le champ
-« TIMESTAMP » du protocole syslog</td>
-</tr>
-<tr>
-<td style="text-align: center;">description</td>
-<td style="text-align: center;">outcomeDesc</td>
-<td style="text-align: center;">EventOutcomeDescription</td>
-</tr>
-<tr>
-<td rowspan="2" style="text-align: center;">ActeurEvenement</td>
-<td style="text-align: center;">identifiant</td>
-<td style="text-align: center;">agent.who.identifier</td>
-<td rowspan="2" style="text-align: center;">ActiveParticipant</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;">role</td>
-<td style="text-align: center;">Agent.role</td>
-<td style="text-align: center;">RoleIdCode</td>
-</tr>
-<tr>
-<td rowspan="3" style="text-align: center;">ObjectEvenement</td>
-<td style="text-align: center;">identifiant</td>
-<td style="text-align: center;">entity.what.identifier</td>
-<td rowspan="3"
-style="text-align: center;">ParticipantObjectIdentification</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;">type</td>
-<td style="text-align: center;">entity.type</td>
-<td style="text-align: center;">ParticipantObjectTypeCode</td>
-</tr>
-<tr>
-<td style="text-align: center;">contenu</td>
-<td style="text-align: center;">entity.what ou entity.query ou
-entity.detail</td>
-<td style="text-align: center;"><p>ParticipantObjectDetail.value</p>
-<p>ou ParticipantObjectQuery</p>
-<p>ou ParticipantObjectID</p></td>
-</tr>
-</tbody>
-</table>
-
-Tableau 6 Mise en correspondance avec la ressource « AuditEvent » et la
-structure AuditMessage
-
-### Annexes B
-
-#### Annexe 1 : Glossaire
-
-| Sigle / Acronyme | Signification |
-|----|----|
-| ASIP Santé | Agence Française de la Santé Numérique |
-| HL7 | *Health Level 7* |
-| FHIR | *Fast Healthcare Interoperability Ressources* |
-| CI-SIS | Cadre d’interopérabilité des systèmes d’information de santé |
-| DICOM | Digital Imaging and COmmunication in Medecine |
-| GS1 | Global Standards 1 |
