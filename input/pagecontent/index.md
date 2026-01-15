@@ -68,7 +68,7 @@ Les ressources profilées dans le cadre de ce guide d'implémentation sont les s
     SELECT json_extract(Json, '$.baseDefinition') as Parent, Name, Description, Web 
     FROM Resources 
     WHERE Type = 'StructureDefinition' 
-      AND Id LIKE 'tddui%' 
+      AND Id LIKE 'TDE%' 
       AND json_extract(Json, '$.kind') = 'resource' 
     ORDER BY Name 
   ", 
