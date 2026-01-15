@@ -47,8 +47,8 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "ValueSet-MeltingPotVS.html" : "Melting Pot Value Set",
-      "ValueSet-EyeColorVS.html" : "EyeColor Value Set"
+      "ValueSet-EyeColorVS.html" : "EyeColor Value Set",
+      "ValueSet-MeltingPotVS.html" : "Melting Pot Value Set"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v2-0131",
@@ -99,8 +99,8 @@
       "http://hl7.org/fhir/R4/valueset-marital-status.html" : "MaritalStatus"
     },
     {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/competence-code-system",
-      "version" : "0.1.0",
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/CodeSystem/competence-code-system",
+      "version" : "2.0.0",
       "status" : "draft",
       "name" : "CompetenceCS",
       "title" : "Compétences CodeSystem",
@@ -110,16 +110,16 @@
       "ValueSet-MeltingPotVS.html" : "Melting Pot Value Set"
     },
     {
-      "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/type-carte-code-system",
-      "version" : "0.1.0",
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/CodeSystem/type-carte-code-system",
+      "version" : "2.0.0",
       "status" : "draft",
       "name" : "TypeCarteCS",
       "title" : "Type de carte",
       "description" : "Type de carte professionnelle et personnelle.",
       "uses" : {
       },
-      "ValueSet-MeltingPotVS.html" : "Melting Pot Value Set",
-      "ValueSet-TypeCarteVS.html" : "Type Carte Value Set"
+      "ValueSet-TypeCarteVS.html" : "Type Carte Value Set",
+      "ValueSet-MeltingPotVS.html" : "Melting Pot Value Set"
     }
   ]
 }

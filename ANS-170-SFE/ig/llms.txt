@@ -1,4 +1,4 @@
-# ans.fhir.fr.[code]#0.1.0: ANS IG Example
+# ans.fhir.fr.tde#2.0.0: ANS - Traçabilité des événements
 
 ## Pages
 
@@ -38,7 +38,7 @@
 
 ### ImplementationGuides
 
-* [ANS IG Example](index.md)
+* [ANS - Traçabilité des événements](index.md)
 
 ### Examples
 

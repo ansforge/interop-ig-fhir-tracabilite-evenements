@@ -1,4 +1,4 @@
-# frpatient-exemple - ANS IG Example v0.1.0
+# frpatient-exemple - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -22,7 +22,7 @@ JEANNE MARIE DARK Female, Date de Naissance :1939-08-13 ( urn:oid:1.2.250.1.213.
   "id" : "frpatient-exemple",
   "meta" : {
     "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient"
+      "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/fr-patient"
     ]
   },
   "identifier" : [

@@ -2,7 +2,7 @@
   "resourceType" : "Patient",
   "id" : "frpatient-exemple",
   "meta" : {
-    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient"]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/fr-patient"]
   },
   "text" : {
     "status" : "generated",

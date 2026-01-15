@@ -1,4 +1,4 @@
-# Patient français - ANS IG Example v0.1.0
+# Patient français - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient | *Version*:0.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/fr-patient | *Version*:2.0.0 |
 | Draft as of 2026-01-15 | *Computable Name*:FrPatient |
 
  
@@ -18,7 +18,7 @@ Description du patient français
 
 * Exemples pour ce Profil: [Patient/frpatient-exemple](Patient-frpatient-exemple.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/fr-patient)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.tde|current/StructureDefinition/fr-patient)
 
 ### Formal Views of Profile Content
 
@@ -36,12 +36,12 @@ Other representations of profile: [CSV](StructureDefinition-fr-patient.csv), [Ex
 {
   "resourceType" : "StructureDefinition",
   "id" : "fr-patient",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/fr-patient",
+  "version" : "2.0.0",
   "name" : "FrPatient",
   "title" : "Patient français",
   "status" : "draft",
-  "date" : "2026-01-15T13:06:15+00:00",
+  "date" : "2026-01-15T15:25:18+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -130,7 +130,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-patient.csv), [Ex
           {
             "code" : "Extension",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/EyeColor"
+              "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/EyeColor"
             ]
           }
         ],
@@ -172,7 +172,7 @@ Other representations of profile: [CSV](StructureDefinition-fr-patient.csv), [Ex
         "short" : "male | female | other",
         "binding" : {
           "strength" : "required",
-          "valueSet" : "https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/ModifiedAdministrativeGender"
+          "valueSet" : "https://interop.esante.gouv.fr/ig/fhir/tde/ValueSet/ModifiedAdministrativeGender"
         }
       }
     ]
