@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"5"}
-    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -257,11 +257,6 @@ la requête HTTP POST suivante :</p>
 <p>Où [base] est le point de contact FHIR défini par le Gestionnaire de
 trace.</p>
 
-<p>Exemple de flux :</p>
-
-<pre><code class="language-HTTP">POST http://base_url_server_gestionnaire_trace/AuditEvent
-</code></pre>
-
 <h2 id="flux-2-consultationtrace">Flux 2 : ConsultationTrace</h2>
 
 <p>Ce flux n’est pas défini dans le contexte du protocole Syslog.</p>
@@ -327,6 +322,11 @@ lequel les traces sont recherchées (date se réfère à la date
 d’enregistrement de l’évènement). <query> représente les autres
 paramètres, sous la forme param=valeur, permettant d’affiner la
 recherche.</query></p>
+
+<p>Un exemple d’appel de recherche de traces est le suivant :</p>
+
+<pre><code class="language-HTTP">GET [base]/AuditEvent?date=ge2026-01-14&amp;date=le2026-01-16&amp;type=rest&amp;subtype=operation
+</code></pre>
 
 <h4 id="paramètres-de-recherche">Paramètres de recherche</h4>
 
@@ -443,14 +443,10 @@ de type « searchset » encapsulant 0, 1 à plusieurs ressources AuditEvent
 (profil TDE_AuditEvent) .</p>
 
 <p>La ressource Bundle constituera alors le corps de la réponse HTTP 200
-ok.</p>
-
-<pre><code class="language-HTTP">GET http://hapi.fhir.org/baseR4/AuditEvent?type=rest&amp;subtype=operation
-</code></pre>
-
-<p>Pour des informations sur les autres codes HTTP (HTTP status code)
+ok.
+Pour des informations sur les autres codes HTTP (HTTP status code)
 retournés en cas d’échec, consultez la documentation relative à
-l’interaction « read » de l’API REST FHIR.</p>
+l’interaction <a href="https://hl7.org/fhir/R4/http.html#read">« read »</a> de l’API REST FHIR.</p>
 
 
 
@@ -493,7 +489,7 @@ l’interaction « read » de l’API REST FHIR.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 9, 2026 09:05+0000">2026-01-09</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 15, 2026 09:18+0000">2026-01-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

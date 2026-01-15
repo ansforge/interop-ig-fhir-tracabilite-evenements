@@ -28,13 +28,6 @@ POST [base]/AuditEvent
 
 Où [base] est le point de contact FHIR défini par le Gestionnaire de trace.
 
-Exemple de flux :
-
-```
-POST http://base_url_server_gestionnaire_trace/AuditEvent
-
-```
-
 ## Flux 2 : ConsultationTrace
 
 Ce flux n’est pas défini dans le contexte du protocole Syslog.
@@ -82,6 +75,13 @@ GET
 
 Où [base] est le point de contact FHIR du gestionnaire de traces, [start-time] et [stop-time] indique l’intervalle de temps dans lequel les traces sont recherchées (date se réfère à la date d’enregistrement de l’évènement). représente les autres paramètres, sous la forme param=valeur, permettant d’affiner la recherche.
 
+Un exemple d’appel de recherche de traces est le suivant :
+
+```
+GET [base]/AuditEvent?date=ge2026-01-14&date=le2026-01-16&type=rest&subtype=operation
+
+```
+
 #### Paramètres de recherche
 
 La transaction [ITI-81] Retrieve ATNA Audit Event exige que la recherche de traces soit bornée dans le temps. C’est-à-dire que le paramètre de recherche « date » qui correspond à la date d’enregistrement de l’évènement doit être présent pour préciser une limite de temps (avant, après ou un intervalle). Le tableau ci-dessous précise la mise en correspondance des paramètres de recherche identifiés dans l’étude métier avec les paramètres de recherche HL7 FHIR de la ressource AuditEvent.
@@ -110,12 +110,5 @@ Dans le contexte d’un échange basé sur le standard HL7 FHIR, ce flux est bas
 
 Conformément au supplément RESTful ATNA du profil IHE ATNA, la réponse retournée par le Gestionnaire de trace au Consommateur de traces est composée d’un Bundle (profil TDE_BundleResultatReponseRechercheTraces) de type « searchset » encapsulant 0, 1 à plusieurs ressources AuditEvent (profil TDE_AuditEvent) .
 
-La ressource Bundle constituera alors le corps de la réponse HTTP 200 ok.
-
-```
-GET http://hapi.fhir.org/baseR4/AuditEvent?type=rest&subtype=operation
-
-```
-
-Pour des informations sur les autres codes HTTP (HTTP status code) retournés en cas d’échec, consultez la documentation relative à l’interaction « read » de l’API REST FHIR.
+La ressource Bundle constituera alors le corps de la réponse HTTP 200 ok. Pour des informations sur les autres codes HTTP (HTTP status code) retournés en cas d’échec, consultez la documentation relative à l’interaction [« read »](https://hl7.org/fhir/R4/http.html#read) de l’API REST FHIR.
 

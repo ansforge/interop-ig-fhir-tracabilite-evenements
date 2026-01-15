@@ -24,7 +24,7 @@ La première étape de construction de ce flux consiste à créer le message qui
 
 Ce contenu est ensuite encapsulé dans un message syslog qui sera transmis via UDP ou TLS au gestionnaire de traces.
 
-Un exemple de flux est joint (cf [annexe 3 ](#annexe-3-exemples-de-flux): **Erreur ! Source du renvoi introuvable.**).
+Un exemple de flux est joint (cf [annexe 3](TDE_Flux01-versionSyslog.xml)).
 
 #### Flux 4 : RechercheTraces
 

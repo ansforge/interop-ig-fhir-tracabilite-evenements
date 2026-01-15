@@ -3,7 +3,6 @@
 ## Pages
 
 * [Accueil](index.md)
-* [Spécifications techniques](st.md)
 * [Correspondances métier](correspondance_metier.md)
 * [Historique des versions](change-log.md)
 * [Vue d'ensemble](sf1.md)

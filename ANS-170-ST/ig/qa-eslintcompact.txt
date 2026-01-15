@@ -7,10 +7,7 @@ recherche.) (INVALID)
 Generic: line 0, col 0, Error - The link './st_flux1.html' for "flux 01" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link './st_flux2.html' for "flux 02" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The image source 'assets/images/fra.svg' cannot be resolved (NOTFOUND)
-Generic: line 0, col 0, Warning - Illegal HTML: Illegal HTML element: section (INVALID)
-Generic: line 0, col 0, Error - The link '#mise-en-correspondance-avec-le-standard-hl7-fhir' for "2.1.1. Mise en correspondance avec le standard HL7 FHIR [6](#mise-en-correspondance-avec-le-standard-hl7-fhir)" cannot be resolved (valid targets: 133 targets) (NOTFOUND)
-Generic: line 0, col 0, Error - The link '#mise-en-correspondance-avec-le-standard-hl7-dicom' for "2.1.2. Mise en correspondance avec le standard HL7 DICOM [7](#mise-en-correspondance-avec-le-standard-hl7-dicom)" cannot be resolved (valid targets: 133 targets) (NOTFOUND)
-Generic: line 0, col 0, Error - The link '#annexe-3-exemples-de-flux' for "annexe 3 " cannot be resolved (valid targets: [paramètres-de-recherche, publish-box, construction-du-flux-http, segment-post-footer, flux-5-reponserecherchetraces, hl7-search-lnk, flux-1-transmissiontrace, top, stripe, segment-footer, flux-4-recherchetraces, segment-content, ans-nav, segment-header, via-syslog, construction-du-flux-http-1, solution-2 -audit-message-dicom-protocole-syslog-et-opération-http, flux-1 -transmissiontrace, bottom, hl7-logo, ig-search, solution-2-audit-message-dicom-protocole-syslog-et-opération-http, flux-5 -reponserecherchetraces, family-nav, ig-status, flux-4 -recherchetraces, segment-navbar, construction-du-flux-syslog, segment-breadcrumb]) (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'TDE_Flux01-versionSyslog.xml' for "annexe 3" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Warning - An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
@@ -46,5 +43,5 @@ Generic: line 0, col 0, Warning - The HTML fragment 'expansion-params.xhtml' is 
 /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-TypeCarteVS.json: line 1, col 1234, Info - Reference to draft CodeSystem urn:iso:std:iso:3166|20210120 (BUSINESSRULE)
 /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-TypeCarteVS.json: line 1, col 1353, Warning - Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present (REQUIRED)
 
-err = 3, warn = 16, info = 17
+err = 3, warn = 15, info = 17
 IG Publisher Version: 2.0.29
