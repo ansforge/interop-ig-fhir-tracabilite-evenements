@@ -211,7 +211,7 @@ La transaction « Authenticate Node [ITI-19] » décrit l’authentification m
 
 La transaction « Record Audit Event [ITI-20] » décrit comment un nœud sécurisé crée un rapport d’évènement et le transmet à l’acteur « Audit Record Repository ». Cette transaction est basée sur un certain nombre de standards sous-jacents comme TLS, DICOM, XML et surtout syslog (avec des extensions pour la couche transport comme « Transmission of Syslog Messages over UDP »).
 
-Le standard « syslog » (RFC 5242) ne spécifie pas la structure du message (« enregistrement d’audit »), c’est pourquoi le profil ATNA contraint l’utilisation du schéma DICOM et de HL7 pour spécifier le contenu du message. DICOM a défini un schéma de base pour le rapport d’événement et des descriptions de base pour les événements, notamment partie 15, annexe A.5 « Audit Trail Message Format Profile ». IHE a étendu ces spécifications pour définir des événements spécifiques pour la sécurité et la protection de la vie privée.
+Le standard « syslog » (RFC 5242) ne spécifie pas la structure du message (« enregistrement d’audit »), c’est pourquoi le profil ATNA contraint l’utilisation du schéma DICOM et de HL7 pour spécifier le contenu du message. DICOM a défini un schéma de base pour le rapport d’événement et des descriptions de base pour les événements, notamment partie 15, [annexe A.5 « Audit Trail Message Format Profile »](http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html). IHE a étendu ces spécifications pour définir des événements spécifiques pour la sécurité et la protection de la vie privée.
 
 ###### Maturité et adoption
 
@@ -679,7 +679,7 @@ Le profil PLT est un cas spécifique de tracabilité des événements concernant
 
 ##### DICOM
 
-DICOM est un standard qui est largement utilisé dans le domaine de la radiologie. La partie « DICOM PS3.15 – Security and System Management Profiles » annexe « A.5 – Audit Trail Message Format Profile » spécifie la structure des messages d’audit DICOM gérés dans les workflows radiologie. Cette spécification est reprise dans les profils ATNA et son option RESTful ATNA et SOLE pour spécifier la structure interne des messages d’audit. Il serait intéressant de réutiliser cette spécification pour couvrir le besoin métier générique décrivant la classe « Evénement ».
+DICOM est un standard qui est largement utilisé dans le domaine de la radiologie. La partie « DICOM PS3.15 – Security and System Management Profiles » [annexe « A.5 – Audit Trail Message Format Profile »](http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html) spécifie la structure des messages d’audit DICOM gérés dans les workflows radiologie. Cette spécification est reprise dans les profils ATNA et son option RESTful ATNA et SOLE pour spécifier la structure interne des messages d’audit. Il serait intéressant de réutiliser cette spécification pour couvrir le besoin métier générique décrivant la classe « Evénement ».
 
 ##### GS1
 
@@ -721,7 +721,7 @@ Le profil PLT – Patient Location Tracking est basé sur le standard HL7 pour l
 
 ##### DICOM
 
-DICOM est le standard utilisé pour échanger des informations dans le domaine de la radiologie. L’annexe 5 – Audit Trail Message Format Profile, de la partie – DICOM PS3.15 spécifie le format des événements qui sont gérés lors d’un workflow de radiologie. Les profils ATNA et son option RESTful ATNA / SOLE se basent sur ce standard pour spécifier la structure des événements qui sont échangés (événements de sécurité et événements spécifiques de radiologie). La même structure de messages pourra être utilisée pour tous les futurs événements pour faciliter la mutualisation des fonctionnalités de tracabilité des événements.
+DICOM est le standard utilisé pour échanger des informations dans le domaine de la radiologie. [L’annexe 5 – Audit Trail Message Format Profile](http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html), de la partie – DICOM PS3.15 spécifie le format des événements qui sont gérés lors d’un workflow de radiologie. Les profils ATNA et son option RESTful ATNA / SOLE se basent sur ce standard pour spécifier la structure des événements qui sont échangés (événements de sécurité et événements spécifiques de radiologie). La même structure de messages pourra être utilisée pour tous les futurs événements pour faciliter la mutualisation des fonctionnalités de tracabilité des événements.
 
 ##### GS1
 

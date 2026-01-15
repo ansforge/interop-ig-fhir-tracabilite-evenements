@@ -707,8 +707,9 @@ entity.detail</td>
 </tbody>
 </table>
 
-<p>Résumé des ressources FHIR</p>
-
+<div style="text-align: center; display: block; clear: both;">
+Résumé des ressources FHIR
+</div>
 <p>D’après ce tableau, nous pouvons voir&nbsp;:</p>
 
 <ul>
@@ -952,7 +953,7 @@ message («&nbsp;enregistrement d’audit&nbsp;»), c’est pourquoi le profil A
 contraint l’utilisation du schéma DICOM et de HL7 pour spécifier le
 contenu du message. DICOM a défini un schéma de base pour le rapport
 d’événement et des descriptions de base pour les événements, notamment
-partie 15, annexe A.5 «&nbsp;Audit Trail Message Format Profile&nbsp;». IHE a
+partie 15, <a href="http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html">annexe A.5 «&nbsp;Audit Trail Message Format Profile&nbsp;»</a>. IHE a
 étendu ces spécifications pour définir des événements spécifiques pour
 la sécurité et la protection de la vie privée.</p>
 
@@ -1422,7 +1423,9 @@ AuditMessage</strong></th>
 </tbody>
 </table>
 
-<p>Mapping DICOM avec les concepts de l’étude métier</p>
+<div style="text-align: center; display: block; clear: both;">
+Mapping DICOM avec les concepts de l’étude métier
+</div>
 
 <p>Cela confirme l’idée de s’inspirer du profil IHE ATNA, de son option
 RESTful ATNA et du profil SOLE pour spécifier techniquement la volet
@@ -1610,7 +1613,10 @@ TransactionEvent.Desitnation.dest</td>
 </tr>
 </tbody>
 </table>
-<p>Mise en correspondance avec l’événement «&nbsp;TransactionEvent&nbsp;»</p>
+
+<div style="text-align: center; display: block; clear: both;">
+Mise en correspondance avec l’événement «&nbsp;TransactionEvent&nbsp;»
+</div>
 
 <p>EPCIS définit trois interfaces pour la tracabilité des événements&nbsp;:</p>
 
@@ -2169,7 +2175,10 @@ exemples opérationnels d'implémentations conformes provenant de
 différents fournisseurs<a role="doc-backlink" href="#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
 </section>
-<p>Tableau récapitulatif de l’évaluation des standards</p>
+
+<div style="text-align: center; display: block; clear: both;">
+Tableau récapitulatif de l’évaluation des standards
+</div>
 
 <h3 id="analyse-et-conclusion">Analyse et Conclusion</h3>
 
@@ -2190,7 +2199,7 @@ de gestion de traces.</p>
 
 <h5 id="hl7-fhir">HL7 FHIR</h5>
 
-<p><a name="l3313">​</a>Les informations identifiées dans <a href="LienSFE">l’étude métier</a>  sont couvertes
+<p><a name="l3316">​</a>Les informations identifiées dans <a href="LienSFE">l’étude métier</a>  sont couvertes
 par les attributs proposés par les ressources FHIR identifiées et
 détaillées dans ce document (AdverseEvent et AuditEvent). De plus, les
 critères de recherche proposés sont adaptés aux critères identifiés dans
@@ -2238,7 +2247,7 @@ tracabilité des événements&nbsp;».</p>
 
 <p>DICOM est un standard qui est largement utilisé dans le domaine de la
 radiologie. La partie «&nbsp;DICOM PS3.15 – Security and System Management
-Profiles&nbsp;» annexe «&nbsp;A.5 – Audit Trail Message Format Profile&nbsp;» spécifie
+Profiles&nbsp;» <a href="http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html">annexe «&nbsp;A.5 – Audit Trail Message Format Profile&nbsp;»</a> spécifie
 la structure des messages d’audit DICOM gérés dans les workflows
 radiologie. Cette spécification est reprise dans les profils ATNA et son
 option RESTful ATNA et SOLE pour spécifier la structure interne des
@@ -2274,7 +2283,7 @@ tracabilité des événements.</p>
 
 <h5 id="hl7-fhir-1">HL7 FHIR</h5>
 
-<p><a name="l3370">​</a>Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
+<p><a name="l3376">​</a>Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
 structurés et identifiés dans <a href="LienSFE">l’étude métier</a> «&nbsp;générique gestion
 des traces&nbsp;».</p>
 
@@ -2328,8 +2337,8 @@ inspirer pour les aspects génériques de tracabilité des événements.</p>
 <h5 id="dicom-1">DICOM</h5>
 
 <p>DICOM est le standard utilisé pour échanger des informations dans le
-domaine de la radiologie. L’annexe 5 – Audit Trail Message Format
-Profile, de la partie – DICOM PS3.15 spécifie le format des événements
+domaine de la radiologie. <a href="http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html">L’annexe 5 – Audit Trail Message Format
+Profile</a>, de la partie – DICOM PS3.15 spécifie le format des événements
 qui sont gérés lors d’un workflow de radiologie. Les profils ATNA et son
 option RESTful ATNA / SOLE se basent sur ce standard pour spécifier la
 structure des événements qui sont échangés (événements de sécurité et
@@ -2367,7 +2376,7 @@ suivants&nbsp;:</p>
 
 <ul>
   <li>
-    <p><a name="l3445">​</a>Le standard adopté doit offrir une couverture maximale des
+    <p><a name="l3454">​</a>Le standard adopté doit offrir une couverture maximale des
 informations identifiées dans <a href="LIENSSFE">l’étude métier</a>;</p>
   </li>
   <li>
@@ -2435,7 +2444,7 @@ spécifications GS1.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 15, 2026 09:50+0000">2026-01-15</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 15, 2026 10:29+0000">2026-01-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
