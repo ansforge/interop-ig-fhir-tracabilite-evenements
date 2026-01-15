@@ -3,7 +3,7 @@ ExampleIG : Validation Results
 
 err = 3, warn = 15, info = 1
 IG Publisher Version: 2.0.29
-Generated Wed Jan 14 13:26:50 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.[code]#0.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/[code])
+Generated Thu Jan 15 13:03:42 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.[code]#0.1.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/[code])
  Build Errors : 0 / 8 / 0
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/AuditEvent-TDEAuditEventExample : 0 / 0 / 1
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/Bundle-TDEBundleResultatReponseRechercheTracesExample : 0 / 2 / 4
