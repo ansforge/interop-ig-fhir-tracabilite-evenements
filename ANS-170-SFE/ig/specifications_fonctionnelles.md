@@ -31,7 +31,7 @@ Les lecteurs cibles sont principalement des chefs de projets ainsi que toute per
 
 Le domaine « Traçabilité » regroupe les groupes de processus qui décrivent la gestion des informations de traçabilité, informations qu'un système enregistre à chaque action qui lui est associée. Dans le cadre de la présente étude, ce domaine est constitué d’un unique groupe de processus « Gestion des traces ».
 
-Figure 1 Organisation du contexte métier de l'étude "Gestion des traces"
+Figure : Organisation du contexte métier de l'étude "Gestion des traces"
 
 Le périmètre de l'étude englobe les processus en couleur sur le diagramme de paquetage.
 
@@ -51,7 +51,7 @@ A noter que la gestion consiste en la création des traces et leur consultation.
 
 ##### Processus collaboratif "Créer des traces"
 
-Figure 2 : Processus collaboratif "Créer des traces"
+Figure : Processus collaboratif "Créer des traces"
 
 | | |
 | :--- | :--- |
@@ -60,11 +60,11 @@ Figure 2 : Processus collaboratif "Créer des traces"
 | Contraintes fonctionnelles | N/A |
 | Scénario nominal | 1 - La source des traces transmet les informations au gestionnaire de traces.2 - Le gestionnaire des traces confirme ou non l'enregistrement des traces. |
 
-Table 1 Caractéristiques du processus collaboratif
+Table : Caractéristiques du processus collaboratif
 
 ##### Processus collaboratif "Consulter une trace"
 
-Figure 3 : Processus collaboratif "Consulter une trace"
+Figure : Processus collaboratif "Consulter une trace"
 
 | | |
 | :--- | :--- |
@@ -73,11 +73,11 @@ Figure 3 : Processus collaboratif "Consulter une trace"
 | Contraintes fonctionnelles | N/A |
 | Scénario nominal | 1 - Le consommateur des traces effectue une demande de consultation d'une trace auprès du gestionnaire des traces.2 - Le gestionnaire des traces renvoie le détail de la trace au consommateur des traces. |
 
-Table 2 Caractéristiques du processus collaboratif
+Table : Caractéristiques du processus collaboratif
 
 ##### Processus collaboratif "Rechercher des traces"
 
-Figure 4 : Processus collaboratif "Rechercher des traces"
+Figure : Processus collaboratif "Rechercher des traces"
 
 | | |
 | :--- | :--- |
@@ -86,7 +86,7 @@ Figure 4 : Processus collaboratif "Rechercher des traces"
 | Contraintes fonctionnelles | N/A |
 | Scénario nominal | 1 - Le consommateur des traces effectue une recherche de traces auprès du gestionnaire des traces.2 - Le gestionnaire des traces renvoie la liste des traces répondant aux critères de recherche. |
 
-Table 3 Caractéristiques du processus collaboratif
+Table : Caractéristiques du processus collaboratif
 
 #### Liste des acteurs pour l'ensemble des processus
 
@@ -96,13 +96,13 @@ Table 3 Caractéristiques du processus collaboratif
 | Gestionnaire des traces | Il s'agit d'un acteur système qui enregistre les informations de traçabilité et fournit les traces en cas de consultation ou de recherches.Le gestionnaire des tr aces peut être, par exemple, un logiciel de traçabilité ou le module de traçabilité d'un logiciel métier. |
 | Source des traces | Il s'agit d'un acteur système qui transmet les informations de traçabilité relatives à une étape significative d'un processus métier suite à un événement au gestionnaire. |
 
-Table 4 Table des acteurs
+Table : Table des acteurs
 
 ### Description des processus collaboratifs et identification des flux
 
 #### Créer des traces
 
-Figure 5 : Processus collaboratif "Créer des traces"
+Figure : Processus collaboratif "Créer des traces"
 
 ##### Description des actions
 
@@ -111,7 +111,7 @@ Figure 5 : Processus collaboratif "Créer des traces"
 | Créer des traces | Envoyer les informations de traçabilité de la source au gestionnaire des traces. |
 | Recevoir et enregistrer les traces | Recevoir et enregistrer les informations de traçabilité. |
 
-Table 5 Tableau des actions
+Table : Tableau des actions
 
 ##### Identification des flux
 
@@ -120,11 +120,11 @@ Table 5 Tableau des actions
 | Flux 1 : TransmissionTrace | Créer des traces | Source des traces | Gestionnaire des traces | Oui |
 | Flux 1bis : RetourTransmissionTrace | Créer des traces | Gestionnaire des traces | Source des traces | Flux technique hors étude |
 
-Table 6 Flux
+Table : Flux
 
 #### Consulter une trace
 
-Figure 6 : Processus collaboratif "Consulter une trace"
+Figure : Processus collaboratif "Consulter une trace"
 
 ##### Description des actions
 
@@ -135,7 +135,7 @@ Figure 6 : Processus collaboratif "Consulter une trace"
 | Réceptionner la demande | Le gestionnaire réceptionne la demande de consultation d'une trace. |
 | Fournir la trace | Le gestionnaire des traces fournit la trace demandée. |
 
-Table 7 Tableau des actions
+Table : Tableau des actions
 
 ##### Identification des flux
 
@@ -144,11 +144,11 @@ Table 7 Tableau des actions
 | Flux 2 : ConsultationTrace | Consulter une trace | Consommateur des traces | Gestionnaire des traces | Oui |
 | Flux 3 : ReponseConsultationTrace | Consulter une trace | Gestionnaire des traces | Consommateur des traces | Oui |
 
-Table 8 Flux
+Table : Flux
 
 #### Rechercher des traces
 
-Figure 7 : Processus collaboratif "Rechercher des traces"
+Figure : Processus collaboratif "Rechercher des traces"
 
 ##### Description des actions
 
@@ -159,7 +159,7 @@ Figure 7 : Processus collaboratif "Rechercher des traces"
 | Réceptionner la recherche | Le gestionnaire des traces reçoit les critères de recherches. |
 | Rechercher et fournir les traces | Les traces sont recherchées par le gestionnaire des traces selon les critères définis par le consommateur des traces.Les traces trouvées sont ensuite retournées au consommateur. |
 
-Table 9 Tableau des actions
+Table : Tableau des actions
 
 ##### Identification des flux
 
@@ -168,7 +168,7 @@ Table 9 Tableau des actions
 | Flux 4 : RechercheTraces | Rechercher des traces | Consommateur des traces | Gestionnaire des traces | Oui |
 | Flux 5 : ReponseRechercheTraces | Rechercher des traces | Gestionnaire des traces | Consommateur des traces | Oui |
 
-Table 10 Flux
+Table : Flux
 
 #### Synthèse des flux
 
@@ -181,7 +181,7 @@ Table 10 Flux
 | Flux 4 : RechercheTraces | Rechercher des traces | Consommateur des traces | Gestionnaire des traces | Oui |
 | Flux 5 : ReponseRechercheTraces | Rechercher des traces | Gestionnaire des traces | Consommateur des traces | Oui |
 
-Table 11 Synthèse des flux identifiés
+Table : Synthèse des flux identifiés
 
 ### Identification des concepts véhiculés dans les flux d’informations et correspondance avec les classes et attributs du MOS
 
@@ -195,7 +195,7 @@ Table 11 Synthèse des flux identifiés
 | Acteurs de l'évènement | Acteurs liés à l'évènement. Il peut s'agir d'une personne (physique ou morale) ou d'un système à l'origine de l'évènement (émetteur) ou destinataire de l'évènement (récepteur). | Flux 1 - TransmissionTraceFlux 3 - ReponseConsultationTrace |
 | Objet de l'évènement | Tout objet impacté par un évènement qui doit être tracé.Le contenu correspond aux informations associées à l’évènement envoyées au gestionnaire de traces et qui doivent être conservées | Flux 1 - TransmissionTraceFlux 3 - ReponseConsultationTrace |
 
-Table 12 Concepts métier
+Table : Concepts métier
 
 #### Mise en équivalence MOS
 
@@ -207,13 +207,13 @@ Table 12 Concepts métier
 | Acteurs de l'évènement |   |   |   |   |
 | Objet de l'évènement |   |   |   |   |
 
-Table 13 Mise en équivalence MOS
+Table : Mise en équivalence MOS
 
 ### Modélisation des flux d'informations
 
 #### Flux 1 - TransmissionTrace
 
-Figure 8 Flux 1 - TransmissionTrace
+Figure : Flux 1 - TransmissionTrace
 
 ##### Classe "Trace"
 
@@ -223,7 +223,7 @@ Ensemble d'informations qu'un système enregistre à chaque action qui lui est a
 | :--- | :--- |
 | identifiant : [0..1] Identifiant | Identifiant de la trace. |
 
-Table 19 Attributs de la classe "Trace"
+Table : Attributs de la classe "Trace"
 
 ##### Classe "SourceTrace"
 
@@ -233,7 +233,7 @@ Système ayant émis la trace de l'évènement.
 | :--- | :--- |
 | identifiant : [0..1] Identifiant | Identifiant de la source de la trace. |
 
-Table 20 Attributs de la classe "SourceTrace"
+Table : Attributs de la classe "SourceTrace"
 
 ##### Classe "Evenement"
 
@@ -247,7 +247,7 @@ Fait marquant relatif à un objet, une personne, un processus, etc
 | declaration : [0..1] DateHeure | Date/heure à laquelle l'évènement est déclaré. |
 | description : [0..1] Texte | Description textuelle de l'évènement. |
 
-Table 21 Attributs de la classe "Evenement"
+Table : Attributs de la classe "Evenement"
 
 ##### Classe "ActeurEvenement"
 
@@ -258,7 +258,7 @@ Représente un acteur de l'évènement. De manière générale, il y aura un act
 | identifiant : [1..1] Identifiant | Identifiant de l'acteur de l'évènement. |
 | role : [1..1] Code | Rôle de l'acteur de l'évènement |
 
-Table 22 Attributs de la classe "ActeurEvenement"
+Table : Attributs de la classe "ActeurEvenement"
 
 ##### Classe "ObjetEvenement"
 
@@ -270,11 +270,11 @@ Détaille l'objet de l'évènement : tout objet impacté par un évènement qui
 | type : [0..1] Code | Type d'objet de l'évènement. |
 | contenu : [0..1] ObjetBinaire | Le contenu correspond aux informations associées à l’évènement envoyées au gestionnaire de traces et qui doivent être conservées. Par exemple, l’identifiant du document recherché. |
 
-Table 23 Attributs de la classe "ObjetEvenement"
+Table : Attributs de la classe "ObjetEvenement"
 
 #### Flux 2 - ConsultationTrace
 
-Figure 9 Flux 2 - ConsultationTrace
+Figure : Flux 2 - ConsultationTrace
 
 ##### Classe "Trace"
 
@@ -284,7 +284,7 @@ Ensemble d'informations qu'un système enregistre à chaque action qui lui est a
 | :--- | :--- |
 | identifiant : [0..1] Identifiant | Identifiant de la trace. |
 
-Table 24 Attributs de la classe "Trace"
+Table : Attributs de la classe "Trace"
 
 #### Flux 3 - ReponseConsultationTrace
 
@@ -305,5 +305,5 @@ Le modèle du flux est identique au flux 1 à la différence que la consultation
 | ActeurEvenement/identifiant | Identifiant de l'acteur de l'évènement. | Non |
 | ActeurEvenement/role | Rôle de l'acteur de l'évènement | Non |
 
-Table 25 Flux de recherche
+Table : Flux de recherche
 
