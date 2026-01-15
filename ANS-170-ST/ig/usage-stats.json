@@ -1,11 +1,11 @@
 {
-  "package": "ans.fhir.fr.[code]",
-  "version": "0.1.0",
+  "package": "ans.fhir.fr.tde",
+  "version": "2.0.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "FR",
   "extensions": [
     {
-      "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/EyeColor",
+      "url": "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/EyeColor",
       "title": "EyeColor",
       "types": [
         "CodeableConcept"
@@ -15,7 +15,7 @@
   "profiles": {
     "Patient": [
       {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient",
+        "url": "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/fr-patient",
         "title": "Patient français"
       }
     ]
@@ -62,7 +62,7 @@
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
     ],
-    "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/EyeColor": [
+    "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/EyeColor": [
       "Patient"
     ]
   }

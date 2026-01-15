@@ -3,14 +3,14 @@
   "id" : "TypeCarteVS",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : EnsembleValeurs TypeCarteVS</b></p><a name=\"TypeCarteVS\"> </a><a name=\"hcTypeCarteVS\"> </a><ul><li>Include tous les codes définis dans <a href=\"CodeSystem-type-carte-code-system.html\"><code>https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/type-carte-code-system</code></a><span title=\"La version nest pas explicitement indiquée, ce qui signifie quelle est fixée à la version fournie dans cette spécification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : EnsembleValeurs TypeCarteVS</b></p><a name=\"TypeCarteVS\"> </a><a name=\"hcTypeCarteVS\"> </a><ul><li>Include tous les codes définis dans <a href=\"CodeSystem-type-carte-code-system.html\"><code>https://interop.esante.gouv.fr/ig/fhir/tde/CodeSystem/type-carte-code-system</code></a><span title=\"La version nest pas explicitement indiquée, ce qui signifie quelle est fixée à la version fournie dans cette spécification\"> version &#x1F4E6;2.0.0</span></li></ul></div>"
   },
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/TypeCarteVS",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/ValueSet/TypeCarteVS",
+  "version" : "2.0.0",
   "name" : "TypeCarteVS",
   "title" : "Type Carte Value Set",
   "status" : "draft",
-  "date" : "2026-01-15T13:06:26+00:00",
+  "date" : "2026-01-15T15:23:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -29,7 +29,7 @@
   }],
   "compose" : {
     "include" : [{
-      "system" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/type-carte-code-system"
+      "system" : "https://interop.esante.gouv.fr/ig/fhir/tde/CodeSystem/type-carte-code-system"
     }]
   }
 }

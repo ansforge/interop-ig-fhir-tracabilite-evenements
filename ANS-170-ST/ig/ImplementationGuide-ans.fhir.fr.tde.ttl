@@ -6,22 +6,22 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]> a fhir:ImplementationGuide ;
+<https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde> a fhir:ImplementationGuide ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ans.fhir.fr.[code]"] ; # 
+  fhir:id [ fhir:v "ans.fhir.fr.tde"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.fhir.fr.[code]</b></p><a name=\"ans.fhir.fr.[code]\"> </a><a name=\"hcans.fhir.fr.[code]\"> </a><h2>ExampleIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]</pre></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.fhir.fr.tde</b></p><a name=\"ans.fhir.fr.tde\"> </a><a name=\"hcans.fhir.fr.tde\"> </a><h2>TDE</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde</pre></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
-     fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]"^^xsd:anyURI ;
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]>
+     fhir:v "https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde"^^xsd:anyURI ;
+     fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde>
   ] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
-  fhir:name [ fhir:v "ExampleIG"] ; # 
-  fhir:title [ fhir:v "ANS IG Example"] ; # 
+  fhir:version [ fhir:v "2.0.0"] ; # 
+  fhir:name [ fhir:v "TDE"] ; # 
+  fhir:title [ fhir:v "ANS - Traçabilité des événements"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-01-15T13:06:26+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-01-15T15:23:39+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -40,7 +40,7 @@
        fhir:display [ fhir:v "FRANCE" ]
      ] )
   ] ) ; # 
-  fhir:packageId [ fhir:v "ans.fhir.fr.[code]"] ; # 
+  fhir:packageId [ fhir:v "ans.fhir.fr.tde"] ; # 
   fhir:license [ fhir:v "CC0-1.0"] ; # 
   fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
   fhir:dependsOn ( [
@@ -362,7 +362,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/history.html"
+           fhir:v "https://interop.esante.gouv.fr/ig/fhir/tde/history.html"
          ]
        ] ) ;
        fhir:url [
@@ -736,7 +736,7 @@
        ] ;
        fhir:value [
          a fhir:Reference ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/Parameters/expansion-parameters> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/Parameters/expansion-parameters> ;
          fhir:reference [ fhir:v "Parameters/expansion-parameters" ]
        ]
      ] [
@@ -1029,7 +1029,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/history.html"
+           fhir:v "https://interop.esante.gouv.fr/ig/fhir/tde/history.html"
          ]
        ] ) ;
        fhir:url [
@@ -1409,7 +1409,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/competence-code-system> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/CodeSystem/competence-code-system> ;
          fhir:reference [ fhir:v "CodeSystem/competence-code-system" ]
        ] ;
        fhir:name [ fhir:v "Compétences CodeSystem" ] ;
@@ -1430,7 +1430,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/EyeColor> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/EyeColor> ;
          fhir:reference [ fhir:v "StructureDefinition/EyeColor" ]
        ] ;
        fhir:name [ fhir:v "EyeColor" ] ;
@@ -1451,7 +1451,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/EyeColorVS> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/ValueSet/EyeColorVS> ;
          fhir:reference [ fhir:v "ValueSet/EyeColorVS" ]
        ] ;
        fhir:name [ fhir:v "EyeColor Value Set" ] ;
@@ -1472,15 +1472,15 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/Patient/frpatient-exemple> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/Patient/frpatient-exemple> ;
          fhir:reference [ fhir:v "Patient/frpatient-exemple" ]
        ] ;
        fhir:name [ fhir:v "frpatient-exemple" ] ;
        fhir:description [ fhir:v "Exemple d'un patient français" ] ;
        fhir:example [
          a fhir:Canonical ;
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient"^^xsd:anyURI ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/fr-patient"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/fr-patient>
        ]
      ] [
        fhir:extension ( [
@@ -1494,7 +1494,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/MeltingPotVS> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/ValueSet/MeltingPotVS> ;
          fhir:reference [ fhir:v "ValueSet/MeltingPotVS" ]
        ] ;
        fhir:name [ fhir:v "Melting Pot Value Set" ] ;
@@ -1515,7 +1515,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/ModifiedAdministrativeGender> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/ValueSet/ModifiedAdministrativeGender> ;
          fhir:reference [ fhir:v "ValueSet/ModifiedAdministrativeGender" ]
        ] ;
        fhir:name [ fhir:v "ModifiedAdministrativeGender" ] ;
@@ -1536,7 +1536,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/fr-patient> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-patient" ]
        ] ;
        fhir:name [ fhir:v "Patient français" ] ;
@@ -1557,7 +1557,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/TypeCarteVS> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/ValueSet/TypeCarteVS> ;
          fhir:reference [ fhir:v "ValueSet/TypeCarteVS" ]
        ] ;
        fhir:name [ fhir:v "Type Carte Value Set" ] ;
@@ -1578,7 +1578,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/type-carte-code-system> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/CodeSystem/type-carte-code-system> ;
          fhir:reference [ fhir:v "CodeSystem/type-carte-code-system" ]
        ] ;
        fhir:name [ fhir:v "Type de carte" ] ;

@@ -1,4 +1,4 @@
-# Via syslog - ANS IG Example v0.1.0
+# Via syslog - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * **Via syslog**
@@ -24,7 +24,7 @@ La première étape de construction de ce flux consiste à créer le message qui
 
 Ce contenu est ensuite encapsulé dans un message syslog qui sera transmis via UDP ou TLS au gestionnaire de traces.
 
-Un exemple de flux est joint (cf [annexe 3](TDE_Flux01-versionSyslog.xml)).
+Un exemple de flux est joint (cf [Le fichier TDE_Flux01-versionSyslog.xml](TDE_Flux01-versionSyslog.xml)).
 
 #### Flux 4 : RechercheTraces
 
@@ -67,4 +67,6 @@ Ce flux véhicule le résultat de la recherche de traces.
 Dans le contexte d’un échange basé sur la transaction IHE ITI-82, ce flux est composé d’un code HTTP 200 ok et le corps de la réponse HTTP est un tableau de messages Syslog au format demandé par le consommateur de traces (JSON ou XML).
 
 Pour des informations sur les autres codes HTTP (HTTP status code) retournés en cas d’échec, consulter le cadre technique IHE, section 3.82.4.2.2.
+
+Un exemple de flux est joint (cf [Le fichier TDE_Flux05-VersionHTTP.ini](TDE_Flux05-VersionHTTP.ini)).
 

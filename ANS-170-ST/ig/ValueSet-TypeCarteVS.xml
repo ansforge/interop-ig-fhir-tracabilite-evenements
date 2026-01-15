@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="TypeCarteVS"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : EnsembleValeurs TypeCarteVS</b></p><a name="TypeCarteVS"> </a><a name="hcTypeCarteVS"> </a><ul><li>Include tous les codes définis dans <a href="CodeSystem-type-carte-code-system.html"><code>https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/type-carte-code-system</code></a><span title="La version nest pas explicitement indiquée, ce qui signifie quelle est fixée à la version fournie dans cette spécification"> version &#x1F4E6;0.1.0</span></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : EnsembleValeurs TypeCarteVS</b></p><a name="TypeCarteVS"> </a><a name="hcTypeCarteVS"> </a><ul><li>Include tous les codes définis dans <a href="CodeSystem-type-carte-code-system.html"><code>https://interop.esante.gouv.fr/ig/fhir/tde/CodeSystem/type-carte-code-system</code></a><span title="La version nest pas explicitement indiquée, ce qui signifie quelle est fixée à la version fournie dans cette spécification"> version &#x1F4E6;2.0.0</span></li></ul></div>
   </text>
-  <url value="https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/TypeCarteVS"/>
-  <version value="0.1.0"/>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/tde/ValueSet/TypeCarteVS"/>
+  <version value="2.0.0"/>
   <name value="TypeCarteVS"/>
   <title value="Type Carte Value Set"/>
   <status value="draft"/>
-  <date value="2026-01-15T13:06:26+00:00"/>
+  <date value="2026-01-15T15:23:39+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -29,7 +29,7 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/type-carte-code-system"/>
+      <system value="https://interop.esante.gouv.fr/ig/fhir/tde/CodeSystem/type-carte-code-system"/>
     </include>
   </compose>
 </ValueSet>

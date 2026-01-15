@@ -1,4 +1,4 @@
-# Accueil - ANS IG Example v0.1.0
+# Accueil - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * **Accueil**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code] | *Version*:0.1.0 |
-| Draft as of 2026-01-15 | *Computable Name*:ExampleIG |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde | *Version*:2.0.0 |
+| Draft as of 2026-01-15 | *Computable Name*:TDE |
 
  **Brief description of this Implementation Guide**
  [Add a brief description of this IG in English] 
@@ -65,13 +65,13 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 ```json
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "ans.fhir.fr.[code]",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]",
-  "version" : "0.1.0",
-  "name" : "ExampleIG",
-  "title" : "ANS IG Example",
+  "id" : "ans.fhir.fr.tde",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde",
+  "version" : "2.0.0",
+  "name" : "TDE",
+  "title" : "ANS - Traçabilité des événements",
   "status" : "draft",
-  "date" : "2026-01-15T13:06:26+00:00",
+  "date" : "2026-01-15T15:23:39+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -95,7 +95,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       ]
     }
   ],
-  "packageId" : "ans.fhir.fr.[code]",
+  "packageId" : "ans.fhir.fr.tde",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.1"],
   "dependsOn" : [
@@ -277,7 +277,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           },
           {
             "url" : "value",
-            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/[code]/history.html"
+            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/tde/history.html"
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -638,7 +638,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           },
           {
             "url" : "value",
-            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/[code]/history.html"
+            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/tde/history.html"
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -894,7 +894,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         },
         "name" : "frpatient-exemple",
         "description" : "Exemple d'un patient français",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/fr-patient"
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/fr-patient"
       },
       {
         "extension" : [

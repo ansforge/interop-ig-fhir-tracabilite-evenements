@@ -1,4 +1,4 @@
-# Artifacts Summary - ANS IG Example v0.1.0
+# Artifacts Summary - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * **Artifacts Summary**
