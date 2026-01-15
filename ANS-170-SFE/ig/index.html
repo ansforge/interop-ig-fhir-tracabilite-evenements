@@ -245,7 +245,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
   <li><a href="#périmètre-du-projet" id="markdown-toc-périmètre-du-projet">Périmètre du projet</a></li>
-  <li><a href="#auteurs-et-contributeurs" id="markdown-toc-auteurs-et-contributeurs">Auteurs et contributeurs</a></li>
+  <li><a href="#standards-utilisés" id="markdown-toc-standards-utilisés">Standards utilisés</a></li>
   <li><a href="#dépendances" id="markdown-toc-dépendances">Dépendances</a></li>
   <li><a href="#propriété-intellectuelle" id="markdown-toc-propriété-intellectuelle">Propriété intellectuelle</a></li>
 </ul>
@@ -262,23 +262,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </blockquote>
 </div>
 
-<!--  A décommenter si CI-SIS
 <div class="figure">
-    <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS" style="width:100%;">
+    <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS" style="width:100%;" />
 </div>
--->
 
 <h3 id="introduction">Introduction</h3>
+<p>Ce guide d'implémentation présente une spécification générique des
+échanges pour la gestion des traces.</p>
 
-<p>Définir ici de quoi parle l'IG (En termes non expert, compréhensible par un patient). Rajouter également les détails techniques sur le contexte et le besoin de cet IG</p>
-
-<p>Les principales sections de l'IG  sont :</p>
-
-<ul>
-  <li>Le contexte de l'IG, quelle problématique il résout</li>
-  <li>Ce que les Implémenteurs doivent mettre en place</li>
-  <li>Un onglet "Ressources de conformité" pour s'assurer d'un schéma global entre tous les IGs</li>
-</ul>
+<p>Les traces sont l’ensemble des informations enregistrées relatant les
+actions entreprises par un système en conséquence d’un événement. Les
+informations peuvent aussi bien porter sur des dispositifs physiques,
+comme par exemple un dispositif médical implantable (changement de lieu,
+mise à jour du statut), que sur des actions utilisateurs (connexion à un
+système, création d'un utilisateur). Dans le cadre de cette étude, les
+processus qui sont à l'origine des traces sont hors périmètre.</p>
 
 <h3 id="périmètre-du-projet">Périmètre du projet</h3>
 
@@ -286,26 +284,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Toujours laisser l'onglet "Ressources de conformité" pour s'assurer d'une cohérence globales entre tous les IGs</p>
 
-<h3 id="auteurs-et-contributeurs">Auteurs et contributeurs</h3>
+<h4 id="lectorat-cible">Lectorat cible</h4>
 
-<table>
-  <thead>
-    <tr>
-      <th>Role</th>
-      <th>Nom</th>
-      <th>Organisation</th>
-      <th>Contact</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Primary Editor</strong></td>
-      <td>Prenom Nom</td>
-      <td>Agence du Numérique en Santé</td>
-      <td>prenom.nom@address.email</td>
-    </tr>
-  </tbody>
-</table>
+<p>Les lecteurs cibles sont principalement des chefs de projets ainsi que
+toute personne concernée par la maitrise d’ouvrage et qui spécifie des
+projets avec des interfaces interopérables.</p>
+
+<h3 id="standards-utilisés">Standards utilisés</h3>
+
+<p>Les données véhiculées dans ce volet ainsi que les interactions entre les systèmes reposent sur le standard HL7 FHIR Release 4.</p>
+
+<p>Les interactions font référence à un certain nombre de ressources du standard ainsi qu’aux spécifications de l’API REST FHIR, basées sur le protocole HTTP dans sa version sécurisée HTTPS. Les syntaxes retenues sont la syntaxe XML et JSON.</p>
+
+<h4 id="ressources-fhir-profilées">Ressources FHIR profilées</h4>
+
+<p>Les ressources profilées dans le cadre de ce guide d'implémentation sont les suivantes :</p>
+
+<table class="lines"><tr><td style="background-color: #eeeeee">Profil parent</td><td style="background-color: #eeeeee">Profil</td><td style="background-color: #eeeeee">Description</td></tr></table>
 
 <h3 id="dépendances">Dépendances</h3>
 
@@ -375,7 +370,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 15, 2026 10:23+0000">2026-01-15</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 15, 2026 11:00+0000">2026-01-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
