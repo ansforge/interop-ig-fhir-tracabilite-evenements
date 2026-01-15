@@ -41,7 +41,7 @@ le contenu de la trace.
 Ce contenu est ensuite encapsulé dans un message syslog qui sera
 transmis via UDP ou TLS au gestionnaire de traces.
 
-Un exemple de flux est joint (cf [annexe 3](TDE_Flux01-versionSyslog.xml)).
+Un exemple de flux est joint (cf [Le fichier TDE_Flux01-versionSyslog.xml](TDE_Flux01-versionSyslog.xml)).
 
 #### Flux 4 : RechercheTraces
 
@@ -162,3 +162,5 @@ de traces (JSON ou XML).
 Pour des informations sur les autres codes HTTP (HTTP status code)
 retournés en cas d’échec, consulter le cadre technique IHE, section
 3.82.4.2.2.
+
+Un exemple de flux est joint (cf [Le fichier TDE_Flux05-VersionHTTP.ini](TDE_Flux05-VersionHTTP.ini)).
