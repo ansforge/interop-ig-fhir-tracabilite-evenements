@@ -17,13 +17,9 @@
 
 ### Introduction
 
-Définir ici de quoi parle l'IG (En termes non expert, compréhensible par un patient). Rajouter également les détails techniques sur le contexte et le besoin de cet IG
+Ce guide d'implémentation présente une spécification générique des échanges pour la gestion des traces.
 
-Les principales sections de l'IG sont :
-
-* Le contexte de l'IG, quelle problématique il résout
-* Ce que les Implémenteurs doivent mettre en place
-* Un onglet "Ressources de conformité" pour s'assurer d'un schéma global entre tous les IGs
+Les traces sont l’ensemble des informations enregistrées relatant les actions entreprises par un système en conséquence d’un événement. Les informations peuvent aussi bien porter sur des dispositifs physiques, comme par exemple un dispositif médical implantable (changement de lieu, mise à jour du statut), que sur des actions utilisateurs (connexion à un système, création d'un utilisateur). Dans le cadre de cette étude, les processus qui sont à l'origine des traces sont hors périmètre.
 
 ### Périmètre du projet
 
@@ -31,11 +27,23 @@ Définir en quelques lignes en anglais quel est le périmètre du projet
 
 Toujours laisser l'onglet "Ressources de conformité" pour s'assurer d'une cohérence globales entre tous les IGs
 
-### Auteurs et contributeurs
+#### Lectorat cible
 
-| | | | |
-| :--- | :--- | :--- | :--- |
-| **Primary Editor** | Prenom Nom | Agence du Numérique en Santé | prenom.nom@address.email |
+Les lecteurs cibles sont principalement des chefs de projets ainsi que toute personne concernée par la maitrise d’ouvrage et qui spécifie des projets avec des interfaces interopérables.
+
+### Standards utilisés
+
+Les données véhiculées dans ce volet ainsi que les interactions entre les systèmes reposent sur le standard HL7 FHIR Release 4.
+
+Les interactions font référence à un certain nombre de ressources du standard ainsi qu’aux spécifications de l’API REST FHIR, basées sur le protocole HTTP dans sa version sécurisée HTTPS. Les syntaxes retenues sont la syntaxe XML et JSON.
+
+#### Ressources FHIR profilées
+
+Les ressources profilées dans le cadre de ce guide d'implémentation sont les suivantes :
+
+| | | |
+| :--- | :--- | :--- |
+| Profil parent | Profil | Description |
 
 ### Dépendances
 
@@ -63,7 +71,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "ExampleIG",
   "title" : "ANS IG Example",
   "status" : "draft",
-  "date" : "2026-01-15T09:18:10+00:00",
+  "date" : "2026-01-15T13:06:26+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
