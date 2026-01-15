@@ -11,9 +11,11 @@
 * [Artifacts Summary](artifacts.md)
 * [Specifications Techniques](specifications_techniques.md)
 * [Sécurité](securite.md)
+* [Mise en correspondance AuditEvent / DICOM](annexe_audit_dicom.md)
 * [Autres Ressources](autres_ressources.md)
 * [Specifications Fonctionnelles](specifications_fonctionnelles.md)
 * [Vue d'ensemble](construction_des_flux.md)
+* [Glossaire](glossaire.md)
 * [Téléchargements et usages](downloads.md)
 
 ## Resources

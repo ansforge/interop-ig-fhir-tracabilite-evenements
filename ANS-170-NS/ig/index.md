@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code] | *Version*:0.1.0 |
-| Draft as of 2025-12-18 | *Computable Name*:ExampleIG |
+| Draft as of 2026-01-15 | *Computable Name*:ExampleIG |
 
  **Brief description of this Implementation Guide**
  [Add a brief description of this IG in English] 
@@ -63,7 +63,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "ExampleIG",
   "title" : "ANS IG Example",
   "status" : "draft",
-  "date" : "2025-12-18T10:47:12+00:00",
+  "date" : "2026-01-15T09:50:34+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -1061,6 +1061,28 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
               "generation" : "markdown"
             }
           ]
+        },
+        {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "annexe_audit_dicom.html"
+            }
+          ],
+          "nameUrl" : "annexe_audit_dicom.html",
+          "title" : "Mise en correspondance AuditEvent / DICOM",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "glossaire.html"
+            }
+          ],
+          "nameUrl" : "glossaire.html",
+          "title" : "Glossaire",
+          "generation" : "markdown"
         },
         {
           "extension" : [

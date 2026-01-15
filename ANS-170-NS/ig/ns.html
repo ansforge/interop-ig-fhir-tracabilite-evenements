@@ -124,6 +124,19 @@
     <a href="artifacts.html">Ressources de conformité</a>
   </li>
   <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 3 - Annexes
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="glossaire.html">Glossaire</a>
+      </li>
+      <li>
+        <a href="annexe_audit_dicom.html">Mise en correspondance AuditEvent / DICOM</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
       <b class="caret"></b>
     </a>
@@ -212,14 +225,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#les-standards" id="markdown-toc-les-standards">Les standards</a></li>
   <li><a href="#synthèse-comparative-des-standards-présentés" id="markdown-toc-synthèse-comparative-des-standards-présentés">Synthèse comparative des standards présentés</a></li>
   <li><a href="#analyse-et-conclusion" id="markdown-toc-analyse-et-conclusion">Analyse et Conclusion</a></li>
-  <li><a href="#annexes-a" id="markdown-toc-annexes-a">Annexes A</a></li>
-  <li><a href="#annexes-b" id="markdown-toc-annexes-b">Annexes B</a></li>
 </ul>
 
 </div>
 <h3 id="introduction">Introduction</h3>
 
-<p><a name="l390">​</a>Ce document regroupe l’analyse des standards identifiés comme
+<p><a name="l405">​</a>Ce document regroupe l’analyse des standards identifiés comme
 potentiellement adaptés pour la mise en œuvre, d’un point de vue
 «&nbsp;générique&nbsp;» de la tracabilité des événements <a href="LIEN SFE">Étude métier – Gestion de
 traces</a>:</p>
@@ -308,7 +319,7 @@ que la fonctionnalité de «&nbsp;tracabilité des événements&nbsp;» peut êt
 dans différents contextes, prenant en compte différents besoins
 fonctionnels métier.</p>
 
-<p><a name="l528">​</a>Ce besoin d’interopérabilité concerne la mise en œuvre d’un mécanisme
+<p><a name="l543">​</a>Ce besoin d’interopérabilité concerne la mise en œuvre d’un mécanisme
 qui permet de gérer la traçabilité «&nbsp;d’objets métier&nbsp;» (médicaments,
 dispositifs médicaux, etc.) tout au long de leur cycle de vie. Par
 exemple, il s’agit de fournir un mécanisme de création et de
@@ -330,12 +341,12 @@ métier sont donc (cf. <a href="LienSFE">l’étude métier</a>)&nbsp;:</p>
   </li>
 </ul>
 
-<p><a name="l555">​</a><a href="LienSFE">l’étude métier</a> a été menée concernant la
+<p><a name="l570">​</a><a href="LienSFE">l’étude métier</a> a été menée concernant la
 modélisation des flux entre acteurs/composants d’un système
 d’information ou entre systèmes d’information pour la mise en œuvre de
 la gestion de traces.</p>
 
-<p><a name="l560">​</a>Les standards présentés dans ce document doivent gérer l’ensemble des
+<p><a name="l575">​</a>Les standards présentés dans ce document doivent gérer l’ensemble des
 flux métiers structurés et identifiés dans <a href="LienSFE">l’étude métier</a> aussi
 bien dans un contexte de client lourd que dans un contexte de mobilité.</p>
 
@@ -576,16 +587,15 @@ GET.</p>
 
 <h5 id="synthèse">Synthèse</h5>
 
-<p><a name="l854">​</a>Plusieurs ressources FHIR ont été identifiées comme pouvant être
+<p><a name="l869">​</a>Plusieurs ressources FHIR ont été identifiées comme pouvant être
 utilisées pour aider à représenter les classes de <a href="LIENSSFE">l’étude métier</a> :
 AdverseEvent, AuditEvent, Communication, CommunicationRequest,
 eventDefinition, SearchParameter.</p>
 
-<p><a name="l860">​</a>Le tableau ci-dessous reprend&nbsp;les classes identifiées dans <a href="LienSFE">l’étude métier</a>(en lignes) ainsi que chacune des ressources pertinentes
+<p><a name="l875">​</a>Le tableau ci-dessous reprend&nbsp;les classes identifiées dans <a href="LienSFE">l’étude métier</a>(en lignes) ainsi que chacune des ressources pertinentes
 étudiées dans ce document (en colonnes) de façon à vérifier l’adéquation
-des ressources FHIR avec le besoin métier. L’annexe 6.1 détaille la mise
-en correspondance entre les attributs de la classe «&nbsp;Evénement&nbsp;» et
-celles des ressources FHIR étudiées.</p>
+des ressources FHIR avec le besoin métier. <a href="annexe_audit_dicom.html">L’annexe</a> détaille la mise
+en correspondance entre les attributs de la classe «&nbsp;Evénement&nbsp;» et celles des ressources FHIR étudiées.</p>
 
 <table style="width:100%;">
 <colgroup>
@@ -697,7 +707,7 @@ entity.detail</td>
 </tbody>
 </table>
 
-<p>Tableau 1 Résumé des ressources FHIR</p>
+<p>Résumé des ressources FHIR</p>
 
 <p>D’après ce tableau, nous pouvons voir&nbsp;:</p>
 
@@ -775,7 +785,7 @@ de recherche relatifs à une ressource.</p>
   </tbody>
 </table>
 
-<p>Tableau 2 Mapping des critères de recherche</p>
+<p>Mapping des critères de recherche</p>
 
 <p>FHIR décrit également une API REST réutilisant les méthodes HTTP,
 celle-ci sera utilisée dans les scénarios ci-après pour permettre
@@ -1412,7 +1422,7 @@ AuditMessage</strong></th>
 </tbody>
 </table>
 
-<p>Tableau 3 Mapping DICOM avec les concepts de l’étude métier</p>
+<p>Mapping DICOM avec les concepts de l’étude métier</p>
 
 <p>Cela confirme l’idée de s’inspirer du profil IHE ATNA, de son option
 RESTful ATNA et du profil SOLE pour spécifier techniquement la volet
@@ -1475,7 +1485,7 @@ pour compléter le contexte et supporter l’interprétation des données
   <img src="ns_image8.png" alt="tracabilité des événements" style="display:block; margin:auto;"/>
 </div>
 
-<p>Figure 1 «&nbsp;Event data&nbsp;» et «&nbsp;Master data&nbsp;» (source<a href="http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration">La doctrine du CI-SIS</a>, &sect; 6.1)</p>
+<p>«&nbsp;Event data&nbsp;» et «&nbsp;Master data&nbsp;» (source<a href="http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration">La doctrine du CI-SIS</a>, &sect; 6.1)</p>
 
 <p>Les données «&nbsp;Event data&nbsp;» sont transmises via les interfaces «&nbsp;Capture
 and Query&nbsp;» d’EPCIS. Quatre mécanismes sont fournis pour transmettre les
@@ -1600,8 +1610,7 @@ TransactionEvent.Desitnation.dest</td>
 </tr>
 </tbody>
 </table>
-
-<p>Tableau 4 Mise en correspondance avec l’événement «&nbsp;TransactionEvent&nbsp;»</p>
+<p>Mise en correspondance avec l’événement «&nbsp;TransactionEvent&nbsp;»</p>
 
 <p>EPCIS définit trois interfaces pour la tracabilité des événements&nbsp;:</p>
 
@@ -2160,8 +2169,7 @@ exemples opérationnels d'implémentations conformes provenant de
 différents fournisseurs<a role="doc-backlink" href="#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
 </section>
-
-<p>Tableau 5 Tableau récapitulatif de l’évaluation des standards</p>
+<p>Tableau récapitulatif de l’évaluation des standards</p>
 
 <h3 id="analyse-et-conclusion">Analyse et Conclusion</h3>
 
@@ -2182,7 +2190,7 @@ de gestion de traces.</p>
 
 <h5 id="hl7-fhir">HL7 FHIR</h5>
 
-<p><a name="l3295">​</a>Les informations identifiées dans <a href="LienSFE">l’étude métier</a>  sont couvertes
+<p><a name="l3313">​</a>Les informations identifiées dans <a href="LienSFE">l’étude métier</a>  sont couvertes
 par les attributs proposés par les ressources FHIR identifiées et
 détaillées dans ce document (AdverseEvent et AuditEvent). De plus, les
 critères de recherche proposés sont adaptés aux critères identifiés dans
@@ -2266,7 +2274,7 @@ tracabilité des événements.</p>
 
 <h5 id="hl7-fhir-1">HL7 FHIR</h5>
 
-<p><a name="l3352">​</a>Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
+<p><a name="l3370">​</a>Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
 structurés et identifiés dans <a href="LienSFE">l’étude métier</a> «&nbsp;générique gestion
 des traces&nbsp;».</p>
 
@@ -2298,7 +2306,7 @@ la façon suivante&nbsp;:</p>
 <div style="text-align: center; display: block; clear: both;">
   <img src="ns_image10.png" alt="tracabilité des événements" style="display:block; margin:auto;"/>
 </div>
-<p>Figure 2 Positionnement des profils ATNA et son option RESTful ATNA /
+<p>Positionnement des profils ATNA et son option RESTful ATNA /
 SOLE</p>
 
 <p>L’option RESTful ATNA, avec la possibilité de l’étendre si nécessaire en
@@ -2359,7 +2367,7 @@ suivants&nbsp;:</p>
 
 <ul>
   <li>
-    <p><a name="l3427">​</a>Le standard adopté doit offrir une couverture maximale des
+    <p><a name="l3445">​</a>Le standard adopté doit offrir une couverture maximale des
 informations identifiées dans <a href="LIENSSFE">l’étude métier</a>;</p>
   </li>
   <li>
@@ -2386,154 +2394,6 @@ les sections 5.1 et 5.1.5, l’option RESTful ATNA semble le plus adapté
 au besoin «&nbsp;générique tracabilité des événements&nbsp;», en s’inspirant aussi des
 spécifications GS1.</p>
 
-<h3 id="annexes-a">Annexes A</h3>
-
-<h4 id="annexe-1-mise-en-correspondance">Annexe 1&nbsp;: Mise en correspondance</h4>
-
-<p>Cette section reprend, la mise en correspondance des objets de la SFE
-avec la ressource FHIR «&nbsp;AuditEvent&nbsp;» et la structure AuditMessage de
-DICOM :</p>
-
-<table style="width:98%;">
-<colgroup>
-<col style="width: 17%"/>
-<col style="width: 19%"/>
-<col style="width: 21%"/>
-<col style="width: 21%"/>
-<col style="width: 19%"/>
-</colgroup>
-<thead>
-<tr>
-<th rowspan="2" style="text-align: center;">Nom Classe</th>
-<th rowspan="2" style="text-align: center;">Nom attribut</th>
-<th rowspan="2" style="text-align: center;">AuditEvent</th>
-<th colspan="2" style="text-align: center;">DICOM</th>
-</tr>
-<tr>
-<th style="text-align: center;"><strong>Elément du schéma
-AuditMessage</strong></th>
-<th style="text-align: center;"><strong>Sous-Elément</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">Trace</td>
-<td style="text-align: center;">identifiant</td>
-<td style="text-align: center;">id</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;">SourceTrace</td>
-<td style="text-align: center;">identifiant</td>
-<td style="text-align: center;">source</td>
-<td style="text-align: center;">SourceAuditIdentification</td>
-<td style="text-align: center;">AuditEnterpriseSiteId</td>
-</tr>
-<tr>
-<td rowspan="5" style="text-align: center;">Evénement</td>
-<td style="text-align: center;">typeEvenement</td>
-<td style="text-align: center;">type</td>
-<td rowspan="5" style="text-align: center;">EventIdentification</td>
-<td style="text-align: center;">EventID</td>
-</tr>
-<tr>
-<td style="text-align: center;">sousTypeEvement</td>
-<td style="text-align: center;">Subtype</td>
-<td style="text-align: center;">EventTypeCode</td>
-</tr>
-<tr>
-<td style="text-align: center;">occurence</td>
-<td style="text-align: center;">period.start</td>
-<td style="text-align: center;">EventDateTime</td>
-</tr>
-<tr>
-<td style="text-align: center;">declaration</td>
-<td style="text-align: center;">recorded</td>
-<td style="text-align: center;">Possibilité utiliser le champ
-«&nbsp;TIMESTAMP&nbsp;» du protocole syslog</td>
-</tr>
-<tr>
-<td style="text-align: center;">description</td>
-<td style="text-align: center;">outcomeDesc</td>
-<td style="text-align: center;">EventOutcomeDescription</td>
-</tr>
-<tr>
-<td rowspan="2" style="text-align: center;">ActeurEvenement</td>
-<td style="text-align: center;">identifiant</td>
-<td style="text-align: center;">agent.who.identifier</td>
-<td rowspan="2" style="text-align: center;">ActiveParticipant</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;">role</td>
-<td style="text-align: center;">Agent.role</td>
-<td style="text-align: center;">RoleIdCode</td>
-</tr>
-<tr>
-<td rowspan="3" style="text-align: center;">ObjectEvenement</td>
-<td style="text-align: center;">identifiant</td>
-<td style="text-align: center;">entity.what.identifier</td>
-<td rowspan="3" style="text-align: center;">ParticipantObjectIdentification</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;">type</td>
-<td style="text-align: center;">entity.type</td>
-<td style="text-align: center;">ParticipantObjectTypeCode</td>
-</tr>
-<tr>
-<td style="text-align: center;">contenu</td>
-<td style="text-align: center;">entity.what ou entity.query ou
-entity.detail</td>
-<td style="text-align: center;"><p>ParticipantObjectDetail.value</p>
-<p>ou ParticipantObjectQuery</p>
-<p>ou ParticipantObjectID</p></td>
-</tr>
-</tbody>
-</table>
-
-<p>Tableau 6 Mise en correspondance avec la ressource «&nbsp;AuditEvent&nbsp;» et la
-structure AuditMessage</p>
-
-<h3 id="annexes-b">Annexes B</h3>
-
-<h4 id="annexe-1-glossaire">Annexe 1&nbsp;: Glossaire</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th>Sigle / Acronyme</th>
-      <th>Signification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>ASIP Santé</td>
-      <td>Agence Française de la Santé Numérique</td>
-    </tr>
-    <tr>
-      <td>HL7</td>
-      <td><em>Health Level 7</em></td>
-    </tr>
-    <tr>
-      <td>FHIR</td>
-      <td><em>Fast Healthcare Interoperability Ressources</em></td>
-    </tr>
-    <tr>
-      <td>CI-SIS</td>
-      <td>Cadre d’interopérabilité des systèmes d’information de santé</td>
-    </tr>
-    <tr>
-      <td>DICOM</td>
-      <td>Digital Imaging and COmmunication in Medecine</td>
-    </tr>
-    <tr>
-      <td>GS1</td>
-      <td>Global Standards 1</td>
-    </tr>
-  </tbody>
-</table>
 
 
 
@@ -2575,7 +2435,7 @@ structure AuditMessage</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 18, 2025 10:47+0000">2025-12-18</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.[code]#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 15, 2026 09:50+0000">2026-01-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

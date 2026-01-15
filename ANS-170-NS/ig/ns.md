@@ -113,7 +113,7 @@ Enfin, le corps des requêtes HTTP peut être formaté en XML, JSON ou RDF (seul
 
 Plusieurs ressources FHIR ont été identifiées comme pouvant être utilisées pour aider à représenter les classes de [l’étude métier](LIENSSFE) : AdverseEvent, AuditEvent, Communication, CommunicationRequest, eventDefinition, SearchParameter.
 
-Le tableau ci-dessous reprend les classes identifiées dans [l’étude métier](LienSFE)(en lignes) ainsi que chacune des ressources pertinentes étudiées dans ce document (en colonnes) de façon à vérifier l’adéquation des ressources FHIR avec le besoin métier. L’annexe 6.1 détaille la mise en correspondance entre les attributs de la classe « Evénement » et celles des ressources FHIR étudiées.
+Le tableau ci-dessous reprend les classes identifiées dans [l’étude métier](LienSFE)(en lignes) ainsi que chacune des ressources pertinentes étudiées dans ce document (en colonnes) de façon à vérifier l’adéquation des ressources FHIR avec le besoin métier. [L’annexe](annexe_audit_dicom.md) détaille la mise en correspondance entre les attributs de la classe « Evénement » et celles des ressources FHIR étudiées.
 
 | | | | | | |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -130,7 +130,7 @@ Le tableau ci-dessous reprend les classes identifiées dans [l’étude métier
 | type |  | entity.type | reasonCode | reasonCode | |
 | contenu | referenceDocument | entity.what ou entity.query ou entity.detail | Payload | Payload | |
 
-Tableau 1 Résumé des ressources FHIR
+Résumé des ressources FHIR
 
 D’après ce tableau, nous pouvons voir :
 
@@ -149,7 +149,7 @@ Ce deuxième tableau présente le mapping entre les paramètres de recherche ide
 | acteurEvenement | Contributor / recorder | agent | Sender / Recipient | Sender / Recipient |
 | Autres paramètres | **A prendre en compte en fonction du besoin métier** | **A prendre en compte en fonction du besoin métier** | **A prendre en compte en fonction du besoin métier** | **A prendre en compte en fonction du besoin métier** |
 
-Tableau 2 Mapping des critères de recherche
+Mapping des critères de recherche
 
 FHIR décrit également une API REST réutilisant les méthodes HTTP, celle-ci sera utilisée dans les scénarios ci-après pour permettre l’interaction entre les différents acteurs impliqués dans le cas d’usage « générique » de la « tracabilité des événements ».
 
@@ -388,7 +388,7 @@ Le but de cette étude « Normes & Standards » n’est pas d’analyser en d�
 | type | ParticipantObjectTypeCode | | |
 | contenu | ParticipantObjectDetail.valueou ParticipantObjectQueryou ParticipantObjectID | | |
 
-Tableau 3 Mapping DICOM avec les concepts de l’étude métier
+Mapping DICOM avec les concepts de l’étude métier
 
 Cela confirme l’idée de s’inspirer du profil IHE ATNA, de son option RESTful ATNA et du profil SOLE pour spécifier techniquement la volet « générique tracabilité des événements ».
 
@@ -407,7 +407,7 @@ Le point important mis en avant par GS1 est que la fonctionnalité centrale d’
 
 Le standard EPCIS spécifie les fonctionnalités et les structures de données pour créer et partager la visibilité sur les événements intra et inter-entreprises. Le standard EPCIS repose sur deux types de données : « Event data » et « Master data », codées en XML. « Event Data » sont gérées au cours d’un processus métier ; « Master data » sont des données pour compléter le contexte et supporter l’interprétation des données « Event data ».
 
-Figure 1 « Event data » et « Master data » (source[La doctrine du CI-SIS](http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration), § 6.1)
+« Event data » et « Master data » (source[La doctrine du CI-SIS](http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration), § 6.1)
 
 Les données « Event data » sont transmises via les interfaces « Capture and Query » d’EPCIS. Quatre mécanismes sont fournis pour transmettre les données « Master data » :
 
@@ -444,7 +444,7 @@ Le « TransactionEvent » semble le plus se rapprocher du besoin métier « g
 | type |  | |
 | contenu | Master data | |
 
-Tableau 4 Mise en correspondance avec l’événement « TransactionEvent »
+Mise en correspondance avec l’événement « TransactionEvent »
 
 EPCIS définit trois interfaces pour la tracabilité des événements :
 
@@ -649,7 +649,7 @@ Cette section présente une synthèse comparative des standards et profils analy
 1. Un standard de base traite des cas d’usage relativement génériques et diversifiés et qui restent à un niveau abstrait (et donc ne traitent pas des cas pointus dans un domaine spécifique)[↩︎](#fnref2)
 1. L’adoption par le marché peut être démontrée par des exemples opérationnels d'implémentations conformes provenant de différents fournisseurs[↩︎](#fnref3)
 
-Tableau 5 Tableau récapitulatif de l’évaluation des standards
+Tableau récapitulatif de l’évaluation des standards
 
 ### Analyse et Conclusion
 
@@ -711,7 +711,7 @@ Il est intéressant de s’inspirer de ces deux profils pour la spécification t
 
 Les profils ATNA et son option RESTful ATNA et SOLE se positionnement de la façon suivante :
 
-Figure 2 Positionnement des profils ATNA et son option RESTful ATNA / SOLE
+Positionnement des profils ATNA et son option RESTful ATNA / SOLE
 
 L’option RESTful ATNA, avec la possibilité de l’étendre si nécessaire en fonction du besoin métier spécifique semble donc approprié pour la spécification technique « générique tracabilité des événements ». Il faut juste identifier les attributs de la spécification technique qui seront génériques à concrétiser lors de la prise en compte d’un besoin métier spécifique.
 
@@ -744,41 +744,4 @@ Les critères à prendre en compte dans le choix de la solution sont les suivant
 * La solution choisie doit faire appel à un minimum de standards différents.
 
 En se basant sur la synthèse des standards et profils IHE présentée dans les sections 5.1 et 5.1.5, l’option RESTful ATNA semble le plus adapté au besoin « générique tracabilité des événements », en s’inspirant aussi des spécifications GS1.
-
-### Annexes A
-
-#### Annexe 1 : Mise en correspondance
-
-Cette section reprend, la mise en correspondance des objets de la SFE avec la ressource FHIR « AuditEvent » et la structure AuditMessage de DICOM :
-
-| | | | | |
-| :--- | :--- | :--- | :--- | :--- |
-| **Elément du schéma AuditMessage** | **Sous-Elément** | | | |
-| Trace | identifiant | id |  |  |
-| SourceTrace | identifiant | source | SourceAuditIdentification | AuditEnterpriseSiteId |
-| Evénement | typeEvenement | type | EventIdentification | EventID |
-| sousTypeEvement | Subtype | EventTypeCode | | |
-| occurence | period.start | EventDateTime | | |
-| declaration | recorded | Possibilité utiliser le champ « TIMESTAMP » du protocole syslog | | |
-| description | outcomeDesc | EventOutcomeDescription | | |
-| ActeurEvenement | identifiant | agent.who.identifier | ActiveParticipant |  |
-| role | Agent.role | RoleIdCode | | |
-| ObjectEvenement | identifiant | entity.what.identifier | ParticipantObjectIdentification |  |
-| type | entity.type | ParticipantObjectTypeCode | | |
-| contenu | entity.what ou entity.query ou entity.detail | ParticipantObjectDetail.valueou ParticipantObjectQueryou ParticipantObjectID | | |
-
-Tableau 6 Mise en correspondance avec la ressource « AuditEvent » et la structure AuditMessage
-
-### Annexes B
-
-#### Annexe 1 : Glossaire
-
-| | |
-| :--- | :--- |
-| ASIP Santé | Agence Française de la Santé Numérique |
-| HL7 | **Health Level 7** |
-| FHIR | **Fast Healthcare Interoperability Ressources** |
-| CI-SIS | Cadre d’interopérabilité des systèmes d’information de santé |
-| DICOM | Digital Imaging and COmmunication in Medecine |
-| GS1 | Global Standards 1 |
 

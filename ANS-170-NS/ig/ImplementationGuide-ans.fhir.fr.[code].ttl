@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "ExampleIG"] ; # 
   fhir:title [ fhir:v "ANS IG Example"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-12-18T10:47:12+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-01-15T09:50:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1761,6 +1761,44 @@
            fhir:title [ fhir:v "Flux 02" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+           ] ;
+           fhir:value [
+             a fhir:Url ;
+             fhir:v "annexe_audit_dicom.html"^^xsd:anyURI ;
+             fhir:l fhir:annexe_audit_dicom.html
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:Url ;
+           fhir:v "annexe_audit_dicom.html"^^xsd:anyURI ;
+           fhir:l fhir:annexe_audit_dicom.html
+         ] ;
+         fhir:title [ fhir:v "Mise en correspondance AuditEvent / DICOM" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+           ] ;
+           fhir:value [
+             a fhir:Url ;
+             fhir:v "glossaire.html"^^xsd:anyURI ;
+             fhir:l fhir:glossaire.html
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:Url ;
+           fhir:v "glossaire.html"^^xsd:anyURI ;
+           fhir:l fhir:glossaire.html
+         ] ;
+         fhir:title [ fhir:v "Glossaire" ] ;
+         fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [
