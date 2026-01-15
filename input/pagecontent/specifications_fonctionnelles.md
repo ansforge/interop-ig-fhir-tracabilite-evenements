@@ -55,8 +55,9 @@ processus « Gestion des traces ».
 <img src="sfe_image4.png"
 style="width:5.42708in;height:3.42708in" />
 </div>
-Figure 1 Organisation du contexte métier de l'étude "Gestion des traces"
-
+<div style="text-align: center; display: block; clear: both;">
+Figure : Organisation du contexte métier de l'étude "Gestion des traces"
+</div>
 Le périmètre de l'étude englobe les processus en couleur sur le
 diagramme de paquetage.
 
@@ -83,9 +84,10 @@ de l’étude.
 <img src="sfe_image5.png" style="width:6.25in;height:1.04167in" />
 
 </div>
+<div style="text-align: center; display: block; clear: both;">
+Figure : Processus collaboratif "Créer des traces"
+</div>
 
-
-Figure 2 : Processus collaboratif "Créer des traces"
 
 <table>
 <colgroup>
@@ -131,8 +133,9 @@ traces.</td>
 </tr>
 </tbody>
 </table>
-
-Table 1 Caractéristiques du processus collaboratif
+<div style="text-align: center; display: block; clear: both;">
+Table : Caractéristiques du processus collaboratif
+</div>
 
 <span id="_Toc77062401" class="anchor"></span>
 
@@ -141,8 +144,9 @@ Table 1 Caractéristiques du processus collaboratif
 <img src="sfe_image6.png" style="width:6.25in;height:0.96875in" />
 
 </div>
-
-Figure 3 : Processus collaboratif "Consulter une trace"
+<div style="text-align: center; display: block; clear: both;">
+Figure : Processus collaboratif "Consulter une trace"
+</div>
 
 <table>
 <colgroup>
@@ -180,9 +184,10 @@ consommateur des traces.</td>
 </tr>
 </tbody>
 </table>
+<div style="text-align: center; display: block; clear: both;">
 
-Table 2 Caractéristiques du processus collaboratif
-
+Table : Caractéristiques du processus collaboratif
+</div>
 <span id="_Toc77062402" class="anchor"></span>
 
 ##### Processus collaboratif "Rechercher des traces"
@@ -191,9 +196,10 @@ Table 2 Caractéristiques du processus collaboratif
 <img src="sfe_image7.png" style="width:6.25in;height:0.9375in" />
 
 </div>
+<div style="text-align: center; display: block; clear: both;">
 
-Figure 4 : Processus collaboratif "Rechercher des traces"
-
+Figure  : Processus collaboratif "Rechercher des traces"
+</div>
 <table>
 <colgroup>
 <col style="width: 25%" />
@@ -230,7 +236,9 @@ critères de recherche.</td>
 </tbody>
 </table>
 
-Table 3 Caractéristiques du processus collaboratif
+<div style="text-align: center; display: block; clear: both;">
+Table : Caractéristiques du processus collaboratif
+</div>
 
 #### Liste des acteurs pour l'ensemble des processus
 
@@ -272,7 +280,9 @@ processus métier suite à un événement au gestionnaire.</td>
 </tbody>
 </table>
 
-Table 4 Table des acteurs
+<div style="text-align: center; display: block; clear: both;">
+Table : Table des acteurs
+</div>
 
 ### Description des processus collaboratifs et identification des flux
 
@@ -282,9 +292,9 @@ Table 4 Table des acteurs
 
 </div>
 
-
-Figure 5 : Processus collaboratif "Créer des traces"
-
+<div style="text-align: center; display: block; clear: both;">
+Figure : Processus collaboratif "Créer des traces"
+</div>
 ##### Description des actions
 
 | Action | Description |
@@ -292,7 +302,9 @@ Figure 5 : Processus collaboratif "Créer des traces"
 | Créer des traces | Envoyer les informations de traçabilité de la source au gestionnaire des traces. |
 | Recevoir et enregistrer les traces | Recevoir et enregistrer les informations de traçabilité. |
 
-Table 5 Tableau des actions
+<div style="text-align: center; display: block; clear: both;">
+Table : Tableau des actions
+</div>
 
 ##### Identification des flux
 
@@ -301,7 +313,9 @@ Table 5 Tableau des actions
 | Flux 1 : TransmissionTrace | Créer des traces | Source des traces | Gestionnaire des traces | Oui |
 | Flux 1bis : RetourTransmissionTrace | Créer des traces | Gestionnaire des traces | Source des traces | Flux technique hors étude |
 
-Table 6 Flux
+<div style="text-align: center; display: block; clear: both;">
+Table : Flux
+</div>
 
 <span id="_Toc77062408" class="anchor"></span>
 
@@ -312,8 +326,9 @@ style="width:5.76573in;height:3.79026in" />
 
 </div>
 
-
-Figure 6 : Processus collaboratif "Consulter une trace"
+<div style="text-align: center; display: block; clear: both;">
+Figure  : Processus collaboratif "Consulter une trace"
+</div>
 
 ##### Description des actions
 
@@ -324,7 +339,9 @@ Figure 6 : Processus collaboratif "Consulter une trace"
 | Réceptionner la demande | Le gestionnaire réceptionne la demande de consultation d'une trace. |
 | Fournir la trace | Le gestionnaire des traces fournit la trace demandée. |
 
-Table 7 Tableau des actions
+<div style="text-align: center; display: block; clear: both;">
+Table : Tableau des actions
+</div>
 
 ##### Identification des flux
 
@@ -333,7 +350,9 @@ Table 7 Tableau des actions
 | Flux 2 : ConsultationTrace | Consulter une trace | Consommateur des traces | Gestionnaire des traces | Oui |
 | Flux 3 : ReponseConsultationTrace | Consulter une trace | Gestionnaire des traces | Consommateur des traces | Oui |
 
-Table 8 Flux
+<div style="text-align: center; display: block; clear: both;">
+Table : Flux
+</div>
 
 #### Rechercher des traces
 <div style="text-align: center; display: block; clear: both;">
@@ -341,8 +360,9 @@ Table 8 Flux
 
 </div>
 
-
-Figure 7 : Processus collaboratif "Rechercher des traces"
+<div style="text-align: center; display: block; clear: both;">
+Figure : Processus collaboratif "Rechercher des traces"
+</div>
 
 ##### Description des actions
 
@@ -384,7 +404,9 @@ Les traces trouvées sont ensuite retournées au consommateur.</td>
 </tbody>
 </table>
 
-Table 9 Tableau des actions
+<div style="text-align: center; display: block; clear: both;">
+Table : Tableau des actions
+</div>
 
 ##### Identification des flux
 
@@ -393,7 +415,9 @@ Table 9 Tableau des actions
 | Flux 4 : RechercheTraces | Rechercher des traces | Consommateur des traces | Gestionnaire des traces | Oui |
 | Flux 5 : ReponseRechercheTraces | Rechercher des traces | Gestionnaire des traces | Consommateur des traces | Oui |
 
-Table 10 Flux
+<div style="text-align: center; display: block; clear: both;">
+Table : Flux
+</div>
 
 #### Synthèse des flux
 
@@ -406,7 +430,9 @@ Table 10 Flux
 | Flux 4 : RechercheTraces | Rechercher des traces | Consommateur des traces | Gestionnaire des traces | Oui |
 | Flux 5 : ReponseRechercheTraces | Rechercher des traces | Gestionnaire des traces | Consommateur des traces | Oui |
 
-Table 11 Synthèse des flux identifiés
+<div style="text-align: center; display: block; clear: both;">
+Table : Synthèse des flux identifiés
+</div>
 
 ###  Identification des concepts véhiculés dans les flux d’informations et correspondance avec les classes et attributs du MOS
 
@@ -470,7 +496,9 @@ au gestionnaire de traces et qui doivent être conservées</td>
 </tbody>
 </table>
 
-Table 12 Concepts métier
+<div style="text-align: center; display: block; clear: both;">
+Table : Concepts métier
+</div>
 
 <span id="_Toc77062418" class="anchor"></span>
 
@@ -484,7 +512,9 @@ Table 12 Concepts métier
 | Acteurs de l'évènement |           |             |             |             |
 | Objet de l'évènement   |           |             |             |             |
 
-Table 13 Mise en équivalence MOS
+<div style="text-align: center; display: block; clear: both;">
+Table : Mise en équivalence MOS
+</div>
 
 ### Modélisation des flux d'informations
 
@@ -495,8 +525,9 @@ style="width:6.71871in;height:2.00233in" />
 
 </div>
 
-
-Figure 8 Flux 1 - TransmissionTrace
+<div style="text-align: center; display: block; clear: both;">
+Figure : Flux 1 - TransmissionTrace
+</div>
 
 ##### Classe "Trace"
 
@@ -507,7 +538,9 @@ est associé.
 |:-----------------------------------|--------------------------|
 | identifiant : \[0..1\] Identifiant | Identifiant de la trace. |
 
-Table 19 Attributs de la classe "Trace"
+<div style="text-align: center; display: block; clear: both;">
+Table : Attributs de la classe "Trace"
+</div>
 
 ##### Classe "SourceTrace"
 
@@ -517,7 +550,9 @@ Système ayant émis la trace de l'évènement.
 |:-----------------------------------|---------------------------------------|
 | identifiant : \[0..1\] Identifiant | Identifiant de la source de la trace. |
 
-Table 20 Attributs de la classe "SourceTrace"
+<div style="text-align: center; display: block; clear: both;">
+Table : Attributs de la classe "SourceTrace"
+</div>
 
 <span id="_Toc77062426" class="anchor"></span>
 
@@ -533,7 +568,9 @@ Fait marquant relatif à un objet, une personne, un processus, etc
 | declaration : \[0..1\] DateHeure | Date/heure à laquelle l'évènement est déclaré. |
 | description : \[0..1\] Texte | Description textuelle de l'évènement. |
 
-Table 21 Attributs de la classe "Evenement"
+<div style="text-align: center; display: block; clear: both;">
+Table : Attributs de la classe "Evenement"
+</div>
 
 ##### Classe "ActeurEvenement"
 
@@ -546,7 +583,9 @@ l'évènement.
 | identifiant : \[1..1\] Identifiant | Identifiant de l'acteur de l'évènement. |
 | role : \[1..1\] Code | Rôle de l'acteur de l'évènement |
 
-Table 22 Attributs de la classe "ActeurEvenement"
+<div style="text-align: center; display: block; clear: both;">
+Table : Attributs de la classe "ActeurEvenement"
+</div>
 
 ##### Classe "ObjetEvenement"
 
@@ -559,7 +598,9 @@ qui doit être tracé.
 | type : \[0..1\] Code | Type d'objet de l'évènement. |
 | contenu : \[0..1\] ObjetBinaire | Le contenu correspond aux informations associées à l’évènement envoyées au gestionnaire de traces et qui doivent être conservées. Par exemple, l’identifiant du document recherché. |
 
-Table 23 Attributs de la classe "ObjetEvenement"
+<div style="text-align: center; display: block; clear: both;">
+Table : Attributs de la classe "ObjetEvenement"
+</div>
 
 #### Flux 2 - ConsultationTrace
 <div style="text-align: center; display: block; clear: both;"><img src="sfe_image12.png"
@@ -567,8 +608,9 @@ style="width:4.33333in;height:0.69792in" />
 
 </div>
 
-
-Figure 9 Flux 2 - ConsultationTrace
+<div style="text-align: center; display: block; clear: both;">
+Figure : Flux 2 - ConsultationTrace
+</div>
 
 ##### Classe "Trace"
 
@@ -579,7 +621,9 @@ est associé.
 |:-----------------------------------|--------------------------|
 | identifiant : \[0..1\] Identifiant | Identifiant de la trace. |
 
-Table 24 Attributs de la classe "Trace"
+<div style="text-align: center; display: block; clear: both;">
+Table : Attributs de la classe "Trace"
+</div>
 
 #### Flux 3 - ReponseConsultationTrace
 
@@ -602,4 +646,6 @@ consultation peut ne retourner aucune source, une seule ou plusieurs.
 | ActeurEvenement/identifiant | Identifiant de l'acteur de l'évènement. | Non |
 | ActeurEvenement/role | Rôle de l'acteur de l'évènement | Non |
 
-Table 25 Flux de recherche
+<div style="text-align: center; display: block; clear: both;">
+Table : Flux de recherche
+</div>
