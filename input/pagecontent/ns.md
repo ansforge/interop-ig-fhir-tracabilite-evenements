@@ -389,8 +389,9 @@ entity.detail</td>
 </tbody>
 </table>
 
+<div style="text-align: center; display: block; clear: both;">
 Résumé des ressources FHIR
-
+</div>
 D’après ce tableau, nous pouvons voir :
 
 - Que les ressources « AdverseEvent », « AuditEvent », « Communication »
@@ -557,7 +558,7 @@ message (« enregistrement d’audit »), c’est pourquoi le profil ATNA
 contraint l’utilisation du schéma DICOM et de HL7 pour spécifier le
 contenu du message. DICOM a défini un schéma de base pour le rapport
 d’événement et des descriptions de base pour les événements, notamment
-partie 15, annexe A.5 « Audit Trail Message Format Profile ». IHE a
+partie 15, [annexe A.5 « Audit Trail Message Format Profile »](http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html). IHE a
 étendu ces spécifications pour définir des événements spécifiques pour
 la sécurité et la protection de la vie privée.
 
@@ -999,7 +1000,9 @@ style="text-align: center;">ParticipantObjectIdentification</td>
 </tbody>
 </table>
 
+<div style="text-align: center; display: block; clear: both;">
 Mapping DICOM avec les concepts de l’étude métier
+</div>
 
 Cela confirme l’idée de s’inspirer du profil IHE ATNA, de son option
 RESTful ATNA et du profil SOLE pour spécifier techniquement la volet
@@ -1167,7 +1170,10 @@ TransactionEvent.Desitnation.dest</td>
 </tr>
 </tbody>
 </table>
+
+<div style="text-align: center; display: block; clear: both;">
 Mise en correspondance avec l’événement « TransactionEvent »
+</div>
 
 EPCIS définit trois interfaces pour la tracabilité des événements :
 
@@ -1706,7 +1712,10 @@ différents fournisseurs<a href="#fnref3" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
+
+<div style="text-align: center; display: block; clear: both;">
 Tableau récapitulatif de l’évaluation des standards
+</div>
 
 ### Analyse et Conclusion
 
@@ -1775,7 +1784,7 @@ tracabilité des événements ».
 
 DICOM est un standard qui est largement utilisé dans le domaine de la
 radiologie. La partie « DICOM PS3.15 – Security and System Management
-Profiles » annexe « A.5 – Audit Trail Message Format Profile » spécifie
+Profiles » [annexe « A.5 – Audit Trail Message Format Profile »](http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html) spécifie
 la structure des messages d’audit DICOM gérés dans les workflows
 radiologie. Cette spécification est reprise dans les profils ATNA et son
 option RESTful ATNA et SOLE pour spécifier la structure interne des
@@ -1865,8 +1874,8 @@ inspirer pour les aspects génériques de tracabilité des événements.
 ##### DICOM
 
 DICOM est le standard utilisé pour échanger des informations dans le
-domaine de la radiologie. L’annexe 5 – Audit Trail Message Format
-Profile, de la partie – DICOM PS3.15 spécifie le format des événements
+domaine de la radiologie. [L’annexe 5 – Audit Trail Message Format
+Profile](http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html), de la partie – DICOM PS3.15 spécifie le format des événements
 qui sont gérés lors d’un workflow de radiologie. Les profils ATNA et son
 option RESTful ATNA / SOLE se basent sur ce standard pour spécifier la
 structure des événements qui sont échangés (événements de sécurité et
