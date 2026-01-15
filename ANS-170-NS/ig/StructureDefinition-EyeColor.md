@@ -1,4 +1,4 @@
-# EyeColor - ANS IG Example v0.1.0
+# EyeColor - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/EyeColor | *Version*:0.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/EyeColor | *Version*:2.0.0 |
 | Draft as of 2026-01-15 | *Computable Name*:EyeColor |
 
 Eye color extension
@@ -21,7 +21,7 @@ Eye color extension
 
 * Utiliser ce Extension: [Patient français](StructureDefinition-fr-patient.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/EyeColor)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.tde|current/StructureDefinition/EyeColor)
 
 ### Formal Views of Extension Content
 
@@ -43,11 +43,11 @@ Other representations of profile: [CSV](StructureDefinition-EyeColor.csv), [Exce
 {
   "resourceType" : "StructureDefinition",
   "id" : "EyeColor",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/EyeColor",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/EyeColor",
+  "version" : "2.0.0",
   "name" : "EyeColor",
   "status" : "draft",
-  "date" : "2026-01-15T13:07:06+00:00",
+  "date" : "2026-01-15T15:25:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -106,7 +106,7 @@ Other representations of profile: [CSV](StructureDefinition-EyeColor.csv), [Exce
       {
         "id" : "Extension.url",
         "path" : "Extension.url",
-        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/EyeColor"
+        "fixedUri" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/EyeColor"
       },
       {
         "id" : "Extension.value[x]",
@@ -118,7 +118,7 @@ Other representations of profile: [CSV](StructureDefinition-EyeColor.csv), [Exce
         ],
         "binding" : {
           "strength" : "required",
-          "valueSet" : "https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/EyeColorVS"
+          "valueSet" : "https://interop.esante.gouv.fr/ig/fhir/tde/ValueSet/EyeColorVS"
         }
       }
     ]

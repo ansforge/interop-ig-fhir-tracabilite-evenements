@@ -1,4 +1,4 @@
-# Mise en correspondance AuditEvent / DICOM - ANS IG Example v0.1.0
+# Mise en correspondance AuditEvent / DICOM - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * **Mise en correspondance AuditEvent / DICOM**

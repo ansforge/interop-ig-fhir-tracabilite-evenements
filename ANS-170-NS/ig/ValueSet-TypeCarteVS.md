@@ -1,4 +1,4 @@
-# Type Carte Value Set - ANS IG Example v0.1.0
+# Type Carte Value Set - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/TypeCarteVS | *Version*:0.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/ValueSet/TypeCarteVS | *Version*:2.0.0 |
 | Draft as of 2026-01-15 | *Computable Name*:TypeCarteVS |
 
  
@@ -45,12 +45,12 @@ Ce jeu de valeurs nest pas utilisé ici ; il peut être utilisé autre part (par
 {
   "resourceType" : "ValueSet",
   "id" : "TypeCarteVS",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/TypeCarteVS",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/ValueSet/TypeCarteVS",
+  "version" : "2.0.0",
   "name" : "TypeCarteVS",
   "title" : "Type Carte Value Set",
   "status" : "draft",
-  "date" : "2026-01-15T13:07:06+00:00",
+  "date" : "2026-01-15T15:25:40+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -78,7 +78,7 @@ Ce jeu de valeurs nest pas utilisé ici ; il peut être utilisé autre part (par
   "compose" : {
     "include" : [
       {
-        "system" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/type-carte-code-system"
+        "system" : "https://interop.esante.gouv.fr/ig/fhir/tde/CodeSystem/type-carte-code-system"
       }
     ]
   }
