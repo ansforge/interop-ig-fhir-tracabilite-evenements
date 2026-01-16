@@ -8,11 +8,11 @@
 * [Vue d'ensemble](sf1.md)
 * [Via syslog](syslog.md)
 * [Artifacts Summary](artifacts.md)
+* [Volume 2 - Détail des transactions](specification_technique_intro.md)
 * [Sécurité](securite.md)
 * [Via API REST](api.md)
 * [Autres Ressources](autres_ressources.md)
 * [Specifications Fonctionnelles](specifications_fonctionnelles.md)
-* [Vue d'ensemble](construction_des_flux.md)
 * [Téléchargements et usages](downloads.md)
 
 ## Resources

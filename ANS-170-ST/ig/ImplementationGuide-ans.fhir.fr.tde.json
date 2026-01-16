@@ -10,7 +10,7 @@
   "name" : "TDE",
   "title" : "ANS - Traçabilité des événements",
   "status" : "draft",
-  "date" : "2026-01-15T15:23:39+00:00",
+  "date" : "2026-01-16T14:51:24+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -800,29 +800,38 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "construction_des_flux.html"
+          "valueUrl" : "specification_technique_intro.html"
         }],
-        "nameUrl" : "construction_des_flux.html",
-        "title" : "Vue d'ensemble",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "api.html"
-        }],
-        "nameUrl" : "api.html",
-        "title" : "Via API REST",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "syslog.html"
-        }],
-        "nameUrl" : "syslog.html",
-        "title" : "Via syslog",
-        "generation" : "markdown"
+        "nameUrl" : "specification_technique_intro.html",
+        "title" : "Volume 2 - Détail des transactions",
+        "generation" : "markdown",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "correspondance_metier.html"
+          }],
+          "nameUrl" : "correspondance_metier.html",
+          "title" : "Correspondances métier",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "api.html"
+          }],
+          "nameUrl" : "api.html",
+          "title" : "Via API REST",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "syslog.html"
+          }],
+          "nameUrl" : "syslog.html",
+          "title" : "Via syslog",
+          "generation" : "markdown"
+        }]
       },
       {
         "extension" : [{
@@ -859,15 +868,6 @@
           "title" : "Téléchargements et usages",
           "generation" : "markdown"
         }]
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "correspondance_metier.html"
-        }],
-        "nameUrl" : "correspondance_metier.html",
-        "title" : "Correspondances métier",
-        "generation" : "markdown"
       }]
     },
     "parameter" : [{

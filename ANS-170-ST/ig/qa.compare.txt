@@ -4,7 +4,7 @@ TDE : Validation Results
 err = 1, warn = 15, info = 17
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.tde#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/tde)
- Build Errors : 5 / 4 / 0
+ Build Errors : 3 / 4 / 0
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CodeSystem-competence-code-system : 0 / 2 / 3
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CodeSystem-type-carte-code-system : 0 / 2 / 3
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.tde : 1 / 0 / 2
@@ -20,11 +20,9 @@ Generated $--. FHIR version $-- for ans.fhir.fr.tde#$-- (canonical = https://int
 WARNING: /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/output/api.html: Illegal HTML: illegal html element: query ( représente les autres
 paramètres, sous la forme param=valeur, permettant d’affiner la
 recherche.)
-ERROR: construction_des_flux.html#/html/body/div/div/div/div/div/p/a at Line 214, column 67: The link './st_flux1.html' for "flux 01" cannot be resolved
-ERROR: construction_des_flux.html#/html/body/div/div/div/div/div/p/a at Line 218, column 67: The link './st_flux2.html' for "flux 02" cannot be resolved
 ERROR: searchform.html#/html/body/div/div/div/a/img/div/a/img/div/p/img at Line 57, column 3: The image source 'assets/images/fra.svg' cannot be resolved
-ERROR: syslog.html#/html/body/div/div/div/div/div/p/a at Line 255, column 38: The link 'TDE_Flux01-versionSyslog.xml' for "Le fichier TDE_Flux01-versionSyslog.xml" cannot be resolved
-ERROR: syslog.html#/html/body/div/div/div/div/div/p/a at Line 377, column 38: The link 'TDE_Flux05-VersionHTTP.ini' for "Le fichier TDE_Flux05-VersionHTTP.ini" cannot be resolved
+ERROR: syslog.html#/html/body/div/div/div/div/div/p/a at Line 258, column 38: The link 'TDE_Flux01-versionSyslog.xml' for "Le fichier TDE_Flux01-versionSyslog.xml" cannot be resolved
+ERROR: syslog.html#/html/body/div/div/div/div/div/p/a at Line 380, column 38: The link 'TDE_Flux05-VersionHTTP.ini' for "Le fichier TDE_Flux05-VersionHTTP.ini" cannot be resolved
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 5: The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide

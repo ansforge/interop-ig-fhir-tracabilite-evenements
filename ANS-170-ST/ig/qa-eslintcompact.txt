@@ -4,8 +4,6 @@ TDE
 Generic: line 0, col 0, Warning - Illegal HTML: illegal html element: query ( représente les autres
 paramètres, sous la forme param=valeur, permettant d’affiner la
 recherche.) (INVALID)
-Generic: line 0, col 0, Error - The link './st_flux1.html' for "flux 01" cannot be resolved (NOTFOUND)
-Generic: line 0, col 0, Error - The link './st_flux2.html' for "flux 02" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The image source 'assets/images/fra.svg' cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link 'TDE_Flux01-versionSyslog.xml' for "Le fichier TDE_Flux01-versionSyslog.xml" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link 'TDE_Flux05-VersionHTTP.ini' for "Le fichier TDE_Flux05-VersionHTTP.ini" cannot be resolved (NOTFOUND)

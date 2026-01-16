@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "TDE"] ; # 
   fhir:title [ fhir:v "ANS - Traçabilité des événements"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-01-15T15:23:39+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-01-16T14:51:24+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1673,55 +1673,75 @@
            ] ;
            fhir:value [
              a fhir:Url ;
-             fhir:v "construction_des_flux.html"^^xsd:anyURI ;
-             fhir:l fhir:construction_des_flux.html
+             fhir:v "specification_technique_intro.html"^^xsd:anyURI ;
+             fhir:l fhir:specification_technique_intro.html
            ]
          ] ) ;
          fhir:name [
            a fhir:Url ;
-           fhir:v "construction_des_flux.html"^^xsd:anyURI ;
-           fhir:l fhir:construction_des_flux.html
+           fhir:v "specification_technique_intro.html"^^xsd:anyURI ;
+           fhir:l fhir:specification_technique_intro.html
          ] ;
-         fhir:title [ fhir:v "Vue d'ensemble" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [
-             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
-             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+         fhir:title [ fhir:v "Volume 2 - Détail des transactions" ] ;
+         fhir:generation [ fhir:v "markdown" ] ;
+         fhir:page ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+               fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+             ] ;
+             fhir:value [
+               a fhir:Url ;
+               fhir:v "correspondance_metier.html"^^xsd:anyURI ;
+               fhir:l fhir:correspondance_metier.html
+             ]
+           ] ) ;
+           fhir:name [
+             a fhir:Url ;
+             fhir:v "correspondance_metier.html"^^xsd:anyURI ;
+             fhir:l fhir:correspondance_metier.html
            ] ;
-           fhir:value [
+           fhir:title [ fhir:v "Correspondances métier" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+               fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+             ] ;
+             fhir:value [
+               a fhir:Url ;
+               fhir:v "api.html"^^xsd:anyURI ;
+               fhir:l fhir:api.html
+             ]
+           ] ) ;
+           fhir:name [
              a fhir:Url ;
              fhir:v "api.html"^^xsd:anyURI ;
              fhir:l fhir:api.html
-           ]
-         ] ) ;
-         fhir:name [
-           a fhir:Url ;
-           fhir:v "api.html"^^xsd:anyURI ;
-           fhir:l fhir:api.html
-         ] ;
-         fhir:title [ fhir:v "Via API REST" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [
-             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
-             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
            ] ;
-           fhir:value [
+           fhir:title [ fhir:v "Via API REST" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
+               fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
+             ] ;
+             fhir:value [
+               a fhir:Url ;
+               fhir:v "syslog.html"^^xsd:anyURI ;
+               fhir:l fhir:syslog.html
+             ]
+           ] ) ;
+           fhir:name [
              a fhir:Url ;
              fhir:v "syslog.html"^^xsd:anyURI ;
              fhir:l fhir:syslog.html
-           ]
-         ] ) ;
-         fhir:name [
-           a fhir:Url ;
-           fhir:v "syslog.html"^^xsd:anyURI ;
-           fhir:l fhir:syslog.html
-         ] ;
-         fhir:title [ fhir:v "Via syslog" ] ;
-         fhir:generation [ fhir:v "markdown" ]
+           ] ;
+           fhir:title [ fhir:v "Via syslog" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] )
        ] [
          fhir:extension ( [
            fhir:url [
@@ -1799,25 +1819,6 @@
            fhir:title [ fhir:v "Téléchargements et usages" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )
-       ] [
-         fhir:extension ( [
-           fhir:url [
-             fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ;
-             fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-page-name>
-           ] ;
-           fhir:value [
-             a fhir:Url ;
-             fhir:v "correspondance_metier.html"^^xsd:anyURI ;
-             fhir:l fhir:correspondance_metier.html
-           ]
-         ] ) ;
-         fhir:name [
-           a fhir:Url ;
-           fhir:v "correspondance_metier.html"^^xsd:anyURI ;
-           fhir:l fhir:correspondance_metier.html
-         ] ;
-         fhir:title [ fhir:v "Correspondances métier" ] ;
-         fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;
      fhir:parameter ( [
