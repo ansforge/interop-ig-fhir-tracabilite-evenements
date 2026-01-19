@@ -7,6 +7,8 @@
 
 ### Introduction
 
+Étude du 10/2016, avec dernière mise à jour en 02/2021; les conclusions de cette étude reflètent l’état de l’art disponible à cette date.
+
 Ce document regroupe l’analyse des standards identifiés comme potentiellement adaptés pour la mise en œuvre, d’un point de vue « générique » de la tracabilité des événements [Étude métier – Gestion de traces](LIEN SFE):
 
 * Le standard HL7 FHIR R4 (**Fast Healthcare Interoperability Resources**). Pour le besoin d’interopérabilité « tracabilité des événements », les ressources FHIR suivantes sont notamment analysées :

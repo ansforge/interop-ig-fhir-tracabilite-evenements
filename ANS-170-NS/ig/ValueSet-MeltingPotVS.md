@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/ValueSet/MeltingPotVS | *Version*:2.0.0 |
-| Draft as of 2026-01-15 | *Computable Name*:MeltingPotVS |
+| Draft as of 2026-01-19 | *Computable Name*:MeltingPotVS |
 
  
 Melting Pot Value Set. 
@@ -50,7 +50,7 @@ Ce jeu de valeurs nest pas utilisé ici ; il peut être utilisé autre part (par
   "name" : "MeltingPotVS",
   "title" : "Melting Pot Value Set",
   "status" : "draft",
-  "date" : "2026-01-15T15:25:40+00:00",
+  "date" : "2026-01-19T13:49:11+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

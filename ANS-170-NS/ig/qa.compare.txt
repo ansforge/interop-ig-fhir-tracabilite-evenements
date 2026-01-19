@@ -18,16 +18,16 @@ Generated $--. FHIR version $-- for ans.fhir.fr.tde#$-- (canonical = https://int
 </table>
 == n/a ==
 WARNING: /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/output/ns.html: Illegal HTML: Illegal HTML element: section
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 235, column 49: The link 'LIEN SFE' for "Étude métier – Gestion de traces" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 330, column 24: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 344, column 5: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 350, column 45: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 591, column 52: The link 'LIENSSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 595, column 64: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2202, column 39: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2206, column 2: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2287, column 32: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/ul/li/p/a at Line 2380, column 32: The link 'LIENSSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 239, column 49: The link 'LIEN SFE' for "Étude métier – Gestion de traces" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 334, column 24: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 348, column 5: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 354, column 45: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 595, column 52: The link 'LIENSSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 599, column 64: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2206, column 39: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2210, column 2: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2291, column 32: The link 'LienSFE' for "l’étude métier" cannot be resolved
+ERROR: ns.html#/html/body/div/div/div/div/div/ul/li/p/a at Line 2384, column 32: The link 'LIENSSFE' for "l’étude métier" cannot be resolved
 ERROR: searchform.html#/html/body/div/div/div/a/img/div/a/img/div/p/img at Line 57, column 3: The image source 'assets/images/fra.svg' cannot be resolved
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide

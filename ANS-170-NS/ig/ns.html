@@ -230,7 +230,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h3 id="introduction">Introduction</h3>
 
-<p><a name="l405">​</a>Ce document regroupe l’analyse des standards identifiés comme
+<div style="width: 65%" class="dragon">
+Étude du 10/2016, avec dernière mise à jour en 02/2021; les conclusions de cette étude reflètent l’état de l’art disponible à cette date.
+</div>
+
+<p><a name="l408">​</a>Ce document regroupe l’analyse des standards identifiés comme
 potentiellement adaptés pour la mise en œuvre, d’un point de vue
 «&nbsp;générique&nbsp;» de la tracabilité des événements <a href="LIEN SFE">Étude métier – Gestion de
 traces</a>:</p>
@@ -319,7 +323,7 @@ que la fonctionnalité de «&nbsp;tracabilité des événements&nbsp;» peut êt
 dans différents contextes, prenant en compte différents besoins
 fonctionnels métier.</p>
 
-<p><a name="l543">​</a>Ce besoin d’interopérabilité concerne la mise en œuvre d’un mécanisme
+<p><a name="l546">​</a>Ce besoin d’interopérabilité concerne la mise en œuvre d’un mécanisme
 qui permet de gérer la traçabilité «&nbsp;d’objets métier&nbsp;» (médicaments,
 dispositifs médicaux, etc.) tout au long de leur cycle de vie. Par
 exemple, il s’agit de fournir un mécanisme de création et de
@@ -341,12 +345,12 @@ métier sont donc (cf. <a href="LienSFE">l’étude métier</a>)&nbsp;:</p>
   </li>
 </ul>
 
-<p><a name="l570">​</a><a href="LienSFE">l’étude métier</a> a été menée concernant la
+<p><a name="l573">​</a><a href="LienSFE">l’étude métier</a> a été menée concernant la
 modélisation des flux entre acteurs/composants d’un système
 d’information ou entre systèmes d’information pour la mise en œuvre de
 la gestion de traces.</p>
 
-<p><a name="l575">​</a>Les standards présentés dans ce document doivent gérer l’ensemble des
+<p><a name="l578">​</a>Les standards présentés dans ce document doivent gérer l’ensemble des
 flux métiers structurés et identifiés dans <a href="LienSFE">l’étude métier</a> aussi
 bien dans un contexte de client lourd que dans un contexte de mobilité.</p>
 
@@ -587,12 +591,12 @@ GET.</p>
 
 <h5 id="synthèse">Synthèse</h5>
 
-<p><a name="l869">​</a>Plusieurs ressources FHIR ont été identifiées comme pouvant être
+<p><a name="l872">​</a>Plusieurs ressources FHIR ont été identifiées comme pouvant être
 utilisées pour aider à représenter les classes de <a href="LIENSSFE">l’étude métier</a> :
 AdverseEvent, AuditEvent, Communication, CommunicationRequest,
 eventDefinition, SearchParameter.</p>
 
-<p><a name="l875">​</a>Le tableau ci-dessous reprend&nbsp;les classes identifiées dans <a href="LienSFE">l’étude métier</a>(en lignes) ainsi que chacune des ressources pertinentes
+<p><a name="l878">​</a>Le tableau ci-dessous reprend&nbsp;les classes identifiées dans <a href="LienSFE">l’étude métier</a>(en lignes) ainsi que chacune des ressources pertinentes
 étudiées dans ce document (en colonnes) de façon à vérifier l’adéquation
 des ressources FHIR avec le besoin métier. <a href="annexe_audit_dicom.html">L’annexe</a> détaille la mise
 en correspondance entre les attributs de la classe «&nbsp;Evénement&nbsp;» et celles des ressources FHIR étudiées.</p>
@@ -2199,7 +2203,7 @@ de gestion de traces.</p>
 
 <h5 id="hl7-fhir">HL7 FHIR</h5>
 
-<p><a name="l3316">​</a>Les informations identifiées dans <a href="LienSFE">l’étude métier</a>  sont couvertes
+<p><a name="l3319">​</a>Les informations identifiées dans <a href="LienSFE">l’étude métier</a>  sont couvertes
 par les attributs proposés par les ressources FHIR identifiées et
 détaillées dans ce document (AdverseEvent et AuditEvent). De plus, les
 critères de recherche proposés sont adaptés aux critères identifiés dans
@@ -2283,7 +2287,7 @@ tracabilité des événements.</p>
 
 <h5 id="hl7-fhir-1">HL7 FHIR</h5>
 
-<p><a name="l3376">​</a>Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
+<p><a name="l3379">​</a>Le standard FHIR permet la mise en œuvre native de l’ensemble des flux
 structurés et identifiés dans <a href="LienSFE">l’étude métier</a> «&nbsp;générique gestion
 des traces&nbsp;».</p>
 
@@ -2376,7 +2380,7 @@ suivants&nbsp;:</p>
 
 <ul>
   <li>
-    <p><a name="l3454">​</a>Le standard adopté doit offrir une couverture maximale des
+    <p><a name="l3457">​</a>Le standard adopté doit offrir une couverture maximale des
 informations identifiées dans <a href="LIENSSFE">l’étude métier</a>;</p>
   </li>
   <li>
@@ -2444,7 +2448,7 @@ spécifications GS1.</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.tde#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 15, 2026 15:25+0000">2026-01-15</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.tde#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 19, 2026 13:49+0000">2026-01-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
