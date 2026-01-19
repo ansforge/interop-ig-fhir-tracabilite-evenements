@@ -1,6 +1,7 @@
 Profile: TDEAuditEvent
 Parent: AuditEvent
-Description: "Traçabilité des évènements d'objets métiers"
+Description: "Profil représentant la trace d'un évènement"
+
 * subtype ..1
 * period.start 1..
 * agent ..2
