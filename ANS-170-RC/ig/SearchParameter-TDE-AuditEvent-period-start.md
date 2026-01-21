@@ -1,4 +1,4 @@
-# TDE-AuditEvent-period-start - ANS IG Example v0.1.0
+# TDE-AuditEvent-period-start - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/TDE-AuditEvent-period-start | *Version*:0.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/SearchParameter/TDE-AuditEvent-period-start | *Version*:2.0.0 |
 | Active as of 2021-12-01 | *Computable Name*:TDE_AuditEvent_period-start |
 
  
@@ -25,8 +25,8 @@ Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser
   "meta" : {
     "lastUpdated" : "2021-10-21T14:10:19.925+00:00"
   },
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/TDE-AuditEvent-period-start",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/SearchParameter/TDE-AuditEvent-period-start",
+  "version" : "2.0.0",
   "name" : "TDE_AuditEvent_period-start",
   "status" : "active",
   "date" : "2021-12-01",

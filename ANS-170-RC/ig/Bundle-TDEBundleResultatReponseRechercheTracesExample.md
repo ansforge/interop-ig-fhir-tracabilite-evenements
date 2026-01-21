@@ -1,4 +1,4 @@
-# TDEBundleResultatReponseRechercheTracesExample - ANS IG Example v0.1.0
+# TDEBundleResultatReponseRechercheTracesExample - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -16,7 +16,7 @@
   "id" : "TDEBundleResultatReponseRechercheTracesExample",
   "meta" : {
     "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces"
+      "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces"
     ]
   },
   "type" : "searchset",
@@ -28,7 +28,7 @@
         "id" : "TDEAuditEventExample",
         "meta" : {
           "profile" : [
-            "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent"
+            "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"
           ]
         },
         "text" : {

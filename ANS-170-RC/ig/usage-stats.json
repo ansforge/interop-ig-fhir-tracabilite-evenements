@@ -1,19 +1,19 @@
 {
-  "package": "ans.fhir.fr.[code]",
-  "version": "0.1.0",
+  "package": "ans.fhir.fr.tde",
+  "version": "2.0.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "FR",
   "extensions": [],
   "profiles": {
     "AuditEvent": [
       {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent",
+        "url": "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent",
         "title": "TDEAuditEvent"
       }
     ],
     "Bundle": [
       {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces",
+        "url": "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces",
         "title": "TDEBundleResultatReponseRechercheTraces"
       }
     ]

@@ -1,4 +1,4 @@
-# Accueil - ANS IG Example v0.1.0
+# Accueil - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * **Accueil**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code] | *Version*:0.1.0 |
-| Draft as of 2026-01-15 | *Computable Name*:ExampleIG |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde | *Version*:2.0.0 |
+| Draft as of 2026-01-21 | *Computable Name*:TDE |
 
  **Brief description of this Implementation Guide**
  [Add a brief description of this IG in English] 
@@ -44,8 +44,8 @@ Les ressources profilées dans le cadre de ce guide d'implémentation sont les s
 | | | |
 | :--- | :--- | :--- |
 | Profil parent | Profil | Description |
-| [AuditEvent](http://hl7.org/fhir/StructureDefinition/AuditEvent) | [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md) | Traçabilité des évènements d'objets métiers |
-| [Bundle](http://hl7.org/fhir/StructureDefinition/Bundle) | [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md) |  |
+| [AuditEvent](http://hl7.org/fhir/StructureDefinition/AuditEvent) | [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md) | Profil représentant la trace d'un évènement |
+| [Bundle](http://hl7.org/fhir/StructureDefinition/Bundle) | [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md) | Bundle de réponse à la recherche de traces |
 
 ### Dépendances
 
@@ -59,7 +59,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
-* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html): [ExampleIG](index.md), [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md)...Show 5 more,[TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md),[TDE_AuditEvent_period-start](SearchParameter-TDE-AuditEvent-period-start.md),[TdEConsommateur](CapabilityStatement-TdEConsommateur.md),[TdEGestionnaire](CapabilityStatement-TdEGestionnaire.md)and[TdESource](CapabilityStatement-TdESource.md)
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html): [TDE](index.md), [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md)... Show 5 more, [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md), [TDE_AuditEvent_period-start](SearchParameter-TDE-AuditEvent-period-start.md), [TdEConsommateur](CapabilityStatement-TdEConsommateur.md), [TdEGestionnaire](CapabilityStatement-TdEGestionnaire.md) and [TdESource](CapabilityStatement-TdESource.md)
 
 
 * These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright © 2011 by the National Electrical Manufacturers Association.
@@ -74,13 +74,13 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 ```json
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "ans.fhir.fr.[code]",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]",
-  "version" : "0.1.0",
-  "name" : "ExampleIG",
-  "title" : "ANS IG Example",
+  "id" : "ans.fhir.fr.tde",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde",
+  "version" : "2.0.0",
+  "name" : "TDE",
+  "title" : "ANS - Traçabilité des événements",
   "status" : "draft",
-  "date" : "2026-01-15T13:02:31+00:00",
+  "date" : "2026-01-21T14:10:51+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -104,7 +104,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
       ]
     }
   ],
-  "packageId" : "ans.fhir.fr.[code]",
+  "packageId" : "ans.fhir.fr.tde",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.1"],
   "dependsOn" : [
@@ -292,7 +292,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           },
           {
             "url" : "value",
-            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/[code]/history.html"
+            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/tde/history.html"
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -653,7 +653,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           },
           {
             "url" : "value",
-            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/[code]/history.html"
+            "valueString" : "https://interop.esante.gouv.fr/ig/fhir/tde/history.html"
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -948,7 +948,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           "reference" : "StructureDefinition/TDEAuditEvent"
         },
         "name" : "TDEAuditEvent",
-        "description" : "Traçabilité des évènements d'objets métiers",
+        "description" : "Profil représentant la trace d'un évènement",
         "exampleBoolean" : false
       },
       {
@@ -962,7 +962,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           "reference" : "AuditEvent/TDEAuditEventExample"
         },
         "name" : "TDEAuditEventExample",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent"
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"
       },
       {
         "extension" : [
@@ -975,6 +975,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           "reference" : "StructureDefinition/TDEBundleResultatReponseRechercheTraces"
         },
         "name" : "TDEBundleResultatReponseRechercheTraces",
+        "description" : "Bundle de réponse à la recherche de traces",
         "exampleBoolean" : false
       },
       {
@@ -988,7 +989,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           "reference" : "Bundle/TDEBundleResultatReponseRechercheTracesExample"
         },
         "name" : "TDEBundleResultatReponseRechercheTracesExample",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces"
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces"
       }
     ],
     "page" : {

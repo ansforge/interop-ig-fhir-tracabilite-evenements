@@ -1,4 +1,4 @@
-# Artifacts Summary - ANS IG Example v0.1.0
+# Artifacts Summary - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * **Artifacts Summary**
@@ -31,8 +31,8 @@ These define constraints on FHIR resources for systems conforming to this implem
 
 | | |
 | :--- | :--- |
-| [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md) | Traçabilité des évènements d'objets métiers |
-| [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md) |  |
+| [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md) | Profil représentant la trace d'un évènement |
+| [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md) | Bundle de réponse à la recherche de traces |
 
 ### Example: Example Instances 
 

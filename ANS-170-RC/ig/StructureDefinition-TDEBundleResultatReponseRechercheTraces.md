@@ -1,4 +1,4 @@
-# TDEBundleResultatReponseRechercheTraces - ANS IG Example v0.1.0
+# TDEBundleResultatReponseRechercheTraces - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,14 +8,17 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces | *Version*:0.1.0 |
-| Draft as of 2026-01-15 | *Computable Name*:TDEBundleResultatReponseRechercheTraces |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces | *Version*:2.0.0 |
+| Draft as of 2026-01-21 | *Computable Name*:TDEBundleResultatReponseRechercheTraces |
+
+ 
+Bundle de réponse à la recherche de traces 
 
 **Utilisations:**
 
 * Exemples pour ce Profil: [Bundle/TDEBundleResultatReponseRechercheTracesExample](Bundle-TDEBundleResultatReponseRechercheTracesExample.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/TDEBundleResultatReponseRechercheTraces)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.tde|current/StructureDefinition/TDEBundleResultatReponseRechercheTraces)
 
 ### Formal Views of Profile Content
 
@@ -33,11 +36,11 @@ Other representations of profile: [CSV](StructureDefinition-TDEBundleResultatRep
 {
   "resourceType" : "StructureDefinition",
   "id" : "TDEBundleResultatReponseRechercheTraces",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces",
+  "version" : "2.0.0",
   "name" : "TDEBundleResultatReponseRechercheTraces",
   "status" : "draft",
-  "date" : "2026-01-15T13:02:31+00:00",
+  "date" : "2026-01-21T14:10:51+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -50,6 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-TDEBundleResultatRep
       ]
     }
   ],
+  "description" : "Bundle de réponse à la recherche de traces",
   "jurisdiction" : [
     {
       "coding" : [
@@ -128,7 +132,7 @@ Other representations of profile: [CSV](StructureDefinition-TDEBundleResultatRep
           {
             "code" : "AuditEvent",
             "profile" : [
-              "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent"
+              "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"
             ]
           }
         ]

@@ -1,4 +1,4 @@
-# TdE-Source - ANS IG Example v0.1.0
+# TdE-Source - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/TdESource | *Version*:0.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdESource | *Version*:2.0.0 |
 | Active as of 2025-01-14 | *Computable Name*:TdESource |
 
  
@@ -24,8 +24,8 @@ Le rôle de la Source est de transmettre les informations de traçabilité relat
 {
   "resourceType" : "CapabilityStatement",
   "id" : "TdESource",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/TdESource",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdESource",
+  "version" : "2.0.0",
   "name" : "TdESource",
   "title" : "TdE-Source",
   "status" : "active",
@@ -71,7 +71,7 @@ Le rôle de la Source est de transmettre les informations de traçabilité relat
         {
           "type" : "AuditEvent",
           "supportedProfile" : [
-            "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent"
+            "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"
           ],
           "interaction" : [
             {

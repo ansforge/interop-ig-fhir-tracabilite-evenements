@@ -9,8 +9,8 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : ParamètreRecherche TDE-AuditEvent-period-start</b></p><a name="TDE-AuditEvent-period-start"> </a><a name="hcTDE-AuditEvent-period-start"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Dernière mise à jour : 2021-10-21 14:10:19+0000</p></div><h2>TDE_AuditEvent_period-start</h2><p>Paramètre <code>period-start</code>:<code>date</code></p><div><p>Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence</p>
 </div><table class="grid"><tr><td>Ressource</td><td><a href="http://hl7.org/fhir/R4/auditevent.html">AuditEvent</a></td></tr><tr><td>Expression</td><td><code>AuditEvent.period.start</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : Le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : Le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr><tr><td>Comparateurs</td><td>Autorisé : eq, ne, gt, lt, ge, le, sa, eb, ap</td></tr></table></div>
   </text>
-  <url value="https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/TDE-AuditEvent-period-start"/>
-  <version value="0.1.0"/>
+  <url value="https://interop.esante.gouv.fr/ig/fhir/tde/SearchParameter/TDE-AuditEvent-period-start"/>
+  <version value="2.0.0"/>
   <name value="TDE_AuditEvent_period-start"/>
   <status value="active"/>
   <date value="2021-12-01"/>

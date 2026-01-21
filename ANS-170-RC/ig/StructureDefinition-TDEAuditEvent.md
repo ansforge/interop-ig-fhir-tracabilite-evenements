@@ -1,4 +1,4 @@
-# TDEAuditEvent - ANS IG Example v0.1.0
+# TDEAuditEvent - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,11 +8,11 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent | *Version*:0.1.0 |
-| Draft as of 2026-01-15 | *Computable Name*:TDEAuditEvent |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent | *Version*:2.0.0 |
+| Draft as of 2026-01-21 | *Computable Name*:TDEAuditEvent |
 
  
-Traçabilité des évènements d'objets métiers 
+Profil représentant la trace d'un évènement 
 
 **Utilisations:**
 
@@ -20,7 +20,7 @@ Traçabilité des évènements d'objets métiers
 * Exemples pour ce Profil: [AuditEvent/TDEAuditEventExample](AuditEvent-TDEAuditEventExample.md)
 * CapabilityStatements utilisant ce Profil: [TdE-Consommateur](CapabilityStatement-TdEConsommateur.md), [TdE-Gestionnaire](CapabilityStatement-TdEGestionnaire.md) and [TdE-Source](CapabilityStatement-TdESource.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/TDEAuditEvent)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.tde|current/StructureDefinition/TDEAuditEvent)
 
 ### Formal Views of Profile Content
 
@@ -38,11 +38,11 @@ Other representations of profile: [CSV](StructureDefinition-TDEAuditEvent.csv), 
 {
   "resourceType" : "StructureDefinition",
   "id" : "TDEAuditEvent",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent",
+  "version" : "2.0.0",
   "name" : "TDEAuditEvent",
   "status" : "draft",
-  "date" : "2026-01-15T13:02:31+00:00",
+  "date" : "2026-01-21T14:10:51+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -55,7 +55,7 @@ Other representations of profile: [CSV](StructureDefinition-TDEAuditEvent.csv), 
       ]
     }
   ],
-  "description" : "Traçabilité des évènements d'objets métiers",
+  "description" : "Profil représentant la trace d'un évènement",
   "jurisdiction" : [
     {
       "coding" : [

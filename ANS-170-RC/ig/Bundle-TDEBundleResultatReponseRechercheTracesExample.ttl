@@ -6,13 +6,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://interop.esante.gouv.fr/ig/fhir/[code]/Bundle/TDEBundleResultatReponseRechercheTracesExample> a fhir:Bundle ;
+<https://interop.esante.gouv.fr/ig/fhir/tde/Bundle/TDEBundleResultatReponseRechercheTracesExample> a fhir:Bundle ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "TDEBundleResultatReponseRechercheTracesExample"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces>
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces>
      ] )
   ] ; # 
   fhir:type [ fhir:v "searchset"] ; # 
@@ -28,8 +28,8 @@
   fhir:id [ fhir:v "TDEAuditEventExample"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent"^^xsd:anyURI ;
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent>
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent>
      ] )
   ] ; # 
   fhir:text [
@@ -59,14 +59,14 @@
   fhir:recorded [ fhir:v "2026-01-07T09:32:15Z"^^xsd:dateTime] ; # 
   fhir:agent ( [
      fhir:who [
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/Practitioner/PractitionerExample> ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/Practitioner/PractitionerExample> ;
        fhir:reference [ fhir:v "Practitioner/PractitionerExample" ]
      ] ;
      fhir:requestor [ fhir:v true ]
   ] ) ; # 
   fhir:source [
      fhir:observer [
-       fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/Device/DeviceExample> ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/Device/DeviceExample> ;
        fhir:reference [ fhir:v "Device/DeviceExample" ]
      ]
   ] . # 

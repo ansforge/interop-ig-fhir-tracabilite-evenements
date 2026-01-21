@@ -6,22 +6,22 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]> a fhir:ImplementationGuide ;
+<https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde> a fhir:ImplementationGuide ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "ans.fhir.fr.[code]"] ; # 
+  fhir:id [ fhir:v "ans.fhir.fr.tde"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.fhir.fr.[code]</b></p><a name=\"ans.fhir.fr.[code]\"> </a><a name=\"hcans.fhir.fr.[code]\"> </a><h2>ExampleIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]</pre></div>"^^rdf:XMLLiteral ]
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.fhir.fr.tde</b></p><a name=\"ans.fhir.fr.tde\"> </a><a name=\"hcans.fhir.fr.tde\"> </a><h2>TDE</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde</pre></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [
-     fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]"^^xsd:anyURI ;
-     fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/ImplementationGuide/ans.fhir.fr.[code]>
+     fhir:v "https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde"^^xsd:anyURI ;
+     fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde>
   ] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
-  fhir:name [ fhir:v "ExampleIG"] ; # 
-  fhir:title [ fhir:v "ANS IG Example"] ; # 
+  fhir:version [ fhir:v "2.0.0"] ; # 
+  fhir:name [ fhir:v "TDE"] ; # 
+  fhir:title [ fhir:v "ANS - Traçabilité des événements"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-01-15T13:02:31+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-01-21T14:10:51+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -40,7 +40,7 @@
        fhir:display [ fhir:v "FRANCE" ]
      ] )
   ] ) ; # 
-  fhir:packageId [ fhir:v "ans.fhir.fr.[code]"] ; # 
+  fhir:packageId [ fhir:v "ans.fhir.fr.tde"] ; # 
   fhir:license [ fhir:v "CC0-1.0"] ; # 
   fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
   fhir:dependsOn ( [
@@ -370,7 +370,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/history.html"
+           fhir:v "https://interop.esante.gouv.fr/ig/fhir/tde/history.html"
          ]
        ] ) ;
        fhir:url [
@@ -744,7 +744,7 @@
        ] ;
        fhir:value [
          a fhir:Reference ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/Parameters/expansion-parameters> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/Parameters/expansion-parameters> ;
          fhir:reference [ fhir:v "Parameters/expansion-parameters" ]
        ]
      ] [
@@ -1037,7 +1037,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/history.html"
+           fhir:v "https://interop.esante.gouv.fr/ig/fhir/tde/history.html"
          ]
        ] ) ;
        fhir:url [
@@ -1417,7 +1417,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/Device/DeviceExample> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/Device/DeviceExample> ;
          fhir:reference [ fhir:v "Device/DeviceExample" ]
        ] ;
        fhir:name [ fhir:v "DeviceExample" ] ;
@@ -1437,7 +1437,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/Practitioner/PractitionerExample> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/Practitioner/PractitionerExample> ;
          fhir:reference [ fhir:v "Practitioner/PractitionerExample" ]
        ] ;
        fhir:name [ fhir:v "PractitionerExample" ] ;
@@ -1457,7 +1457,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/TDE-AuditEvent-period-start> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/SearchParameter/TDE-AuditEvent-period-start> ;
          fhir:reference [ fhir:v "SearchParameter/TDE-AuditEvent-period-start" ]
        ] ;
        fhir:name [ fhir:v "TDE-AuditEvent-period-start" ] ;
@@ -1478,7 +1478,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/TdEConsommateur> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdEConsommateur> ;
          fhir:reference [ fhir:v "CapabilityStatement/TdEConsommateur" ]
        ] ;
        fhir:name [ fhir:v "TdE-Consommateur" ] ;
@@ -1499,7 +1499,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/TdEGestionnaire> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdEGestionnaire> ;
          fhir:reference [ fhir:v "CapabilityStatement/TdEGestionnaire" ]
        ] ;
        fhir:name [ fhir:v "TdE-Gestionnaire" ] ;
@@ -1520,7 +1520,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/TdESource> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdESource> ;
          fhir:reference [ fhir:v "CapabilityStatement/TdESource" ]
        ] ;
        fhir:name [ fhir:v "TdE-Source" ] ;
@@ -1541,11 +1541,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent> ;
          fhir:reference [ fhir:v "StructureDefinition/TDEAuditEvent" ]
        ] ;
        fhir:name [ fhir:v "TDEAuditEvent" ] ;
-       fhir:description [ fhir:v "Traçabilité des évènements d'objets métiers" ] ;
+       fhir:description [ fhir:v "Profil représentant la trace d'un évènement" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -1562,14 +1562,14 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/AuditEvent/TDEAuditEventExample> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/AuditEvent/TDEAuditEventExample> ;
          fhir:reference [ fhir:v "AuditEvent/TDEAuditEventExample" ]
        ] ;
        fhir:name [ fhir:v "TDEAuditEventExample" ] ;
        fhir:example [
          a fhir:Canonical ;
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent"^^xsd:anyURI ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent>
        ]
      ] [
        fhir:extension ( [
@@ -1583,10 +1583,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces> ;
          fhir:reference [ fhir:v "StructureDefinition/TDEBundleResultatReponseRechercheTraces" ]
        ] ;
        fhir:name [ fhir:v "TDEBundleResultatReponseRechercheTraces" ] ;
+       fhir:description [ fhir:v "Bundle de réponse à la recherche de traces" ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -1603,14 +1604,14 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/Bundle/TDEBundleResultatReponseRechercheTracesExample> ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/Bundle/TDEBundleResultatReponseRechercheTracesExample> ;
          fhir:reference [ fhir:v "Bundle/TDEBundleResultatReponseRechercheTracesExample" ]
        ] ;
        fhir:name [ fhir:v "TDEBundleResultatReponseRechercheTracesExample" ] ;
        fhir:example [
          a fhir:Canonical ;
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces"^^xsd:anyURI ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces>
        ]
      ] ) ;
      fhir:page [

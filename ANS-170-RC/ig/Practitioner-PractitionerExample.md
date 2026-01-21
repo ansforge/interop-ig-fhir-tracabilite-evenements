@@ -1,4 +1,4 @@
-# PractitionerExample - ANS IG Example v0.1.0
+# PractitionerExample - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)

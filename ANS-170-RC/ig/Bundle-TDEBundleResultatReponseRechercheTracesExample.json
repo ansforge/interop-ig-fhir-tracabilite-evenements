@@ -2,7 +2,7 @@
   "resourceType" : "Bundle",
   "id" : "TDEBundleResultatReponseRechercheTracesExample",
   "meta" : {
-    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEBundleResultatReponseRechercheTraces"]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces"]
   },
   "type" : "searchset",
   "entry" : [{
@@ -11,7 +11,7 @@
       "resourceType" : "AuditEvent",
       "id" : "TDEAuditEventExample",
       "meta" : {
-        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent"]
+        "profile" : ["https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"]
       },
       "text" : {
         "status" : "generated",

@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://interop.esante.gouv.fr/ig/fhir/[code]/Practitioner/PractitionerExample> a fhir:Practitioner ;
+<https://interop.esante.gouv.fr/ig/fhir/tde/Practitioner/PractitionerExample> a fhir:Practitioner ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "PractitionerExample"] ; # 
   fhir:meta [

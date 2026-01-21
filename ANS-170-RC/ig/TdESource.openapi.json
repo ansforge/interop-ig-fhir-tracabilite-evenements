@@ -7,14 +7,14 @@
       "name": "Creative Commons Zero v1.0 Universal",
       "url": "http://spdx.org/licenses/CC0-1.0.html"
     },
-    "version": "0.1.0",
+    "version": "2.0.0",
     "contact": {
       "name": "Agence du Numérique en Santé (ANS) - 2-10 Rue d\u0027Oradour-sur-Glane, 75015 Paris",
       "url": "https://esante.gouv.fr"
     }
   },
   "externalDocs": {
-    "url": "https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/TdESource",
+    "url": "https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdESource",
     "description": "FHIR CapabilityStatement"
   },
   "components": {

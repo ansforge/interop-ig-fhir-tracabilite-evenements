@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://interop.esante.gouv.fr/ig/fhir/[code]/Device/DeviceExample> a fhir:Device ;
+<https://interop.esante.gouv.fr/ig/fhir/tde/Device/DeviceExample> a fhir:Device ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "DeviceExample"] ; # 
   fhir:text [

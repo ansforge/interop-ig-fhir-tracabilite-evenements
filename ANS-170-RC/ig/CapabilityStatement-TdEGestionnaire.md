@@ -1,4 +1,4 @@
-# TdE-Gestionnaire - ANS IG Example v0.1.0
+# TdE-Gestionnaire - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/TdEGestionnaire | *Version*:0.1.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdEGestionnaire | *Version*:2.0.0 |
 | Active as of 2025-01-14 | *Computable Name*:TdEGestionnaire |
 
  
@@ -24,8 +24,8 @@ Le rôle du Gestionnaire est d'enregistrer les informations de traçabilité et 
 {
   "resourceType" : "CapabilityStatement",
   "id" : "TdEGestionnaire",
-  "url" : "https://interop.esante.gouv.fr/ig/fhir/[code]/CapabilityStatement/TdEGestionnaire",
-  "version" : "0.1.0",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdEGestionnaire",
+  "version" : "2.0.0",
   "name" : "TdEGestionnaire",
   "title" : "TdE-Gestionnaire",
   "status" : "active",
@@ -71,7 +71,7 @@ Le rôle du Gestionnaire est d'enregistrer les informations de traçabilité et 
         {
           "type" : "AuditEvent",
           "supportedProfile" : [
-            "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent"
+            "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"
           ],
           "interaction" : [
             {
@@ -84,7 +84,7 @@ Le rôle du Gestionnaire est d'enregistrer les informations de traçabilité et 
           "searchParam" : [
             {
               "name" : "TDE_AuditEvent_period-start",
-              "definition" : "https://interop.esante.gouv.fr/ig/fhir/[code]/SearchParameter/TDE-AuditEvent-period-start",
+              "definition" : "https://interop.esante.gouv.fr/ig/fhir/tde/SearchParameter/TDE-AuditEvent-period-start",
               "type" : "date",
               "documentation" : "Paramètre de recherche pour la date d'occurence d'une trace"
             }

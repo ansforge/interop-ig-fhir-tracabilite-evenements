@@ -1,4 +1,4 @@
-# TDEAuditEventExample - ANS IG Example v0.1.0
+# TDEAuditEventExample - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -21,7 +21,7 @@ Profil: [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md)
 | | | |
 | :--- | :--- | :--- |
 | - | **Who** | **Requestor** |
-| * | [Practitioner Jean DUPONT](Practitioner-PractitionerExample.md) | true |
+| * | [Practitioner Jean DUPONT ](Practitioner-PractitionerExample.md) | true |
 
 ### Sources
 
@@ -40,7 +40,7 @@ Profil: [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md)
   "id" : "TDEAuditEventExample",
   "meta" : {
     "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/TDEAuditEvent"
+      "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"
     ]
   },
   "type" : {
