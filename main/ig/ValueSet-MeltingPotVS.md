@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/ValueSet/MeltingPotVS | *Version*:0.1.0 |
-| Draft as of 2025-11-18 | *Computable Name*:MeltingPotVS |
+| Draft as of 2026-01-23 | *Computable Name*:MeltingPotVS |
 
  
 Melting Pot Value Set. 
@@ -18,25 +18,11 @@ Melting Pot Value Set.
 
 Ce jeu de valeurs nest pas utilisé ici ; il peut être utilisé autre part (par exemple dans les spécifications et / ou implémentations qui utilisent ce contenu)
 
-### Logical Definition (CLD)
-
-Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :
-
-* Inclut ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`http://snomed.info/sct`](http://www.snomed.org/)version Not Stated (use latest from terminology server)
-* Inclut ce(s) code(s) tel quil(s) est (sont) défini(s) dans [`https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/competence-code-system`](CodeSystem-competence-code-system.md)version 📦0.1.0 
-* Inclut tous les codes définis dans [`https://interop.esante.gouv.fr/ig/fhir/[code]/CodeSystem/type-carte-code-system`](CodeSystem-type-carte-code-system.md)version 📦0.1.0
+### Définition logique (CLD)
 
  
 
 ### Expansion
-
-Expansion from smt.esante.gouv.fr based on:
-
-* SNOMED CT 11000315107 edition 21-Jun 2025
-* [codesystem Compétences CodeSystem v0.1.0 (CodeSystem)](CodeSystem-competence-code-system.md)
-* [codesystem Type de carte v0.1.0 (CodeSystem)](CodeSystem-type-carte-code-system.md)
-
-Ce jeu de valeur (ValueSet) contient 7 concepts
 
 -------
 
@@ -64,7 +50,7 @@ Ce jeu de valeur (ValueSet) contient 7 concepts
   "name" : "MeltingPotVS",
   "title" : "Melting Pot Value Set",
   "status" : "draft",
-  "date" : "2025-11-18T09:19:50+00:00",
+  "date" : "2026-01-23T13:08:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

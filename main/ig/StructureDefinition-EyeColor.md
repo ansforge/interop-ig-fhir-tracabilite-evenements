@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/[code]/StructureDefinition/EyeColor | *Version*:0.1.0 |
-| Draft as of 2025-11-18 | *Computable Name*:EyeColor |
+| Draft as of 2026-01-23 | *Computable Name*:EyeColor |
 
 Eye color extension
 
@@ -17,9 +17,9 @@ Eye color extension
 
 **Usage info**
 
-**Usages:**
+**Utilisations:**
 
-* Use this Extension: [Patient français](StructureDefinition-fr-patient.md)
+* Utiliser ce Extension: [Patient français](StructureDefinition-fr-patient.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.[code]|current/StructureDefinition/EyeColor)
 
@@ -31,9 +31,9 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 Other representations of profile: [CSV](StructureDefinition-EyeColor.csv), [Excel](StructureDefinition-EyeColor.xlsx), [Schematron](StructureDefinition-EyeColor.sch) 
 
-#### Terminology Bindings
+#### Bindings terminologiques
 
-#### Constraints
+#### Contraintes
 
 
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-EyeColor.csv), [Exce
   "version" : "0.1.0",
   "name" : "EyeColor",
   "status" : "draft",
-  "date" : "2025-11-18T09:19:50+00:00",
+  "date" : "2026-01-23T13:08:23+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
