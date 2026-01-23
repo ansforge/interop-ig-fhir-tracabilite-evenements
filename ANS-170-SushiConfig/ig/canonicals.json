@@ -1,0 +1,65 @@
+[
+  {
+    "id" : "competence-code-system",
+    "type" : "CodeSystem",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/CodeSystem/competence-code-system",
+    "version" : "2.0.0",
+    "name" : "CompetenceCS"
+  },
+  {
+    "id" : "type-carte-code-system",
+    "type" : "CodeSystem",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/CodeSystem/type-carte-code-system",
+    "version" : "2.0.0",
+    "name" : "TypeCarteCS"
+  },
+  {
+    "id" : "ans.fhir.fr.tde",
+    "type" : "ImplementationGuide",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde",
+    "version" : "2.0.0",
+    "name" : "TDE"
+  },
+  {
+    "id" : "EyeColor",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/EyeColor",
+    "version" : "2.0.0",
+    "name" : "EyeColor"
+  },
+  {
+    "id" : "fr-patient",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/fr-patient",
+    "version" : "2.0.0",
+    "name" : "FrPatient"
+  },
+  {
+    "id" : "EyeColorVS",
+    "type" : "ValueSet",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/ValueSet/EyeColorVS",
+    "version" : "2.0.0",
+    "name" : "EyeColorVS"
+  },
+  {
+    "id" : "MeltingPotVS",
+    "type" : "ValueSet",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/ValueSet/MeltingPotVS",
+    "version" : "2.0.0",
+    "name" : "MeltingPotVS"
+  },
+  {
+    "id" : "ModifiedAdministrativeGender",
+    "type" : "ValueSet",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/ValueSet/ModifiedAdministrativeGender",
+    "version" : "2.0.0",
+    "name" : "ModifiedAdministrativeGender"
+  },
+  {
+    "id" : "TypeCarteVS",
+    "type" : "ValueSet",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/ValueSet/TypeCarteVS",
+    "version" : "2.0.0",
+    "name" : "TypeCarteVS"
+  }
+]

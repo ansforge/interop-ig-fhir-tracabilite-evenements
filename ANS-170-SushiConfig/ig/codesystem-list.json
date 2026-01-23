@@ -1,0 +1,20 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/CodeSystem/competence-code-system",
+      "version" : "2.0.0",
+      "status" : "draft",
+      "name" : "CompetenceCS",
+      "title" : "Compétences CodeSystem",
+      "description" : "Compétences des professionnels de santé."
+    },
+    {
+      "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/CodeSystem/type-carte-code-system",
+      "version" : "2.0.0",
+      "status" : "draft",
+      "name" : "TypeCarteCS",
+      "title" : "Type de carte",
+      "description" : "Type de carte professionnelle et personnelle."
+    }
+  ]
+}
