@@ -18,30 +18,6 @@
 
 ## Resources
 
-### CodeSystems
-
-* [Compétences CodeSystem](CodeSystem-competence-code-system.md)
-* [Type de carte](CodeSystem-type-carte-code-system.md)
-
-### ValueSets
-
-* [EyeColor Value Set](ValueSet-EyeColorVS.md)
-* [Melting Pot Value Set](ValueSet-MeltingPotVS.md)
-* [ModifiedAdministrativeGender](ValueSet-ModifiedAdministrativeGender.md)
-* [Type Carte Value Set](ValueSet-TypeCarteVS.md)
-
-### Resource Profiles
-
-* [Patient français](StructureDefinition-fr-patient.md)
-
-### Extensions
-
-* [EyeColor](StructureDefinition-EyeColor.md)
-
 ### ImplementationGuides
 
 * [ANS - Traçabilité des événements](index.md)
-
-### Examples
-
-* [frpatient-exemple (Patient)](Patient-frpatient-exemple.md)
