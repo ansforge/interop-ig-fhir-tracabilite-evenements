@@ -29,15 +29,12 @@
 </div>
 
 ### Introduction
-Ce guide d'implémentation présente une spécification générique des
-échanges pour la gestion des traces.
 
-Les traces sont l’ensemble des informations enregistrées relatant les
-actions entreprises par un système en conséquence d’un événement. Les
-informations peuvent aussi bien porter sur des dispositifs physiques,
-comme par exemple un dispositif médical implantable (changement de lieu,
-mise à jour du statut), que sur des actions utilisateurs (connexion à un
-système, création d'un utilisateur). Dans le cadre de cette étude, les
+Ce guide d'implémentation présente une spécification générique des échanges pour la gestion des traces.
+
+Les traces sont l’ensemble des informations enregistrées relatant les actions entreprises par un système en conséquence d’un événement. Les
+informations peuvent aussi bien porter sur des dispositifs physiques, comme par exemple un dispositif médical implantable (changement de lieu,
+mise à jour du statut), que sur des actions utilisateurs (connexion à un système, création d'un utilisateur). Dans le cadre de cette étude, les
 processus qui sont à l'origine des traces sont hors périmètre.
 
 ### Périmètre du projet
@@ -46,9 +43,7 @@ Cet IG définit le périmètre fonctionnel et technique de la mise en œuvre des
 
 #### Lectorat cible
 
-Les lecteurs cibles sont principalement des chefs de projets ainsi que
-toute personne concernée par la maitrise d’ouvrage et qui spécifie des
-projets avec des interfaces interopérables.
+Les lecteurs cibles sont principalement des chefs de projets ainsi que toute personne concernée par la maitrise d’ouvrage et qui spécifie des projets avec des interfaces interopérables.
 
 ### Standards utilisés
 
