@@ -1,5 +1,7 @@
 Profile: TDEAuditEvent
 Parent: AuditEvent
+Id: tde-auditevent
+Title: "TdE AuditEvent"
 Description: "Profil représentant la trace d'un évènement"
 
 * subtype ..1

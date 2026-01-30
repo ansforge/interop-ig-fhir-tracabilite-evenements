@@ -18,9 +18,8 @@ Instance: PractitionerExample
 InstanceOf: FRCorePractitionerProfile
 Usage: #example
 
-* identifier.system = "https://rpps.esante.gouv.fr"
-* identifier.value = "10001234567"
-
+* identifier[rpps].value = "10001234567"
+* identifier[rpps].system = "https://rpps.esante.gouv.fr"
 * name.family = "DUPONT"
 * name.given = "Jean"
 
