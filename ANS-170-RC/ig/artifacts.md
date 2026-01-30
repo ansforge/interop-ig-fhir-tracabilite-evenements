@@ -23,7 +23,7 @@ These define the properties by which a RESTful server can be searched. They can 
 
 | | |
 | :--- | :--- |
-| [TDE-AuditEvent-period-start](SearchParameter-TDE-AuditEvent-period-start.md) | Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence |
+| [TdE AuditEvent period.start](SearchParameter-TDE-AuditEvent-period-start.md) | Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence |
 
 ### Structures: Resource Profiles 
 

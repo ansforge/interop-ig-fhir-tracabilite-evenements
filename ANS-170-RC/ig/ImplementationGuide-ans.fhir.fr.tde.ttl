@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "TDE"] ; # 
   fhir:title [ fhir:v "ANS - Traçabilité des événements"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-01-30T11:08:28+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-01-30T15:03:31+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1460,7 +1460,7 @@
          fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/SearchParameter/TDE-AuditEvent-period-start> ;
          fhir:reference [ fhir:v "SearchParameter/TDE-AuditEvent-period-start" ]
        ] ;
-       fhir:name [ fhir:v "TDE-AuditEvent-period-start" ] ;
+       fhir:name [ fhir:v "TdE AuditEvent period.start" ] ;
        fhir:description [ fhir:v "Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence" ] ;
        fhir:example [
          a fhir:Boolean ;

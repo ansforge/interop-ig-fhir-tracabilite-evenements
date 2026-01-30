@@ -77,7 +77,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "TDE",
   "title" : "ANS - Traçabilité des événements",
   "status" : "draft",
-  "date" : "2026-01-30T11:08:28+00:00",
+  "date" : "2026-01-30T15:03:31+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -888,7 +888,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         "reference" : {
           "reference" : "SearchParameter/TDE-AuditEvent-period-start"
         },
-        "name" : "TDE-AuditEvent-period-start",
+        "name" : "TdE AuditEvent period.start",
         "description" : "Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence",
         "exampleBoolean" : false
       },

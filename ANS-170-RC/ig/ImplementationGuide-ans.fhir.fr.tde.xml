@@ -10,7 +10,7 @@
   <name value="TDE"/>
   <title value="ANS - Traçabilité des événements"/>
   <status value="draft"/>
-  <date value="2026-01-30T11:08:28+00:00"/>
+  <date value="2026-01-30T15:03:31+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -518,7 +518,7 @@
       <reference>
         <reference value="SearchParameter/TDE-AuditEvent-period-start"/>
       </reference>
-      <name value="TDE-AuditEvent-period-start"/>
+      <name value="TdE AuditEvent period.start"/>
       <description value="Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence"/>
       <exampleBoolean value="false"/>
     </resource>
