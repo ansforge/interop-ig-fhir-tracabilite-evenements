@@ -10,7 +10,7 @@
   <name value="TDE"/>
   <title value="ANS - Traçabilité des événements"/>
   <status value="draft"/>
-  <date value="2026-01-21T14:10:51+00:00"/>
+  <date value="2026-01-30T11:08:28+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -617,46 +617,38 @@
           <valueUrl value="specifications_fonctionnelles.html"/>
         </extension>
         <nameUrl value="specifications_fonctionnelles.html"/>
-        <title value="Specifications Fonctionnelles"/>
+        <title value="Volume 1 - Etude fonctionnelle"/>
         <generation value="markdown"/>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="sf1.html"/>
-          </extension>
-          <nameUrl value="sf1.html"/>
-          <title value="Vue d'ensemble"/>
-          <generation value="markdown"/>
-        </page>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="specifications_techniques.html"/>
+          <valueUrl value="specifications_technique_intro.html"/>
         </extension>
-        <nameUrl value="specifications_techniques.html"/>
-        <title value="Specifications Techniques"/>
+        <nameUrl value="specifications_technique_intro.html"/>
+        <title value="Volume 2 - Détail des transactions"/>
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="construction_des_flux.html"/>
+            <valueUrl value="specifications_technique_correspondance_metier.html"/>
           </extension>
-          <nameUrl value="construction_des_flux.html"/>
-          <title value="Vue d'ensemble"/>
+          <nameUrl value="specifications_technique_correspondance_metier.html"/>
+          <title value="Correspondances métier"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="st_flux1.html"/>
+            <valueUrl value="specifications_technique_api.html"/>
           </extension>
-          <nameUrl value="st_flux1.html"/>
-          <title value="Flux 01"/>
+          <nameUrl value="specifications_technique_api.html"/>
+          <title value="Via API REST"/>
           <generation value="markdown"/>
         </page>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="st_flux2.html"/>
+            <valueUrl value="specifications_technique_syslog.html"/>
           </extension>
-          <nameUrl value="st_flux2.html"/>
-          <title value="Flux 02"/>
+          <nameUrl value="specifications_technique_syslog.html"/>
+          <title value="Via syslog"/>
           <generation value="markdown"/>
         </page>
       </page>
@@ -666,14 +658,6 @@
         </extension>
         <nameUrl value="change-log.html"/>
         <title value="Historique des versions"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="autres_ressources.html"/>
-        </extension>
-        <nameUrl value="autres_ressources.html"/>
-        <title value="Autres Ressources"/>
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -689,6 +673,30 @@
           </extension>
           <nameUrl value="downloads.html"/>
           <title value="Téléchargements et usages"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="normes_standards.html"/>
+          </extension>
+          <nameUrl value="normes_standards.html"/>
+          <title value="Etude norme et standards"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="annexe_audit_dicom.html"/>
+          </extension>
+          <nameUrl value="annexe_audit_dicom.html"/>
+          <title value="Mise en correspondance AuditEvent / DICOM"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="glossaire.html"/>
+          </extension>
+          <nameUrl value="glossaire.html"/>
+          <title value="Glossaire"/>
           <generation value="markdown"/>
         </page>
       </page>

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent | *Version*:2.0.0 |
-| Draft as of 2026-01-21 | *Computable Name*:TDEAuditEvent |
+| Draft as of 2026-01-30 | *Computable Name*:TDEAuditEvent |
 
  
 Profil représentant la trace d'un évènement 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-TDEAuditEvent.csv), 
   "version" : "2.0.0",
   "name" : "TDEAuditEvent",
   "status" : "draft",
-  "date" : "2026-01-21T14:10:51+00:00",
+  "date" : "2026-01-30T11:08:28+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
