@@ -1,46 +1,23 @@
-# ans.fhir.fr.[code]#0.1.0: ANS IG Example
+# ans.fhir.fr.tde#2.0.0: ANS - Traçabilité des événements
 
 ## Pages
 
 * [Accueil](index.md)
 * [Historique des versions](change-log.md)
-* [Vue d'ensemble](sf1.md)
-* [Flux 02](st_flux2.md)
-* [Flux 01](st_flux1.md)
+* [Correspondances métier](specifications_technique_correspondance_metier.md)
+* [Volume 2 - Détail des transactions](specifications_technique_intro.md)
 * [Artifacts Summary](artifacts.md)
-* [Specifications Techniques](specifications_techniques.md)
 * [Sécurité](securite.md)
-* [Autres Ressources](autres_ressources.md)
-* [Specifications Fonctionnelles](specifications_fonctionnelles.md)
-* [Vue d'ensemble](construction_des_flux.md)
+* [Mise en correspondance AuditEvent / DICOM](annexe_audit_dicom.md)
+* [Etude norme et standards](normes_standards.md)
+* [Via API REST](specifications_technique_api.md)
+* [Volume 1 - Etude fonctionnelle](specifications_fonctionnelles.md)
+* [Via syslog](specifications_technique_syslog.md)
+* [Glossaire](glossaire.md)
 * [Téléchargements et usages](downloads.md)
 
 ## Resources
 
-### CodeSystems
-
-* [Compétences CodeSystem](CodeSystem-competence-code-system.md)
-* [Type de carte](CodeSystem-type-carte-code-system.md)
-
-### ValueSets
-
-* [EyeColor Value Set](ValueSet-EyeColorVS.md)
-* [Melting Pot Value Set](ValueSet-MeltingPotVS.md)
-* [ModifiedAdministrativeGender](ValueSet-ModifiedAdministrativeGender.md)
-* [Type Carte Value Set](ValueSet-TypeCarteVS.md)
-
-### Resource Profiles
-
-* [Patient français](StructureDefinition-fr-patient.md)
-
-### Extensions
-
-* [EyeColor](StructureDefinition-EyeColor.md)
-
 ### ImplementationGuides
 
-* [ANS IG Example](index.md)
-
-### Examples
-
-* [frpatient-exemple (Patient)](Patient-frpatient-exemple.md)
+* [ANS - Traçabilité des événements](index.md)
