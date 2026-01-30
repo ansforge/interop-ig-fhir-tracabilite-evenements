@@ -1,13 +1,7 @@
 Instance: TDE-AuditEvent-period-start
 InstanceOf: SearchParameter
+Description: Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence
 Usage: #definition
-* meta.lastUpdated = "2021-10-21T14:10:19.925+00:00"
-* version = "1.0"
-* name = "TDE_AuditEvent_period-start"
-* status = #active
-* date = "2021-12-01"
-* publisher = "ANS"
-* description = "Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence"
 * code = #period-start
 * base = #AuditEvent
 * type = #date
