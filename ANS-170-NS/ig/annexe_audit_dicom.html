@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"5"}
-    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <style type="text/css">h2{--heading-prefix:"4.4"}
+    h3,h4,h5,h6{--heading-prefix:"4.4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -68,7 +68,7 @@
 
 
 
-  <span title="">FR</span>
+  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
 
 
             </span>
@@ -99,10 +99,7 @@
     <a href="index.html">Accueil</a>
   </li>
   <li>
-    <a href="index.html">Volume 1 - Etude fonctionnelle</a>
-  </li>
-  <li>
-    <a href="ns.html">Normes et standards</a>
+    <a href="specifications_fonctionnelles.html">Volume 1 - Etude fonctionnelle</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 - Détail des transactions
@@ -110,18 +107,18 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="construction_des_flux.html">Construction des flux</a>
+        <a href="specifications_technique_intro.html">Introduction</a>
       </li>
       <li>
-        <a href="st_flux1.html">Flux 01</a>
+        <a href="specifications_technique_correspondance_metier.html">Correspondances métier</a>
       </li>
       <li>
-        <a href="st_flux2.html">Flux 02</a>
+        <a href="specifications_technique_api.html">Via API REST</a>
+      </li>
+      <li>
+        <a href="specifications_technique_syslog.html">Via syslog</a>
       </li>
     </ul>
-  </li>
-  <li>
-    <a href="artifacts.html">Ressources de conformité</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 3 - Annexes
@@ -129,18 +126,14 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="normes_standards.html">Normes et standards</a>
+      </li>
+      <li>
         <a href="glossaire.html">Glossaire</a>
       </li>
       <li>
         <a href="annexe_audit_dicom.html">Mise en correspondance AuditEvent / DICOM</a>
       </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
       <li>
         <a href="securite.html">Sécurité</a>
       </li>
@@ -154,6 +147,9 @@
         <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
       </li>
     </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
   </li>
   <li>
     <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
@@ -173,11 +169,11 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Mise en correspondance AuditEvent / DICOM</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='change-log.html'><b>Historique des versions</b></a></li><li><b>Mise en correspondance AuditEvent / DICOM</b></li>
 
           <span style="float:right;">
 
-            <a href="st_flux2.html">&lt;prev</a> | 
+            <a href="normes_standards.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
@@ -346,7 +342,7 @@ entity.detail</td>
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="st_flux2.html">&lt;prev</a>
+                <a href="normes_standards.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -364,7 +360,7 @@ entity.detail</td>
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.tde#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 19, 2026 13:49+0000">2026-01-19</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.tde#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 30, 2026 10:50+0000">2026-01-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

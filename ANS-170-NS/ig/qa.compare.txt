@@ -1,73 +1,22 @@
 TDE : Validation Results
 =========================================
 
-err = 1, warn = 15, info = 17
+err = 2, warn = 3, info = 0
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.tde#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/tde)
- Build Errors : 11 / 4 / 0
- /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CodeSystem-competence-code-system : 0 / 2 / 3
- /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/CodeSystem-type-carte-code-system : 0 / 2 / 3
- /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.tde : 1 / 0 / 2
- /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/Patient-frpatient-exemple : 0 / 1 / 1
- /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/StructureDefinition-EyeColor : 0 / 2 / 2
- /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/StructureDefinition-fr-patient : 0 / 0 / 5
- /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-EyeColorVS : 0 / 1 / 3
- /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-MeltingPotVS : 0 / 1 / 4
- /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-ModifiedAdministrativeGender : 0 / 1 / 2
- /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ValueSet-TypeCarteVS : 0 / 1 / 2
+ Build Errors : 6 / 3 / 0
+ /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.tde : 2 / 0 / 1
 </table>
 == n/a ==
-WARNING: /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/output/ns.html: Illegal HTML: Illegal HTML element: section
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 239, column 49: The link 'LIEN SFE' for "Étude métier – Gestion de traces" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 334, column 24: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 348, column 5: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 354, column 45: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 595, column 52: The link 'LIENSSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 599, column 64: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2206, column 39: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2210, column 2: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/p/a at Line 2291, column 32: The link 'LienSFE' for "l’étude métier" cannot be resolved
-ERROR: ns.html#/html/body/div/div/div/div/div/ul/li/p/a at Line 2384, column 32: The link 'LIENSSFE' for "l’étude métier" cannot be resolved
-ERROR: searchform.html#/html/body/div/div/div/a/img/div/a/img/div/p/img at Line 57, column 3: The image source 'assets/images/fra.svg' cannot be resolved
+ERROR: downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 240, column 8: The link 'definitions.json.zip' for "Définitions JSON (zip)" cannot be resolved
+ERROR: downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 241, column 8: The link 'definitions.xml.zip' for "Définitions XML (zip)" cannot be resolved
+ERROR: downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 242, column 8: The link 'definitions.ttl.zip' for "Définitions Turtle (zip)" cannot be resolved
+ERROR: downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 248, column 8: The link 'examples.xml.zip' for "Exemples XML (zip)" cannot be resolved
+ERROR: downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 249, column 8: The link 'examples.json.zip' for "Exemples JSON (zip)" cannot be resolved
+ERROR: downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 250, column 8: The link 'examples.ttl.zip' for "Exemples Turtle (zip)" cannot be resolved
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 5: The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
-== fsh-generated/resources/CodeSystem-competence-code-system.json ==
-INFORMATION: CodeSystem/competence-code-system: CodeSystem.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
-INFORMATION: CodeSystem/competence-code-system: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
-WARNING: CodeSystem/competence-code-system: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
-WARNING: CodeSystem/competence-code-system: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
-== fsh-generated/resources/CodeSystem-type-carte-code-system.json ==
-INFORMATION: CodeSystem/type-carte-code-system: CodeSystem.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
-INFORMATION: CodeSystem/type-carte-code-system: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
-WARNING: CodeSystem/type-carte-code-system: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
-WARNING: CodeSystem/type-carte-code-system: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.tde.json ==
-INFORMATION: ImplementationGuide/ans.fhir.fr.tde: ImplementationGuide.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+ERROR: ImplementationGuide/ans.fhir.fr.tde: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)
 ERROR: ImplementationGuide/ans.fhir.fr.tde: ImplementationGuide.definition.extension[27].url: No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
-== fsh-generated/resources/Patient-frpatient-exemple.json ==
-WARNING: Patient/frpatient-exemple: Patient.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.213.1.4.8'
-== fsh-generated/resources/StructureDefinition-EyeColor.json ==
-INFORMATION: StructureDefinition/EyeColor: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
-WARNING: StructureDefinition/EyeColor: StructureDefinition.context[0]: Review the extension type for EyeColor: extensions should not have a context of Element unless it's really intended that they can be used anywhere
-WARNING: StructureDefinition.where(url = 'https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/EyeColor'): The Implementation Guide contains no examples for this extension
-== fsh-generated/resources/StructureDefinition-fr-patient.json ==
-INFORMATION: StructureDefinition/fr-patient: StructureDefinition.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
-INFORMATION: StructureDefinition/fr-patient: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
-INFORMATION: StructureDefinition/fr-patient: StructureDefinition.differential.element[3].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-INFORMATION: StructureDefinition/fr-patient: StructureDefinition.snapshot.element[10].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-== fsh-generated/resources/ValueSet-EyeColorVS.json ==
-INFORMATION: ValueSet/EyeColorVS: ValueSet.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
-INFORMATION: ValueSet/EyeColorVS: ValueSet.compose.include[0]: The concepts in the value set include have not been validated because the terminology server https://smt.esante.gouv.fr/fhir does not support batch validation (tests version < 1.7.8)
-WARNING: ValueSet/EyeColorVS: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
-== fsh-generated/resources/ValueSet-MeltingPotVS.json ==
-INFORMATION: ValueSet/MeltingPotVS: ValueSet.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
-INFORMATION: ValueSet/MeltingPotVS: ValueSet.compose.include[0]: The concepts in the value set include have not been validated because the terminology server https://smt.esante.gouv.fr/fhir does not support batch validation (tests version < 1.7.8)
-INFORMATION: ValueSet/MeltingPotVS: ValueSet.compose.include[1].concept[0]: Reference to draft CodeSystem https://interop.esante.gouv.fr/ig/fhir/tde/CodeSystem/competence-code-system|2.0.0
-WARNING: ValueSet/MeltingPotVS: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
-== fsh-generated/resources/ValueSet-ModifiedAdministrativeGender.json ==
-INFORMATION: ValueSet/ModifiedAdministrativeGender: ValueSet.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
-WARNING: ValueSet/ModifiedAdministrativeGender: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
-== fsh-generated/resources/ValueSet-TypeCarteVS.json ==
-INFORMATION: ValueSet/TypeCarteVS: ValueSet.jurisdiction[0]: Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
-WARNING: ValueSet/TypeCarteVS: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
