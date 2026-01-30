@@ -1,7 +1,7 @@
 # Téléchargements et usages - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
-* [**Autres Ressources**](autres_ressources.md)
+* [**Historique des versions**](change-log.md)
 * **Téléchargements et usages**
 
 ## Téléchargements et usages
