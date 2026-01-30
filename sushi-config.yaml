@@ -12,6 +12,9 @@ copyrightYear: 2020+
 releaseLabel: ci-build # le release label doit être conforme au cycle de vie de la doctrine du ci-sis
 jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
 
+dependencies:
+    hl7.fhir.fr.core: 2.1.0
+
 parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
     shownav: 'true'
     path-expansion-params: '../../expansion-params.json' # for using French SNOMED CT Extension
@@ -22,39 +25,44 @@ pages:
     index.md:
         title: Accueil
     specifications_fonctionnelles.md:
-        sf1.md:
-            title: Vue d'ensemble
-    specification_technique_intro.md:
+            title: Volume 1 - Etude fonctionnelle
+    specifications_technique_intro.md:
         title: Volume 2 - Détail des transactions
-        correspondance_metier.md:
+        specifications_technique_correspondance_metier.md:
             title: Correspondances métier
-        api.md:
+        specifications_technique_api.md:
             title: Via API REST
-        syslog.md:
+        specifications_technique_syslog.md:
             title: Via syslog
     change-log.md:
         title: Historique des versions
-    autres_ressources.md:
-        title: Autres Ressources
         securite.md:
             title: Sécurité
         downloads.md:
             title: Téléchargements et usages
-    
-
+        normes_standards.md:
+            title: Etude norme et standards
+        annexe_audit_dicom.md:
+            title: Mise en correspondance AuditEvent / DICOM
+        glossaire.md:
+            title: Glossaire
 menu:
     Accueil: index.html
-    Volume 1 - Etude fonctionnelle: index.html
+    Volume 1 - Etude fonctionnelle: specifications_fonctionnelles.html
     Volume 2 - Détail des transactions:
-        Introduction: specification_technique_intro.html
-        Correspondances métier: correspondance_metier.html
-        Via API REST: api.html
-        Via syslog: syslog.html
-    Ressources de conformité: artifacts.html
-    Autres ressources:
+        Introduction: specifications_technique_intro.html
+        Correspondances métier: specifications_technique_correspondance_metier.html
+        Via API REST: specifications_technique_api.html
+        Via syslog: specifications_technique_syslog.html
+    Volume 3 - Annexes:
+        Normes et standards: normes_standards.html
+        Glossaire: glossaire.html
+        Mise en correspondance AuditEvent / DICOM: annexe_audit_dicom.html
         Sécurité: securite.html
         Téléchargements et usage: downloads.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
+
+    Ressources de conformité: artifacts.html
     Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
     Historique: change-log.html
