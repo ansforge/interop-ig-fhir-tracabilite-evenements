@@ -5,16 +5,16 @@
   "jurisdiction": "FR",
   "extensions": [],
   "profiles": {
-    "AuditEvent": [
-      {
-        "url": "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent",
-        "title": "TDEAuditEvent"
-      }
-    ],
     "Bundle": [
       {
         "url": "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces",
         "title": "TDEBundleResultatReponseRechercheTraces"
+      }
+    ],
+    "AuditEvent": [
+      {
+        "url": "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent",
+        "title": "TdE AuditEvent"
       }
     ]
   },

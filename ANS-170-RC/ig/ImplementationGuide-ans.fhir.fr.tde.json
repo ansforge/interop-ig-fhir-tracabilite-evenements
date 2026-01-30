@@ -10,7 +10,7 @@
   "name" : "TDE",
   "title" : "ANS - Traçabilité des événements",
   "status" : "draft",
-  "date" : "2026-01-30T15:03:31+00:00",
+  "date" : "2026-01-30T15:44:16+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -685,6 +685,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/tde-auditevent"
+      },
+      "name" : "TdE AuditEvent",
+      "description" : "Profil représentant la trace d'un évènement",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
       }],
       "reference" : {
@@ -733,25 +745,13 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/TDEAuditEvent"
-      },
-      "name" : "TDEAuditEvent",
-      "description" : "Profil représentant la trace d'un évènement",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "AuditEvent"
       }],
       "reference" : {
         "reference" : "AuditEvent/TDEAuditEventExample"
       },
       "name" : "TDEAuditEventExample",
-      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"
+      "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent"
     },
     {
       "extension" : [{

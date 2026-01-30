@@ -41,7 +41,7 @@ Les ressources profilées dans le cadre de ce guide d'implémentation sont les s
 | | | |
 | :--- | :--- | :--- |
 | Profil parent | Profil | Description |
-| [AuditEvent](http://hl7.org/fhir/StructureDefinition/AuditEvent) | [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md) | Profil représentant la trace d'un évènement |
+| [AuditEvent](http://hl7.org/fhir/StructureDefinition/AuditEvent) | [TDEAuditEvent](StructureDefinition-tde-auditevent.md) | Profil représentant la trace d'un évènement |
 | [Bundle](http://hl7.org/fhir/StructureDefinition/Bundle) | [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md) | Bundle de réponse à la recherche de traces |
 
 ### Dépendances
@@ -56,7 +56,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
-* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html): [TDE](index.md), [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md)... Show 5 more, [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md), [TDE_AuditEvent_period-start](SearchParameter-TDE-AuditEvent-period-start.md), [TdEConsommateur](CapabilityStatement-TdEConsommateur.md), [TdEGestionnaire](CapabilityStatement-TdEGestionnaire.md) and [TdESource](CapabilityStatement-TdESource.md)
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html): [TDE](index.md), [TDEAuditEvent](StructureDefinition-tde-auditevent.md)... Show 5 more, [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md), [TDE_AuditEvent_period-start](SearchParameter-TDE-AuditEvent-period-start.md), [TdEConsommateur](CapabilityStatement-TdEConsommateur.md), [TdEGestionnaire](CapabilityStatement-TdEGestionnaire.md) and [TdESource](CapabilityStatement-TdESource.md)
 
 
 * These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright © 2011 by the National Electrical Manufacturers Association.
@@ -77,7 +77,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "TDE",
   "title" : "ANS - Traçabilité des événements",
   "status" : "draft",
-  "date" : "2026-01-30T15:03:31+00:00",
+  "date" : "2026-01-30T15:44:16+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -882,6 +882,20 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/tde-auditevent"
+        },
+        "name" : "TdE AuditEvent",
+        "description" : "Profil représentant la trace d'un évènement",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "SearchParameter"
           }
         ],
@@ -938,20 +952,6 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "StructureDefinition:resource"
-          }
-        ],
-        "reference" : {
-          "reference" : "StructureDefinition/TDEAuditEvent"
-        },
-        "name" : "TDEAuditEvent",
-        "description" : "Profil représentant la trace d'un évènement",
-        "exampleBoolean" : false
-      },
-      {
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "AuditEvent"
           }
         ],
@@ -959,7 +959,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           "reference" : "AuditEvent/TDEAuditEventExample"
         },
         "name" : "TDEAuditEventExample",
-        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent"
       },
       {
         "extension" : [

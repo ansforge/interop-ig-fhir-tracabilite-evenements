@@ -20,8 +20,8 @@
 
 ### Resource Profiles
 
-* [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md)
 * [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md)
+* [TdE AuditEvent](StructureDefinition-tde-auditevent.md)
 
 ### CapabilityStatements
 

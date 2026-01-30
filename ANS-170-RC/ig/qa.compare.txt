@@ -14,8 +14,8 @@ Generated $--. FHIR version $-- for ans.fhir.fr.tde#$-- (canonical = https://int
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.tde : 1 / 0 / 1
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/Practitioner-PractitionerExample : 0 / 1 / 1
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/SearchParameter-TDE-AuditEvent-period-start : 0 / 1 / 1
- /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/StructureDefinition-TDEAuditEvent : 0 / 0 / 2
- /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/StructureDefinition-TDEBundleResultatReponseRechercheTraces : 0 / 0 / 1
+ /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/StructureDefinition-TDEBundleResultatReponseRechercheTraces : 0 / 0 / 2
+ /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/StructureDefinition-tde-auditevent : 0 / 0 / 1
 </table>
 == n/a ==
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Device/DeviceExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
@@ -42,6 +42,6 @@ ERROR: ImplementationGuide/ans.fhir.fr.tde: ImplementationGuide.definition.exten
 WARNING: Practitioner/PractitionerExample: Practitioner.identifier[0].system: No definition could be found for URL value 'https://rpps.esante.gouv.fr'
 == fsh-generated/resources/SearchParameter-TDE-AuditEvent-period-start.json ==
 WARNING: SearchParameter/TDE-AuditEvent-period-start: SearchParameter: Constraint failed: spd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))'
-== fsh-generated/resources/StructureDefinition-TDEAuditEvent.json ==
-INFORMATION: StructureDefinition/TDEAuditEvent: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 == fsh-generated/resources/StructureDefinition-TDEBundleResultatReponseRechercheTraces.json ==
+INFORMATION: StructureDefinition/TDEBundleResultatReponseRechercheTraces: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+== fsh-generated/resources/StructureDefinition-tde-auditevent.json ==

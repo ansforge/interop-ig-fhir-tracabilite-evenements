@@ -71,7 +71,7 @@ Le rôle du Gestionnaire est d'enregistrer les informations de traçabilité et 
         {
           "type" : "AuditEvent",
           "supportedProfile" : [
-            "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"
+            "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent"
           ],
           "interaction" : [
             {

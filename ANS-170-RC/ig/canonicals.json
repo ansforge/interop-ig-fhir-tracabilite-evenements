@@ -35,17 +35,17 @@
     "name" : "TDE_AuditEvent_period-start"
   },
   {
-    "id" : "TDEAuditEvent",
-    "type" : "StructureDefinition",
-    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent",
-    "version" : "2.0.0",
-    "name" : "TDEAuditEvent"
-  },
-  {
     "id" : "TDEBundleResultatReponseRechercheTraces",
     "type" : "StructureDefinition",
     "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces",
     "version" : "2.0.0",
     "name" : "TDEBundleResultatReponseRechercheTraces"
+  },
+  {
+    "id" : "tde-auditevent",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent",
+    "version" : "2.0.0",
+    "name" : "TDEAuditEvent"
   }
 ]

@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "TDE"] ; # 
   fhir:title [ fhir:v "ANS - Traçabilité des événements"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-01-30T15:03:31+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-01-30T15:44:16+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -1453,6 +1453,27 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent> ;
+         fhir:reference [ fhir:v "StructureDefinition/tde-auditevent" ]
+       ] ;
+       fhir:name [ fhir:v "TdE AuditEvent" ] ;
+       fhir:description [ fhir:v "Profil représentant la trace d'un évènement" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "SearchParameter"
          ]
        ] ) ;
@@ -1537,27 +1558,6 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "StructureDefinition:resource"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent> ;
-         fhir:reference [ fhir:v "StructureDefinition/TDEAuditEvent" ]
-       ] ;
-       fhir:name [ fhir:v "TDEAuditEvent" ] ;
-       fhir:description [ fhir:v "Profil représentant la trace d'un évènement" ] ;
-       fhir:example [
-         a fhir:Boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [
-           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
-           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
-         ] ;
-         fhir:value [
-           a fhir:String ;
            fhir:v "AuditEvent"
          ]
        ] ) ;
@@ -1568,8 +1568,8 @@
        fhir:name [ fhir:v "TDEAuditEventExample" ] ;
        fhir:example [
          a fhir:Canonical ;
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"^^xsd:anyURI ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent>
+         fhir:v "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent"^^xsd:anyURI ;
+         fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent>
        ]
      ] [
        fhir:extension ( [

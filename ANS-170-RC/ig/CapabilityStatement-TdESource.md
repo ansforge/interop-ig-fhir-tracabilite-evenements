@@ -71,7 +71,7 @@ Le rôle de la Source est de transmettre les informations de traçabilité relat
         {
           "type" : "AuditEvent",
           "supportedProfile" : [
-            "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"
+            "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent"
           ],
           "interaction" : [
             {

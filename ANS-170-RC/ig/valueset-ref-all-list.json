@@ -15,7 +15,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.458"],
       "uses" : {
       },
-      "StructureDefinition-TDEAuditEvent.html" : "TDEAuditEvent"
+      "StructureDefinition-tde-auditevent.html" : "TdE AuditEvent"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/audit-event-action",
@@ -29,7 +29,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.452"],
       "uses" : {
       },
-      "StructureDefinition-TDEAuditEvent.html" : "TDEAuditEvent"
+      "StructureDefinition-tde-auditevent.html" : "TdE AuditEvent"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/audit-event-outcome",
@@ -43,7 +43,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.454"],
       "uses" : {
       },
-      "StructureDefinition-TDEAuditEvent.html" : "TDEAuditEvent"
+      "StructureDefinition-tde-auditevent.html" : "TdE AuditEvent"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/audit-event-sub-type",
@@ -60,7 +60,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.464"],
       "uses" : {
       },
-      "StructureDefinition-TDEAuditEvent.html" : "TDEAuditEvent"
+      "StructureDefinition-tde-auditevent.html" : "TdE AuditEvent"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/audit-event-type",
@@ -78,7 +78,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.462"],
       "uses" : {
       },
-      "StructureDefinition-TDEAuditEvent.html" : "TDEAuditEvent"
+      "StructureDefinition-tde-auditevent.html" : "TdE AuditEvent"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/audit-source-type",
@@ -92,7 +92,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.466"],
       "uses" : {
       },
-      "StructureDefinition-TDEAuditEvent.html" : "TDEAuditEvent"
+      "StructureDefinition-tde-auditevent.html" : "TdE AuditEvent"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/bundle-type",
@@ -120,7 +120,7 @@
       "sources" : ["1.2.840.10008.6.​1.​908"],
       "uses" : {
       },
-      "StructureDefinition-TDEAuditEvent.html" : "TDEAuditEvent"
+      "StructureDefinition-tde-auditevent.html" : "TdE AuditEvent"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/http-verb",
@@ -148,8 +148,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-TDEBundleResultatReponseRechercheTraces.html" : "TDEBundleResultatReponseRechercheTraces",
-      "StructureDefinition-TDEAuditEvent.html" : "TDEAuditEvent"
+      "StructureDefinition-tde-auditevent.html" : "TdE AuditEvent",
+      "StructureDefinition-TDEBundleResultatReponseRechercheTraces.html" : "TDEBundleResultatReponseRechercheTraces"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/network-type",
@@ -163,7 +163,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.456"],
       "uses" : {
       },
-      "StructureDefinition-TDEAuditEvent.html" : "TDEAuditEvent"
+      "StructureDefinition-tde-auditevent.html" : "TdE AuditEvent"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/object-lifecycle-events",
@@ -178,7 +178,7 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-TDEAuditEvent.html" : "TDEAuditEvent"
+      "StructureDefinition-tde-auditevent.html" : "TdE AuditEvent"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/object-role",
@@ -192,7 +192,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.460"],
       "uses" : {
       },
-      "StructureDefinition-TDEAuditEvent.html" : "TDEAuditEvent"
+      "StructureDefinition-tde-auditevent.html" : "TdE AuditEvent"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/participation-role-type",
@@ -214,7 +214,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.54"],
       "uses" : {
       },
-      "StructureDefinition-TDEAuditEvent.html" : "TDEAuditEvent"
+      "StructureDefinition-tde-auditevent.html" : "TdE AuditEvent"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
@@ -248,7 +248,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.47"],
       "uses" : {
       },
-      "StructureDefinition-TDEAuditEvent.html" : "TDEAuditEvent"
+      "StructureDefinition-tde-auditevent.html" : "TdE AuditEvent"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/security-role-type",
@@ -270,7 +270,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.978"],
       "uses" : {
       },
-      "StructureDefinition-TDEAuditEvent.html" : "TDEAuditEvent"
+      "StructureDefinition-tde-auditevent.html" : "TdE AuditEvent"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-PurposeOfUse",
@@ -284,7 +284,7 @@
       "sources" : ["2.16.840.1.113883.1.11.20448"],
       "uses" : {
       },
-      "StructureDefinition-TDEAuditEvent.html" : "TDEAuditEvent"
+      "StructureDefinition-tde-auditevent.html" : "TdE AuditEvent"
     }
   ]
 }

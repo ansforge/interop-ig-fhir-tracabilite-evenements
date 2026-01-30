@@ -31,8 +31,8 @@ These define constraints on FHIR resources for systems conforming to this implem
 
 | | |
 | :--- | :--- |
-| [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md) | Profil représentant la trace d'un évènement |
 | [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md) | Bundle de réponse à la recherche de traces |
+| [TdE AuditEvent](StructureDefinition-tde-auditevent.md) | Profil représentant la trace d'un évènement |
 
 ### Example: Example Instances 
 

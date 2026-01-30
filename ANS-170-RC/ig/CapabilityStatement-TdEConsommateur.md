@@ -71,7 +71,7 @@ Le rôle du Consommateur est d'accéder aux traces. Les personnes utilisant ce s
         {
           "type" : "AuditEvent",
           "supportedProfile" : [
-            "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"
+            "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent"
           ],
           "interaction" : [
             {

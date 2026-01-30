@@ -6,7 +6,7 @@
 
 ## Example AuditEvent: TDEAuditEventExample
 
-Profil: [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md)
+Profil: [TdE AuditEvent](StructureDefinition-tde-auditevent.md)
 
 **type**: [Audit Event ID: rest](http://terminology.hl7.org/7.0.1/CodeSystem-audit-event-type.html#audit-event-type-rest) (RESTful Operation)
 
@@ -40,7 +40,7 @@ Profil: [TDEAuditEvent](StructureDefinition-TDEAuditEvent.md)
   "id" : "TDEAuditEventExample",
   "meta" : {
     "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEAuditEvent"
+      "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent"
     ]
   },
   "type" : {
