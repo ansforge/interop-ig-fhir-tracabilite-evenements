@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Specifications Fonctionnelles - ANS - Traçabilité des événements v2.0.0</title>
+    <title>Volume 1 - Etude fonctionnelle - ANS - Traçabilité des événements v2.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -44,7 +44,7 @@
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"2"}
-    h3,h4,h5,h6{--heading-prefix:"2.0"}</style>
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -68,7 +68,7 @@
 
 
 
-  <span title="">FR</span>
+  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
 
 
             </span>
@@ -99,7 +99,7 @@
     <a href="index.html">Accueil</a>
   </li>
   <li>
-    <a href="index.html">Volume 1 - Etude fonctionnelle</a>
+    <a href="specifications_fonctionnelles.html">Volume 1 - Etude fonctionnelle</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2 - Détail des transactions
@@ -107,27 +107,33 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="specification_technique_intro.html">Introduction</a>
+        <a href="specifications_technique_intro.html">Introduction</a>
       </li>
       <li>
-        <a href="correspondance_metier.html">Correspondances métier</a>
+        <a href="specifications_technique_correspondance_metier.html">Correspondances métier</a>
       </li>
       <li>
-        <a href="api.html">Via API REST</a>
+        <a href="specifications_technique_api.html">Via API REST</a>
       </li>
       <li>
-        <a href="syslog.html">Via syslog</a>
+        <a href="specifications_technique_syslog.html">Via syslog</a>
       </li>
     </ul>
   </li>
-  <li>
-    <a href="artifacts.html">Ressources de conformité</a>
-  </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Autres ressources
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 3 - Annexes
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
+      <li>
+        <a href="normes_standards.html">Normes et standards</a>
+      </li>
+      <li>
+        <a href="glossaire.html">Glossaire</a>
+      </li>
+      <li>
+        <a href="annexe_audit_dicom.html">Mise en correspondance AuditEvent / DICOM</a>
+      </li>
       <li>
         <a href="securite.html">Sécurité</a>
       </li>
@@ -141,6 +147,9 @@
         <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
       </li>
     </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
   </li>
   <li>
     <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
@@ -160,7 +169,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Specifications Fonctionnelles</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Volume 1 - Etude fonctionnelle</b></li>
 
           <span style="float:right;">
 
@@ -168,7 +177,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="sf1.html">next&gt;</a>
+          | <a href="specifications_technique_intro.html">next&gt;</a>
 
           </span>
 
@@ -190,7 +199,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">ANS - Traçabilité des événements - version de développement local (v2.0.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/fhir/tde/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
-  <h2>Specifications Fonctionnelles</h2>
+  <h2>Volume 1 - Etude fonctionnelle</h2>
   
 
 
@@ -240,7 +249,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="sf1.html">next&gt;</a>
+                <a href="specifications_technique_intro.html">next&gt;</a>
 
               </td>
             </tr>
@@ -250,7 +259,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.tde#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 16, 2026 14:51+0000">2026-01-16</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.tde#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 30, 2026 11:09+0000">2026-01-30</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

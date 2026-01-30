@@ -3,44 +3,21 @@
 ## Pages
 
 * [Accueil](index.md)
-* [Correspondances métier](correspondance_metier.md)
 * [Historique des versions](change-log.md)
-* [Vue d'ensemble](sf1.md)
-* [Via syslog](syslog.md)
+* [Correspondances métier](specifications_technique_correspondance_metier.md)
+* [Volume 2 - Détail des transactions](specifications_technique_intro.md)
 * [Artifacts Summary](artifacts.md)
-* [Volume 2 - Détail des transactions](specification_technique_intro.md)
 * [Sécurité](securite.md)
-* [Via API REST](api.md)
-* [Autres Ressources](autres_ressources.md)
-* [Specifications Fonctionnelles](specifications_fonctionnelles.md)
+* [Mise en correspondance AuditEvent / DICOM](annexe_audit_dicom.md)
+* [Etude norme et standards](normes_standards.md)
+* [Via API REST](specifications_technique_api.md)
+* [Volume 1 - Etude fonctionnelle](specifications_fonctionnelles.md)
+* [Via syslog](specifications_technique_syslog.md)
+* [Glossaire](glossaire.md)
 * [Téléchargements et usages](downloads.md)
 
 ## Resources
 
-### CodeSystems
-
-* [Compétences CodeSystem](CodeSystem-competence-code-system.md)
-* [Type de carte](CodeSystem-type-carte-code-system.md)
-
-### ValueSets
-
-* [EyeColor Value Set](ValueSet-EyeColorVS.md)
-* [Melting Pot Value Set](ValueSet-MeltingPotVS.md)
-* [ModifiedAdministrativeGender](ValueSet-ModifiedAdministrativeGender.md)
-* [Type Carte Value Set](ValueSet-TypeCarteVS.md)
-
-### Resource Profiles
-
-* [Patient français](StructureDefinition-fr-patient.md)
-
-### Extensions
-
-* [EyeColor](StructureDefinition-EyeColor.md)
-
 ### ImplementationGuides
 
 * [ANS - Traçabilité des événements](index.md)
-
-### Examples
-
-* [frpatient-exemple (Patient)](Patient-frpatient-exemple.md)
