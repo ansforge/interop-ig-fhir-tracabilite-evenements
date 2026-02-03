@@ -21,7 +21,7 @@
   fhir:name [ fhir:v "TDE"] ; # 
   fhir:title [ fhir:v "ANS - Traçabilité des événements"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-03T10:17:24+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-03T10:18:19+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;

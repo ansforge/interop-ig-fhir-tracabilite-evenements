@@ -70,7 +70,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "TDE",
   "title" : "ANS - Traçabilité des événements",
   "status" : "draft",
-  "date" : "2026-02-03T10:17:24+00:00",
+  "date" : "2026-02-03T10:18:19+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
