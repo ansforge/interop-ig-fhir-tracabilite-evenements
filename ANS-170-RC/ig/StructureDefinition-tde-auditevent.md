@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent | *Version*:2.0.0 |
-| Draft as of 2026-01-30 | *Computable Name*:TDEAuditEvent |
+| Draft as of 2026-02-03 | *Computable Name*:TDEAuditEvent |
 
  
 Profil représentant la trace d'un évènement 
@@ -17,7 +17,7 @@ Profil représentant la trace d'un évènement
 **Utilisations:**
 
 * Utiliser ce Profil: [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md)
-* Exemples pour ce Profil: [AuditEvent/TDEAuditEventExample](AuditEvent-TDEAuditEventExample.md)
+* Exemples pour ce Profil: [AuditEvent/TDEAuditEventExample-2](AuditEvent-TDEAuditEventExample-2.md) and [AuditEvent/TDEAuditEventExample](AuditEvent-TDEAuditEventExample.md)
 * CapabilityStatements utilisant ce Profil: [TdE-Consommateur](CapabilityStatement-TdEConsommateur.md), [TdE-Gestionnaire](CapabilityStatement-TdEGestionnaire.md) and [TdE-Source](CapabilityStatement-TdESource.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/ans.fhir.fr.tde|current/StructureDefinition/tde-auditevent)
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-tde-auditevent.csv),
   "name" : "TDEAuditEvent",
   "title" : "TdE AuditEvent",
   "status" : "draft",
-  "date" : "2026-01-30T15:44:16+00:00",
+  "date" : "2026-02-03T13:33:49+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

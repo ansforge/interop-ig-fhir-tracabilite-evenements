@@ -39,6 +39,7 @@
 
 ### Examples
 
+* [TDEAuditEventExample-2 (AuditEvent)](AuditEvent-TDEAuditEventExample-2.md)
 * [TDEAuditEventExample (AuditEvent)](AuditEvent-TDEAuditEventExample.md)
 * [TDEBundleResultatReponseRechercheTracesExample (Bundle)](Bundle-TDEBundleResultatReponseRechercheTracesExample.md)
 * [DeviceExample (Device)](Device-DeviceExample.md)

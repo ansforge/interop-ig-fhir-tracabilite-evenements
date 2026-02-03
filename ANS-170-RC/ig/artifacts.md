@@ -43,5 +43,6 @@ These are example instances that show what data produced and consumed by systems
 | [DeviceExample](Device-DeviceExample.md) |
 | [PractitionerExample](Practitioner-PractitionerExample.md) |
 | [TDEAuditEventExample](AuditEvent-TDEAuditEventExample.md) |
+| [TDEAuditEventExample-2](AuditEvent-TDEAuditEventExample-2.md) |
 | [TDEBundleResultatReponseRechercheTracesExample](Bundle-TDEBundleResultatReponseRechercheTracesExample.md) |
 

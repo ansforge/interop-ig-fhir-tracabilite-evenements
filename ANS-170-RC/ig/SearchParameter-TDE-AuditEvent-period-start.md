@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/SearchParameter/TDE-AuditEvent-period-start | *Version*:2.0.0 |
-| Active as of 2026-01-30 | *Computable Name*:TDE_AuditEvent_period-start |
+| Active as of 2026-02-03 | *Computable Name*:TDE_AuditEvent_period-start |
 
  
 Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence 
@@ -26,7 +26,7 @@ Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser
   "version" : "2.0.0",
   "name" : "TDE_AuditEvent_period-start",
   "status" : "active",
-  "date" : "2026-01-30T15:44:16+00:00",
+  "date" : "2026-02-03T13:33:49+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

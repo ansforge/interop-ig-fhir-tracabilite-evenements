@@ -4,6 +4,7 @@ TDE
 Generic: line 0, col 0, Warning - Unable to find ImplementationGuide.definition.resource.description for the resource Device/DeviceExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list. (INVARIANT)
 Generic: line 0, col 0, Warning - Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/PractitionerExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list. (INVARIANT)
 Generic: line 0, col 0, Warning - Unable to find ImplementationGuide.definition.resource.description for the resource AuditEvent/TDEAuditEventExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list. (INVARIANT)
+Generic: line 0, col 0, Warning - Unable to find ImplementationGuide.definition.resource.description for the resource AuditEvent/TDEAuditEventExample-2.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list. (INVARIANT)
 Generic: line 0, col 0, Warning - Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/TDEBundleResultatReponseRechercheTracesExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list. (INVARIANT)
 Generic: line 0, col 0, Warning - An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
@@ -18,5 +19,5 @@ Generic: line 0, col 0, Warning - The HTML fragment 'expansion-params.xhtml' is 
 /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/SearchParameter-TDE-AuditEvent-period-start.json: line 1, col 2156, Warning - Constraint failed: spd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation (name.matches('[A-Z]([A-Za-z0-9_]){0,254}'))' (INVARIANT)
 /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/StructureDefinition-TDEBundleResultatReponseRechercheTraces.json: line 1, col 23820, Info - The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated (BUSINESSRULE)
 
-err = 1, warn = 14, info = 1
+err = 1, warn = 15, info = 1
 IG Publisher Version: 2.0.30

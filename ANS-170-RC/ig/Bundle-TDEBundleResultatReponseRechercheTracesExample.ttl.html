@@ -45,8 +45,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"5.10"}
-    h3,h4,h5,h6{--heading-prefix:"5.10"}</style>
+    <style type="text/css">h2{--heading-prefix:"5.11"}
+    h3,h4,h5,h6{--heading-prefix:"5.11"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -270,6 +270,11 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://example.org/fhir/AuditEvent/TDEAuditEventExample&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://example.org/fhir/AuditEvent/TDEAuditEventExample&gt;     ] ;
     ( <a href="http://hl7.org/fhir/R4/auditevent.html#AuditEvent">fhir:resource</a> &lt;http://example.org/fhir/AuditEvent/TDEAuditEventExample&gt; )
+  ] [
+<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:fullUrl</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://example.org/fhir/AuditEvent/TDEAuditEventExample-2&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://example.org/fhir/AuditEvent/TDEAuditEventExample-2&gt;     ] ;
+    ( <a href="http://hl7.org/fhir/R4/auditevent.html#AuditEvent">fhir:resource</a> &lt;http://example.org/fhir/AuditEvent/TDEAuditEventExample-2&gt; )
   ] ) . # 
 
 &lt;http://example.org/fhir/AuditEvent/TDEAuditEventExample&gt; <a href="http://hl7.org/fhir/R4/auditevent.html">a</a> fhir:AuditEvent ;
@@ -302,6 +307,48 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">fhir:end</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2026-01-07T09:32:00Z&quot;^^xsd:dateTime ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/auditevent.html#AuditEvent.recorded">fhir:recorded</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:v</a> &quot;2026-01-07T09:32:15Z&quot;^^xsd:dateTime] ; # 
+  <a href="http://hl7.org/fhir/R4/auditevent.html#AuditEvent.agent">fhir:agent</a> ( [
+<a href="http://hl7.org/fhir/R4/auditevent.html#AuditEvent.agent.who">fhir:who</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Practitioner/PractitionerExample ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner/PractitionerExample&quot; ]     ] ;
+<a href="http://hl7.org/fhir/R4/auditevent.html#AuditEvent.agent.requestor">fhir:requestor</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> true ]
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/auditevent.html#AuditEvent.source">fhir:source</a> [
+<a href="http://hl7.org/fhir/R4/auditevent.html#AuditEvent.source.observer">fhir:observer</a> [
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Device/DeviceExample ;
+<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Device/DeviceExample&quot; ]     ]
+  ] . # 
+
+&lt;http://example.org/fhir/AuditEvent/TDEAuditEventExample-2&gt; <a href="http://hl7.org/fhir/R4/auditevent.html">a</a> fhir:AuditEvent ;
+  <a href="http://hl7.org/fhir/R4/resource.html#AuditEvent.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;TDEAuditEventExample-2&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#AuditEvent.meta">fhir:meta</a> [
+    ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent&gt;     ] )
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/domainresource.html#AuditEvent.text">fhir:text</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;AuditEvent_TDEAuditEventExample-2\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : ÉvènementSécurité TDEAuditEventExample-2&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;TDEAuditEventExample-2\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcTDEAuditEventExample-2\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-tde-auditevent.html\&quot;&gt;TdE AuditEvent&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-dicom-dcim.html#dicom-dcim-110101\&quot;&gt;DICOM: 110101&lt;/a&gt; (Audit Log Used)&lt;/p&gt;&lt;p&gt;&lt;b&gt;subtype&lt;/b&gt;: &lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-restful-interaction.html#restful-interaction-read\&quot;&gt;FHIR Restful Interactions: read&lt;/a&gt; (read)&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: 2025-01-07 09:30:00+0000 --&amp;gt; 2025-01-07 09:32:00+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;recorded&lt;/b&gt;: 2025-01-07 09:32:15+0000&lt;/p&gt;&lt;h3&gt;Agents&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Who&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Requestor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Practitioner-PractitionerExample.html\&quot;&gt;Practitioner Jean DUPONT &lt;/a&gt;&lt;/td&gt;&lt;td&gt;true&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Sources&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Observer&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Device-DeviceExample.html\&quot;&gt;Device : manufacturer = Éditeur SI Santé&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/auditevent.html#AuditEvent.type">fhir:type</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://dicom.nema.org/resources/ontology/DCM&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://dicom.nema.org/resources/ontology/DCM&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;110101&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Audit Log Used&quot; ]
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/auditevent.html#AuditEvent.subtype">fhir:subtype</a> ( [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/restful-interaction&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/restful-interaction&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;read&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;read&quot; ]
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/auditevent.html#AuditEvent.period">fhir:period</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">fhir:start</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-01-07T09:30:00Z&quot;^^xsd:dateTime ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">fhir:end</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-01-07T09:32:00Z&quot;^^xsd:dateTime ]
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/auditevent.html#AuditEvent.recorded">fhir:recorded</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:v</a> &quot;2025-01-07T09:32:15Z&quot;^^xsd:dateTime] ; # 
   <a href="http://hl7.org/fhir/R4/auditevent.html#AuditEvent.agent">fhir:agent</a> ( [
 <a href="http://hl7.org/fhir/R4/auditevent.html#AuditEvent.agent.who">fhir:who</a> [
 <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Practitioner/PractitionerExample ;
@@ -361,7 +408,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.tde#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 30, 2026 15:44+0000">2026-01-30</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.tde#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 3, 2026 13:33+0000">2026-02-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

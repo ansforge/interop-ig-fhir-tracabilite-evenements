@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces | *Version*:2.0.0 |
-| Draft as of 2026-01-30 | *Computable Name*:TDEBundleResultatReponseRechercheTraces |
+| Draft as of 2026-02-03 | *Computable Name*:TDEBundleResultatReponseRechercheTraces |
 
  
 Bundle de réponse à la recherche de traces 
@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-TDEBundleResultatRep
   "version" : "2.0.0",
   "name" : "TDEBundleResultatReponseRechercheTraces",
   "status" : "draft",
-  "date" : "2026-01-30T15:44:16+00:00",
+  "date" : "2026-02-03T13:33:49+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
