@@ -222,7 +222,7 @@ opératoire (traçabilité des actes chirurgicaux), à la sécurité
 <td style="text-align: left;">Il s'agit d'un acteur système qui
 enregistre les informations de traçabilité et fournit les traces en cas
 de consultation ou de recherches.<br />
-Le gestionnaire des tr aces peut être, par exemple, un logiciel de
+Le gestionnaire des traces peut être, par exemple, un logiciel de
 traçabilité ou le module de traçabilité d'un logiciel métier.</td>
 </tr>
 <tr>
