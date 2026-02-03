@@ -71,7 +71,7 @@ Table : Caractéristiques du processus collaboratif
 | | |
 | :--- | :--- |
 | Consommateur des traces | Il s'agit d'un acteur système interne ou externe habilité à accéder aux traces.Les personnes utilisant ce système peuvent être rattachées par exemple à la pharmacie hospitalière (traçabilité des médicaments), au bloc opératoire (traçabilité des actes chirurgicaux), à la sécurité (traçabilité de sécurité). |
-| Gestionnaire des traces | Il s'agit d'un acteur système qui enregistre les informations de traçabilité et fournit les traces en cas de consultation ou de recherches.Le gestionnaire des tr aces peut être, par exemple, un logiciel de traçabilité ou le module de traçabilité d'un logiciel métier. |
+| Gestionnaire des traces | Il s'agit d'un acteur système qui enregistre les informations de traçabilité et fournit les traces en cas de consultation ou de recherches.Le gestionnaire des traces peut être, par exemple, un logiciel de traçabilité ou le module de traçabilité d'un logiciel métier. |
 | Source des traces | Il s'agit d'un acteur système qui transmet les informations de traçabilité relatives à une étape significative d'un processus métier suite à un événement au gestionnaire. |
 
 Table : Table des acteurs
