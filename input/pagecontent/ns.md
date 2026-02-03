@@ -1419,7 +1419,7 @@ Cette section présente une synthèse comparative des standards et profils
 analysés dans les sections précédentes. Les items de cette synthèse sont
 inspirés des documents suivants :
 
-- [La doctrine du CI-SIS](http://esante.gouv.fr/services/referentiels/ci-sis/demarche-elaboration) .
+- [La doctrine du CI-SIS](https://interop.esante.gouv.fr/ig/doctrine/) .
 
 - Le document [« Organismes et Standards » ](http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/annexes-transverses) qui décrit les
   organismes producteurs de standards ainsi que la manière dont ces
