@@ -1,5 +1,5 @@
 {
-  "date" : "Fri, 30 Jan, 2026 10:50:52 +0000",
+  "date" : "Tue, 03 Feb, 2026 08:57:15 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -8,56 +8,49 @@
       "processes" : [
         {
           "activity" : "load",
-          "start" : 39,
-          "length" : 42
+          "start" : 35,
+          "length" : 51
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 40,
-          "length" : 15
+          "start" : 36,
+          "length" : 16
         },
         {
           "activity" : "generateNarratives",
-          "start" : 40,
-          "length" : 85
+          "start" : 36,
+          "length" : 99
         },
         {
           "activity" : "validate",
-          "start" : 40,
-          "length" : 6102
+          "start" : 37,
+          "length" : 3905
         },
         {
           "activity" : "generate1",
-          "start" : 47,
-          "length" : 79
+          "start" : 41,
+          "length" : 91
         },
         {
           "activity" : "generate2",
-          "start" : 50,
-          "length" : 94
+          "start" : 43,
+          "length" : 103
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 62,
-          "length" : 1
+          "start" : 52,
+          "length" : 2
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 66,
+          "start" : 55,
           "length" : 2
         }
       ]
     },
     {
       "name" : "/fsh-generated/includes/menu.xml",
-      "size" : 2781,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 50,
-          "length" : 1
-        }
-      ]
+      "size" : 2781
     },
     {
       "name" : "/input/data/features.yml",
@@ -65,7 +58,14 @@
     },
     {
       "name" : "/input/pagecontent/annexe_audit_dicom.md",
-      "size" : 3448
+      "size" : 3448,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 43,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/specifications_techniques.md",
@@ -80,8 +80,8 @@
       "size" : 0,
       "processes" : [
         {
-          "activity" : "generate2",
-          "start" : 50,
+          "activity" : "validate",
+          "start" : 37,
           "length" : 1
         }
       ]
@@ -96,7 +96,19 @@
     },
     {
       "name" : "/input/pagecontent/specifications_fonctionnelles.md",
-      "size" : 0
+      "size" : 0,
+      "processes" : [
+        {
+          "activity" : "generateNarratives",
+          "start" : 37,
+          "length" : 1
+        },
+        {
+          "activity" : "generate2",
+          "start" : 43,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/specifications_technique_correspondance_metier.md",
@@ -112,12 +124,12 @@
     },
     {
       "name" : "/input/pagecontent/ns.md",
-      "size" : 82059,
+      "size" : 82031,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 50,
-          "length" : 9
+          "start" : 43,
+          "length" : 8
         }
       ]
     },
@@ -127,7 +139,14 @@
     },
     {
       "name" : "/input/pagecontent/change-log.md",
-      "size" : 330
+      "size" : 330,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 43,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/index.md",
@@ -135,25 +154,25 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 50,
+          "start" : 43,
           "length" : 3
         }
       ]
     },
     {
       "name" : "/input/pagecontent/specifications_technique_api.md",
-      "size" : 0,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 50,
-          "length" : 1
-        }
-      ]
+      "size" : 0
     },
     {
       "name" : "/input/pagecontent/autres_ressources.md",
-      "size" : 155
+      "size" : 155,
+      "processes" : [
+        {
+          "activity" : "generateLogicals",
+          "start" : 44,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/template/config",
@@ -161,7 +180,14 @@
     },
     {
       "name" : "/template/config/_config.yml",
-      "size" : 140
+      "size" : 140,
+      "processes" : [
+        {
+          "activity" : "scan",
+          "start" : 36,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/images",
@@ -181,14 +207,7 @@
     },
     {
       "name" : "/input/images/ci-sis-logo.png",
-      "size" : 61365,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 50,
-          "length" : 1
-        }
-      ]
+      "size" : 61365
     },
     {
       "name" : "/input/images/ns_image5.png",
@@ -200,7 +219,14 @@
     },
     {
       "name" : "/input/images/ns_image3.png",
-      "size" : 61891
+      "size" : 61891,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 43,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/images/ns_image8.png",

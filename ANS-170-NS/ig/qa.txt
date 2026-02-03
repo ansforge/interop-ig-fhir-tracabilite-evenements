@@ -3,7 +3,7 @@ TDE : Validation Results
 
 err = 2, warn = 3, info = 0
 IG Publisher Version: 2.0.30
-Generated Fri Jan 30 10:51:59 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.tde#2.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/tde)
+Generated Tue Feb 03 08:58:11 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.tde#2.0.0 (canonical = https://interop.esante.gouv.fr/ig/fhir/tde)
  Build Errors : 6 / 3 / 0
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.tde : 2 / 0 / 1
 </table>
