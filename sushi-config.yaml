@@ -36,16 +36,16 @@ pages:
             title: Via syslog
     change-log.md:
         title: Historique des versions
-        securite.md:
-            title: Sécurité
-        downloads.md:
-            title: Téléchargements et usages
-        normes_standards.md:
-            title: Etude norme et standards
-        annexe_audit_dicom.md:
-            title: Mise en correspondance AuditEvent / DICOM
-        glossaire.md:
-            title: Glossaire
+    securite.md:
+        title: Sécurité
+    downloads.md:
+        title: Téléchargements et usages
+    normes_standards.md:
+        title: Etude norme et standards
+    annexe_audit_dicom.md:
+        title: Mise en correspondance AuditEvent / DICOM
+    glossaire.md:
+        title: Glossaire
 menu:
     Accueil: index.html
     Volume 1 - Etude fonctionnelle: specifications_fonctionnelles.html
