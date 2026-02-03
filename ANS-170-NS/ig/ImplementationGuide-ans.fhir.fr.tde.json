@@ -10,7 +10,7 @@
   "name" : "TDE",
   "title" : "ANS - Traçabilité des événements",
   "status" : "draft",
-  "date" : "2026-02-03T08:57:15+00:00",
+  "date" : "2026-02-03T10:16:41+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -729,52 +729,52 @@
         }],
         "nameUrl" : "change-log.html",
         "title" : "Historique des versions",
-        "generation" : "markdown",
-        "page" : [{
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "securite.html"
-          }],
-          "nameUrl" : "securite.html",
-          "title" : "Sécurité",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "downloads.html"
-          }],
-          "nameUrl" : "downloads.html",
-          "title" : "Téléchargements et usages",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "normes_standards.html"
-          }],
-          "nameUrl" : "normes_standards.html",
-          "title" : "Etude norme et standards",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "annexe_audit_dicom.html"
-          }],
-          "nameUrl" : "annexe_audit_dicom.html",
-          "title" : "Mise en correspondance AuditEvent / DICOM",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "glossaire.html"
-          }],
-          "nameUrl" : "glossaire.html",
-          "title" : "Glossaire",
-          "generation" : "markdown"
-        }]
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "securite.html"
+        }],
+        "nameUrl" : "securite.html",
+        "title" : "Sécurité",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "downloads.html"
+        }],
+        "nameUrl" : "downloads.html",
+        "title" : "Téléchargements et usages",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "normes_standards.html"
+        }],
+        "nameUrl" : "normes_standards.html",
+        "title" : "Etude norme et standards",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "annexe_audit_dicom.html"
+        }],
+        "nameUrl" : "annexe_audit_dicom.html",
+        "title" : "Mise en correspondance AuditEvent / DICOM",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "glossaire.html"
+        }],
+        "nameUrl" : "glossaire.html",
+        "title" : "Glossaire",
+        "generation" : "markdown"
       }]
     },
     "parameter" : [{

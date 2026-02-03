@@ -1,56 +1,68 @@
 {
-  "date" : "Tue, 03 Feb, 2026 08:57:15 +0000",
+  "date" : "Tue, 03 Feb, 2026 10:16:41 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
       "name" : "/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.tde.json",
-      "size" : 3633,
+      "size" : 3501,
       "processes" : [
         {
           "activity" : "load",
-          "start" : 35,
-          "length" : 51
+          "start" : 46,
+          "length" : 45
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 36,
-          "length" : 16
+          "start" : 46,
+          "length" : 17
         },
         {
           "activity" : "generateNarratives",
-          "start" : 36,
-          "length" : 99
+          "start" : 46,
+          "length" : 93
         },
         {
           "activity" : "validate",
-          "start" : 37,
-          "length" : 3905
+          "start" : 46,
+          "length" : 6168
+        },
+        {
+          "activity" : "generateLogicalMaps",
+          "start" : 53,
+          "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 41,
-          "length" : 91
+          "start" : 53,
+          "length" : 88
         },
         {
           "activity" : "generate2",
-          "start" : 43,
+          "start" : 56,
           "length" : 103
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 52,
+          "start" : 69,
           "length" : 2
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 55,
+          "start" : 73,
           "length" : 2
         }
       ]
     },
     {
       "name" : "/fsh-generated/includes/menu.xml",
-      "size" : 2781
+      "size" : 2781,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 56,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/data/features.yml",
@@ -58,18 +70,18 @@
     },
     {
       "name" : "/input/pagecontent/annexe_audit_dicom.md",
-      "size" : 3448,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 43,
-          "length" : 1
-        }
-      ]
+      "size" : 3448
     },
     {
       "name" : "/input/pagecontent/specifications_techniques.md",
-      "size" : 0
+      "size" : 0,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 56,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/glossaire.md",
@@ -77,14 +89,7 @@
     },
     {
       "name" : "/input/pagecontent/specifications_technique_intro.md",
-      "size" : 0,
-      "processes" : [
-        {
-          "activity" : "validate",
-          "start" : 37,
-          "length" : 1
-        }
-      ]
+      "size" : 0
     },
     {
       "name" : "/input/pagecontent/tests.md",
@@ -92,23 +97,18 @@
     },
     {
       "name" : "/input/pagecontent/specifications_technique_syslog.md",
-      "size" : 0
-    },
-    {
-      "name" : "/input/pagecontent/specifications_fonctionnelles.md",
       "size" : 0,
       "processes" : [
         {
-          "activity" : "generateNarratives",
-          "start" : 37,
-          "length" : 1
-        },
-        {
-          "activity" : "generate2",
-          "start" : 43,
+          "activity" : "scan",
+          "start" : 46,
           "length" : 1
         }
       ]
+    },
+    {
+      "name" : "/input/pagecontent/specifications_fonctionnelles.md",
+      "size" : 0
     },
     {
       "name" : "/input/pagecontent/specifications_technique_correspondance_metier.md",
@@ -116,19 +116,22 @@
     },
     {
       "name" : "/input/pagecontent/securite.md",
-      "size" : 900
-    },
-    {
-      "name" : "/input/pagecontent/normes_standards.md",
-      "size" : 0
-    },
-    {
-      "name" : "/input/pagecontent/ns.md",
-      "size" : 82031,
+      "size" : 900,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 43,
+          "start" : 56,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/normes_standards.md",
+      "size" : 82307,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 56,
           "length" : 8
         }
       ]
@@ -139,14 +142,7 @@
     },
     {
       "name" : "/input/pagecontent/change-log.md",
-      "size" : 330,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 43,
-          "length" : 1
-        }
-      ]
+      "size" : 330
     },
     {
       "name" : "/input/pagecontent/index.md",
@@ -154,8 +150,8 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 43,
-          "length" : 3
+          "start" : 56,
+          "length" : 5
         }
       ]
     },
@@ -165,14 +161,7 @@
     },
     {
       "name" : "/input/pagecontent/autres_ressources.md",
-      "size" : 155,
-      "processes" : [
-        {
-          "activity" : "generateLogicals",
-          "start" : 44,
-          "length" : 1
-        }
-      ]
+      "size" : 155
     },
     {
       "name" : "/template/config",
@@ -180,14 +169,7 @@
     },
     {
       "name" : "/template/config/_config.yml",
-      "size" : 140,
-      "processes" : [
-        {
-          "activity" : "scan",
-          "start" : 36,
-          "length" : 1
-        }
-      ]
+      "size" : 140
     },
     {
       "name" : "/input/images",
@@ -195,7 +177,14 @@
     },
     {
       "name" : "/input/images/ns_image7.png",
-      "size" : 15974
+      "size" : 15974,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 56,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/images/ns_image10.png",
@@ -218,23 +207,19 @@
       "size" : 15215
     },
     {
-      "name" : "/input/images/ns_image3.png",
-      "size" : 61891,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 43,
-          "length" : 1
-        }
-      ]
-    },
-    {
       "name" : "/input/images/ns_image8.png",
       "size" : 24393
     },
     {
       "name" : "/temp/pages/_includes/artifacts.xml",
-      "size" : 600
+      "size" : 600,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 56,
+          "length" : 1
+        }
+      ]
     }
   ]
 }
