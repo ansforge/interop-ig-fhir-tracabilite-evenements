@@ -1,5 +1,5 @@
 {
-  "date" : "Tue, 03 Feb, 2026 10:16:41 +0000",
+  "date" : "Wed, 04 Feb, 2026 16:43:30 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -8,80 +8,75 @@
       "processes" : [
         {
           "activity" : "load",
-          "start" : 46,
-          "length" : 45
+          "start" : 44,
+          "length" : 40
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 46,
-          "length" : 17
+          "start" : 45,
+          "length" : 20
         },
         {
           "activity" : "generateNarratives",
-          "start" : 46,
-          "length" : 93
+          "start" : 45,
+          "length" : 92
         },
         {
           "activity" : "validate",
-          "start" : 46,
-          "length" : 6168
-        },
-        {
-          "activity" : "generateLogicalMaps",
-          "start" : 53,
-          "length" : 1
+          "start" : 45,
+          "length" : 6659
         },
         {
           "activity" : "generate1",
-          "start" : 53,
+          "start" : 51,
           "length" : 88
         },
         {
           "activity" : "generate2",
-          "start" : 56,
-          "length" : 103
+          "start" : 55,
+          "length" : 111
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 69,
-          "length" : 2
+          "start" : 68,
+          "length" : 3
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 73,
-          "length" : 2
+          "start" : 72,
+          "length" : 1
         }
       ]
     },
     {
       "name" : "/fsh-generated/includes/menu.xml",
-      "size" : 2781,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 56,
-          "length" : 1
-        }
-      ]
+      "size" : 2781
     },
     {
       "name" : "/input/data/features.yml",
-      "size" : 164
-    },
-    {
-      "name" : "/input/pagecontent/annexe_audit_dicom.md",
-      "size" : 3448
-    },
-    {
-      "name" : "/input/pagecontent/specifications_techniques.md",
-      "size" : 0,
+      "size" : 164,
       "processes" : [
         {
-          "activity" : "generate2",
+          "activity" : "generateLogicals",
           "start" : 56,
           "length" : 1
         }
       ]
+    },
+    {
+      "name" : "/input/pagecontent/annexe_audit_dicom.md",
+      "size" : 3448,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/pagecontent/specifications_techniques.md",
+      "size" : 0
     },
     {
       "name" : "/input/pagecontent/glossaire.md",
@@ -97,18 +92,18 @@
     },
     {
       "name" : "/input/pagecontent/specifications_technique_syslog.md",
-      "size" : 0,
-      "processes" : [
-        {
-          "activity" : "scan",
-          "start" : 46,
-          "length" : 1
-        }
-      ]
+      "size" : 0
     },
     {
       "name" : "/input/pagecontent/specifications_fonctionnelles.md",
-      "size" : 0
+      "size" : 0,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 55,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/specifications_technique_correspondance_metier.md",
@@ -116,22 +111,15 @@
     },
     {
       "name" : "/input/pagecontent/securite.md",
-      "size" : 900,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 56,
-          "length" : 1
-        }
-      ]
+      "size" : 900
     },
     {
       "name" : "/input/pagecontent/normes_standards.md",
-      "size" : 82307,
+      "size" : 80494,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 56,
+          "start" : 55,
           "length" : 8
         }
       ]
@@ -150,8 +138,8 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 56,
-          "length" : 5
+          "start" : 55,
+          "length" : 4
         }
       ]
     },
@@ -181,7 +169,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 56,
+          "start" : 55,
           "length" : 1
         }
       ]
@@ -216,7 +204,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 56,
+          "start" : 55,
           "length" : 1
         }
       ]
