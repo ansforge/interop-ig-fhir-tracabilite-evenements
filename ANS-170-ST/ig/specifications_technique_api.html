@@ -198,7 +198,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">ANS - Traçabilité des événements - version de développement local (v2.0.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/fhir/tde/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">ANS - Traçabilité des événements - version de développement local (intégration continue v2.0.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/fhir/tde/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
   <h2>Via API REST</h2>
   
 
@@ -214,9 +214,182 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#solution-1--ressource-auditevent-et-api-fhir-rest" id="markdown-toc-solution-1--ressource-auditevent-et-api-fhir-rest">Solution 1 : Ressource AuditEvent et API FHIR REST</a></li>
+  <li><a href="#flux-1--transmissiontrace" id="markdown-toc-flux-1--transmissiontrace">Flux 1 : TransmissionTrace</a>    <ul>
+      <li><a href="#construction-du-flux-hl7-fhir" id="markdown-toc-construction-du-flux-hl7-fhir">Construction du flux HL7 FHIR</a></li>
+    </ul>
+  </li>
+  <li><a href="#flux-2--consultationtrace" id="markdown-toc-flux-2--consultationtrace">Flux 2 : ConsultationTrace</a></li>
+  <li><a href="#flux-3--reponseconsultationtrace" id="markdown-toc-flux-3--reponseconsultationtrace">Flux 3 : ReponseConsultationTrace</a></li>
+  <li><a href="#flux-4--recherchetraces" id="markdown-toc-flux-4--recherchetraces">Flux 4 : RechercheTraces</a>    <ul>
+      <li><a href="#construction-du-flux-hl7-fhir-1" id="markdown-toc-construction-du-flux-hl7-fhir-1">Construction du flux HL7 FHIR</a></li>
+    </ul>
+  </li>
+  <li><a href="#flux-5--reponserecherchetraces" id="markdown-toc-flux-5--reponserecherchetraces">Flux 5 : ReponseRechercheTraces</a>    <ul>
+      <li><a href="#construction-du-flux-hl7-fhir-2" id="markdown-toc-construction-du-flux-hl7-fhir-2">Construction du flux HL7 FHIR</a></li>
+    </ul>
+  </li>
+</ul>
+
 </div>
+<h3 id="solution-1--ressource-auditevent-et-api-fhir-rest">Solution 1 : Ressource AuditEvent et API FHIR REST</h3>
+
+<p>La construction des flux consiste en la construction des requêtes ou des réponses HTTP de l’API REST pour FHIR. Cette section présente les flux permettant d’échanger les informations identifiées dans les chapitres précédents.</p>
+
+<div style="text-align: center; display: block; clear: both;">
+  <img src="st_image5.png" alt="Gestion des traces" style="display:block; margin:auto;" />
+</div>
+
+<h2 id="flux-1--transmissiontrace">Flux 1 : TransmissionTrace</h2>
+
+<p>Ce flux permet de transmettre une trace « générique » de la « source des traces » vers le « gestionnaire des traces ».</p>
+
+<h3 id="construction-du-flux-hl7-fhir">Construction du flux HL7 FHIR</h3>
+
+<p>Ce flux est construit selon les exigences de la transaction <a href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_RESTful-ATNA.pdf">IHE ITI-20 « Record Audit Event »</a> dans sa version HL7 FHIR où une seule trace est transmise à la fois : « Send Audit Resource Request Message - FHIR Feed Interaction ». La première étape de construction de ce flux consiste à créer la ressource AuditEvent conformément aux exigences du contexte métier.</p>
+
+<p>La ressource AuditEvent ainsi constituée sera envoyée dans le corps de la requête HTTP POST suivante :</p>
+
+<pre><code class="language-HTTP">POST [base]/AuditEvent
+</code></pre>
+
+<p>Où [base] est le point de contact FHIR défini par le Gestionnaire de trace.</p>
+
+<h2 id="flux-2--consultationtrace">Flux 2 : ConsultationTrace</h2>
+
+<p>Ce flux n’est pas défini dans le contexte du protocole Syslog. Le Flux 2 « ConsultationTrace » permet au consommateur de traces de demander la consultation d’une trace dont l’identifiant est connu au gestionnaire de traces. Ce flux utilise l’interaction « read » de l’API REST de HL7 FHIR.</p>
+
+<p>La première étape de construction de ce flux consiste à récupérer l’identifiant de la ressource AuditEvent représentant la trace à consulter. Cet identifiant est utilisé dans la requête GET suivante :</p>
+
+<pre><code class="language-HTTP">GET [base]/AuditEvent/[id]
+</code></pre>
+
+<p>Où [base] est le point de contact défini par le gestionnaire de trace et [id] l’identifiant système de la ressource AuditEvent à consulter.</p>
+
+<h2 id="flux-3--reponseconsultationtrace">Flux 3 : ReponseConsultationTrace</h2>
+
+<p>Ce flux n’est pas défini dans le contexte du protocole Syslog. Le Flux 3 « ReponseConsultationTrace » correspond à la réponse du Gestionnaire de trace à la demande du Consommateur de traces de consulter une trace dont il connaît l’identifiant système (Flux 2).</p>
+
+<p>Le flux 3 se compose d’un code HTTP 200 ok et d’un contenu. Le corps de la réponse HTTP est constitué de la ressource AuditEvent identifiée dans la demande. Pour des informations sur les autres codes HTTP (HTTP status code) retournés en cas d’échec, consultez la documentation relative à l’interaction « read » de l’API REST FHIR.</p>
+
+<h2 id="flux-4--recherchetraces">Flux 4 : RechercheTraces</h2>
+
+<p>Ce flux est utilisé par le consommateur de traces pour faire une recherche de traces auprès du gestionnaire de traces.</p>
+
+<h3 id="construction-du-flux-hl7-fhir-1">Construction du flux HL7 FHIR</h3>
+
+<p>Dans le contexte d’une implémentation en HL7 FHIR, le flux 4 est construit selon les exigences de l’interaction « search » de l’API REST de FHIR et, plus particulièrement, les exigences de la transaction <a href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_RESTful-ATNA.pdf">IHE ITI-81 « Retrieve ATNA Audit Event »</a>. Les paramètres de recherche possibles sont ceux définis par HL7 FHIR pour la ressource AuditEvent.</p>
+
+<p>L’URL suivante est utilisée :</p>
+
+<pre><code class="language-HTTP">GET [base]/AuditEvent?date=ge[start-time]&amp;date=le[stop-time]&amp;&lt;query&gt;
+</code></pre>
+
+<p>Où [base] est le point de contact FHIR du gestionnaire de traces, [start-time] et [stop-time] indiquent l’intervalle de temps dans lequel les traces sont recherchées (date se réfère à la date d’enregistrement de l’évènement). <query> représente les autres paramètres, sous la forme param=valeur, permettant d’affiner la recherche.</query></p>
+
+<p>Un exemple d’appel de recherche de traces est le suivant :</p>
+
+<pre><code class="language-HTTP">GET [base]/AuditEvent?date=ge2026-01-14&amp;date=le2026-01-16&amp;type=rest&amp;subtype=operation
+</code></pre>
+
+<h4 id="paramètres-de-recherche">Paramètres de recherche</h4>
+
+<p>La transaction [ITI-81] Retrieve ATNA Audit Event exige que la recherche de traces soit bornée dans le temps. C’est-à-dire que le paramètre de recherche « date » qui correspond à la date d’enregistrement de l’évènement doit être présent pour préciser une limite de temps (avant, après ou un intervalle). Le tableau ci-dessous précise la mise en correspondance des paramètres de recherche identifiés dans l’étude métier avec les paramètres de recherche HL7 FHIR de la ressource AuditEvent.</p>
+
+<p>L’élément apparaissant <em>en italique</em> correspond à un critère de recherche défini dans le cadre de cette spécification technique.</p>
+
+<table>
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 23%" />
+<col style="width: 18%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr>
+<th>Critère de recherche « métier »</th>
+<th>Nom du paramètre</th>
+<th>Type de donnée</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>typeEvenement</td>
+<td>type</td>
+<td>token</td>
+<td>Type de l’évènement qui a été tracé</td>
+</tr>
+<tr>
+<td>sousTypeEvement</td>
+<td>subtype</td>
+<td>token</td>
+<td>Sous-type de l’évènement qui a été tracé</td>
+</tr>
+<tr>
+<td>dateOccurence</td>
+<td><em>TDE_AuditEvent_period-start</em></td>
+<td>dateTime</td>
+<td>Date d’occurrence de l’évènement</td>
+</tr>
+<tr>
+<td>dateDeclaration</td>
+<td>date</td>
+<td>dateTime</td>
+<td>Date à laquelle l’évènement a été enregistré</td>
+</tr>
+<tr>
+<td rowspan="2">origine</td>
+<td><p>agent</p>
+<p>agent-name</p>
+<p>altId</p></td>
+<td><p>reference</p>
+<p>string</p>
+<p>token</p></td>
+<td>Les paramètres agent, agent-name et/ou altId peuvent être utilisés
+pour identifier l’origine de la trace</td>
+</tr>
+<tr>
+<td>agent-role</td>
+<td>token</td>
+<td>agent-role aura pour valeur le code utilisé pour indiquer que
+l’agent est l’origine de la trace</td>
+</tr>
+<tr>
+<td rowspan="2">destinataire</td>
+<td><p>agent</p>
+<p>agent-name</p>
+<p>altId</p></td>
+<td><p>reference</p>
+<p>string</p>
+<p>token</p></td>
+<td>Les paramètres agent, agent-name et/ou altId peuvent être utilisés
+pour identifier l’origine de la l’évènement</td>
+</tr>
+<tr>
+<td>agent-role</td>
+<td>token</td>
+<td>agent-role aura pour valeur le code utilisé pour indiquer que
+l’agent est le destinataire de l’évènement</td>
+</tr>
+<tr>
+<td>autreParametre</td>
+<td colspan="3">Chaque concrétisation de ses spécifications génériques
+peut ajouter des paramètres de recherche. <a href="https://www.hl7.org/fhir/auditevent.html#search">HL7 FHIR</a> en définit d’autres paramètres peuvent être
+définis par profilage</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="flux-5--reponserecherchetraces">Flux 5 : ReponseRechercheTraces</h2>
+
+<p>Ce flux véhicule le résultat de la recherche de traces.</p>
+
+<h3 id="construction-du-flux-hl7-fhir-2">Construction du flux HL7 FHIR</h3>
+
+<p>Dans le contexte d’un échange basé sur le standard HL7 FHIR, ce flux est basé sur les ressources FHIR Bundle, AuditEvent et OperationOutcome (en cas d’erreur) telles qu’utilisées dans la transaction IHE ITI-81 « Retrieve ATNA Audit Event ». Conformément au supplément RESTful ATNA du profil IHE ATNA, la réponse retournée par le Gestionnaire de trace au Consommateur de traces est composée d’un Bundle (profil TDE_BundleResultatReponseRechercheTraces) de type « searchset » encapsulant 0, 1 à plusieurs ressources AuditEvent (profil TDE_AuditEvent). La ressource Bundle constituera alors le corps de la réponse HTTP 200 ok. Pour des informations sur les autres codes HTTP (HTTP status code) retournés en cas d’échec, consultez la documentation relative à l’interaction <a href="https://hl7.org/fhir/R4/http.html#read">« read »</a> de l’API REST FHIR.</p>
 
 
 
@@ -259,7 +432,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.tde#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 3, 2026 08:58+0000">2026-02-03</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.tde#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 4, 2026 15:55+0000">2026-02-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |

@@ -7,11 +7,13 @@ Generic: line 0, col 0, Error - The link 'definitions.ttl.zip' for "Définitions
 Generic: line 0, col 0, Error - The link 'examples.xml.zip' for "Exemples XML (zip)" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link 'examples.json.zip' for "Exemples JSON (zip)" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Error - The link 'examples.ttl.zip' for "Exemples Turtle (zip)" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Warning - Illegal HTML: illegal html element: query ( représente les autres paramètres, sous la forme param=valeur, permettant d’affiner la recherche.) (INVALID)
+Generic: line 0, col 0, Error - The link 'TDE_Flux01-versionSyslog.xml' for "Le fichier TDE_Flux01-versionSyslog.xml" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Warning - An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
-/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.tde.json: line 1, col 15138, Error - ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1) (STRUCTURE)
-/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.tde.json: line 1, col 6742, Error - No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters' (INVALID)
+/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.tde.json: line 1, col 15140, Error - ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1) (STRUCTURE)
+/home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.tde.json: line 1, col 6744, Error - No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters' (INVALID)
 
-err = 2, warn = 3, info = 0
-IG Publisher Version: 2.0.30
+err = 2, warn = 4, info = 0
+IG Publisher Version: 2.1.0

@@ -1,5 +1,5 @@
 {
-  "date" : "Tue, 03 Feb, 2026 08:58:16 +0000",
+  "date" : "Wed, 04 Feb, 2026 15:55:49 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -8,33 +8,33 @@
       "processes" : [
         {
           "activity" : "load",
-          "start" : 46,
-          "length" : 40
+          "start" : 43,
+          "length" : 42
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 47,
-          "length" : 14
+          "start" : 44,
+          "length" : 19
         },
         {
           "activity" : "generateNarratives",
-          "start" : 47,
+          "start" : 44,
           "length" : 93
         },
         {
           "activity" : "validate",
-          "start" : 47,
-          "length" : 5464
+          "start" : 44,
+          "length" : 6769
         },
         {
           "activity" : "generate1",
-          "start" : 53,
-          "length" : 90
+          "start" : 51,
+          "length" : 81
         },
         {
           "activity" : "generate2",
-          "start" : 56,
-          "length" : 120
+          "start" : 54,
+          "length" : 93
         },
         {
           "activity" : "generateValidationPack",
@@ -43,7 +43,7 @@
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 70,
+          "start" : 71,
           "length" : 1
         }
       ]
@@ -54,7 +54,7 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 56,
+          "start" : 54,
           "length" : 1
         }
       ]
@@ -68,32 +68,17 @@
       "size" : 0
     },
     {
-      "name" : "/input/pagecontent/syslog.md",
-      "size" : 6093,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 56,
-          "length" : 1
-        }
-      ]
-    },
-    {
       "name" : "/input/pagecontent/glossaire.md",
       "size" : 0
     },
     {
       "name" : "/input/pagecontent/specifications_technique_intro.md",
-      "size" : 0
-    },
-    {
-      "name" : "/input/pagecontent/api.md",
-      "size" : 7717,
+      "size" : 3882,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 56,
-          "length" : 1
+          "start" : 54,
+          "length" : 3
         }
       ]
     },
@@ -102,38 +87,23 @@
       "size" : 1184
     },
     {
-      "name" : "/input/pagecontent/correspondance_metier.md",
-      "size" : 3471,
+      "name" : "/input/pagecontent/specifications_technique_syslog.md",
+      "size" : 6402,
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 56,
+          "start" : 54,
           "length" : 1
         }
       ]
-    },
-    {
-      "name" : "/input/pagecontent/specifications_technique_syslog.md",
-      "size" : 0
     },
     {
       "name" : "/input/pagecontent/specifications_fonctionnelles.md",
       "size" : 0
     },
     {
-      "name" : "/input/pagecontent/specification_technique_intro.md",
-      "size" : 3910,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 56,
-          "length" : 3
-        }
-      ]
-    },
-    {
       "name" : "/input/pagecontent/specifications_technique_correspondance_metier.md",
-      "size" : 0
+      "size" : 3460
     },
     {
       "name" : "/input/pagecontent/securite.md",
@@ -149,14 +119,7 @@
     },
     {
       "name" : "/input/pagecontent/change-log.md",
-      "size" : 330,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 56,
-          "length" : 1
-        }
-      ]
+      "size" : 330
     },
     {
       "name" : "/input/pagecontent/index.md",
@@ -164,18 +127,18 @@
       "processes" : [
         {
           "activity" : "generate2",
-          "start" : 56,
+          "start" : 54,
           "length" : 1
         }
       ]
     },
     {
       "name" : "/input/pagecontent/specifications_technique_api.md",
-      "size" : 0,
+      "size" : 7668,
       "processes" : [
         {
-          "activity" : "scan",
-          "start" : 47,
+          "activity" : "generate2",
+          "start" : 54,
           "length" : 1
         }
       ]
@@ -194,29 +157,22 @@
     },
     {
       "name" : "/input/images",
-      "size" : 0,
-      "processes" : [
-        {
-          "activity" : "validateExpressions",
-          "start" : 53,
-          "length" : 1
-        }
-      ]
+      "size" : 0
     },
     {
       "name" : "/input/images/st_image6.png",
-      "size" : 114072,
-      "processes" : [
-        {
-          "activity" : "generate2",
-          "start" : 56,
-          "length" : 1
-        }
-      ]
+      "size" : 114072
     },
     {
       "name" : "/input/images/anImage.png",
-      "size" : 36288
+      "size" : 36288,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 54,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/images/st_image5.png",
@@ -225,6 +181,10 @@
     {
       "name" : "/input/images/ci-sis-logo.png",
       "size" : 61365
+    },
+    {
+      "name" : "/input/images/TDE_Flux01-VersionSyslog.xml",
+      "size" : 1715
     },
     {
       "name" : "/temp/pages/_includes/artifacts.xml",
