@@ -1,10 +1,7 @@
 ### Organisation du contexte métier
 
-Le domaine « Traçabilité » regroupe les groupes de processus qui
-décrivent la gestion des informations de traçabilité, informations qu'un
-système enregistre à chaque action qui lui est associée. Dans le cadre
-de la présente étude, ce domaine est constitué d’un unique groupe de
-processus « Gestion des traces ».
+Le domaine « Traçabilité » regroupe les groupes de processus qui décrivent la gestion des informations de traçabilité, informations qu'un système enregistre à chaque action qui lui est associée. Dans le cadre de la présente étude, ce domaine est constitué d'un unique groupe de processus « Gestion des traces ».
+
 <div style="text-align: center; display: block; clear: both;">
 <img src="sfe_image4.png"
 style="width:5.42708in;height:3.42708in" />
@@ -12,20 +9,17 @@ style="width:5.42708in;height:3.42708in" />
 <div style="text-align: center; display: block; clear: both;">
 Figure : Organisation du contexte métier de l'étude "Gestion des traces"
 </div>
-Le périmètre de l'étude englobe les processus en couleur sur le
-diagramme de paquetage.
+
+Le périmètre de l'étude englobe les processus en couleur sur le diagramme de paquetage.
 
 #### Gestion des traces
 
-Le groupe de processus « Gestion des traces » regroupe les processus qui
-permettent de gérer les traces produites lors de la vie d’un produit :  
-- Créer des traces ;  
-- Consulter une trace ;  
-- Recherches des traces.  
-  
-A noter que la gestion consiste en la création des traces et leur
-consultation. La suppression des traces ne fait pas partie du périmètre
-de l’étude.
+Le groupe de processus « Gestion des traces » regroupe les processus qui permettent de gérer les traces produites lors de la vie d'un produit :
+- Créer des traces ;
+- Consulter une trace ;
+- Recherches des traces.
+
+A noter que la gestion consiste en la création des traces et leur consultation. La suppression des traces ne fait pas partie du périmètre de l'étude.
 
 <span id="_Toc77062398" class="anchor"></span>
 
@@ -42,7 +36,6 @@ de l’étude.
 Figure : Processus collaboratif "Créer des traces"
 </div>
 
-
 <table>
 <colgroup>
 <col style="width: 20%" />
@@ -51,24 +44,18 @@ Figure : Processus collaboratif "Créer des traces"
 <thead>
 <tr>
 <th style="text-align: center;">Service attendu</th>
-<th style="text-align: left;">Ce processus permet de créer des traces.
-Cette traçabilité se déclenche à chaque fois qu'une étape significative
-dans un processus métier est réalisée. Les catégories d'évènements qui
-peuvent déclencher le processus de traçabilité sont par exemple :<br />
+<th style="text-align: left;">Ce processus permet de créer des traces. Cette traçabilité se déclenche à chaque fois qu'une étape significative dans un processus métier est réalisée. Les catégories d'évènements qui peuvent déclencher le processus de traçabilité sont par exemple :<br />
 - Un changement de statut,<br />
 - Un changement de lieu,<br />
 - Une action réalisée.<br />
-Les informations à tracer sont fonction du processus métier dont on
-souhaite faire le suivi.<br />
-La finalité de la traçabilité est de pouvoir proposer des pistes d'audit
-en cas d'enquête.</th>
+Les informations à tracer sont fonction du processus métier dont on souhaite faire le suivi.<br />
+La finalité de la traçabilité est de pouvoir proposer des pistes d'audit en cas d'enquête.</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">Pré-conditions</td>
-<td style="text-align: left;">La source des traces est habilitée à
-enregistrer des traces auprès du gestionnaire des traces.</td>
+<td style="text-align: left;">La source des traces est habilitée à enregistrer des traces auprès du gestionnaire des traces.</td>
 </tr>
 <tr>
 <td style="text-align: center;">Post-conditions</td>
@@ -80,10 +67,8 @@ enregistrer des traces auprès du gestionnaire des traces.</td>
 </tr>
 <tr>
 <td style="text-align: center;">Scénario nominal</td>
-<td style="text-align: left;">1 - La source des traces transmet les
-informations au gestionnaire de traces.<br />
-2 - Le gestionnaire des traces confirme ou non l'enregistrement des
-traces.</td>
+<td style="text-align: left;">1 - La source des traces transmet les informations au gestionnaire de traces.<br />
+2 - Le gestionnaire des traces confirme ou non l'enregistrement des traces.</td>
 </tr>
 </tbody>
 </table>
@@ -110,15 +95,13 @@ Figure : Processus collaboratif "Consulter une trace"
 <thead>
 <tr>
 <th style="text-align: center;">Service attendu</th>
-<th style="text-align: left;">Ce processus permet de consulter le détail
-d'une trace.</th>
+<th style="text-align: left;">Ce processus permet de consulter le détail d'une trace.</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">Pré-conditions</td>
-<td style="text-align: left;">Le consommateur des traces est habilité à
-consulter des traces auprès du gestionnaire des traces.</td>
+<td style="text-align: left;">Le consommateur des traces est habilité à consulter des traces auprès du gestionnaire des traces.</td>
 </tr>
 <tr>
 <td style="text-align: center;">Post-conditions</td>
@@ -130,11 +113,8 @@ consulter des traces auprès du gestionnaire des traces.</td>
 </tr>
 <tr>
 <td style="text-align: center;">Scénario nominal</td>
-<td style="text-align: left;">1 - Le consommateur des traces effectue
-une demande de consultation d'une trace auprès du gestionnaire des
-traces.<br />
-2 - Le gestionnaire des traces renvoie le détail de la trace au
-consommateur des traces.</td>
+<td style="text-align: left;">1 - Le consommateur des traces effectue une demande de consultation d'une trace auprès du gestionnaire des traces.<br />
+2 - Le gestionnaire des traces renvoie le détail de la trace au consommateur des traces.</td>
 </tr>
 </tbody>
 </table>
@@ -162,15 +142,13 @@ Figure  : Processus collaboratif "Rechercher des traces"
 <thead>
 <tr>
 <th style="text-align: center;">Service attendu</th>
-<th style="text-align: left;">Ce processus permet de rechercher une
-liste de traces répondant aux critères de recherche.</th>
+<th style="text-align: left;">Ce processus permet de rechercher une liste de traces répondant aux critères de recherche.</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">Pré-conditions</td>
-<td style="text-align: left;">Le consommateur des traces est habilité à
-rechercher des traces auprès du gestionnaire des traces.</td>
+<td style="text-align: left;">Le consommateur des traces est habilité à rechercher des traces auprès du gestionnaire des traces.</td>
 </tr>
 <tr>
 <td style="text-align: center;">Post-conditions</td>
@@ -182,10 +160,8 @@ rechercher des traces auprès du gestionnaire des traces.</td>
 </tr>
 <tr>
 <td style="text-align: center;">Scénario nominal</td>
-<td style="text-align: left;">1 - Le consommateur des traces effectue
-une recherche de traces auprès du gestionnaire des traces.<br />
-2 - Le gestionnaire des traces renvoie la liste des traces répondant aux
-critères de recherche.</td>
+<td style="text-align: left;">1 - Le consommateur des traces effectue une recherche de traces auprès du gestionnaire des traces.<br />
+2 - Le gestionnaire des traces renvoie la liste des traces répondant aux critères de recherche.</td>
 </tr>
 </tbody>
 </table>
@@ -210,26 +186,15 @@ Table : Caractéristiques du processus collaboratif
 <tbody>
 <tr>
 <td style="text-align: left;">Consommateur des traces</td>
-<td style="text-align: left;">Il s'agit d'un acteur système interne ou
-externe habilité à accéder aux traces.<br />
-Les personnes utilisant ce système peuvent être rattachées par exemple à
-la pharmacie hospitalière (traçabilité des médicaments), au bloc
-opératoire (traçabilité des actes chirurgicaux), à la sécurité
-(traçabilité de sécurité).</td>
+<td style="text-align: left;">Il s'agit d'un acteur système interne ou externe habilité à accéder aux traces. Les personnes utilisant ce système peuvent être rattachées par exemple à la pharmacie hospitalière (traçabilité des médicaments), au bloc opératoire (traçabilité des actes chirurgicaux), à la sécurité (traçabilité de sécurité).</td>
 </tr>
 <tr>
 <td style="text-align: left;">Gestionnaire des traces</td>
-<td style="text-align: left;">Il s'agit d'un acteur système qui
-enregistre les informations de traçabilité et fournit les traces en cas
-de consultation ou de recherches.<br />
-Le gestionnaire des traces peut être, par exemple, un logiciel de
-traçabilité ou le module de traçabilité d'un logiciel métier.</td>
+<td style="text-align: left;">Il s'agit d'un acteur système qui enregistre les informations de traçabilité et fournit les traces en cas de consultation ou de recherches. Le gestionnaire des traces peut être, par exemple, un logiciel de traçabilité ou le module de traçabilité d'un logiciel métier.</td>
 </tr>
 <tr>
 <td style="text-align: left;">Source des traces</td>
-<td style="text-align: left;">Il s'agit d'un acteur système qui transmet
-les informations de traçabilité relatives à une étape significative d'un
-processus métier suite à un événement au gestionnaire.</td>
+<td style="text-align: left;">Il s'agit d'un acteur système qui transmet les informations de traçabilité relatives à une étape significative d'un processus métier suite à un événement au gestionnaire.</td>
 </tr>
 </tbody>
 </table>
@@ -249,6 +214,7 @@ Table : Table des acteurs
 <div style="text-align: center; display: block; clear: both;">
 Figure : Processus collaboratif "Créer des traces"
 </div>
+
 ##### Description des actions
 
 | Action | Description |
@@ -334,26 +300,19 @@ Figure : Processus collaboratif "Rechercher des traces"
 <tbody>
 <tr>
 <td style="text-align: left;">Rechercher des traces</td>
-<td style="text-align: left;">Le consommateur des traces effectue une
-recherche de traces auprès du gestionnaire des traces en précisant les
-critères de sa recherche.</td>
+<td style="text-align: left;">Le consommateur des traces effectue une recherche de traces auprès du gestionnaire des traces en précisant les critères de sa recherche.</td>
 </tr>
 <tr>
 <td style="text-align: left;">Consulter la réponse</td>
-<td style="text-align: left;">Le consommateur des traces consulte les
-traces retournées par le gestionnaire des traces.</td>
+<td style="text-align: left;">Le consommateur des traces consulte les traces retournées par le gestionnaire des traces.</td>
 </tr>
 <tr>
 <td style="text-align: left;">Réceptionner la recherche</td>
-<td style="text-align: left;">Le gestionnaire des traces reçoit les
-critères de recherches.</td>
+<td style="text-align: left;">Le gestionnaire des traces reçoit les critères de recherches.</td>
 </tr>
 <tr>
 <td style="text-align: left;">Rechercher et fournir les traces</td>
-<td style="text-align: left;">Les traces sont recherchées par le
-gestionnaire des traces selon les critères définis par le consommateur
-des traces.<br />
-Les traces trouvées sont ensuite retournées au consommateur.</td>
+<td style="text-align: left;">Les traces sont recherchées par le gestionnaire des traces selon les critères définis par le consommateur des traces. Les traces trouvées sont ensuite retournées au consommateur.</td>
 </tr>
 </tbody>
 </table>
@@ -388,7 +347,7 @@ Table : Flux
 Table : Synthèse des flux identifiés
 </div>
 
-###  Identification des concepts véhiculés dans les flux d’informations et correspondance avec les classes et attributs du MOS
+###  Identification des concepts véhiculés dans les flux d'informations et correspondance avec les classes et attributs du MOS
 
 #### Concepts métier - Factorisation par concept
 
@@ -408,42 +367,32 @@ Table : Synthèse des flux identifiés
 <tbody>
 <tr>
 <td style="text-align: left;">Trace</td>
-<td style="text-align: left;">Ensemble des informations enregistrées
-relatant les actions entreprises par un système en conséquence d’un
-événement.</td>
+<td style="text-align: left;">Ensemble des informations enregistrées relatant les actions entreprises par un système en conséquence d'un événement.</td>
 <td style="text-align: left;"><p>Flux 1 - TransmissionTrace</p>
 <p>Flux 2 - ConsultationTrace</p>
 <p>Flux 3 - ReponseConsultationTrace</p></td>
 </tr>
 <tr>
 <td style="text-align: left;">Source</td>
-<td style="text-align: left;">Système qui transmet les informations de
-traçabilité relatives à une étape significative d'un processus
-métier.</td>
+<td style="text-align: left;">Système qui transmet les informations de traçabilité relatives à une étape significative d'un processus métier.</td>
 <td style="text-align: left;"><p>Flux 1 - TransmissionTrace</p>
 <p>Flux 3 - ReponseConsultationTrace</p></td>
 </tr>
 <tr>
 <td style="text-align: left;">Evènement</td>
-<td style="text-align: left;">Fait marquant relatif à un objet, une
-personne, un processus, etc</td>
+<td style="text-align: left;">Fait marquant relatif à un objet, une personne, un processus, etc</td>
 <td style="text-align: left;"><p>Flux 1 - TransmissionTrace</p>
 <p>Flux 3 - ReponseConsultationTrace</p></td>
 </tr>
 <tr>
 <td style="text-align: left;">Acteurs de l'évènement</td>
-<td style="text-align: left;">Acteurs liés à l'évènement. Il peut s'agir
-d'une personne (physique ou morale) ou d'un système à l'origine de
-l'évènement (émetteur) ou destinataire de l'évènement (récepteur).</td>
+<td style="text-align: left;">Acteurs liés à l'évènement. Il peut s'agir d'une personne (physique ou morale) ou d'un système à l'origine de l'évènement (émetteur) ou destinataire de l'évènement (récepteur).</td>
 <td style="text-align: left;"><p>Flux 1 - TransmissionTrace</p>
 <p>Flux 3 - ReponseConsultationTrace</p></td>
 </tr>
 <tr>
 <td style="text-align: left;">Objet de l'évènement</td>
-<td style="text-align: left;">Tout objet impacté par un évènement qui
-doit être tracé.<br />
-Le contenu correspond aux informations associées à l’évènement envoyées
-au gestionnaire de traces et qui doivent être conservées</td>
+<td style="text-align: left;">Tout objet impacté par un évènement qui doit être tracé. Le contenu correspond aux informations associées à l'évènement envoyées au gestionnaire de traces et qui doivent être conservées</td>
 <td style="text-align: left;"><p>Flux 1 - TransmissionTrace</p>
 <p>Flux 3 - ReponseConsultationTrace</p></td>
 </tr>
@@ -485,8 +434,7 @@ Figure : Flux 1 - TransmissionTrace
 
 ##### Classe "Trace"
 
-Ensemble d'informations qu'un système enregistre à chaque action qui lui
-est associé.
+Ensemble d'informations qu'un système enregistre à chaque action qui lui est associé.
 
 | Nom                                | Description              |
 |:-----------------------------------|--------------------------|
@@ -528,9 +476,7 @@ Table : Attributs de la classe "Evenement"
 
 ##### Classe "ActeurEvenement"
 
-Représente un acteur de l'évènement. De manière générale, il y aura un
-acteur émetteur, à l'origine de l'évènement et un acteur destinataire de
-l'évènement.
+Représente un acteur de l'évènement. De manière générale, il y aura un acteur émetteur, à l'origine de l'évènement et un acteur destinataire de l'évènement.
 
 | Nom | Description |
 |:---|----|
@@ -543,14 +489,13 @@ Table : Attributs de la classe "ActeurEvenement"
 
 ##### Classe "ObjetEvenement"
 
-Détaille l'objet de l'évènement : tout objet impacté par un évènement
-qui doit être tracé.
+Détaille l'objet de l'évènement : tout objet impacté par un évènement qui doit être tracé.
 
 | Nom | Description |
 |:---|----|
 | identifiant : \[0..1\] Identifiant | Identifiant de l'objet de l'évènement. |
 | type : \[0..1\] Code | Type d'objet de l'évènement. |
-| contenu : \[0..1\] ObjetBinaire | Le contenu correspond aux informations associées à l’évènement envoyées au gestionnaire de traces et qui doivent être conservées. Par exemple, l’identifiant du document recherché. |
+| contenu : \[0..1\] ObjetBinaire | Le contenu correspond aux informations associées à l'évènement envoyées au gestionnaire de traces et qui doivent être conservées. Par exemple, l'identifiant du document recherché. |
 
 <div style="text-align: center; display: block; clear: both;">
 Table : Attributs de la classe "ObjetEvenement"
@@ -568,8 +513,7 @@ Figure : Flux 2 - ConsultationTrace
 
 ##### Classe "Trace"
 
-Ensemble d'informations qu'un système enregistre à chaque action qui lui
-est associé.
+Ensemble d'informations qu'un système enregistre à chaque action qui lui est associé.
 
 | Nom                                | Description              |
 |:-----------------------------------|--------------------------|
@@ -581,13 +525,11 @@ Table : Attributs de la classe "Trace"
 
 #### Flux 3 - ReponseConsultationTrace
 
-Le modèle du flux est identique au flux 1 à la différence que la
-consultation peut ne retourner aucune trace.
+Le modèle du flux est identique au flux 1 à la différence que la consultation peut ne retourner aucune trace.
 
 #### Flux 5 - ReponseRechercheTraces
 
-Le modèle du flux est identique au flux 1 à la différence que la
-consultation peut ne retourner aucune source, une seule ou plusieurs.
+Le modèle du flux est identique au flux 1 à la différence que la consultation peut ne retourner aucune source, une seule ou plusieurs.
 
 #### Flux de recherche : Flux 4 - RechercheTraces
 
