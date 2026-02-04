@@ -7,7 +7,7 @@
 
 ### Organisation du contexte métier
 
-Le domaine « Traçabilité » regroupe les groupes de processus qui décrivent la gestion des informations de traçabilité, informations qu'un système enregistre à chaque action qui lui est associée. Dans le cadre de la présente étude, ce domaine est constitué d’un unique groupe de processus « Gestion des traces ».
+Le domaine « Traçabilité » regroupe les groupes de processus qui décrivent la gestion des informations de traçabilité, informations qu'un système enregistre à chaque action qui lui est associée. Dans le cadre de la présente étude, ce domaine est constitué d'un unique groupe de processus « Gestion des traces ».
 
 Figure : Organisation du contexte métier de l'étude "Gestion des traces"
 
@@ -15,13 +15,13 @@ Le périmètre de l'étude englobe les processus en couleur sur le diagramme de 
 
 #### Gestion des traces
 
-Le groupe de processus « Gestion des traces » regroupe les processus qui permettent de gérer les traces produites lors de la vie d’un produit :
+Le groupe de processus « Gestion des traces » regroupe les processus qui permettent de gérer les traces produites lors de la vie d'un produit :
 
 * Créer des traces ;
 * Consulter une trace ;
 * Recherches des traces.
 
-A noter que la gestion consiste en la création des traces et leur consultation. La suppression des traces ne fait pas partie du périmètre de l’étude.
+A noter que la gestion consiste en la création des traces et leur consultation. La suppression des traces ne fait pas partie du périmètre de l'étude.
 
 ### Définition des processus collaboratifs
 
@@ -70,8 +70,8 @@ Table : Caractéristiques du processus collaboratif
 
 | | |
 | :--- | :--- |
-| Consommateur des traces | Il s'agit d'un acteur système interne ou externe habilité à accéder aux traces.Les personnes utilisant ce système peuvent être rattachées par exemple à la pharmacie hospitalière (traçabilité des médicaments), au bloc opératoire (traçabilité des actes chirurgicaux), à la sécurité (traçabilité de sécurité). |
-| Gestionnaire des traces | Il s'agit d'un acteur système qui enregistre les informations de traçabilité et fournit les traces en cas de consultation ou de recherches.Le gestionnaire des traces peut être, par exemple, un logiciel de traçabilité ou le module de traçabilité d'un logiciel métier. |
+| Consommateur des traces | Il s'agit d'un acteur système interne ou externe habilité à accéder aux traces. Les personnes utilisant ce système peuvent être rattachées par exemple à la pharmacie hospitalière (traçabilité des médicaments), au bloc opératoire (traçabilité des actes chirurgicaux), à la sécurité (traçabilité de sécurité). |
+| Gestionnaire des traces | Il s'agit d'un acteur système qui enregistre les informations de traçabilité et fournit les traces en cas de consultation ou de recherches. Le gestionnaire des traces peut être, par exemple, un logiciel de traçabilité ou le module de traçabilité d'un logiciel métier. |
 | Source des traces | Il s'agit d'un acteur système qui transmet les informations de traçabilité relatives à une étape significative d'un processus métier suite à un événement au gestionnaire. |
 
 Table : Table des acteurs
@@ -135,7 +135,7 @@ Figure : Processus collaboratif "Rechercher des traces"
 | Rechercher des traces | Le consommateur des traces effectue une recherche de traces auprès du gestionnaire des traces en précisant les critères de sa recherche. |
 | Consulter la réponse | Le consommateur des traces consulte les traces retournées par le gestionnaire des traces. |
 | Réceptionner la recherche | Le gestionnaire des traces reçoit les critères de recherches. |
-| Rechercher et fournir les traces | Les traces sont recherchées par le gestionnaire des traces selon les critères définis par le consommateur des traces.Les traces trouvées sont ensuite retournées au consommateur. |
+| Rechercher et fournir les traces | Les traces sont recherchées par le gestionnaire des traces selon les critères définis par le consommateur des traces. Les traces trouvées sont ensuite retournées au consommateur. |
 
 Table : Tableau des actions
 
@@ -161,17 +161,17 @@ Table : Flux
 
 Table : Synthèse des flux identifiés
 
-### Identification des concepts véhiculés dans les flux d’informations et correspondance avec les classes et attributs du MOS
+### Identification des concepts véhiculés dans les flux d'informations et correspondance avec les classes et attributs du MOS
 
 #### Concepts métier - Factorisation par concept
 
 | | | |
 | :--- | :--- | :--- |
-| Trace | Ensemble des informations enregistrées relatant les actions entreprises par un système en conséquence d’un événement. | Flux 1 - TransmissionTraceFlux 2 - ConsultationTraceFlux 3 - ReponseConsultationTrace |
+| Trace | Ensemble des informations enregistrées relatant les actions entreprises par un système en conséquence d'un événement. | Flux 1 - TransmissionTraceFlux 2 - ConsultationTraceFlux 3 - ReponseConsultationTrace |
 | Source | Système qui transmet les informations de traçabilité relatives à une étape significative d'un processus métier. | Flux 1 - TransmissionTraceFlux 3 - ReponseConsultationTrace |
 | Evènement | Fait marquant relatif à un objet, une personne, un processus, etc | Flux 1 - TransmissionTraceFlux 3 - ReponseConsultationTrace |
 | Acteurs de l'évènement | Acteurs liés à l'évènement. Il peut s'agir d'une personne (physique ou morale) ou d'un système à l'origine de l'évènement (émetteur) ou destinataire de l'évènement (récepteur). | Flux 1 - TransmissionTraceFlux 3 - ReponseConsultationTrace |
-| Objet de l'évènement | Tout objet impacté par un évènement qui doit être tracé.Le contenu correspond aux informations associées à l’évènement envoyées au gestionnaire de traces et qui doivent être conservées | Flux 1 - TransmissionTraceFlux 3 - ReponseConsultationTrace |
+| Objet de l'évènement | Tout objet impacté par un évènement qui doit être tracé. Le contenu correspond aux informations associées à l'évènement envoyées au gestionnaire de traces et qui doivent être conservées | Flux 1 - TransmissionTraceFlux 3 - ReponseConsultationTrace |
 
 Table : Concepts métier
 
@@ -240,13 +240,13 @@ Table : Attributs de la classe "ActeurEvenement"
 
 ##### Classe "ObjetEvenement"
 
-Détaille l'objet de l'évènement : tout objet impacté par un évènement qui doit être tracé.
+Détaille l'objet de l'évènement : tout objet impacté par un évènement qui doit être tracé.
 
 | | |
 | :--- | :--- |
 | identifiant : [0..1] Identifiant | Identifiant de l'objet de l'évènement. |
 | type : [0..1] Code | Type d'objet de l'évènement. |
-| contenu : [0..1] ObjetBinaire | Le contenu correspond aux informations associées à l’évènement envoyées au gestionnaire de traces et qui doivent être conservées. Par exemple, l’identifiant du document recherché. |
+| contenu : [0..1] ObjetBinaire | Le contenu correspond aux informations associées à l'évènement envoyées au gestionnaire de traces et qui doivent être conservées. Par exemple, l'identifiant du document recherché. |
 
 Table : Attributs de la classe "ObjetEvenement"
 

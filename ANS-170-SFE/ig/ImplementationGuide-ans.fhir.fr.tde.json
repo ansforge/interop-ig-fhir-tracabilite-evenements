@@ -3,14 +3,14 @@
   "id" : "ans.fhir.fr.tde",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.fhir.fr.tde</b></p><a name=\"ans.fhir.fr.tde\"> </a><a name=\"hcans.fhir.fr.tde\"> </a><h2>TDE</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.fhir.fr.tde</b></p><a name=\"ans.fhir.fr.tde\"> </a><a name=\"hcans.fhir.fr.tde\"> </a><h2>TDE</h2><p>L'URL officielle pour ce guide d'implémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde</pre></div>"
   },
   "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde",
   "version" : "2.0.0",
   "name" : "TDE",
   "title" : "ANS - Traçabilité des événements",
   "status" : "draft",
-  "date" : "2026-02-03T10:18:19+00:00",
+  "date" : "2026-02-04T16:20:06+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
