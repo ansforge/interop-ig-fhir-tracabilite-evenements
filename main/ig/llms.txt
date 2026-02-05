@@ -18,6 +18,29 @@
 
 ## Resources
 
+### Resource Profiles
+
+* [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md)
+* [TdE AuditEvent](StructureDefinition-tde-auditevent.md)
+
+### CapabilityStatements
+
+* [TdE-Consommateur](CapabilityStatement-TdEConsommateur.md)
+* [TdE-Gestionnaire](CapabilityStatement-TdEGestionnaire.md)
+* [TdE-Source](CapabilityStatement-TdESource.md)
+
 ### ImplementationGuides
 
 * [ANS - Traçabilité des événements](index.md)
+
+### SearchParameters
+
+* [TDE_AuditEvent_period-start](SearchParameter-TDE-AuditEvent-period-start.md)
+
+### Examples
+
+* [TDEAuditEventExample-2 (AuditEvent)](AuditEvent-TDEAuditEventExample-2.md)
+* [TDEAuditEventExample (AuditEvent)](AuditEvent-TDEAuditEventExample.md)
+* [TDEBundleResultatReponseRechercheTracesExample (Bundle)](Bundle-TDEBundleResultatReponseRechercheTracesExample.md)
+* [DeviceExample (Device)](Device-DeviceExample.md)
+* [PractitionerExample (Practitioner)](Practitioner-PractitionerExample.md)

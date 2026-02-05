@@ -41,6 +41,8 @@ Les ressources profilées dans le cadre de ce guide d'implémentation sont les s
 | | | |
 | :--- | :--- | :--- |
 | Profil parent | Profil | Description |
+| [AuditEvent](http://hl7.org/fhir/StructureDefinition/AuditEvent) | [TDEAuditEvent](StructureDefinition-tde-auditevent.md) | Profil représentant la trace d'un évènement |
+| [Bundle](http://hl7.org/fhir/StructureDefinition/Bundle) | [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md) | Bundle de réponse à la recherche de traces |
 
 ### Dépendances
 
@@ -54,7 +56,13 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
 
 * ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: [https://www.iso.org/iso-3166-country-codes.html](https://www.iso.org/iso-3166-country-codes.html)
 
-* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html): [TDE](index.md)
+* [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html): [TDE](index.md), [TDEAuditEvent](StructureDefinition-tde-auditevent.md)... Show 5 more, [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md), [TDE_AuditEvent_period-start](SearchParameter-TDE-AuditEvent-period-start.md), [TdEConsommateur](CapabilityStatement-TdEConsommateur.md), [TdEGestionnaire](CapabilityStatement-TdEGestionnaire.md) and [TdESource](CapabilityStatement-TdESource.md)
+
+
+* These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright © 2011 by the National Electrical Manufacturers Association.
+
+* [DICOM Controlled Terminology Definitions](http://hl7.org/fhir/R4/codesystem-dicom-dcim.html): [AuditEvent/TDEAuditEventExample-2](AuditEvent-TDEAuditEventExample-2.md) and [Bundle/TDEBundleResultatReponseRechercheTracesExample](Bundle-TDEBundleResultatReponseRechercheTracesExample.md)
+* [Audit Event ID](http://terminology.hl7.org/7.0.1/CodeSystem-audit-event-type.html): [AuditEvent/TDEAuditEventExample](AuditEvent-TDEAuditEventExample.md) and [Bundle/TDEBundleResultatReponseRechercheTracesExample](Bundle-TDEBundleResultatReponseRechercheTracesExample.md)
 
 
 
@@ -70,7 +78,7 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
   "name" : "TDE",
   "title" : "ANS - Traçabilité des événements",
   "status" : "draft",
-  "date" : "2026-02-05T08:17:56+00:00",
+  "date" : "2026-02-05T08:18:27+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
@@ -842,6 +850,157 @@ Certaines ressources sémantiques de ce guide sont protégées par des droits de
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      }
+    ],
+    "resource" : [
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Device"
+          }
+        ],
+        "reference" : {
+          "reference" : "Device/DeviceExample"
+        },
+        "name" : "DeviceExample",
+        "exampleBoolean" : true
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Practitioner"
+          }
+        ],
+        "reference" : {
+          "reference" : "Practitioner/PractitionerExample"
+        },
+        "name" : "PractitionerExample",
+        "exampleBoolean" : true
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/tde-auditevent"
+        },
+        "name" : "TdE AuditEvent",
+        "description" : "Profil représentant la trace d'un évènement",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "SearchParameter"
+          }
+        ],
+        "reference" : {
+          "reference" : "SearchParameter/TDE-AuditEvent-period-start"
+        },
+        "name" : "TdE AuditEvent period.start",
+        "description" : "Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "CapabilityStatement"
+          }
+        ],
+        "reference" : {
+          "reference" : "CapabilityStatement/TdEConsommateur"
+        },
+        "name" : "TdE-Consommateur",
+        "description" : "Le rôle du Consommateur est d'accéder aux traces. Les personnes utilisant ce système peuvent être rattachées par exemple à la pharmacie hospitalière (traçabilité des médicaments), au bloc opératoire (traçabilité des actes chirurgicaux), à la sécurité (traçabilité de sécurité).",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "CapabilityStatement"
+          }
+        ],
+        "reference" : {
+          "reference" : "CapabilityStatement/TdEGestionnaire"
+        },
+        "name" : "TdE-Gestionnaire",
+        "description" : "Le rôle du Gestionnaire est d'enregistrer les informations de traçabilité et fournir les traces en cas de consultation ou de recherches.\nLe gestionnaire des traces peut être, par exemple, un logiciel de traçabilité ou le module de traçabilité d'un logiciel métier.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "CapabilityStatement"
+          }
+        ],
+        "reference" : {
+          "reference" : "CapabilityStatement/TdESource"
+        },
+        "name" : "TdE-Source",
+        "description" : "Le rôle de la Source est de transmettre les informations de traçabilité relatives à une étape significative d'un processus métier suite à un événement au gestionnaire.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "AuditEvent"
+          }
+        ],
+        "reference" : {
+          "reference" : "AuditEvent/TDEAuditEventExample"
+        },
+        "name" : "TDEAuditEventExample",
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "AuditEvent"
+          }
+        ],
+        "reference" : {
+          "reference" : "AuditEvent/TDEAuditEventExample-2"
+        },
+        "name" : "TDEAuditEventExample-2",
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/TDEBundleResultatReponseRechercheTraces"
+        },
+        "name" : "TDEBundleResultatReponseRechercheTraces",
+        "description" : "Bundle de réponse à la recherche de traces",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "Bundle"
+          }
+        ],
+        "reference" : {
+          "reference" : "Bundle/TDEBundleResultatReponseRechercheTracesExample"
+        },
+        "name" : "TDEBundleResultatReponseRechercheTracesExample",
+        "exampleCanonical" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces"
       }
     ],
     "page" : {
