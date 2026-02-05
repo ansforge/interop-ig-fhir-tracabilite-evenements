@@ -1,49 +1,49 @@
 {
-  "date" : "Fri, 30 Jan, 2026 10:49:29 +0000",
+  "date" : "Thu, 05 Feb, 2026 08:17:30 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
       "name" : "/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.tde.json",
-      "size" : 3633,
+      "size" : 3501,
       "processes" : [
         {
           "activity" : "load",
-          "start" : 39,
-          "length" : 57
+          "start" : 42,
+          "length" : 43
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 40,
-          "length" : 16
+          "start" : 42,
+          "length" : 20
         },
         {
           "activity" : "generateNarratives",
-          "start" : 40,
-          "length" : 86
+          "start" : 42,
+          "length" : 94
         },
         {
           "activity" : "validate",
-          "start" : 40,
-          "length" : 5808
+          "start" : 43,
+          "length" : 3973
         },
         {
           "activity" : "generate1",
-          "start" : 46,
-          "length" : 92
+          "start" : 47,
+          "length" : 78
         },
         {
           "activity" : "generate2",
           "start" : 49,
-          "length" : 106
+          "length" : 130
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 62,
-          "length" : 2
+          "start" : 61,
+          "length" : 3
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 66,
+          "start" : 65,
           "length" : 2
         }
       ]
@@ -65,7 +65,7 @@
     },
     {
       "name" : "/input/pagecontent/annexe_audit_dicom.md",
-      "size" : 0
+      "size" : 3448
     },
     {
       "name" : "/input/pagecontent/specifications_techniques.md",
@@ -73,7 +73,7 @@
     },
     {
       "name" : "/input/pagecontent/glossaire.md",
-      "size" : 0
+      "size" : 361
     },
     {
       "name" : "/input/pagecontent/specifications_technique_intro.md",
@@ -81,7 +81,14 @@
     },
     {
       "name" : "/input/pagecontent/tests.md",
-      "size" : 1184
+      "size" : 1184,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 49,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/input/pagecontent/specifications_technique_syslog.md",
@@ -97,18 +104,18 @@
     },
     {
       "name" : "/input/pagecontent/securite.md",
-      "size" : 900,
+      "size" : 900
+    },
+    {
+      "name" : "/input/pagecontent/normes_standards.md",
+      "size" : 80494,
       "processes" : [
         {
           "activity" : "generate2",
           "start" : 49,
-          "length" : 1
+          "length" : 7
         }
       ]
-    },
-    {
-      "name" : "/input/pagecontent/normes_standards.md",
-      "size" : 0
     },
     {
       "name" : "/input/pagecontent/downloads.md",
@@ -125,7 +132,7 @@
         {
           "activity" : "generate2",
           "start" : 49,
-          "length" : 4
+          "length" : 3
         }
       ]
     },
@@ -135,11 +142,25 @@
     },
     {
       "name" : "/input/pagecontent/autres_ressources.md",
-      "size" : 155
+      "size" : 155,
+      "processes" : [
+        {
+          "activity" : "scan",
+          "start" : 42,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/template/config",
-      "size" : 0
+      "size" : 0,
+      "processes" : [
+        {
+          "activity" : "generate2",
+          "start" : 49,
+          "length" : 1
+        }
+      ]
     },
     {
       "name" : "/template/config/_config.yml",
@@ -150,8 +171,28 @@
       "size" : 0
     },
     {
+      "name" : "/input/images/ns_image7.png",
+      "size" : 15974
+    },
+    {
+      "name" : "/input/images/ns_image10.png",
+      "size" : 41124
+    },
+    {
       "name" : "/input/images/anImage.png",
-      "size" : 36288,
+      "size" : 36288
+    },
+    {
+      "name" : "/input/images/ci-sis-logo.png",
+      "size" : 61365
+    },
+    {
+      "name" : "/input/images/ns_image5.png",
+      "size" : 13301
+    },
+    {
+      "name" : "/input/images/ns_image6.png",
+      "size" : 15215,
       "processes" : [
         {
           "activity" : "generate2",
@@ -161,8 +202,8 @@
       ]
     },
     {
-      "name" : "/input/images/ci-sis-logo.png",
-      "size" : 61365
+      "name" : "/input/images/ns_image8.png",
+      "size" : 24393
     },
     {
       "name" : "/temp/pages/_includes/artifacts.xml",

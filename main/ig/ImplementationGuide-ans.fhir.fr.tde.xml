@@ -3,14 +3,14 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ans.fhir.fr.tde"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : ImplementationGuide ans.fhir.fr.tde</b></p><a name="ans.fhir.fr.tde"> </a><a name="hcans.fhir.fr.tde"> </a><h2>TDE</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde</pre></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : ImplementationGuide ans.fhir.fr.tde</b></p><a name="ans.fhir.fr.tde"> </a><a name="hcans.fhir.fr.tde"> </a><h2>TDE</h2><p>L'URL officielle pour ce guide d'implémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde</pre></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde"/>
   <version value="2.0.0"/>
   <name value="TDE"/>
   <title value="ANS - Traçabilité des événements"/>
   <status value="draft"/>
-  <date value="2026-01-30T10:49:29+00:00"/>
+  <date value="2026-02-05T08:17:30+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -553,46 +553,46 @@
         <nameUrl value="change-log.html"/>
         <title value="Historique des versions"/>
         <generation value="markdown"/>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="securite.html"/>
-          </extension>
-          <nameUrl value="securite.html"/>
-          <title value="Sécurité"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="downloads.html"/>
-          </extension>
-          <nameUrl value="downloads.html"/>
-          <title value="Téléchargements et usages"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="normes_standards.html"/>
-          </extension>
-          <nameUrl value="normes_standards.html"/>
-          <title value="Etude norme et standards"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="annexe_audit_dicom.html"/>
-          </extension>
-          <nameUrl value="annexe_audit_dicom.html"/>
-          <title value="Mise en correspondance AuditEvent / DICOM"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="glossaire.html"/>
-          </extension>
-          <nameUrl value="glossaire.html"/>
-          <title value="Glossaire"/>
-          <generation value="markdown"/>
-        </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="securite.html"/>
+        </extension>
+        <nameUrl value="securite.html"/>
+        <title value="Sécurité"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="downloads.html"/>
+        </extension>
+        <nameUrl value="downloads.html"/>
+        <title value="Téléchargements et usages"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="normes_standards.html"/>
+        </extension>
+        <nameUrl value="normes_standards.html"/>
+        <title value="Etude norme et standards"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="annexe_audit_dicom.html"/>
+        </extension>
+        <nameUrl value="annexe_audit_dicom.html"/>
+        <title value="Mise en correspondance AuditEvent / DICOM"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="glossaire.html"/>
+        </extension>
+        <nameUrl value="glossaire.html"/>
+        <title value="Glossaire"/>
+        <generation value="markdown"/>
       </page>
     </page>
     <parameter>
