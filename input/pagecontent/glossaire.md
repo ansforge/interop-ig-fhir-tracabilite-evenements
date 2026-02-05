@@ -1,8 +1,2 @@
-| Sigle / Acronyme | Signification |
-|----|----|
-| ASIP Santé | Agence Française de la Santé Numérique |
-| HL7 | *Health Level 7* |
-| FHIR | *Fast Healthcare Interoperability Ressources* |
-| CI-SIS | Cadre d’interopérabilité des systèmes d’information de santé |
-| DICOM | Digital Imaging and COmmunication in Medecine |
-| GS1 | Global Standards 1 |
+
+<table> <thead> <tr><th>Sigle / Acronyme</th><th>Signification</th></tr> </thead> <tbody> <tr><td>ASIP Santé</td><td>Agence Française de la Santé Numérique</td></tr> <tr><td>HL7</td><td><em>Health Level 7</em></td></tr> <tr><td>FHIR</td><td><em>Fast Healthcare Interoperability Ressources</em></td></tr> <tr><td>CI-SIS</td><td>Cadre d'interopérabilité des systèmes d'information de santé</td></tr> <tr><td>DICOM</td><td>Digital Imaging and Communication in Medicine</td></tr> <tr><td>GS1</td><td>Global Standards 1</td></tr> </tbody> </table>
