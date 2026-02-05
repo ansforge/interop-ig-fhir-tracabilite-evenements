@@ -1,0 +1,44 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "TDE-AuditEvent-period-start",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ParamètreRecherche TDE-AuditEvent-period-start</b></p><a name=\"TDE-AuditEvent-period-start\"> </a><a name=\"hcTDE-AuditEvent-period-start\"> </a><h2>TDE_AuditEvent_period-start</h2><p>Paramètre <code>period-start</code>:<code>date</code></p><div><p>Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence</p>\n</div><table class=\"grid\"><tr><td>Ressource</td><td><a href=\"http://hl7.org/fhir/R4/auditevent.html\">AuditEvent</a></td></tr><tr><td>Expression</td><td><code>AuditEvent.period.start</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd : Le paramètre peut se répéter pour spécifier plusieurs valeurs qui doivent toutes être vraies</li><li>multipleOr : Le paramètre peut avoir plusieurs valeurs (séparées par des virgules) dont au moins une doit être vraie</li></ul></td></tr><tr><td>Comparateurs</td><td>Autorisé : eq, ne, gt, lt, ge, le, sa, eb, ap</td></tr></table></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/SearchParameter/TDE-AuditEvent-period-start",
+  "version" : "2.0.0",
+  "name" : "TDE_AuditEvent_period-start",
+  "status" : "active",
+  "date" : "2026-02-05T08:37:08+00:00",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "code" : "period-start",
+  "base" : ["AuditEvent"],
+  "type" : "date",
+  "expression" : "AuditEvent.period.start",
+  "multipleOr" : true,
+  "multipleAnd" : true,
+  "comparator" : ["eq",
+  "ne",
+  "gt",
+  "lt",
+  "ge",
+  "le",
+  "sa",
+  "eb",
+  "ap"]
+}
