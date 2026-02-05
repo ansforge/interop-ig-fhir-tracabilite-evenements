@@ -21,7 +21,7 @@ La première étape de construction de ce flux consiste à créer le message qui
 
 Ce contenu est ensuite encapsulé dans un message syslog qui sera transmis via UDP ou TLS au gestionnaire de traces.
 
-Un exemple de flux est joint (cf [Le fichier TDE_Flux01-versionSyslog.xml](TDE_Flux01-versionSyslog.xml)).
+Un exemple de flux est joint (cf [Le fichier TDE_Flux01-versionSyslog.xml](TDE_Flux01-VersionSyslog.xml)).
 
 #### Flux 4 : RechercheTraces
 
