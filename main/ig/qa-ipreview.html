@@ -180,7 +180,7 @@ These codes are excerpted from Digital Imaging and Communications in Medicine (D
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>
 .  Package ans.fhir.fr.tde#2.0.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Thu, Feb 5, 2026 08:18+0000">2026-02-05</span>
+. Generated           <span title="Thu, Feb 5, 2026 08:19+0000">2026-02-05</span>
 
                     <br/>
 
@@ -212,7 +212,7 @@ These codes are excerpted from Digital Imaging and Communications in Medicine (D
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>
 .  Package ans.fhir.fr.tde#2.0.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Thu, Feb 5, 2026 08:18+0000">2026-02-05</span>
+. Generated           <span title="Thu, Feb 5, 2026 08:19+0000">2026-02-05</span>
 
                     <br/>
 
@@ -244,7 +244,7 @@ These codes are excerpted from Digital Imaging and Communications in Medicine (D
 
           IG &copy; 2020+           <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>
 .  Package ans.fhir.fr.tde#2.0.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
-. Generated           <span title="Thu, Feb 5, 2026 08:18+0000">2026-02-05</span>
+. Generated           <span title="Thu, Feb 5, 2026 08:19+0000">2026-02-05</span>
 
                     <br/>
 
@@ -1278,6 +1278,80 @@ DICOM est le standard utilisé pour échanger des informations dans le domaine d
 </img>          </a>
         </td>
       </tr>
+      <tr>
+        <td>
+          <a href="specifications_technique_api.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_RESTful-ATNA.pdf">www.ihe.net</a>
+        </td>
+        <td>
+Ce flux est construit selon les exigences de la transaction           <a href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_RESTful-ATNA.pdf">IHE ITI-20 « Record Audit Event »</a>
+ dans sa version HL7 FHIR où une seule trace est transmise à la fois : « Send Audit Resource Request Message - FHIR Feed Interaction ». La première étape de construction de ce flux consiste à créer la ressource AuditEvent conformément aux exigences du contexte métier.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="specifications_technique_api.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_RESTful-ATNA.pdf">www.ihe.net</a>
+        </td>
+        <td>
+Dans le contexte d’une implémentation en HL7 FHIR, le flux 4 est construit selon les exigences de l’interaction « search » de l’API REST de FHIR et, plus particulièrement, les exigences de la transaction           <a href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_RESTful-ATNA.pdf">IHE ITI-81 « Retrieve ATNA Audit Event »</a>
+. Les paramètres de recherche possibles sont ceux définis par HL7 FHIR pour la ressource AuditEvent.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="specifications_technique_intro.html">web</a>
+        </td>
+        <td>
+          <a href="http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html">dicom.nema.org</a>
+        </td>
+        <td>
+D'autre part, au protocole et à la structure de messages syslog, éventuellement couplée à la structure de message d'audit définie par           <a href="http://dicom.nema.org/dicom/2013/output/chtml/part15/sect_A.5.html">DICOM</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="specifications_technique_intro.html">web</a>
+        </td>
+        <td>
+          <a href="https://esante.gouv.fr/securite/politique-generale-de-securite-des-systemes-d-information-de-sante">esante.gouv.fr</a>
+        </td>
+        <td>
+Les spécifications d'interopérabilité présentées dans ce volet ne présagent pas des conditions de leur mise en œuvre dans le cadre d'un système d'information partagé. Il appartient à tout responsable de traitement de s'assurer que les services utilisant ces spécifications respectent les cadres et bonnes pratiques applicables à ce genre de service (ex : cadre juridique, bonnes pratiques de sécurité, ergonomie, accessibilité …). Il est à noter que les contraintes de sécurité concernant les flux échangés ne sont pas traitées dans ce document. Celles-ci sont du ressort de chaque responsable de l'implémentation du mécanisme qui est dans l'obligation de se conformer au cadre juridique en la matière. L'ANS propose des référentiels dédiés à la politique de sécurité (          <a href="https://esante.gouv.fr/securite/politique-generale-de-securite-des-systemes-d-information-de-sante">la PGSSI-S</a>
+) et des mécanismes de sécurisation sont définis dans les volets de la           <a href="http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/couche-transport">couche Transport</a>
+ du Cadre d'Interopérabilité des systèmes d'information de santé (CI-SIS).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="specifications_technique_intro.html">web</a>
+        </td>
+        <td>
+          <a href="http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/couche-transport">esante.gouv.fr</a>
+        </td>
+        <td>
+Les spécifications d'interopérabilité présentées dans ce volet ne présagent pas des conditions de leur mise en œuvre dans le cadre d'un système d'information partagé. Il appartient à tout responsable de traitement de s'assurer que les services utilisant ces spécifications respectent les cadres et bonnes pratiques applicables à ce genre de service (ex : cadre juridique, bonnes pratiques de sécurité, ergonomie, accessibilité …). Il est à noter que les contraintes de sécurité concernant les flux échangés ne sont pas traitées dans ce document. Celles-ci sont du ressort de chaque responsable de l'implémentation du mécanisme qui est dans l'obligation de se conformer au cadre juridique en la matière. L'ANS propose des référentiels dédiés à la politique de sécurité (          <a href="https://esante.gouv.fr/securite/politique-generale-de-securite-des-systemes-d-information-de-sante">la PGSSI-S</a>
+) et des mécanismes de sécurisation sont définis dans les volets de la           <a href="http://esante.gouv.fr/services/referentiels/ci-sis/espace-publication/couche-transport">couche Transport</a>
+ du Cadre d'Interopérabilité des systèmes d'information de santé (CI-SIS).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="specifications_technique_syslog.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol2a.pdf">www.ihe.net</a>
+        </td>
+        <td>
+Ce flux est construit selon les exigences de la transaction           <a href="https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol2a.pdf">IHE ITI-20 « Record Audit Event »</a>
+ dans sa version Syslog : « Send Audit Event Message - Syslog Interaction ». Certaines contraintes de cette transaction doivent être adaptées à chaque contexte métier, en particulier les éléments suivants de l'en-tête Syslog :
+        </td>
+      </tr>
     </table>
     <h2>Internal Images</h2>
     <table class="grid">
@@ -1369,6 +1443,18 @@ sfe_image8.png          <br/>
         <td>
 sfe_image9.png          <br/>
           <img src="sfe_image9.png" alt="sfe_image9.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+st_image5.png          <br/>
+          <img src="st_image5.png" alt="st_image5.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+st_image6.png          <br/>
+          <img src="st_image6.png" alt="st_image6.png" width="600px" height="auto"/>
         </td>
       </tr>
       <tr>

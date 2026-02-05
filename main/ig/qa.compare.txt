@@ -1,10 +1,10 @@
 TDE : Validation Results
 =========================================
 
-err = 1, warn = 16, info = 1
+err = 1, warn = 17, info = 1
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.tde#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/tde)
- Build Errors : 0 / 9 / 0
+ Build Errors : 1 / 10 / 0
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/AuditEvent-TDEAuditEventExample : 0 / 0 / 1
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/AuditEvent-TDEAuditEventExample-2 : 0 / 0 / 1
  /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/fsh-generated/resources/Bundle-TDEBundleResultatReponseRechercheTracesExample : 0 / 2 / 7
@@ -25,6 +25,8 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource AuditEvent/TDEAuditEventExample-2.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/TDEBundleResultatReponseRechercheTracesExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/output/normes_standards.html: Illegal HTML: Illegal HTML element: section
+WARNING: /home/runner/work/interop-ig-fhir-tracabilite-evenements/interop-ig-fhir-tracabilite-evenements/igSource/output/specifications_technique_api.html: Illegal HTML: illegal html element: query ( représente les autres paramètres, sous la forme param=valeur, permettant d’affiner la recherche.)
+ERROR: specifications_technique_syslog.html#/html/body/div/div/div/div/div/p/a at Line 245, column 38: The link 'TDE_Flux01-versionSyslog.xml' for "Le fichier TDE_Flux01-versionSyslog.xml" cannot be resolved
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 5: The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
