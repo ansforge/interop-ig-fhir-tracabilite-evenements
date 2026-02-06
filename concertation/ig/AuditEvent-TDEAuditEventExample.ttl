@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/tde/AuditEvent/TDEAuditEventExample> a fhir:AuditEvent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "TDEAuditEventExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent"^^xsd:anyURI ;
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ÉvènementSécurité TDEAuditEventExample</b></p><a name=\"TDEAuditEventExample\"> </a><a name=\"hcTDEAuditEventExample\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-tde-auditevent.html\">TdE AuditEvent</a></p></div><p><b>type</b>: <a href=\"http://terminology.hl7.org/7.0.1/CodeSystem-audit-event-type.html#audit-event-type-rest\">Audit Event ID: rest</a> (RESTful Operation)</p><p><b>subtype</b>: <a href=\"http://hl7.org/fhir/R4/codesystem-restful-interaction.html#restful-interaction-read\">FHIR Restful Interactions: read</a> (read)</p><p><b>period</b>: 2026-01-07 09:30:00+0000 --&gt; 2026-01-07 09:32:00+0000</p><p><b>recorded</b>: 2026-01-07 09:32:15+0000</p><h3>Agents</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Who</b></td><td><b>Requestor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-PractitionerExample.html\">Practitioner Jean DUPONT </a></td><td>true</td></tr></table><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Observer</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Device-DeviceExample.html\">Device : manufacturer = Éditeur SI Santé</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:type [
+     fhir:system [
+       fhir:v "http://terminology.hl7.org/CodeSystem/audit-event-type"^^xsd:anyURI ;
+       fhir:l <http://terminology.hl7.org/CodeSystem/audit-event-type>
+     ] ;
+     fhir:code [ fhir:v "rest" ] ;
+     fhir:display [ fhir:v "RESTful Operation" ]
+  ] ; # 
+  fhir:subtype ( [
+     fhir:system [
+       fhir:v "http://hl7.org/fhir/restful-interaction"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/restful-interaction>
+     ] ;
+     fhir:code [ fhir:v "read" ] ;
+     fhir:display [ fhir:v "read" ]
+  ] ) ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2026-01-07T09:30:00Z"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2026-01-07T09:32:00Z"^^xsd:dateTime ]
+  ] ; # 
+  fhir:recorded [ fhir:v "2026-01-07T09:32:15Z"^^xsd:dateTime] ; # 
+  fhir:agent ( [
+     fhir:who [
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/Practitioner/PractitionerExample> ;
+       fhir:reference [ fhir:v "Practitioner/PractitionerExample" ]
+     ] ;
+     fhir:requestor [ fhir:v true ]
+  ] ) ; # 
+  fhir:source [
+     fhir:observer [
+       fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/Device/DeviceExample> ;
+       fhir:reference [ fhir:v "Device/DeviceExample" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

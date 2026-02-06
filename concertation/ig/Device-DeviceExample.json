@@ -1,0 +1,13 @@
+{
+  "resourceType" : "Device",
+  "id" : "DeviceExample",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Dispositif DeviceExample</b></p><a name=\"DeviceExample\"> </a><a name=\"hcDeviceExample\"> </a><p><b>manufacturer</b>: Éditeur SI Santé</p><h3>DeviceNames</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td>SIH</td><td>User Friendly name</td></tr></table></div>"
+  },
+  "manufacturer" : "Éditeur SI Santé",
+  "deviceName" : [{
+    "name" : "SIH",
+    "type" : "user-friendly-name"
+  }]
+}

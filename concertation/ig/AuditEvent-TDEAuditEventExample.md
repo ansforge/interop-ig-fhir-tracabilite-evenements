@@ -1,0 +1,78 @@
+# TDEAuditEventExample - ANS - Traçabilité des événements v2.0.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **TDEAuditEventExample**
+
+## Example AuditEvent: TDEAuditEventExample
+
+Profil: [TdE AuditEvent](StructureDefinition-tde-auditevent.md)
+
+**type**: [Audit Event ID: rest](http://terminology.hl7.org/7.0.1/CodeSystem-audit-event-type.html#audit-event-type-rest) (RESTful Operation)
+
+**subtype**: [FHIR Restful Interactions: read](http://hl7.org/fhir/R4/codesystem-restful-interaction.html#restful-interaction-read) (read)
+
+**period**: 2026-01-07 09:30:00+0000 --> 2026-01-07 09:32:00+0000
+
+**recorded**: 2026-01-07 09:32:15+0000
+
+### Agents
+
+| | | |
+| :--- | :--- | :--- |
+| - | **Who** | **Requestor** |
+| * | [Practitioner Jean DUPONT ](Practitioner-PractitionerExample.md) | true |
+
+### Sources
+
+| | |
+| :--- | :--- |
+| - | **Observer** |
+| * | [Device : manufacturer = Éditeur SI Santé](Device-DeviceExample.md) |
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "AuditEvent",
+  "id" : "TDEAuditEventExample",
+  "meta" : {
+    "profile" : [
+      "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent"
+    ]
+  },
+  "type" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/audit-event-type",
+    "code" : "rest",
+    "display" : "RESTful Operation"
+  },
+  "subtype" : [
+    {
+      "system" : "http://hl7.org/fhir/restful-interaction",
+      "code" : "read",
+      "display" : "read"
+    }
+  ],
+  "period" : {
+    "start" : "2026-01-07T09:30:00Z",
+    "end" : "2026-01-07T09:32:00Z"
+  },
+  "recorded" : "2026-01-07T09:32:15Z",
+  "agent" : [
+    {
+      "who" : {
+        "reference" : "Practitioner/PractitionerExample"
+      },
+      "requestor" : true
+    }
+  ],
+  "source" : {
+    "observer" : {
+      "reference" : "Device/DeviceExample"
+    }
+  }
+}
+
+```

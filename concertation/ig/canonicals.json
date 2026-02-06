@@ -1,0 +1,51 @@
+[
+  {
+    "id" : "TdEConsommateur",
+    "type" : "CapabilityStatement",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdEConsommateur",
+    "version" : "2.0.0",
+    "name" : "TdEConsommateur"
+  },
+  {
+    "id" : "TdEGestionnaire",
+    "type" : "CapabilityStatement",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdEGestionnaire",
+    "version" : "2.0.0",
+    "name" : "TdEGestionnaire"
+  },
+  {
+    "id" : "TdESource",
+    "type" : "CapabilityStatement",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdESource",
+    "version" : "2.0.0",
+    "name" : "TdESource"
+  },
+  {
+    "id" : "ans.fhir.fr.tde",
+    "type" : "ImplementationGuide",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde",
+    "version" : "2.0.0",
+    "name" : "TDE"
+  },
+  {
+    "id" : "TDE-AuditEvent-period-start",
+    "type" : "SearchParameter",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/SearchParameter/TDE-AuditEvent-period-start",
+    "version" : "2.0.0",
+    "name" : "TDE_AuditEvent_period-start"
+  },
+  {
+    "id" : "TDEBundleResultatReponseRechercheTraces",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces",
+    "version" : "2.0.0",
+    "name" : "TDEBundleResultatReponseRechercheTraces"
+  },
+  {
+    "id" : "tde-auditevent",
+    "type" : "StructureDefinition",
+    "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent",
+    "version" : "2.0.0",
+    "name" : "TDEAuditEvent"
+  }
+]
