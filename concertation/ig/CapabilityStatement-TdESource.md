@@ -1,4 +1,4 @@
-# TdE-Source - ANS - Traçabilité des événements v2.0.0
+# TdE-Source - ANS - Traçabilité des événements v2.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdESource | *Version*:2.0.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdESource | *Version*:2.0.0-ballot |
 | Active as of 2025-01-14 | *Computable Name*:TdESource |
 
  
@@ -25,7 +25,7 @@ Le rôle de la Source est de transmettre les informations de traçabilité relat
   "resourceType" : "CapabilityStatement",
   "id" : "TdESource",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdESource",
-  "version" : "2.0.0",
+  "version" : "2.0.0-ballot",
   "name" : "TdESource",
   "title" : "TdE-Source",
   "status" : "active",

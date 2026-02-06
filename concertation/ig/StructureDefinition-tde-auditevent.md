@@ -1,4 +1,4 @@
-# TdE AuditEvent - ANS - Traçabilité des événements v2.0.0
+# TdE AuditEvent - ANS - Traçabilité des événements v2.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent | *Version*:2.0.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent | *Version*:2.0.0-ballot |
 | Draft as of 2026-02-06 | *Computable Name*:TDEAuditEvent |
 
  
@@ -39,11 +39,11 @@ Other representations of profile: [CSV](StructureDefinition-tde-auditevent.csv),
   "resourceType" : "StructureDefinition",
   "id" : "tde-auditevent",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent",
-  "version" : "2.0.0",
+  "version" : "2.0.0-ballot",
   "name" : "TDEAuditEvent",
   "title" : "TdE AuditEvent",
   "status" : "draft",
-  "date" : "2026-02-06T14:02:29+00:00",
+  "date" : "2026-02-06T14:23:47+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

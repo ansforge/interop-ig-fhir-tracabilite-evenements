@@ -1,4 +1,4 @@
-# TdE-Gestionnaire - ANS - Traçabilité des événements v2.0.0
+# TdE-Gestionnaire - ANS - Traçabilité des événements v2.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdEGestionnaire | *Version*:2.0.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdEGestionnaire | *Version*:2.0.0-ballot |
 | Active as of 2025-01-14 | *Computable Name*:TdEGestionnaire |
 
  
@@ -25,7 +25,7 @@ Le rôle du Gestionnaire est d'enregistrer les informations de traçabilité et 
   "resourceType" : "CapabilityStatement",
   "id" : "TdEGestionnaire",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdEGestionnaire",
-  "version" : "2.0.0",
+  "version" : "2.0.0-ballot",
   "name" : "TdEGestionnaire",
   "title" : "TdE-Gestionnaire",
   "status" : "active",

@@ -6,11 +6,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : ImplementationGuide ans.fhir.fr.tde</b></p><a name="ans.fhir.fr.tde"> </a><a name="hcans.fhir.fr.tde"> </a><h2>TDE</h2><p>L'URL officielle pour ce guide d'implémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde</pre></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde"/>
-  <version value="2.0.0"/>
+  <version value="2.0.0-ballot"/>
   <name value="TDE"/>
   <title value="ANS - Traçabilité des événements"/>
   <status value="draft"/>
-  <date value="2026-02-06T14:02:29+00:00"/>
+  <date value="2026-02-06T14:23:47+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>

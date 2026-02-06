@@ -1,4 +1,4 @@
-# Glossaire - ANS - Traçabilité des événements v2.0.0
+# Glossaire - ANS - Traçabilité des événements v2.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Glossaire**

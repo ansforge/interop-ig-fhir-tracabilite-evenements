@@ -1,4 +1,4 @@
-# TdE-Consommateur - ANS - Traçabilité des événements v2.0.0
+# TdE-Consommateur - ANS - Traçabilité des événements v2.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdEConsommateur | *Version*:2.0.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdEConsommateur | *Version*:2.0.0-ballot |
 | Active as of 2025-01-14 | *Computable Name*:TdEConsommateur |
 
  
@@ -25,7 +25,7 @@ Le rôle du Consommateur est d'accéder aux traces. Les personnes utilisant ce s
   "resourceType" : "CapabilityStatement",
   "id" : "TdEConsommateur",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/CapabilityStatement/TdEConsommateur",
-  "version" : "2.0.0",
+  "version" : "2.0.0-ballot",
   "name" : "TdEConsommateur",
   "title" : "TdE-Consommateur",
   "status" : "active",

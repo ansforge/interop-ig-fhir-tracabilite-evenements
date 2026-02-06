@@ -1,4 +1,4 @@
-# TDEBundleResultatReponseRechercheTraces - ANS - Traçabilité des événements v2.0.0
+# TDEBundleResultatReponseRechercheTraces - ANS - Traçabilité des événements v2.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces | *Version*:2.0.0 |
+| *Official URL*:https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces | *Version*:2.0.0-ballot |
 | Draft as of 2026-02-06 | *Computable Name*:TDEBundleResultatReponseRechercheTraces |
 
  
@@ -37,10 +37,10 @@ Other representations of profile: [CSV](StructureDefinition-TDEBundleResultatRep
   "resourceType" : "StructureDefinition",
   "id" : "TDEBundleResultatReponseRechercheTraces",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/TDEBundleResultatReponseRechercheTraces",
-  "version" : "2.0.0",
+  "version" : "2.0.0-ballot",
   "name" : "TDEBundleResultatReponseRechercheTraces",
   "status" : "draft",
-  "date" : "2026-02-06T14:02:29+00:00",
+  "date" : "2026-02-06T14:23:47+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {

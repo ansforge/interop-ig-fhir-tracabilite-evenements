@@ -1,4 +1,4 @@
-# Mise en correspondance AuditEvent / DICOM - ANS - Traçabilité des événements v2.0.0
+# Mise en correspondance AuditEvent / DICOM - ANS - Traçabilité des événements v2.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Mise en correspondance AuditEvent / DICOM**

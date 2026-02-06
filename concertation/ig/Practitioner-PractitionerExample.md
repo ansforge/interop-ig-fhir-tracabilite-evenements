@@ -1,4 +1,4 @@
-# PractitionerExample - ANS - Traçabilité des événements v2.0.0
+# PractitionerExample - ANS - Traçabilité des événements v2.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
