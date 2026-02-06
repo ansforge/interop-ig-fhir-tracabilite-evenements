@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-tde-auditevent.csv),
   "name" : "TDEAuditEvent",
   "title" : "TdE AuditEvent",
   "status" : "draft",
-  "date" : "2026-02-06T14:23:47+00:00",
+  "date" : "2026-02-06T15:34:31+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [
     {
