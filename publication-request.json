@@ -7,7 +7,7 @@
     "sequence" : "STU1",
     "title" : "Volet Traçabilité des événements",
     "first" : true,
-    "desc" : "A mettre a jour.",
+    "desc" : "Ce guide décrit les échanges de données de santé dans le domaine de la traçabilité des événements",
     "ci-build" : "https://ansforge.github.io/interop-ig-fhir-tracabilite-evenements/main/ig",
     "category" : "Imaging",
     "introduction" : "Ce guide décrit les échanges de données de santé dans le domaine de la traçabilité des événements",
