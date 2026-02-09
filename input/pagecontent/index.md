@@ -17,7 +17,7 @@
 <p>
   <b>Attention !</b>
   <br>
- Cet Implementation Guide est actuellement en concertation. La version courante est accessible à l'adresse : https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde
+ Cet Implementation Guide est actuellement en concertation. La version courante est accessible à l'adresse : https://interop.esante.gouv.fr/ig/fhir/tde
 </p>
 </blockquote>
 </div>
