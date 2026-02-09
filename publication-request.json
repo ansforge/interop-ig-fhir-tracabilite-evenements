@@ -9,7 +9,7 @@
     "first" : true,
     "desc" : "Ce guide décrit les échanges de données de santé dans le domaine de la traçabilité des événements",
     "ci-build" : "https://ansforge.github.io/interop-ig-fhir-tracabilite-evenements/main/ig",
-    "category" : "Imaging",
+    "category" : "Infrastructure",
     "introduction" : "Ce guide décrit les échanges de données de santé dans le domaine de la traçabilité des événements",
     "changes": "change-log.html"
 
