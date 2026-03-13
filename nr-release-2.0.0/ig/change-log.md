@@ -21,3 +21,15 @@ URL : [https://interop.esante.gouv.fr/ig/fhir/tde/2.0.0](https://interop.esante.
 * Fix filename case in Syslog example reference [#14](https://github.com/ansforge/interop-ig-fhir-tracabilite-evenements/pull/14)
 * Préparation à la publication 2.0.0-ballot [#15](https://github.com/ansforge/interop-ig-fhir-tracabilite-evenements/pull/15)
 
+### Versions antérieures (PDF)
+
+Les versions antérieures de ce volet sont disponibles sur le [site de l'ANS](https://esante.gouv.fr/volet-tracabilite-devenements) :
+
+| | | |
+| :--- | :--- | :--- |
+| v1.2 | [Spécifications Techniques - Traçabilité d'événements](https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_specifications_techniques_tracabilite-evenements-v1.2.pdf) | Décembre 2022 |
+| v1.4 | [Spécifications Fonctionnelles - Gestion de traces](https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_specifications_fonctionnelles_genericisation_gestion_traces-v1.4.pdf) | Septembre 2021 |
+| v1.2 | [Étude des normes et standards - Gestion des traces](https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_etude_normes_standards_genericisation_gestion_traces-v1.2_0.pdf) | Septembre 2021 |
+| v1.1 | [Spécifications Techniques - Traçabilité d'événements](https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_specifications_techniques_tracabilite-evenements-v1.1.pdf) | Avril 2022 |
+| v1.5 | [Spécifications Techniques - Généricisation : gestion des traces (archive)](https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_specifications_techniques_genericisation_gestion_traces-v1.5.pdf) | Septembre 2021 |
+

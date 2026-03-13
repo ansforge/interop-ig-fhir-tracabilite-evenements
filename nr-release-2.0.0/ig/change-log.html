@@ -214,14 +214,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p>  <!-- white space is critical inside of capture --></p>
-<div>
-  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#version-200" id="markdown-toc-version-200">version 2.0.0</a></li>
+  <li><a href="#versions-antérieures-pdf" id="markdown-toc-versions-antérieures-pdf">Versions antérieures (PDF)</a></li>
+</ul>
+
 </div>
 <h3 id="version-200">version 2.0.0</h3>
 
 <p><strong>Release 2.0.0 de l'Implementation Guide FHIR Traçabilité des événements.</strong></p>
 
-<p><a name="l380">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/tde/2.0.0">https://interop.esante.gouv.fr/ig/fhir/tde/2.0.0</a></p>
+<p><a name="l389">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/tde/2.0.0">https://interop.esante.gouv.fr/ig/fhir/tde/2.0.0</a></p>
 
 <p><a href="https://github.com/ansforge/interop-ig-fhir-tracabilite-evenements/milestone/1?closed=1">Modifications apportées dans cette release</a> :</p>
 
@@ -234,6 +238,47 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Fix filename case in Syslog example reference <a href="https://github.com/ansforge/interop-ig-fhir-tracabilite-evenements/pull/14">#14</a></li>
   <li>Préparation à la publication 2.0.0-ballot <a href="https://github.com/ansforge/interop-ig-fhir-tracabilite-evenements/pull/15">#15</a></li>
 </ul>
+
+<h3 id="versions-antérieures-pdf">Versions antérieures (PDF)</h3>
+
+<p>Les versions antérieures de ce volet sont disponibles sur le <a href="https://esante.gouv.fr/volet-tracabilite-devenements">site de l'ANS</a> :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Document</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>v1.2</td>
+      <td><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_specifications_techniques_tracabilite-evenements-v1.2.pdf">Spécifications Techniques - Traçabilité d'événements</a></td>
+      <td>Décembre 2022</td>
+    </tr>
+    <tr>
+      <td>v1.4</td>
+      <td><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_specifications_fonctionnelles_genericisation_gestion_traces-v1.4.pdf">Spécifications Fonctionnelles - Gestion de traces</a></td>
+      <td>Septembre 2021</td>
+    </tr>
+    <tr>
+      <td>v1.2</td>
+      <td><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_etude_normes_standards_genericisation_gestion_traces-v1.2_0.pdf">Étude des normes et standards - Gestion des traces</a></td>
+      <td>Septembre 2021</td>
+    </tr>
+    <tr>
+      <td>v1.1</td>
+      <td><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_specifications_techniques_tracabilite-evenements-v1.1.pdf">Spécifications Techniques - Traçabilité d'événements</a></td>
+      <td>Avril 2022</td>
+    </tr>
+    <tr>
+      <td>v1.5</td>
+      <td><a href="https://esante.gouv.fr/sites/default/files/media_entity/documents/ci-sis_specifications_techniques_genericisation_gestion_traces-v1.5.pdf">Spécifications Techniques - Généricisation : gestion des traces (archive)</a></td>
+      <td>Septembre 2021</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
@@ -276,14 +321,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.tde#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 13, 2026 15:25+0000">2026-03-13</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  Package ans.fhir.fr.tde#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 13, 2026 15:29+0000">2026-03-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
             Liens : <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA</a> |
 <a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/fhir/tde/history.html" target="_blank">Historique des versions</a>
 <a style="color: var(--footer-hyperlink-text-color)" href="https://interop.esante.gouv.fr/ig/documentation" target="_blank">Documentation</a>
- | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/ansforge/FIG_ans-ig-sample/issues/new" target="_blank">New Issue</a>
+ | <a style="color: var(--footer-hyperlink-text-color)" href="https://github.com/ansforge/interop-ig-fhir-tracabilite-evenements/issues/new" target="_blank">New Issue</a>
 
           
         </p>
