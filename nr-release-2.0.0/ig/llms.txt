@@ -1,0 +1,46 @@
+# ans.fhir.fr.tde#2.0.0-ballot: ANS - Traçabilité des événements
+
+## Pages
+
+* [Accueil](index.md)
+* [Correspondances métier](specifications_technique_correspondance_metier.md)
+* [Via API REST](specifications_technique_api.md)
+* [Etude norme et standards](normes_standards.md)
+* [Mise en correspondance AuditEvent / DICOM](annexe_audit_dicom.md)
+* [Volume 1 - Etude fonctionnelle](specifications_fonctionnelles.md)
+* [Artifacts Summary](artifacts.md)
+* [Téléchargements et usages](downloads.md)
+* [Glossaire](glossaire.md)
+* [Volume 2 - Détail des transactions](specifications_technique_intro.md)
+* [Via syslog](specifications_technique_syslog.md)
+* [Historique des versions](change-log.md)
+* [Sécurité](securite.md)
+
+## Resources
+
+### Resource Profiles
+
+* [TDEBundleResultatReponseRechercheTraces](StructureDefinition-TDEBundleResultatReponseRechercheTraces.md)
+* [TdE AuditEvent](StructureDefinition-tde-auditevent.md)
+
+### CapabilityStatements
+
+* [TdE-Consommateur](CapabilityStatement-TdEConsommateur.md)
+* [TdE-Gestionnaire](CapabilityStatement-TdEGestionnaire.md)
+* [TdE-Source](CapabilityStatement-TdESource.md)
+
+### ImplementationGuides
+
+* [ANS - Traçabilité des événements](index.md)
+
+### SearchParameters
+
+* [TDE_AuditEvent_period-start](SearchParameter-TDE-AuditEvent-period-start.md)
+
+### Examples
+
+* [TDEAuditEventExample-2 (AuditEvent)](AuditEvent-TDEAuditEventExample-2.md)
+* [TDEAuditEventExample (AuditEvent)](AuditEvent-TDEAuditEventExample.md)
+* [TDEBundleResultatReponseRechercheTracesExample (Bundle)](Bundle-TDEBundleResultatReponseRechercheTracesExample.md)
+* [DeviceExample (Device)](Device-DeviceExample.md)
+* [PractitionerExample (Practitioner)](Practitioner-PractitionerExample.md)

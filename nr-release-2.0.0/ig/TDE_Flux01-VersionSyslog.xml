@@ -1,0 +1,23 @@
+<110>1 2021-02-05T02:28:40.024+00:00 TEST-WEB INFRA - IHE+RFC-3881 - 
+<?xml version="1.0" encoding="utf-8"?>
+
+<AuditMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<EventIdentification EventActionCode="R" EventDateTime="2021-02-05T14:28:40.0236367Z" EventOutcomeIndicator="0">
+		<EventID codeSystemName="DCM" originalText="Patient Record" csd-code="110110" />
+		<EventTypeCode codeSystemName="DCM" originalText="Use of Restricted Function" csd-code="110132" />
+	</EventIdentification>
+		<ActiveParticipant UserID="6576" AlternativeUserID="SVC_ALL_HL7_DICOM" UserName="RVCCore" UserIsRequestor="false" NetworkAccessPointID="/api/patients/000789" NetworkAccessPointTypeCode="5">
+		<RoleIDCode codeSystemName="DCM" originalText="Source" csd-code="110153" />
+	</ActiveParticipant>
+	<ActiveParticipant UserID="Anonymous" UserIsRequestor="false" NetworkAccessPointID="10.212.134.113" NetworkAccessPointTypeCode="2">
+		<RoleIDCode codeSystemName="DCM" originalText="Destination" csd-code="110152" />
+	</ActiveParticipant>
+	<AuditSourceIdentification AuditEnterpriseSiteID="TEST-WEB" AuditSourceID="RVCCore">
+		<AuditSourceTypeCode displayName="Web server process" csd-code="3" />
+	</AuditSourceIdentification>
+	<ParticipantObjectIdentification ParticipantObjectID="000789" ParticipantObjectTypeCode="1" ParticipantObjectTypeCodeRole="1" ParticipantObjectDataLifeCycle="6">
+		<ParticipantObjectIDTypeCode codeSystemName="RFC-3881" originalText="Patient Number." csd-code="2" />
+		<ParticipantObjectName>Testdreumes Y.</ParticipantObjectName>
+		<ParticipantObjectDetail type="TransferSyntax" value="VVRGLTg=" />
+	</ParticipantObjectIdentification>
+</AuditMessage>
