@@ -40,7 +40,7 @@ Other representations of profile: [CSV](StructureDefinition-TDEBundleResultatRep
   "version" : "2.0.0",
   "name" : "TDEBundleResultatReponseRechercheTraces",
   "status" : "active",
-  "date" : "2026-03-13T15:51:21+00:00",
+  "date" : "2026-03-13T15:51:36+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
