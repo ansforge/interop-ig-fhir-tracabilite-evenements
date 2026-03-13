@@ -26,7 +26,7 @@ Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser
   "version" : "2.0.0",
   "name" : "TDE_AuditEvent_period-start",
   "status" : "active",
-  "date" : "2026-03-13T16:06:41+00:00",
+  "date" : "2026-03-13T16:06:55+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
