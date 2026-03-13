@@ -6,4 +6,4 @@
 
 ## Preview
 
-https://ansforge.github.io/tracabilite-evenements/[ajouter_nom_de_la_branche]/ig
+https://ansforge.github.io/interop-ig-fhir-tracabilite-evenements/[ajouter_nom_de_la_branche]/ig
