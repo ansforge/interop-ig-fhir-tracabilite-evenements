@@ -1,0 +1,16 @@
+{
+    "package-id" : "ans.fhir.fr.tde",
+    "version" : "2.0.0-ballot",
+    "path" : "https://interop.esante.gouv.fr/ig/fhir/tde/2.0.0-ballot",
+    "mode" : "working",
+    "status" : "ballot",
+    "sequence" : "STU1",
+    "title" : "Volet Traçabilité des événements",
+    "first" : true,
+    "desc" : "Ce guide décrit les échanges de données de santé dans le domaine de la traçabilité des événements",
+    "ci-build" : "https://ansforge.github.io/interop-ig-fhir-tracabilite-evenements/main/ig",
+    "category" : "Infrastructure",
+    "introduction" : "Ce guide décrit les échanges de données de santé dans le domaine de la traçabilité des événements",
+    "changes": "change-log.html"
+
+  }
