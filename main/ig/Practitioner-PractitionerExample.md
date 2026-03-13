@@ -1,4 +1,4 @@
-# PractitionerExample - ANS - Traçabilité des événements v2.0.0
+# PractitionerExample - ANS - Traçabilité des événements v2.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -21,22 +21,16 @@ Profil: [FR Core Practitioner Profile](https://hl7.fr/ig/fhir/core/2.1.0/Structu
   "resourceType" : "Practitioner",
   "id" : "PractitionerExample",
   "meta" : {
-    "profile" : [
-      "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"
-    ]
+    "profile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"]
   },
-  "identifier" : [
-    {
-      "system" : "https://rpps.esante.gouv.fr",
-      "value" : "10001234567"
-    }
-  ],
-  "name" : [
-    {
-      "family" : "DUPONT",
-      "given" : ["Jean"]
-    }
-  ]
+  "identifier" : [{
+    "system" : "https://rpps.esante.gouv.fr",
+    "value" : "10001234567"
+  }],
+  "name" : [{
+    "family" : "DUPONT",
+    "given" : ["Jean"]
+  }]
 }
 
 ```

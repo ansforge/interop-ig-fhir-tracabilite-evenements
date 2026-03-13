@@ -1,4 +1,4 @@
-# DeviceExample - ANS - Traçabilité des événements v2.0.0
+# DeviceExample - ANS - Traçabilité des événements v2.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -24,12 +24,10 @@
   "resourceType" : "Device",
   "id" : "DeviceExample",
   "manufacturer" : "Éditeur SI Santé",
-  "deviceName" : [
-    {
-      "name" : "SIH",
-      "type" : "user-friendly-name"
-    }
-  ]
+  "deviceName" : [{
+    "name" : "SIH",
+    "type" : "user-friendly-name"
+  }]
 }
 
 ```

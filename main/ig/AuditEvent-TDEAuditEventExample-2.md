@@ -1,4 +1,4 @@
-# TDEAuditEventExample-2 - ANS - Traçabilité des événements v2.0.0
+# TDEAuditEventExample-2 - ANS - Traçabilité des événements v2.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -39,35 +39,29 @@ Profil: [TdE AuditEvent](StructureDefinition-tde-auditevent.md)
   "resourceType" : "AuditEvent",
   "id" : "TDEAuditEventExample-2",
   "meta" : {
-    "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent"
-    ]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent"]
   },
   "type" : {
     "system" : "http://dicom.nema.org/resources/ontology/DCM",
     "code" : "110101",
     "display" : "Audit Log Used"
   },
-  "subtype" : [
-    {
-      "system" : "http://hl7.org/fhir/restful-interaction",
-      "code" : "read",
-      "display" : "read"
-    }
-  ],
+  "subtype" : [{
+    "system" : "http://hl7.org/fhir/restful-interaction",
+    "code" : "read",
+    "display" : "read"
+  }],
   "period" : {
     "start" : "2025-01-07T09:30:00Z",
     "end" : "2025-01-07T09:32:00Z"
   },
   "recorded" : "2025-01-07T09:32:15Z",
-  "agent" : [
-    {
-      "who" : {
-        "reference" : "Practitioner/PractitionerExample"
-      },
-      "requestor" : true
-    }
-  ],
+  "agent" : [{
+    "who" : {
+      "reference" : "Practitioner/PractitionerExample"
+    },
+    "requestor" : true
+  }],
   "source" : {
     "observer" : {
       "reference" : "Device/DeviceExample"

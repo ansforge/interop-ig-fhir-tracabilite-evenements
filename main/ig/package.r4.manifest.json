@@ -1,6 +1,6 @@
 {
-  "version" : "2.0.0",
-  "date" : "20260205094018",
+  "version" : "2.0.0-ballot",
+  "date" : "20260313151834",
   "notForPublication" : true,
   "name" : "ans.fhir.fr.tde.r4"
 }

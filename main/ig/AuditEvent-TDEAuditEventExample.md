@@ -1,4 +1,4 @@
-# TDEAuditEventExample - ANS - Traçabilité des événements v2.0.0
+# TDEAuditEventExample - ANS - Traçabilité des événements v2.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 Profil: [TdE AuditEvent](StructureDefinition-tde-auditevent.md)
 
-**type**: [Audit Event ID: rest](http://terminology.hl7.org/7.0.1/CodeSystem-audit-event-type.html#audit-event-type-rest) (RESTful Operation)
+**type**: [Audit Event ID: rest](http://terminology.hl7.org/7.1.0/CodeSystem-audit-event-type.html#audit-event-type-rest) (RESTful Operation)
 
 **subtype**: [FHIR Restful Interactions: read](http://hl7.org/fhir/R4/codesystem-restful-interaction.html#restful-interaction-read) (read)
 
@@ -39,35 +39,29 @@ Profil: [TdE AuditEvent](StructureDefinition-tde-auditevent.md)
   "resourceType" : "AuditEvent",
   "id" : "TDEAuditEventExample",
   "meta" : {
-    "profile" : [
-      "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent"
-    ]
+    "profile" : ["https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent"]
   },
   "type" : {
     "system" : "http://terminology.hl7.org/CodeSystem/audit-event-type",
     "code" : "rest",
     "display" : "RESTful Operation"
   },
-  "subtype" : [
-    {
-      "system" : "http://hl7.org/fhir/restful-interaction",
-      "code" : "read",
-      "display" : "read"
-    }
-  ],
+  "subtype" : [{
+    "system" : "http://hl7.org/fhir/restful-interaction",
+    "code" : "read",
+    "display" : "read"
+  }],
   "period" : {
     "start" : "2026-01-07T09:30:00Z",
     "end" : "2026-01-07T09:32:00Z"
   },
   "recorded" : "2026-01-07T09:32:15Z",
-  "agent" : [
-    {
-      "who" : {
-        "reference" : "Practitioner/PractitionerExample"
-      },
-      "requestor" : true
-    }
-  ],
+  "agent" : [{
+    "who" : {
+      "reference" : "Practitioner/PractitionerExample"
+    },
+    "requestor" : true
+  }],
   "source" : {
     "observer" : {
       "reference" : "Device/DeviceExample"

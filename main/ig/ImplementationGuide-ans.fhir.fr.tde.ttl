@@ -17,11 +17,11 @@
      fhir:v "https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde"^^xsd:anyURI ;
      fhir:l <https://interop.esante.gouv.fr/ig/fhir/tde/ImplementationGuide/ans.fhir.fr.tde>
   ] ; # 
-  fhir:version [ fhir:v "2.0.0"] ; # 
+  fhir:version [ fhir:v "2.0.0-ballot"] ; # 
   fhir:name [ fhir:v "TDE"] ; # 
   fhir:title [ fhir:v "ANS - Traçabilité des événements"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-05T09:40:18+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-03-13T15:18:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -60,7 +60,7 @@
        fhir:l <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "7.0.1" ]
+     fhir:version [ fhir:v "7.1.0" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -130,7 +130,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "ci-build"
+           fhir:v "public-comment"
          ]
        ] ) ;
        fhir:url [
@@ -797,7 +797,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "ci-build"
+           fhir:v "public-comment"
          ]
        ] ) ;
        fhir:url [
