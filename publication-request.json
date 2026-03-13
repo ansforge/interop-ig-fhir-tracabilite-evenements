@@ -2,7 +2,7 @@
     "package-id" : "ans.fhir.fr.tde",
     "version" : "2.0.0",
     "path" : "https://interop.esante.gouv.fr/ig/fhir/tde/2.0.0",
-    "mode" : "release",
+    "mode" : "milestone",
     "status" : "trial-use",
     "sequence" : "STU1",
     "title" : "Volet Traçabilité des événements",
