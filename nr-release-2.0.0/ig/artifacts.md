@@ -1,4 +1,4 @@
-# Artifacts Summary - ANS - Traçabilité des événements v2.0.0-ballot
+# Artifacts Summary - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * **Artifacts Summary**

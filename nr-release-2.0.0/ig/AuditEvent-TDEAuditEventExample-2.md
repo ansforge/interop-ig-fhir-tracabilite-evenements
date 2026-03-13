@@ -1,4 +1,4 @@
-# TDEAuditEventExample-2 - ANS - Traçabilité des événements v2.0.0-ballot
+# TDEAuditEventExample-2 - ANS - Traçabilité des événements v2.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
