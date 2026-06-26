@@ -1,0 +1,85 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/tde/SearchParameter/TDE-AuditEvent-period-start> a fhir:SearchParameter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "TDE-AuditEvent-period-start"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SearchParameter TDE-AuditEvent-period-start</b></p><a name=\"TDE-AuditEvent-period-start\"> </a><a name=\"hcTDE-AuditEvent-period-start\"> </a><h2>TDE_AuditEvent_period-start</h2><p>Parameter <code>period-start</code>:<code>date</code></p><div><p>Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/auditevent.html\">AuditEvent</a></td></tr><tr><td>Expression</td><td><code>AuditEvent.period.start</code></td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: The parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: The parameter may have multiple values (separated by comma) where at least one must be true</li></ul></td></tr><tr><td>Comparators</td><td>Allowed: eq, ne, gt, lt, ge, le, sa, eb, ap</td></tr></table></div>"
+  ] ;
+  fhir:SearchParameter.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/tde/SearchParameter/TDE-AuditEvent-period-start"] ;
+  fhir:SearchParameter.version [ fhir:value "2.0.0"] ;
+  fhir:SearchParameter.name [ fhir:value "TDE_AuditEvent_period-start"] ;
+  fhir:SearchParameter.status [ fhir:value "active"] ;
+  fhir:SearchParameter.date [ fhir:value "2026-06-26T11:49:40+00:00"^^xsd:dateTime] ;
+  fhir:SearchParameter.publisher [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ;
+  fhir:SearchParameter.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://esante.gouv.fr" ]
+     ]
+  ] ;
+  fhir:SearchParameter.description [ fhir:value "Paramètre de recherche créé pour le volet TdE de manière à pouvoir utiliser comme critère de recherche l'élément AuditEvent.period.start correspondant à l'objet dateOccurence"] ;
+  fhir:SearchParameter.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "FRANCE" ]
+     ]
+  ] ;
+  fhir:SearchParameter.code [ fhir:value "period-start"] ;
+  fhir:SearchParameter.base [
+     fhir:value "AuditEvent" ;
+     fhir:index -1
+  ] ;
+  fhir:SearchParameter.type [ fhir:value "date"] ;
+  fhir:SearchParameter.expression [ fhir:value "AuditEvent.period.start"] ;
+  fhir:SearchParameter.multipleOr [ fhir:value "true"^^xsd:boolean] ;
+  fhir:SearchParameter.multipleAnd [ fhir:value "true"^^xsd:boolean] ;
+  fhir:SearchParameter.comparator [
+     fhir:value "eq" ;
+     fhir:index -1
+  ], [
+     fhir:value "ne" ;
+     fhir:index -1
+  ], [
+     fhir:value "gt" ;
+     fhir:index -1
+  ], [
+     fhir:value "lt" ;
+     fhir:index -1
+  ], [
+     fhir:value "ge" ;
+     fhir:index -1
+  ], [
+     fhir:value "le" ;
+     fhir:index -1
+  ], [
+     fhir:value "sa" ;
+     fhir:index -1
+  ], [
+     fhir:value "eb" ;
+     fhir:index -1
+  ], [
+     fhir:value "ap" ;
+     fhir:index -1
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/tde/SearchParameter/TDE-AuditEvent-period-start.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/tde/AuditEvent/TDEAuditEventExample> a fhir:AuditEvent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "TDEAuditEventExample"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent" ;
+       fhir:index -1 ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/tde/StructureDefinition/tde-auditevent>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: AuditEvent TDEAuditEventExample</b></p><a name=\"TDEAuditEventExample\"> </a><a name=\"hcTDEAuditEventExample\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-tde-auditevent.html\">TdE AuditEvent</a></p></div><p><b>type</b>: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-audit-event-type.html#audit-event-type-rest\">Audit Event ID: rest</a> (RESTful Operation)</p><p><b>subtype</b>: <a href=\"http://hl7.org/fhir/R4/codesystem-restful-interaction.html#restful-interaction-read\">FHIR Restful Interactions: read</a> (read)</p><p><b>period</b>: 2026-01-07 09:30:00+0000 --&gt; 2026-01-07 09:32:00+0000</p><p><b>recorded</b>: 2026-01-07 09:32:15+0000</p><h3>Agents</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Who</b></td><td><b>Requestor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-PractitionerExample.html\">Practitioner Jean DUPONT </a></td><td>true</td></tr></table><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Observer</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Device-DeviceExample.html\">Device: manufacturer = Éditeur SI Santé</a></td></tr></table></div>"
+  ] ;
+  fhir:AuditEvent.type [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/audit-event-type" ] ;
+     fhir:Coding.code [ fhir:value "rest" ] ;
+     fhir:Coding.display [ fhir:value "RESTful Operation" ]
+  ] ;
+  fhir:AuditEvent.subtype [
+     fhir:index -1 ;
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/restful-interaction" ] ;
+     fhir:Coding.code [ fhir:value "read" ] ;
+     fhir:Coding.display [ fhir:value "read" ]
+  ] ;
+  fhir:AuditEvent.period [
+     fhir:Period.start [ fhir:value "2026-01-07T09:30:00Z"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2026-01-07T09:32:00Z"^^xsd:dateTime ]
+  ] ;
+  fhir:AuditEvent.recorded [ fhir:value "2026-01-07T09:32:15Z"^^xsd:dateTime] ;
+  fhir:AuditEvent.agent [
+     fhir:index -1 ;
+     fhir:AuditEvent.agent.who [
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/tde/Practitioner/PractitionerExample> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/PractitionerExample" ]
+     ] ;
+     fhir:AuditEvent.agent.requestor [ fhir:value "true"^^xsd:boolean ]
+  ] ;
+  fhir:AuditEvent.source [
+     fhir:AuditEvent.source.observer [
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/tde/Device/DeviceExample> ;
+       fhir:Reference.reference [ fhir:value "Device/DeviceExample" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/tde/AuditEvent/TDEAuditEventExample.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
